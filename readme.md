@@ -94,7 +94,7 @@ This addon offers the following commands, which you can change by going to the m
 ## Change for version 2.1 ##
 
 *	 Adding a script to vocalize moving to the next splitting point with Control+Right Arrow;
-*	 Adding a script to vocalize moving to the previous splitting point with Control+Right Arrow;
+*	 Adding a script to vocalize moving to the previous splitting point with Control+Left Arrow;
 *	 Adding a script to vocalize the displacement of 4 hundredths of second ahead, with Shift+Right Arrow;
 *	 Adding a script to vocalize the displacement of 4 hundredths of second back, with Shift+Left Arrow;
 *	 Correction of the addon's summary from 'for mp3DirectCut' to 'mp3DirectCut'.

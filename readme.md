@@ -78,6 +78,7 @@ This addon offers the following commands, which you can change by going to the m
 	*	Lets you see the current position of the playhead.
 	*	This command also position the cursor at the location of the marker of the beginning of selection B, while giving the location of this marker if a selection has been made.
 	*	In the volume dialog box, vocalise the previous value that can be reached generally with upArrow.
+	*	This value is not vocalized default.
 *	NVDA+H
 	*	Lets open the help of the current add-on.
 

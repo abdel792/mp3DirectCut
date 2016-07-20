@@ -63,7 +63,6 @@ This addon offers the following commands, which you can change by going to the m
 	*	Moves to the previous splitting point, while giving the current duration.
 *	Shift+Right Arrow
 	*	Lets do a brief forward of four hundredths of seconds during playback, while giving the current duration.
-
 *	Shift+Left Arrow
 	*	Lets do a brief backwards of four hundredths of seconds during playback, while giving the current duration. 
 *	S

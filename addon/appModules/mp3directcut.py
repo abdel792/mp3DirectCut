@@ -782,14 +782,17 @@ class AppModule(appModuleHandler.AppModule):
 	def script_endOfSelection(self, gesture):
 		repeat = getLastScriptRepeatCount()
 		bSelection = beginSelection()
+		eSelection = endSelection()
 		if not bSelection:
 			bSelection = themessages[1]
+		if not eSelection:
+			eSelection = themessages[1]
 		if partOrSelection() == 2:
 			if repeat == 0:
-				sayMessage(themessages[7] + ' : ' + endSelection())
+				sayMessage(themessages[7] + ' : ' + eSelection)
 			elif repeat == 1:
 				sayMessage(themessages[6] + ' : ' + bSelection)
-				sayMessage(themessages[7] + ' : ' + endSelection())
+				sayMessage(themessages[7] + ' : ' + eSelection)
 				sayMessage(themessages[10] + ' : ' + selectionDuration())
 		else:
 			sayMessage(themessages[12])

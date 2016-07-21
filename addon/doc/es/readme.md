@@ -1,4 +1,4 @@
-﻿# mp3DirectCut-2.1.1
+﻿# mp3DirectCut-2.2
 
 *	 Autor(es): Abdel, Rémy, Abdellah ZINEDDINE, Jean-François COLAS
 *	 Descargar [versión estable][1]
@@ -77,6 +77,10 @@ Este complemento ofrece las órdenes siguientes, que se puede modificar llendo a
 
 ## Cambios para la versión 2.1.1 ##
 
+*	 La corrección de scripts que dan la selección marcadores ubicaciones.
+
+## Cambios para la versión 2.1.1 ##
+
 *	 Supresión del script dando la duración total y añadida esta información para el script que da el tiempo transcurrido;
 *	 Añadida la posibilidad de activar o desactivar los anuncios relacionados con la tecla de espacio en las opciones de configuración del complemento, por separado de los otros anuncios;;
 *	 Añadida la posibilidad para activar o desactivar el anuncio para la buena colocación de Tags de selección en las opciones de configuración del complemento;
@@ -101,17 +105,15 @@ Este complemento ofrece las órdenes siguientes, que se puede modificar llendo a
 
 ## Cambios para la versión 1.1 ##
 
-*	 Corrección del directorio de idioma árabe de ar_sa a ar;
 *	 Añadida la posibilidad para incluir las órdenes del complemento entre los Gestos de entrada, en la categoría "mp3DirectCut";
- Ellas serán visibles sólo durante una utilización del software mp3DirectCut.
+	*	 Ellas serán visibles sólo durante una utilización del software mp3DirectCut.
 *	 Añadido el idioma español entre los idiomas de traducción;
-*	 Se ha añadido la posibilidad de activar o desactivar los mensajes automáticos, en el menú Herramientas NVDA, elemento de menú "Configuración del complemento mp3DirectCut";
-*	 Corrección  en el idioma árabe.
+*	 Se ha añadido la posibilidad de activar o desactivar los mensajes automáticos, en el menú Herramientas NVDA, elemento de menú "Configuración del complemento mp3DirectCut".
 
 ## Cambios para la versión 1.0 ##
 
 *	 Primera  versión
 
-[1]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.1.1.nvda-addon
+[1]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.2.nvda-addon
 
-[2]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.1.1-dev.nvda-addon
+[2]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.2-dev.nvda-addon

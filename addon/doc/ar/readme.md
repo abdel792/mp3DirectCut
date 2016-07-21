@@ -1,4 +1,4 @@
-﻿# mp3DirectCut-2.1.1
+﻿# mp3DirectCut-2.2
 
 *	 المطوِّرون: عبْدُ الكريم, ريمي, عبدُ الله زين الدين, Jean-François COLAS
 *	 تحميل [نسخة جاهزة][1]
@@ -79,6 +79,10 @@
 *	NVDA+H
 	*	يُمَكِّنُكم من فتح ملف المساعدة للإضافة البرمجية الجارية.
 
+## مستجدات النسخة 2.2 ##
+
+*	 تصحيح البرامج التي تُعطي أماكن تواجد مؤشرات التحديد.
+
 ## مستجدات النسخة 2.1.1 ##
  
 *	 إزالةُ السكريبت الذي يُعطي الوقت الكامل و إضافة هذه المعلومة إلى السكريبت الذي يعطي الوقت المسموع;
@@ -116,6 +120,6 @@
 
 *	 النسخة الأولى.
 
-[1]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.1.1.nvda-addon
+[1]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.2.nvda-addon
 
-[2]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.1.1-dev.nvda-addon
+[2]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.2-dev.nvda-addon

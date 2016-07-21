@@ -1,4 +1,4 @@
-﻿# mp3DirectCut-2.1.1
+﻿# mp3DirectCut-2.2
 
 *	 Auteur(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
 *	 Télécharger [version stable][1]
@@ -75,6 +75,10 @@ Cet addon propose les commandes suivantes, que vous pourrez modifier en allant d
 *	NVDA+H
 	*	Permet d'ouvrir l'aide du module complémentaire courant.
 
+## Changements pour la version 2.2 ##
+
+*	 Correction des scripts donnant les emplacements des marqueurs de sélection.
+
 ## Changements pour la version 2.1.1 ##
 
 *	 Suppression du script permettant de donner la durée totale et ajout de cette information au script donnant le temps écoulé;
@@ -101,17 +105,14 @@ Cet addon propose les commandes suivantes, que vous pourrez modifier en allant d
 
 ## Changements pour la version 1.1 ##
 
-*	 Correction du répertoire de la langue arabe de ar_sa vers ar;
 *	 Ajout de la possibilité de faire figurer les commandes de l'addon parmi les gestes de commandes, dans la catégorie 'mp3DirectCut';
 	*	 Elles ne seront visible que durant une utilisation du logiciel mp3DirectCut.
-*	Ajout de la langue espagnole dans les traductions;
-*	Ajout de la possibilité d'activer ou de désactiver les messages automatiques dans le menu outils de NVDA, item 'Configuration de mp3DirectCut';
-*	Correction de la langue arabe.
+*	 Ajout de la possibilité d'activer ou de désactiver les messages automatiques dans le menu outils de NVDA, item 'Configuration de mp3DirectCut'.
 
 ## Changements pour la version 1.0 ##
 
 *	 Première version
 
-[1]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.1.1.nvda-addon
+[1]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.2.nvda-addon
 
-[2]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.1.1-dev.nvda-addon
+[2]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.2-dev.nvda-addon

@@ -19,7 +19,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("""some commands to use mp3directcut with NVDA"""),
 	# version
-	"addon_version" : "2.1.1",
+	"addon_version" : "2.2",
 	# Author(s)
 	"addon_author" : "Abdel, Rémy RUIZ, Abdellah ZINEDDINE, Jean-François COLAS".decode("mbcs"),
 	# URL for the add-on documentation support

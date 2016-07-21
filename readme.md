@@ -1,4 +1,4 @@
-# mp3DirectCut-2.1.1
+# mp3DirectCut-2.2
 
 *	 Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
 *	 Download [stable version][1]
@@ -81,6 +81,10 @@ This addon offers the following commands, which you can change by going to the m
 *	NVDA+H
 	*	Lets open the help of the current add-on.
 
+## Change for version 2.2 ##
+
+*	 Correction of the scripts giving the selection markers' locations.
+
 ## Change for version 2.1.1 ##
 
 *	 Removing the script giving the total time and adding this information to the script giving the elapsed time;
@@ -115,6 +119,6 @@ This addon offers the following commands, which you can change by going to the m
 
 *	 Initial version.
 
-[1]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.1.1.nvda-addon
+[1]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.2.nvda-addon
 
-[2]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.1.1-dev.nvda-addon
+[2]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.2-dev.nvda-addon

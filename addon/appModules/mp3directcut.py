@@ -683,6 +683,7 @@ class AppModule(appModuleHandler.AppModule):
 			elif repeat == 1:
 				message('%s %s' % (themessages[9], totalTime()))
 
+	# Translators: message presented in input mode.
 	script_elapsedTime.__doc__ = _('Gives the duration from the beginning of the file to the current position of the playback cursor. If pressed twice, gives the total duration.')
 
 	def script_timeRemaining(self, gesture):
@@ -700,6 +701,7 @@ class AppModule(appModuleHandler.AppModule):
 			# Translators: Message to indicate the remaining time.
 			message('%s %s' % (_('Remaining time: '), timeRemaining()))
 
+	# Translators: message presented in input mode.
 	script_timeRemaining.__doc__ = _('Gives the time remaining from the current position of the playback cursor to the end of the file.')
 
 	def script_vuMeter(self, gesture):
@@ -726,6 +728,7 @@ class AppModule(appModuleHandler.AppModule):
 		else:
 			sayMessage(_('The vu-meter is not available. Please verify if a recording is in progress, and that the checkbox enable the margin button is checked in the options of %s.') % programName)
 
+	# Translators: message presented in input mode.
 	script_vuMeter.__doc__ = _('Used to determine the current level of the vu-meter, during recording, double pressure reset it.')
 
 	def script_bPosition(self, gesture):
@@ -777,6 +780,7 @@ class AppModule(appModuleHandler.AppModule):
 		else:
 			sayMessage(themessages[12])
 
+	# Translators: message presented in input mode.
 	script_beginningOfSelection.__doc__ = _('Used to indicate the position of the marker of the beginning of selection B. Double pressure lets give you the duration of the selection.')
 
 	def script_endOfSelection(self, gesture):
@@ -797,6 +801,7 @@ class AppModule(appModuleHandler.AppModule):
 		else:
 			sayMessage(themessages[12])
 
+	# Translators: message presented in input mode.
 	script_endOfSelection.__doc__ = _('Used to indicate the position of the marker of the end of selection N. Double pressure gives recapitulatif positions B and N, and the duration of the selection.')
 
 	def script_actualPart(self, gesture):
@@ -813,11 +818,13 @@ class AppModule(appModuleHandler.AppModule):
 		else:
 			message(themessages[13])
 
+	# Translators: message presented in input mode.
 	script_actualPart.__doc__ = _('Give the reference of the actual part and the total number of parts in the current file.')
 
 	def script_open_help(self, gesture):
 		os.startfile(addonHandler.getCodeAddon().getDocFilePath())
 
+	# Translators: message presented in input mode.
 	script_open_help.__doc__=_('Lets open the help of the current add-on.')
 
 	__gestures = {

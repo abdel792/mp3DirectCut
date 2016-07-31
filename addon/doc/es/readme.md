@@ -1,4 +1,4 @@
-﻿# mp3DirectCut-2.2
+# mp3DirectCut-2.2 #
 
 *	 Autor(es): Abdel, Rémy, Abdellah ZINEDDINE, Jean-François COLAS
 *	 Descargar [versión estable][1]
@@ -75,9 +75,9 @@ Este complemento ofrece las órdenes siguientes, que se puede modificar llendo a
 *	NVDA+H
 	*	Permite de abrir la ayuda del actual complemento.
 
-## Cambios para la versión 2.1.1 ##
+## Cambios para la versión 2.2 ##
 
-*	 La corrección de scripts que dan la selección marcadores ubicaciones.
+*	 La corrección de scripts que dan las ubicaciones de los tags de selección.
 
 ## Cambios para la versión 2.1.1 ##
 

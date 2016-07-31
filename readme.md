@@ -2,7 +2,7 @@
 
 *	 Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
 *	 Download [stable version][1]
-*	 Download [developement version][2]
+*	 Download [development version][2]
 
 # Presentation #
 

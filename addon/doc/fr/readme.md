@@ -1,4 +1,4 @@
-﻿# mp3DirectCut-2.2
+# mp3DirectCut-2.2 #
 
 *	 Auteur(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
 *	 Télécharger [version stable][1]

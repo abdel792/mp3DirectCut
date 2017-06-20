@@ -21,7 +21,7 @@ addon_info = {
 	# version
 	"addon_version" : "2.2",
 	# Author(s)
-	"addon_author" : u"Abdel, Rémy RUIZ, Abdellah ZINEDDINE, Jean-François COLAS",
+	"addon_author" : u"Abdel, RÃ¨my Ruiz, Abdellah Zineddine, Jean-FranÃ§ois Colas",
 	# URL for the add-on documentation support
 	"addon_url" : "",
 	# Documentation file name

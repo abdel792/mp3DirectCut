@@ -16,32 +16,32 @@ Tämä lisäosa tarjoaa seuraavat näppäinkomennot, joita voidaan muuttaa
 valitsemalla Asetukset-valikosta Syöte-eleet ja mp3DirectCut-kategoria:
 
 *	B
-	*	Käytetään valinnan alkukohdan asettamiseen.
+	*	Asettaa valinnan aloitusmerkin sijainnin.
 *	Ctrl+Shift+B
-	*	Käytetään valinnan alkukohdan ilmoittamiseen.
+	*	Ilmoittaa valinnan aloitusmerkin sijainnin.
 	*	Kahdesti painettaessa kerrotaan valinnan kesto.
 *	Ctrl+Shift+D
 	*	Ilmoittaa keston tiedoston alusta toistokohdistimen nykyiseen sijaintiin saakka.
 	*	Kahdesti painettaessa ilmoitetaan koko tiedoston kesto.
 *	Ctrl+Shift+R
-	*	Ilmoittaa jäljellä olevan ajan toistokohdistimen nykyisestä sijainnista tiedoston loppuun.
+	*	Ilmoittaa jäljellä olevan ajan toistokohdistimen nykyisestä sijainnista tiedoston loppuun saakka.
 *	Ctrl+Shift+N
-	*	Käytetään valinnan loppumerkin kohdan ilmoittamiseen.
-	*	Antaa kahdesti painettaessa yhteenvedon valinnan alku- ja loppumerkkien sijainneista sekä ilmoittaa valinnan keston.
+	*	Ilmoittaa valinnan lopetusmerkin sijainnin.
+	*	Antaa kahdesti painettaessa yhteenvedon valinnan aloitus- ja lopetusmerkkien sijainneista sekä ilmoittaa valinnan keston.
 *	Ctrl+Shift+P
 	*	Ilmoittaa nykyisen osan sekä tiedostossa olevien osien määrän.
 *	Ctrl+Shift+Space
-	*	Used to determine the current level of the vu-meter, during recording.
-	*	Double pressure reset it.
-*	Down Arrow
-	*	Lets you see the current position of the playhead.
-	*	This command also position the cursor at the location of the marker of the end of selection N, while giving the location of this marker if a selection has been made.
-	*	In the volume dialog box, vocalise the next value that can be reached generally with downArrow.
-	*	This value is not vocalized default.
+	*	Ilmoittaa VU-mittarin nykyisen tason äänityksen aikana.
+	*	Kahdesti painaminen nollaa tason.
+*	Nuoli alas
+	*	Ilmoittaa toistokohdistimen nykyisen sijainnin.
+	*	Lisäksi tämä komento siirtää kohdistimen valinnan lopetusmerkin sijaintiin ilmoittaen samalla sen, mikäli valinta on tehty .
+	*	Puhuu äänenvoimakkuusvalintaikkunassa seuraavan arvon.
+	*	Oletuksena tätä arvoa ei puhuta.
 *	End
-	*	Moves the playback cursor at the end of the current file and give the total time.
+	*	Siirtää toistokohdistimen nykyisen tiedoston loppuun ja ilmoittaa kokonaiskeston.
 *	Home
-	*	Moves the playback cursor at the beginning of the current file.
+	*	Siirtää toistokohdistimen nykyisen tiedoston alkuun.
 *	Left Arrow
 	*	Lets make a brief return back of one second during playback, while giving the current duration.
 	*	This duration is configurable in the options of mp3directcut.
@@ -74,11 +74,11 @@ valitsemalla Asetukset-valikosta Syöte-eleet ja mp3DirectCut-kategoria:
 	*	If a file is loaded, start the reading.
 	*	If a read is in progress, allows to do a pause by giving current duration.
 	*	If read is paused, allows to restart the reading from the current location.
-*	Up Arrow
-	*	Lets you see the current position of the playhead.
-	*	This command also position the cursor at the location of the marker of the beginning of selection B, while giving the location of this marker if a selection has been made.
+*	Nuoli ylös
+	*	Puhuu toistokohdistimen nykyisen sijainnin.
+	*	Lisäksi, mikäli valinta on tehty,  tämä komento siirtää kohdistimen valinnan aloitusmerkin kohdalle ja puhuu sen sijainnin.
 	*	In the volume dialog box, vocalise the previous value that can be reached generally with upArrow.
-	*	This value is not vocalized default.
+	*	Tätä ei puhuta oletuksena.
 *	NVDA+H
 	*	Avaa lisäosan ohjeen.
 

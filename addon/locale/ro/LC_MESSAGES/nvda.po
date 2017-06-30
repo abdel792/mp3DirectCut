@@ -1,0 +1,257 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the mp3DirectCut package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mp3DirectCut 2.2\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2017-06-20 15:57+1000\n"
+"PO-Revision-Date: 2017-06-24 21:18+0300\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.9\n"
+
+#. Translators: name of the option in the menu.
+#, python-brace-format
+msgid "{0} addon configuration"
+msgstr "Configurarea suplimentului {0}"
+
+#, python-brace-format
+msgid "Allows you display the configuration dialog of {0} addon."
+msgstr "Vă permite să afișați dialogul de configurare a suplimentului {0}."
+
+#. Translators: The title of the add-on configuration dialog box.
+#, python-brace-format
+msgid "Configuration of the addon {0}"
+msgstr "Configurarea suplimentului {0}"
+
+#. Translators: The label of the checkbox to enable or disable the spacebar announcements.
+msgid "Enable announcements of the space key"
+msgstr "Activează anunțurile tastei spațiu"
+
+#. Translators: The label of the checkbox to enable or disable the announcements of the selection markers.
+msgid "Announce the placement of the selection markers"
+msgstr "Anunță plasarea marcajelor de selecție"
+
+#. Translators: The label of the checkbox to enable or disable the other announcements.
+msgid "Enable the other announces"
+msgstr "Activează alte anunțuri"
+
+msgid "hours"
+msgstr "ore"
+
+msgid "minutes"
+msgstr "minute"
+
+msgid "seconds"
+msgstr "secunde"
+
+msgid "hundredths"
+msgstr "sutimi"
+
+msgid "thousandths"
+msgstr "miimi"
+
+#. Translators: Message to inform that no selection has been realized.
+msgid "No selection"
+msgstr "Fără selecție"
+
+#. Translators: Message to inform the user that the playback cursor is at the top of the file.
+msgid "Beginning of the file."
+msgstr "Începutul fișierului"
+
+#. Translators: Message to inform the user that the playback cursor is at the end of the file.
+msgid "End of the file."
+msgstr "Sfârșitul fișierului."
+
+#. Translators: Message to inform the user that not file is loaded.
+msgid ""
+"Not file is loaded. Please check that you are in a file, open one with "
+"Control O, or R to start recording."
+msgstr ""
+"Niciun fișier nu este încărcat. Vă rugăm să verificați dacă sunteți într-un "
+"folder de fișiere, deschideți unul cu Control+O, sau apăsați R pentru a "
+"porni înregistrarea."
+
+#. Translators: Message to inform the user that the current command is not available in a recording mode.
+msgid ""
+"This command is not available in a recording mode, it is available only in a "
+"reading mode !"
+msgstr ""
+"Această comandă nu este disponibilă în modul de înregistrare, ea "
+"funcționează doar în modul de citire."
+
+#. Translators: Message to inform the user that he must close the menu to use this command.
+msgid "Please close the opened menu to use this command."
+msgstr "Vă rugăm să închideți meniul deschis pentru a utiliza această comandă."
+
+#. Translators: Message to indicate the position of the selection start marker.
+msgid "The marker of the beginning of selection B is at"
+msgstr "Marcajul începutului selecției B este la"
+
+#. Translators: Message to indicate the position of the selection end marker.
+msgid "The marker of the End of selection N is at"
+msgstr "Marcajul sfârșitului selecției N este la"
+
+#. Translators: Message to indicate the level of the vu-meter.
+msgid "The level of the vu-meter is at"
+msgstr "Nivelul vu-meter-ului este la"
+
+#. Translators: Message to indicate the total duration of the current file.
+msgid "Total time: "
+msgstr "Timp total: "
+
+#. Translators: Message to indicate the duration of the selection.
+msgid "Duration of selection"
+msgstr "Durata selecției"
+
+#. Translators: Message to indicate the actual part.
+msgid "Actual part"
+msgstr "Parte actuală"
+
+#. Translators: Message to inform that no selection was found.
+msgid "Selection not found."
+msgstr "Selecție negăsită"
+
+#. Translators: Message to indicate that the information of the current part is not available.
+msgid "Information specific to the actual part is not available."
+msgstr "Informația specifică pentru partea actuală nu este disponibilă."
+
+#. Translators: Message to prompt the user to verify that no selection has been made.
+msgid "Please check that no selection has been made."
+msgstr "Vă rugăm să verificați dacă nicio selecție nu a fost făcută."
+
+#. Translators: Message to prompt the user to verify that it is not in recording mode.
+msgid "Please chek that you are not in a recording mode."
+msgstr "Vă rugăm să verificați dacă nu sunteți în modul de înregistrare."
+
+msgid "of"
+msgstr "din"
+
+msgid "Part"
+msgstr "Parte"
+
+msgid "No time remaining !"
+msgstr "Fără timp rămas!"
+
+#. Translators: Message to inform the user that the recording is ready.
+msgid ""
+"The recording is ready ! It remains only to press spacebar for begin the "
+"recording. This same spacebar  will stop the recording !"
+msgstr ""
+"Înregistrarea este gata! Rămâne doar să apăsați spațiu pentru a reda "
+"înregistrarea. Din nou apăsat, spațiu va opri redarea!"
+
+#. Translators: Message to inform the user that a recording is in progress.
+msgid ""
+"A recording is in progress, please press spacebar for stop it and start a "
+"new one."
+msgstr ""
+"O înregistrare este în desfășurare, vă rugăm să apăsați spațiu pentru a o "
+"opri și a începe una nouă."
+
+#. Translators: Message to inform the user that the recording is not ready.
+msgid "The recording is not ready !"
+msgstr "Înregistrarea nu este gata!"
+
+#. Translators: Message to indicate the elapsed time.
+#. Translators: Message  to indicate the elapsed time.
+#. Translators: Message to indicate the elapsed time.
+msgid "Elapsed time: "
+msgstr "Timp scurs:"
+
+#. Translators: message presented in input mode.
+msgid ""
+"Gives the duration from the beginning of the file to the current position of "
+"the playback cursor. If pressed twice, gives the total duration."
+msgstr ""
+"Afișează durata de la începutul fișierului până la poziția curentă a "
+"cursorului de redare. Dacă este apăsat de două ori, afișează durata totală."
+
+#. Translators: Message to indicate the remaining time.
+msgid "Remaining time: "
+msgstr "Timp rămas"
+
+#. Translators: message presented in input mode.
+msgid ""
+"Gives the time remaining from the current position of the playback cursor to "
+"the end of the file."
+msgstr ""
+"Afișează timpul rămas de la poziția curentă a cursorului de redare până la "
+"sfârșitul fișierului."
+
+#. Translators: Message to indicate that the vu-meter is not available.
+#, python-format
+msgid ""
+"The vu-meter is not available. Please verify if a recording is in progress, "
+"and that the checkbox enable the margin button is checked in the options of "
+"%s."
+msgstr ""
+"vu-meter nu este disponibil. Vă rugăm verificați dacă o înregistrare este în "
+"desfășurare și dacă caseta de bifat „Activează butonul margin” este bifată "
+"în opțiunile %s."
+
+#. Translators: Message to confirm that the level of the vu-meter has been reset.
+msgid "The level of the vu-meter has been reset !"
+msgstr "Nivelul vu-meter-ului a fost resetat!"
+
+#. Translators: message presented in input mode.
+msgid ""
+"Used to determine the current level of the vu-meter, during recording, "
+"double pressure reset it."
+msgstr ""
+"Utilizat pentru a determina nivelul curent a vu-meter-ului, în timpul "
+"înregistrării. Dacă este apăsat de două ori, îl va reseta."
+
+#. Translators: Message to confirm the placement of the selection start marker.
+msgid "It's OK, your marker of the beginning of selection B has been posed."
+msgstr ""
+"Este OK, marcajul Dumneavoastră de la începutul selecției B a fost pus pe "
+"pauză."
+
+#. Translators: Message to confirm the placement of the selection end marker.
+msgid "It's OK, your marker of the end of selection N has been posed."
+msgstr ""
+"Este OK, marcajul Dumneavoastră de la sfârșitul selecției N, a fost pus pe "
+"pauză."
+
+#. Translators: message presented in input mode.
+msgid ""
+"Used to indicate the position of the marker of the beginning of selection B. "
+"Double pressure lets give you the duration of the selection."
+msgstr ""
+"Folosit pentru a indica poziția marcajului curent de la începutul selecției "
+"B. Apăsat de două, va afișa durata selecției."
+
+#. Translators: message presented in input mode.
+msgid ""
+"Used to indicate the position of the marker of the end of selection N. "
+"Double pressure gives recapitulatif positions B and N, and the duration of "
+"the selection."
+msgstr ""
+"Folosit pentru a indica poziția marcajului de la sfârșitul selecției N. "
+"Apăsată de două ori, afișează recapitularea pozițiilor B și N și durata "
+"selecției."
+
+#. Translators: message presented in input mode.
+msgid ""
+"Give the reference of the actual part and the total number of parts in the "
+"current file."
+msgstr ""
+"Afișează referința părții actuale și numărul total de părți în fișierul "
+"curent."
+
+#. Translators: message presented in input mode.
+msgid "Lets open the help of the current add-on."
+msgstr "Hai să Deschidem ghidul de utilizare al suplimentului curent."
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid "some commands to use mp3directcut with NVDA"
+msgstr "Niște comenzi pentru utilizarea mp3directcut cu NVDA"

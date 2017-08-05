@@ -396,56 +396,6 @@ class AppModule(appModuleHandler.AppModule):
 		sActual = sActual + ' ' + actualDurationPercentage()
 		sayMessage(sActual, space = True)
 
-	def script_left(self, gesture):
-		gesture.send()
-		role = api.getFocusObject().role
-		if isMenu() == True:
-			return 
-		if role == ROLE_EDITABLETEXT:
-			api.processPendingEvents()
-			scriptHandler.executeScript(globalCommands.commands.script_review_currentCharacter, None)
-			return
-		if isStarting():
-			sayMessage(themessages[3])
-			return
-		if stateOfRecording() > 4:
-			return 
-		if api.getFocusObject().role != ROLE_PANE:
-			return
-		if stateOfRecording() == 3:
-			sActual = actualDuration()
-			if not sActual:
-				sActual = themessages[1]
-			else:
-				sActual = sActual + ' ' + actualDurationPercentage()
-			if not isRead():
-				sayMessage(sActual)
-
-	def script_right(self, gesture):
-		gesture.send()
-		role = api.getFocusObject().role
-		if isMenu() == True:
-			return 
-		if role == ROLE_EDITABLETEXT:
-			api.processPendingEvents()
-			scriptHandler.executeScript(globalCommands.commands.script_review_currentCharacter, None)
-			return
-		if isStarting():
-			sayMessage(themessages[3])
-			return
-		if stateOfRecording() > 4:
-			return
-		if api.getFocusObject().role != ROLE_PANE:
-			return 
-		if stateOfRecording() == 3:
-			sActual = actualDuration()
-			if sActual == totalTime():
-				sActual = themessages[2]
-			else:
-				sActual = sActual + ' ' + actualDurationPercentage()
-			if not isRead():
-				sayMessage(sActual)
-
 	def script_nextSplittingPoint(self, gesture):
 		gesture.send()
 		role = api.getFocusObject().role
@@ -834,8 +784,6 @@ class AppModule(appModuleHandler.AppModule):
 		'kb:control+shift+d': 'elapsedTime',
 		'kb:control+shift+r': 'timeRemaining',
 		'kb:space': 'space',
-		'kb:leftArrow': 'left',
-		'kb:rightArrow': 'right',
 		'kb:control+leftArrow':'previousSplittingPoint',
 		'kb:control+rightArrow':'nextSplittingPoint',
 		'kb:shift+leftArrow':'moveSingleFrameBackwards',

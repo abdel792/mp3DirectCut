@@ -446,48 +446,6 @@ class AppModule(appModuleHandler.AppModule):
 			if not isRead():
 				sayMessage(sActual)
 
-	def script_moveSingleFrameForward(self, gesture):
-		gesture.send()
-		role = api.getFocusObject().role
-		if isMenu() == True:
-			return 
-		if isStarting():
-			sayMessage(themessages[3])
-			return
-		if stateOfRecording() > 4:
-			return
-		if api.getFocusObject().role != ROLE_PANE:
-			return 
-		if stateOfRecording() == 3:
-			sActual = actualDuration()
-			if sActual == totalTime():
-				sActual = themessages[2]
-			else:
-				sActual = sActual + ' ' + actualDurationPercentage()
-			if not isRead():
-				sayMessage(sActual)
-
-	def script_moveSingleFrameBackwards(self, gesture):
-		gesture.send()
-		role = api.getFocusObject().role
-		if isMenu() == True:
-			return 
-		if isStarting():
-			sayMessage(themessages[3])
-			return
-		if stateOfRecording() > 4:
-			return
-		if api.getFocusObject().role != ROLE_PANE:
-			return 
-		if stateOfRecording() == 3:
-			sActual = actualDuration()
-			if not sActual:
-				sActual = themessages[1]
-			else:
-				sActual = sActual + ' ' + actualDurationPercentage()
-			if not isRead():
-				sayMessage(sActual)
-
 	def script_pageUp(self, gesture):
 		gesture.send()
 		if isMenu() == True:
@@ -786,8 +744,6 @@ class AppModule(appModuleHandler.AppModule):
 		'kb:space': 'space',
 		'kb:control+leftArrow':'previousSplittingPoint',
 		'kb:control+rightArrow':'nextSplittingPoint',
-		'kb:shift+leftArrow':'moveSingleFrameBackwards',
-		'kb:shift+rightArrow':'moveSingleFrameForward',
 		'kb:pageUp': 'pageUp',
 		'kb:pageDown': 'pageDown',
 		'kb:upArrow': 'up',

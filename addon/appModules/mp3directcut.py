@@ -24,13 +24,13 @@ import speech
 
 hr, min, sec, hun, th = _('hours'), _('minutes'), _('seconds'), _('hundredths'), _('thousandths')
 programName = 'mp3DirectCut'
-
+oldSpeechMode = speech.speechMode
 _addonDir = os.path.join(os.path.dirname(__file__), '..').decode('mbcs')
 _curAddon = addonHandler.Addon(_addonDir)
 _addonSummary = _curAddon.manifest['summary']
 
 themessages = (
-# Translators: Message to inform that no selection has been realized.
+	# Translators: Message to inform that no selection has been realized.
 	_('No selection'),
 	# Translators: Message to inform the user that the playback cursor is at the top of the file.
 	_('Beginning of the file.'),
@@ -310,6 +310,21 @@ def timeRemaining():
 	return timeSplitter(result)
 
 class AppModule(appModuleHandler.AppModule):
+
+	def event_valueChange (self, obj, nextHandler):
+		if obj.role == ROLE_EDITABLETEXT and not obj.value.isspace () and "   " in obj.value:
+			if stateOfRecording() == 3:
+				sActual = actualDuration()
+				if sActual == totalTime():
+					sActual = themessages[2] + ' ' + sActual
+				elif not sActual:
+					sActual = themessages[1]
+				else:
+					sActual = sActual + ' ' + actualDurationPercentage()
+				if not isRead():
+					return sayMessage(sActual)
+		nextHandler
+
 	scriptCategory = _addonSummary
 
 	def script_checkRecording(self, gesture):
@@ -325,52 +340,6 @@ class AppModule(appModuleHandler.AppModule):
 		else:
 			# Translators: Message to inform the user that the recording is not ready.
 			sayMessage (_('The recording is not ready !'))
-
-	def script_begin(self, gesture):
-		gesture.send()
-		role = api.getFocusObject().role
-		if isMenu() == True:
-			return
-		if role == ROLE_EDITABLETEXT:
-			api.processPendingEvents()
-			scriptHandler.executeScript(globalCommands.commands.script_review_currentCharacter, None)
-			return
-		if actualDuration() in [1, 2]:
-			return
-		if role != ROLE_PANE and not 'total' in api.getFocusObject().displayText:
-			return
-		if stateOfRecording() < 3:
-			return
-		if isStarting():
-			sayMessage(themessages[3])
-			return
-		if not isRead():
-			sayMessage (themessages[1])
-
-	def script_end(self, gesture):
-		gesture.send()
-		role = api.getFocusObject().role
-		if isMenu() == True:
-			return
-		if role == ROLE_EDITABLETEXT:
-			api.processPendingEvents()
-			scriptHandler.executeScript(globalCommands.commands.script_review_currentCharacter, None)
-			return
-		if actualDuration() in [1, 2]:
-			return
-		if stateOfRecording() < 3:
-			return 
-		if role != ROLE_PANE and not 'total' in api.getFocusObject().displayText:
-			return
-		if isStarting():
-			sayMessage(themessages[3])
-			return
-		text = themessages[2]
-		total = totalTime()
-		if not isRead():
-			sayMessage(text)
-			time.sleep(0.3)
-			sayMessage(total)
 
 	def script_space(self, gesture):
 		gesture.send()
@@ -390,6 +359,9 @@ class AppModule(appModuleHandler.AppModule):
 		sActual = actualDuration()
 		if sActual in [1, 2]:
 			return
+		speech.speechMode = speech.speechMode_off
+		api.processPendingEvents()
+		speech.speechMode = oldSpeechMode
 		if not sActual:
 			sayMessage(themessages[1], space = True)
 			return
@@ -418,6 +390,10 @@ class AppModule(appModuleHandler.AppModule):
 				sActual = themessages[2]
 			else:
 				sActual = sActual + ' ' + actualDurationPercentage() if partOrSelection() == 2 else sActual + ' ' + part(flag=True)
+			speech.speechMode = speech.speechMode_off
+			api.processPendingEvents()
+			speech.speechMode = oldSpeechMode
+
 			if not isRead():
 				sayMessage(sActual)
 
@@ -443,46 +419,11 @@ class AppModule(appModuleHandler.AppModule):
 				sActual = themessages[1]
 			else:
 				sActual = sActual + ' ' + actualDurationPercentage() if partOrSelection() == 2 else sActual + ' ' + part(flag=True)
+			speech.speechMode = speech.speechMode_off
+			api.processPendingEvents()
+			speech.speechMode = oldSpeechMode
 			if not isRead():
 				sayMessage(sActual)
-
-	def script_pageUp(self, gesture):
-		gesture.send()
-		if isMenu() == True:
-			return 
-		if isStarting():
-			sayMessage(themessages[3])
-			return
-		if stateOfRecording() > 4:
-			return 
-		if api.getFocusObject().role != ROLE_PANE:
-			return
-		sActual = actualDuration()
-		if not sActual:
-			sActual = themessages[1]
-		else:
-			sActual = sActual + ' ' + actualDurationPercentage()
-		if not isRead():
-			sayMessage(sActual)
-
-	def script_pageDown(self, gesture):
-		gesture.send()
-		if isMenu() == True:
-			return 
-		if isStarting():
-			sayMessage(themessages[3])
-			return
-		if stateOfRecording() > 4:
-			return 
-		if api.getFocusObject().role != ROLE_PANE:
-			return
-		sActual = actualDuration()
-		if actualDurationPercentage() == '100%' and actualDuration() == totalTime():
-			sActual = themessages[2]
-		else:
-			sActual = sActual + ' ' + actualDurationPercentage()
-		if not isRead():
-			sayMessage(sActual)
 
 	def script_up(self, gesture):
 		gesture.send()
@@ -506,6 +447,9 @@ class AppModule(appModuleHandler.AppModule):
 			sayMessage(themessages[3])
 			return
 		if stateOfRecording() == 3:
+			speech.speechMode = speech.speechMode_off
+			api.processPendingEvents()
+			speech.speechMode = oldSpeechMode
 			if partOrSelection() == 2:
 				if not isRead():
 					sActual = actualDuration()
@@ -522,7 +466,7 @@ class AppModule(appModuleHandler.AppModule):
 						return
 					if sActual == totalTime():
 						sActual = '%s %s' % (sActual, themessages[2])
-					# Translators: Message to indicate the elapsed time.
+					# Translators: Message  to indicate the elapsed time.
 					sayMessage ('%s, %s %s %s' % (themessages[0], _('Elapsed time: '), sActual, actualDurationPercentage()))
 
 	def script_down(self, gesture):
@@ -547,6 +491,9 @@ class AppModule(appModuleHandler.AppModule):
 			sayMessage(themessages[3])
 			return
 		if stateOfRecording() == 3:
+			speech.speechMode = speech.speechMode_off
+			api.processPendingEvents()
+			speech.speechMode = oldSpeechMode
 			if partOrSelection() == 2:
 				if not isRead():
 					sActual = actualDuration()
@@ -737,15 +684,11 @@ class AppModule(appModuleHandler.AppModule):
 
 	__gestures = {
 		'kb:r': 'checkRecording',
-		'kb:home': 'begin',
-		'kb:end': 'end',
 		'kb:control+shift+d': 'elapsedTime',
 		'kb:control+shift+r': 'timeRemaining',
 		'kb:space': 'space',
 		'kb:control+leftArrow':'previousSplittingPoint',
 		'kb:control+rightArrow':'nextSplittingPoint',
-		'kb:pageUp': 'pageUp',
-		'kb:pageDown': 'pageDown',
 		'kb:upArrow': 'up',
 		'kb:downArrow': 'down',
 		'kb:control+shift+space': 'vuMeter',

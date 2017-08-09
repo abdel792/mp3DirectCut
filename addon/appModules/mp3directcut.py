@@ -610,18 +610,6 @@ class AppModule(appModuleHandler.AppModule):
 			# Translators: Message to confirm the placement of the selection end marker.
 			sayMessage(_("It's OK, your marker of the end of selection N has been posed."), marker = True)
 
-	def script_stop(self, gesture):
-		gesture.send()
-		if isMenu() == True:
-			return 
-		if stateOfRecording() > 4:
-			return
-		if api.getFocusObject().role != ROLE_PANE:
-			return 
-		sActual = actualDuration()
-		sActual = sActual + ' ' + actualDurationPercentage()
-		sayMessage(sActual)
-
 	def script_beginningOfSelection(self, gesture):
 		repeat = getLastScriptRepeatCount()
 		bSelection = beginSelection()
@@ -694,7 +682,6 @@ class AppModule(appModuleHandler.AppModule):
 		'kb:control+shift+space': 'vuMeter',
 		'kb:b': 'bPosition',
 		'kb:n': 'nPosition',
-		'kb:s': 'stop',
 		'kb:control+shift+b': 'beginningOfSelection',
 		'kb:control+shift+n': 'endOfSelection',
 		'kb:control+shift+p': 'actualPart',

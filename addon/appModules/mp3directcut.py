@@ -4,32 +4,31 @@
 
 import addonHandler
 addonHandler.initTranslation()
+
 import appModuleHandler
-import globalCommands
-import scriptHandler
-from oleacc import AccessibleObjectFromWindow, ROLE_SYSTEM_SCROLLBAR
-from controlTypes import ROLE_MENUITEM, ROLE_PANE, ROLE_EDITABLETEXT
+import windowUtils
+from oleacc import AccessibleObjectFromWindow
+from controlTypes import ROLE_PANE, ROLE_EDITABLETEXT, STATE_CHECKED
 from datetime import datetime
-import time
 import os
 import api
 import gui
 import wx
-import textInfos
-from win32con import GW_HWNDNEXT, GW_CHILD, GW_HWNDPREV
 from scriptHandler import getLastScriptRepeatCount
-from winUser import getWindow, getForegroundWindow, getControlID, setFocus, mouse_event, MOUSEEVENTF_LEFTDOWN, MOUSEEVENTF_LEFTUP
+from winUser import mouse_event, MOUSEEVENTF_LEFTDOWN, MOUSEEVENTF_LEFTUP
 from ui import message
 import speech
+from NVDAObjects.IAccessible import IAccessible
 
 hr, min, sec, hun, th = _('hours'), _('minutes'), _('seconds'), _('hundredths'), _('thousandths')
 programName = 'mp3DirectCut'
+
 oldSpeechMode = speech.speechMode
 _addonDir = os.path.join(os.path.dirname(__file__), '..').decode('mbcs')
 _curAddon = addonHandler.Addon(_addonDir)
 _addonSummary = _curAddon.manifest['summary']
 
-themessages = (
+announce = (
 	# Translators: Message to inform that no selection has been realized.
 	_('No selection'),
 	# Translators: Message to inform the user that the playback cursor is at the top of the file.
@@ -40,8 +39,6 @@ themessages = (
 	_('Not file is loaded. Please check that you are in a file, open one with Control O, or R to start recording.'),
 	# Translators: Message to inform the user that the current command is not available in a recording mode.
 	_('This command is not available in a recording mode, it is available only in a reading mode !'),
-	# Translators: Message to inform the user that he must close the menu to use this command.
-	_('Please close the opened menu to use this command.'),
 	# Translators: Message to indicate the position of the selection start marker.
 	_('The marker of the beginning of selection B is at'),
 	# Translators: Message to indicate the position of the selection end marker.
@@ -63,7 +60,6 @@ themessages = (
 	# Translators: Message to prompt the user to verify that it is not in recording mode.
 	_('Please chek that you are not in a recording mode.')
 )
-
 def timeSplitter(sTime):
 	hours = minutes = seconds = hundredths = thousandths = ''
 	if ':' in sTime:
@@ -98,18 +94,15 @@ def timeSplitter(sTime):
 	timeSplitter = hours + minutes + seconds + hundredths if not thousandths else hours + minutes + seconds + thousandths
 	return timeSplitter
 
-def stateOfRecording():
-	if partOrSelection() <3:
-		return 3
-	if partOrSelection() == 5:
-		return 1
-	if partOrSelection() == 3:
-		return 2
-	if partOrSelection() == 6:
-		return 7
-	if partOrSelection() == 8:
-		return 8
-	return 4
+def isRecordingReady():
+	fg = api.getForegroundObject ()
+	hTime = readOrRecord ()
+	hRecord = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
+	text = AccessibleObjectFromWindow(hTime, -4).accValue (0)
+	text1 = AccessibleObjectFromWindow(hRecord, -4).accValue (0)
+	if text1.isspace() and (text != '' and not text.isspace()):
+		return True
+	return False
 
 def sayMessage(msg, space = None, marker = None):
 	import config
@@ -123,89 +116,72 @@ def sayMessage(msg, space = None, marker = None):
 		if config.conf['mp3DCReport']['other']:
 			message(msg)
 
-def isRead():
-	sActual= actualDuration()
-	time.sleep(0.2)
-	if actualDuration() != sActual:
-		return True
-	return False
-
-def isMenu():
-	role = api.getFocusObject().role
-	if role == ROLE_MENUITEM:
+def isReading():
+	fg = api.getForegroundObject ()
+	readingBtn = fg.firstChild.firstChild.children[-1].children[-2]
+	if STATE_CHECKED in readingBtn.states:
 		return True
 	return False
 
 def readOrRecord():
-	hWnd = getWindow(getWindow(getForegroundWindow(), GW_CHILD), GW_CHILD)
+	hWnd = windowUtils.findDescendantWindow(api.getForegroundObject().windowHandle, controlID=161)
 	return hWnd
 
 def isStarting():
-	hWnd = readOrRecord()
-	if not hWnd: return False
-	o = AccessibleObjectFromWindow(hWnd, -4)
-	sStarting = o.accValue(0)
-	if sStarting == ' ':
-		return True
+	focus = api.getFocusObject ()
+	if focus.role == ROLE_PANE and focus.name == u'mp3DirectCut':
+		hWnd = readOrRecord()
+		if not hWnd: return False
+		o = AccessibleObjectFromWindow(hWnd, -4)
+		sStarting = o.accValue(0)
+		if sStarting == ' ':
+			return True
 	return False
 
 def vuMeterHandle():
-	focus = api.getFocusObject()
-	if focus.appModule.productVersion in ['2.2.1.0', '2.2.2.0']:
-		try:
-			hWnd = focus.firstChild.firstChild.firstChild.next.next.next.next.next.windowHandle
-		except:
-			hWnd = None
-		return hWnd
-	try:
-		hWnd = getWindow(getWindow(getForegroundWindow(), GW_CHILD), GW_CHILD)
-	except:
-		return None
-	for i in range(9):
-		hWnd = getWindow(hWnd, GW_HWNDNEXT)
+	hWnd = windowUtils.findDescendantWindow(api.getForegroundObject().windowHandle, controlID=138)
 	return hWnd
 
-def isRecording():
-	hWnd = vuMeterHandle()
-	if not hWnd: return False
-	o = AccessibleObjectFromWindow(hWnd, -4)
-	sLevel = o.accValue(0)
-	if sLevel != '' and partOrSelection() > 2:
-		return True
+def isRecording ():
+	fg = api.getForegroundObject ()
+	hWnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
+	if hWnd:
+		o = AccessibleObjectFromWindow(hWnd, -4)
+		text = o.accValue(0)
+		if not text.isspace() and not text == None:
+			text=text.split()
+			if text[1].startswith ("'"):
+				return True
 	return False
 
-def partOrSelection():
-	hWnd = readOrRecord()
+def checkPart():
+	fg = api.getForegroundObject ()
+	hWnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
 	if hWnd:
-		hWnd = getWindow(hWnd, GW_HWNDNEXT)
-		if hWnd and getControlID(hWnd) == 160:
-			o = AccessibleObjectFromWindow(hWnd, -4)
-			text = o.accValue(0)
-			if not text.isspace() and not text == None:
-				text = text.split('   ')
-				text=text[-1].split()
-				word=text[0]
-				if ':' in word:
-					return 2
-				else:
-					if text[1][:1] == '(':
-						return 1
-					if text[1][:1] == "'":
-						return 3
-					return 4
-			hWnd = getWindow(hWnd, GW_HWNDPREV)
-			if hWnd:
-				o = AccessibleObjectFromWindow(hWnd, -4)
-				text = o.accValue(0)
-				if text != '' and not text.isspace():
-					return 5
-				return 6
-		return 7
-	return 8
+		o = AccessibleObjectFromWindow(hWnd, -4)
+		text = o.accValue(0)
+		if not text.isspace() and not text == None:
+			text=text.split()
+			if text[1].startswith ('('):
+				return True
+	return False
+
+def checkSelection ():
+	fg = api.getForegroundObject ()
+	hWnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
+	if hWnd:
+		o = AccessibleObjectFromWindow(hWnd, -4)
+		text = o.accValue(0)
+		if not text.isspace() and not text == None:
+			text=text.split()
+			if text[0].endswith(':'):
+				return True
+	return False
 
 def part(flag=None):
-	if partOrSelection() == 1:
-		hWnd = getWindow(readOrRecord(), GW_HWNDNEXT)
+	if checkPart ():
+		fg = api.getForegroundObject ()
+		hWnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
 		o = AccessibleObjectFromWindow(hWnd, -4)
 		text = o.accValue(0)
 		text = text.split('(')
@@ -213,11 +189,12 @@ def part(flag=None):
 		text = text.split(')')
 		text = text[0]
 		text = text.replace('/', ' %s ' % _('of'))
-		return '%s %s' % (themessages[11], text) if not flag else '%s %s' % (_('Part'), text)
+		return '%s %s' % (announce[10], text) if not flag else '%s %s' % (_('Part'), text)
 
 def selectionDuration():
-	if partOrSelection() == 2:
-		hWnd = getWindow(readOrRecord(), GW_HWNDNEXT)
+	if checkSelection ():
+		fg = api.getForegroundObject ()
+		hWnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
 		o = AccessibleObjectFromWindow(hWnd, -4)
 		text = o.accValue(0)
 		selectionDuration = text.split('(')
@@ -226,8 +203,9 @@ def selectionDuration():
 		return timeSplitter(selectionDuration)
 
 def beginSelection():
-	if partOrSelection() == 2:
-		hWnd = getWindow(readOrRecord(), GW_HWNDNEXT)
+	if checkSelection():
+		fg = api.getForegroundObject ()
+		hWnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
 		o = AccessibleObjectFromWindow(hWnd, -4)
 		text = o.accValue(0)
 		beginSelection = text.split(' - ')
@@ -236,8 +214,9 @@ def beginSelection():
 		return timeSplitter(beginSelection)
 
 def endSelection():
-	if partOrSelection() == 2:
-		hWnd = getWindow(readOrRecord(), GW_HWNDNEXT)
+	if checkSelection ():
+		fg = api.getForegroundObject ()
+		hWnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
 		o = AccessibleObjectFromWindow(hWnd, -4)
 		text = o.accValue(0)
 		endSelection = text.split(' - ')
@@ -248,7 +227,6 @@ def endSelection():
 
 def actualDuration():
 	hWnd = readOrRecord()
-	if not hWnd: return 2
 	o = AccessibleObjectFromWindow(hWnd, -4)
 	sActual = o.accValue(0)
 	if sActual and not sActual.isspace() and '   ' in sActual:
@@ -256,8 +234,6 @@ def actualDuration():
 		sActual = sActual[2].split()
 		sActual=sActual[0]
 		sActual = timeSplitter(sActual)
-	else:
-		sActual = 1
 	return sActual
 
 def actualDurationPercentage():
@@ -271,7 +247,7 @@ def actualDurationPercentage():
 	return sActual
 
 def totalTime():
-	if stateOfRecording() == 3:
+	if checkPart () or checkSelection ():
 		hWnd = readOrRecord()
 		o = AccessibleObjectFromWindow(hWnd, -4)
 		sTime = o.accValue(0)
@@ -309,226 +285,133 @@ def timeRemaining():
 	result = result[:-4] if hORm == 2 else result[:-3]
 	return timeSplitter(result)
 
-class AppModule(appModuleHandler.AppModule):
-
-	def event_valueChange (self, obj, nextHandler):
-		if obj.role == ROLE_EDITABLETEXT and not obj.value.isspace () and "   " in obj.value:
-			if stateOfRecording() == 3:
-				sActual = actualDuration()
-				if sActual == totalTime():
-					sActual = themessages[2] + ' ' + sActual
-				elif not sActual:
-					sActual = themessages[1]
-				else:
-					sActual = sActual + ' ' + actualDurationPercentage()
-				if not isRead():
-					return sayMessage(sActual)
-		nextHandler
+class SoundManager (IAccessible):
 
 	scriptCategory = _addonSummary
 
-	def script_checkRecording(self, gesture):
-		gesture.send()
-		if api.getFocusObject().role != ROLE_PANE:
-			return 
-		if stateOfRecording() == 1:
-			# Translators: Message to inform the user that the recording is ready.
-			sayMessage (_('The recording is ready ! It remains only to press spacebar for begin the recording. This same spacebar  will stop the recording !'))
-		elif stateOfRecording() == 2:
-			# Translators: Message to inform the user that a recording is in progress.
-			sayMessage (_('A recording is in progress, please press spacebar for stop it and start a new one.'))
-		else:
-			# Translators: Message to inform the user that the recording is not ready.
-			sayMessage (_('The recording is not ready !'))
-
 	def script_space(self, gesture):
 		gesture.send()
-		if isMenu() == True:
-			return 
-		if api.getFocusObject().role != ROLE_PANE:
+		if isReading():
 			return
 		if isStarting():
-			sayMessage(themessages[3], space = True)
+			sayMessage (announce[3])
 			return
-		if isRecording ():
-			return
-		if stateOfRecording() > 5:
-			return
-		if isRead():
-			return 
 		sActual = actualDuration()
-		if sActual in [1, 2]:
-			return
 		speech.speechMode = speech.speechMode_off
 		api.processPendingEvents()
 		speech.speechMode = oldSpeechMode
 		if not sActual:
-			sayMessage(themessages[1], space = True)
+			sayMessage(announce[1], space = True)
 			return
 		sActual = sActual + ' ' + actualDurationPercentage()
 		sayMessage(sActual, space = True)
 
 	def script_nextSplittingPoint(self, gesture):
 		gesture.send()
-		role = api.getFocusObject().role
-		if isMenu() == True:
-			return 
-		if role == ROLE_EDITABLETEXT:
-			api.processPendingEvents()
-			scriptHandler.executeScript(globalCommands.commands.script_review_currentWord, None)
-			return
 		if isStarting():
-			sayMessage(themessages[3])
+			sayMessage (announce[3])
 			return
-		if stateOfRecording() > 4:
-			return
-		if api.getFocusObject().role != ROLE_PANE:
-			return 
-		if stateOfRecording() == 3:
+		if checkPart () or checkSelection ():
 			sActual = actualDuration()
 			if sActual == totalTime():
-				sActual = themessages[2]
+				sActual = announce[2] + ' ' + actualDuration () + ' ' + actualDurationPercentage() if checkSelection () else announce[2] + ' ' + actualDuration () + ' ' + part(flag=True)
 			else:
-				sActual = sActual + ' ' + actualDurationPercentage() if partOrSelection() == 2 else sActual + ' ' + part(flag=True)
+				sActual = sActual + ' ' + actualDurationPercentage() if checkSelection () else sActual + ' ' + part(flag=True)
 			speech.speechMode = speech.speechMode_off
 			api.processPendingEvents()
 			speech.speechMode = oldSpeechMode
-
-			if not isRead():
+			if not isReading():
 				sayMessage(sActual)
 
 	def script_previousSplittingPoint(self, gesture):
 		gesture.send()
-		role = api.getFocusObject().role
-		if isMenu() == True:
-			return 
-		if role == ROLE_EDITABLETEXT:
-			api.processPendingEvents()
-			scriptHandler.executeScript(globalCommands.commands.script_review_currentWord, None)
-			return
 		if isStarting():
-			sayMessage(themessages[3])
+			sayMessage (announce[3])
 			return
-		if stateOfRecording() > 4:
-			return
-		if api.getFocusObject().role != ROLE_PANE:
-			return 
-		if stateOfRecording() == 3:
+		if checkSelection () or checkPart ():
 			sActual = actualDuration()
 			if not sActual:
-				sActual = themessages[1]
+				sActual = announce[1] + ' ' + actualDurationPercentage() if checkSelection () else announce[1] + ' ' + part(flag=True)
 			else:
-				sActual = sActual + ' ' + actualDurationPercentage() if partOrSelection() == 2 else sActual + ' ' + part(flag=True)
+				sActual = sActual + ' ' + actualDurationPercentage() if checkSelection () else sActual + ' ' + part(flag=True)
 			speech.speechMode = speech.speechMode_off
 			api.processPendingEvents()
 			speech.speechMode = oldSpeechMode
-			if not isRead():
+			if not isReading():
 				sayMessage(sActual)
 
 	def script_up(self, gesture):
 		gesture.send()
-		role = api.getFocusObject().role
-		if isMenu() == True:
+		if isStarting():
+			sayMessage (announce[3])
 			return
 		if isRecording():
 			return
-		if stateOfRecording() in [4, 8] and role == ROLE_EDITABLETEXT:
-			scriptHandler.executeScript(globalCommands.commands.script_review_currentLine, None)
-			return
-		if stateOfRecording() == 8 and role != ROLE_EDITABLETEXT:
-			curObject = api.getFocusObject()
-			curObjectName = curObject.name
-			curObjectValue = curObject.value
-			curObjectRole = curObject.role
-			if curObjectName == u'-90 dB' or curObjectRole & ROLE_SYSTEM_SCROLLBAR:
-				sayMessage(curObjectValue)
-				return
-		if isStarting():
-			sayMessage(themessages[3])
-			return
-		if stateOfRecording() == 3:
+		if checkSelection () or checkPart ():
 			speech.speechMode = speech.speechMode_off
 			api.processPendingEvents()
 			speech.speechMode = oldSpeechMode
-			if partOrSelection() == 2:
-				if not isRead():
+			if checkSelection ():
+				if not isReading():
 					sActual = actualDuration()
 					if not sActual:
-						sActual = themessages[1]
+						sActual = announce[1]
 					if sActual == totalTime():
-						sActual = '%s %s' % (sActual, themessages[2])
-					sayMessage (themessages[6] + ' : ' + sActual + ' ' + actualDurationPercentage())
+						sActual = '%s %s' % (sActual, announce[2])
+					sayMessage (announce[5] + ' : ' + sActual + ' ' + actualDurationPercentage())
 			else:
-				if not isRead():
+				if not isReading():
 					sActual = actualDuration()
 					if not sActual:
-						sayMessage('%s, %s' % (themessages[0], themessages[1]))
+						sayMessage('%s, %s' % (announce[0], announce[1]))
 						return
 					if sActual == totalTime():
-						sActual = '%s %s' % (sActual, themessages[2])
+						sActual = '%s %s' % (sActual, announce[2])
 					# Translators: Message  to indicate the elapsed time.
-					sayMessage ('%s, %s %s %s' % (themessages[0], _('Elapsed time: '), sActual, actualDurationPercentage()))
+					sayMessage ('%s, %s %s %s' % (announce[0], _('Elapsed time: '), sActual, actualDurationPercentage()))
 
 	def script_down(self, gesture):
 		gesture.send()
-		role = api.getFocusObject().role
-		if isMenu() == True:
+		if isStarting():
+			sayMessage (announce[3])
 			return
 		if isRecording():
 			return
-		if stateOfRecording() in [4, 8] and role == ROLE_EDITABLETEXT:
-			scriptHandler.executeScript(globalCommands.commands.script_review_currentLine, None)
-			return
-		if stateOfRecording() == 8 and role != ROLE_EDITABLETEXT:
-			curObject = api.getFocusObject()
-			curObjectName = curObject.name
-			curObjectValue = curObject.value
-			curObjectRole = curObject.role
-			if curObjectName == u'-90 dB' or curObjectRole & ROLE_SYSTEM_SCROLLBAR:
-				sayMessage(curObjectValue)
-				return
-		if isStarting():
-			sayMessage(themessages[3])
-			return
-		if stateOfRecording() == 3:
+		if checkSelection () or checkPart ():
 			speech.speechMode = speech.speechMode_off
 			api.processPendingEvents()
 			speech.speechMode = oldSpeechMode
-			if partOrSelection() == 2:
-				if not isRead():
+			if checkSelection ():
+				if not isReading():
 					sActual = actualDuration()
 					if not sActual:
-						sActual = themessages[1]
+						sActual = announce[1]
 					if sActual == totalTime():
-						sActual = '%s %s' % (sActual, themessages[2])
-					sayMessage (themessages[7] + ' : ' + sActual + ' ' + actualDurationPercentage())
+						sActual = '%s %s' % (sActual, announce[2])
+					sayMessage (announce[6] + ' : ' + sActual + ' ' + actualDurationPercentage())
 			else:
-				if not isRead():
+				if not isReading():
 					sActual = actualDuration()
 					if not sActual:
-						sayMessage('%s, %s' % (themessages[0], themessages[1]))
+						sayMessage('%s, %s' % (announce[0], announce[1]))
 						return
 					if sActual == totalTime():
-						sActual = '%s %s' % (sActual, themessages[2])
+						sActual = '%s %s' % (sActual, announce[2])
 					# Translators: Message  to indicate the elapsed time.
-					sayMessage ('%s, %s %s %s' % (themessages[0], _('Elapsed time: '), sActual, actualDurationPercentage()))
+					sayMessage ('%s, %s %s %s' % (announce[0], _('Elapsed time: '), sActual, actualDurationPercentage()))
 
 	def script_elapsedTime(self, gesture):
-		if isMenu() == True:
-			message(themessages[5])
-			return 
-		if stateOfRecording() > 5:
-			if stateOfRecording() == 7:
-				message(themessages[3])
-				return
-		if isRecording():
-			message(themessages[4])
+		if isStarting():
+			sayMessage (announce[3])
 			return
-		if stateOfRecording() == 3:
+		if isRecording():
+			message(announce[4])
+			return
+		if checkSelection () or checkPart ():
 			if not actualDuration():
-				text = themessages[1]
+				text = announce[1]
 			elif actualDuration() == totalTime():
-				text = '%s %s %s %s' % (_('Elapsed time: '), actualDuration(), themessages[2], actualDurationPercentage())
+				text = '%s %s %s %s' % (_('Elapsed time: '), actualDuration(), announce[2], actualDurationPercentage())
 			else:
 				# Translators: Message to indicate the elapsed time.
 				text = '%s %s %s' % (_('Elapsed time: '), actualDuration(), actualDurationPercentage())
@@ -536,23 +419,19 @@ class AppModule(appModuleHandler.AppModule):
 			if repeat == 0:
 				message(text)
 			elif repeat == 1:
-				message('%s %s' % (themessages[9], totalTime()))
+				message('%s %s' % (announce[8], totalTime()))
 
 	# Translators: message presented in input mode.
 	script_elapsedTime.__doc__ = _('Gives the duration from the beginning of the file to the current position of the playback cursor. If pressed twice, gives the total duration.')
 
 	def script_timeRemaining(self, gesture):
-		if isMenu() == True:
-			message(themessages[5])
-			return 
-		if stateOfRecording() > 5:
-			if stateOfRecording() == 7:
-				message(themessages[3])
-				return
-		if isRecording():
-			message(themessages[4])
+		if isStarting():
+			sayMessage (announce[3])
 			return
-		if stateOfRecording() == 3:
+		if isRecording():
+			message(announce[4])
+			return
+		if checkSelection () or checkPart ():
 			# Translators: Message to indicate the remaining time.
 			message('%s %s' % (_('Remaining time: '), timeRemaining()))
 
@@ -561,7 +440,10 @@ class AppModule(appModuleHandler.AppModule):
 
 	def script_vuMeter(self, gesture):
 		gesture.send()
-		h=api.getFocusObject().windowHandle
+		if isStarting():
+			sayMessage (announce[3])
+			return
+		h=self.windowHandle
 		hWnd = vuMeterHandle()
 		if not hWnd:
 			# Translators: Message to indicate that the vu-meter is not available.
@@ -572,7 +454,7 @@ class AppModule(appModuleHandler.AppModule):
 		sLevel = o.accValue(0)
 		if sLevel:
 			if repeat == 0:
-				sayMessage(themessages[8] + ' : ' + sLevel)
+				sayMessage(announce[7] + ' : ' + sLevel)
 			elif repeat == 1:
 				setFocus(hWnd)
 				mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, None, None)
@@ -588,90 +470,82 @@ class AppModule(appModuleHandler.AppModule):
 
 	def script_bPosition(self, gesture):
 		gesture.send()
-		if isMenu() == True:
-			return 
-		if stateOfRecording() != 3 and stateOfRecording() != 4:
-			return 
-		if api.getFocusObject().role != ROLE_PANE:
-			return 
-		if not isRead():
+		if isStarting():
+			sayMessage (announce[3])
+			return
+		if not isReading():
 			# Translators: Message to confirm the placement of the selection start marker.
-			sayMessage(_("It's OK, your marker of the beginning of selection B has been posed."), marker = True)
+			sayMessage(_("Start selection marker set."), marker = True)
 
 	def script_nPosition(self, gesture):
 		gesture.send()
-		if isMenu() == True:
-			return 
-		if stateOfRecording() != 3 and stateOfRecording() != 4:
-			return 
-		if api.getFocusObject().role != ROLE_PANE:
-			return 
-		if not isRead():
+		if isStarting():
+			sayMessage (announce[3])
+			return
+		if not isReading():
 			# Translators: Message to confirm the placement of the selection end marker.
-			sayMessage(_("It's OK, your marker of the end of selection N has been posed."), marker = True)
+			sayMessage(_("End selection marker set."), marker = True)
 
 	def script_beginningOfSelection(self, gesture):
+		if isStarting():
+			sayMessage (announce[3])
+			return
 		repeat = getLastScriptRepeatCount()
 		bSelection = beginSelection()
 		if not bSelection:
-			bSelection = themessages[1]
-		if partOrSelection() == 2:
+			bSelection = announce[1]
+		if checkSelection ():
 			if repeat == 0:
-				sayMessage(themessages[6] + ' : ' + bSelection)
+				sayMessage(announce[5] + ' : ' + bSelection)
 			elif repeat == 1:
-				sayMessage(themessages[10] + ' : ' + selectionDuration())
+				sayMessage(announce[9] + ' : ' + selectionDuration())
 		else:
-			sayMessage(themessages[12])
+			sayMessage(announce[11])
 
 	# Translators: message presented in input mode.
 	script_beginningOfSelection.__doc__ = _('Used to indicate the position of the marker of the beginning of selection B. Double pressure lets give you the duration of the selection.')
 
 	def script_endOfSelection(self, gesture):
+		if isStarting():
+			sayMessage (announce[3])
+			return
 		repeat = getLastScriptRepeatCount()
 		bSelection = beginSelection()
 		eSelection = endSelection()
 		if not bSelection:
-			bSelection = themessages[1]
+			bSelection = announce[1]
 		if not eSelection:
-			eSelection = themessages[1]
+			eSelection = announce[1]
 		if partOrSelection() == 2:
 			if repeat == 0:
-				sayMessage(themessages[7] + ' : ' + eSelection)
+				sayMessage(announce[6] + ' : ' + eSelection)
 			elif repeat == 1:
-				sayMessage(themessages[6] + ' : ' + bSelection)
-				sayMessage(themessages[7] + ' : ' + eSelection)
-				sayMessage(themessages[10] + ' : ' + selectionDuration())
+				sayMessage(announce[5] + ' : ' + bSelection)
+				sayMessage(announce[6] + ' : ' + eSelection)
+				sayMessage(announce[9] + ' : ' + selectionDuration())
 		else:
-			sayMessage(themessages[12])
+			sayMessage(announce[11])
 
 	# Translators: message presented in input mode.
 	script_endOfSelection.__doc__ = _('Used to indicate the position of the marker of the end of selection N. Double pressure gives recapitulatif positions B and N, and the duration of the selection.')
 
 	def script_actualPart(self, gesture):
-		if partOrSelection() == 1:
+		if isStarting():
+			sayMessage (announce[3])
+			return
+		elif checkPart ():
 			message(part())
-		elif stateOfRecording() > 5:
-			if stateOfRecording() != 7:
-				return
-			message(themessages[3])
 		elif isRecording():
-			message(themessages[13] + ' ' + themessages[15])
-		elif partOrSelection() == 2:
-			message(themessages[13] + ' ' + themessages[14])
+			message(announce[12] + ' ' + announce[14])
+		elif checkSelection ():
+			message(announce[12] + ' ' + announce[13])
 		else:
-			message(themessages[13])
+			message(announce[12])
 
 	# Translators: message presented in input mode.
 	script_actualPart.__doc__ = _('Give the reference of the actual part and the total number of parts in the current file.')
 
-	def script_open_help(self, gesture):
-		os.startfile(addonHandler.getCodeAddon().getDocFilePath())
-
-	# Translators: message presented in input mode.
-	script_open_help.__doc__=_('Lets open the help of the current add-on.')
-
 	__gestures = {
-		'kb:r': 'checkRecording',
 		'kb:control+shift+d': 'elapsedTime',
 		'kb:control+shift+r': 'timeRemaining',
 		'kb:space': 'space',
@@ -684,6 +558,50 @@ class AppModule(appModuleHandler.AppModule):
 		'kb:n': 'nPosition',
 		'kb:control+shift+b': 'beginningOfSelection',
 		'kb:control+shift+n': 'endOfSelection',
-		'kb:control+shift+p': 'actualPart',
-		'kb:NVDA+H': 'open_help'
+		'kb:control+shift+p': 'actualPart'
 	}
+
+class AppModule (appModuleHandler.AppModule):
+
+	def event_valueChange (self, obj, nextHandler):
+		if obj.role == ROLE_EDITABLETEXT and obj.value and all (x in obj.value for x in ['   ', ':']):
+			if checkSelection () or checkPart ():
+				sActual = actualDuration()
+				if sActual == totalTime():
+					sActual = announce[2] + ' ' + sActual
+				elif not sActual:
+					sActual = announce[1]
+				else:
+					sActual = sActual + ' ' + actualDurationPercentage()
+				if not isReading():
+					return sayMessage(sActual)
+		nextHandler ()
+
+	def chooseNVDAObjectOverlayClasses (self, obj, clsList):
+		if obj.role == ROLE_PANE and obj.name and any (x in obj.name for x in [u'mp3DirectCut', '.mp3']):
+			clsList.insert(0, SoundManager)
+
+	def script_checkRecording(self, gesture):
+		gesture.send()
+		if api.getFocusObject().role != ROLE_PANE:
+			return 
+		if isRecordingReady ():
+			# Translators: Message to inform the user that the recording is ready.
+			sayMessage (_('The recording is ready ! It remains only to press spacebar for begin the recording. This same spacebar  will stop the recording !'))
+		elif isRecording ():
+			# Translators: Message to inform the user that a recording is in progress.
+			sayMessage (_('A recording is in progress, please press spacebar for stop it and start a new one.'))
+		else:
+			# Translators: Message to inform the user that the recording is not ready.
+			sayMessage (_('The recording is not ready !'))
+
+	def script_openHelp(self, gesture):
+		os.startfile(addonHandler.getCodeAddon().getDocFilePath())
+
+	# Translators: message presented in input mode.
+	script_openHelp.__doc__=_('Lets open the help of the current add-on.')
+
+	__gestures = {
+		'kb:r':'checkRecording',
+		'kb:nvda+h':'openHelp'
+		}

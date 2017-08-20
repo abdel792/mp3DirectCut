@@ -12,10 +12,8 @@ from controlTypes import ROLE_PANE, ROLE_EDITABLETEXT, STATE_CHECKED
 from datetime import datetime
 import os
 import api
-import gui
-import wx
 from scriptHandler import getLastScriptRepeatCount
-from winUser import mouse_event, MOUSEEVENTF_LEFTDOWN, MOUSEEVENTF_LEFTUP
+from winUser import setFocus, mouse_event, MOUSEEVENTF_LEFTDOWN, MOUSEEVENTF_LEFTUP
 from ui import message
 import speech
 from NVDAObjects.IAccessible import IAccessible
@@ -60,6 +58,7 @@ announce = (
 	# Translators: Message to prompt the user to verify that it is not in recording mode.
 	_('Please chek that you are not in a recording mode.')
 )
+
 def timeSplitter(sTime):
 	hours = minutes = seconds = hundredths = thousandths = ''
 	if ':' in sTime:
@@ -562,6 +561,8 @@ class SoundManager (IAccessible):
 	}
 
 class AppModule (appModuleHandler.AppModule):
+
+	scriptCategory = _addonSummary
 
 	def event_valueChange (self, obj, nextHandler):
 		if obj.role == ROLE_EDITABLETEXT and obj.value and all (x in obj.value for x in ['   ', ':']):

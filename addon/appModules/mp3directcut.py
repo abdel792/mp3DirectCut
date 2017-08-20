@@ -288,6 +288,18 @@ class SoundManager (IAccessible):
 
 	scriptCategory = _addonSummary
 
+	def script_checkRecording(self, gesture):
+		gesture.send()
+		if isRecordingReady ():
+			# Translators: Message to inform the user that the recording is ready.
+			sayMessage (_('The recording is ready ! It remains only to press spacebar for begin the recording. This same spacebar  will stop the recording !'))
+		elif isRecording ():
+			# Translators: Message to inform the user that a recording is in progress.
+			sayMessage (_('A recording is in progress, please press spacebar for stop it and start a new one.'))
+		else:
+			# Translators: Message to inform the user that the recording is not ready.
+			sayMessage (_('The recording is not ready !'))
+
 	def script_space(self, gesture):
 		gesture.send()
 		if isReading():
@@ -545,6 +557,7 @@ class SoundManager (IAccessible):
 	script_actualPart.__doc__ = _('Give the reference of the actual part and the total number of parts in the current file.')
 
 	__gestures = {
+		'kb:r':'checkRecording',
 		'kb:control+shift+d': 'elapsedTime',
 		'kb:control+shift+r': 'timeRemaining',
 		'kb:space': 'space',
@@ -582,20 +595,6 @@ class AppModule (appModuleHandler.AppModule):
 		if obj.role == ROLE_PANE and obj.name and any (x in obj.name for x in [u'mp3DirectCut', '.mp3']):
 			clsList.insert(0, SoundManager)
 
-	def script_checkRecording(self, gesture):
-		gesture.send()
-		if api.getFocusObject().role != ROLE_PANE:
-			return 
-		if isRecordingReady ():
-			# Translators: Message to inform the user that the recording is ready.
-			sayMessage (_('The recording is ready ! It remains only to press spacebar for begin the recording. This same spacebar  will stop the recording !'))
-		elif isRecording ():
-			# Translators: Message to inform the user that a recording is in progress.
-			sayMessage (_('A recording is in progress, please press spacebar for stop it and start a new one.'))
-		else:
-			# Translators: Message to inform the user that the recording is not ready.
-			sayMessage (_('The recording is not ready !'))
-
 	def script_openHelp(self, gesture):
 		os.startfile(addonHandler.getCodeAddon().getDocFilePath())
 
@@ -603,6 +602,5 @@ class AppModule (appModuleHandler.AppModule):
 	script_openHelp.__doc__=_('Lets open the help of the current add-on.')
 
 	__gestures = {
-		'kb:r':'checkRecording',
 		'kb:nvda+h':'openHelp'
-		}
+	}

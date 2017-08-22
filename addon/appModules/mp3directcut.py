@@ -7,21 +7,20 @@ addonHandler.initTranslation()
 
 import appModuleHandler
 import windowUtils
-from oleacc import AccessibleObjectFromWindow
-from controlTypes import ROLE_PANE, ROLE_EDITABLETEXT, STATE_CHECKED
+from oleacc import AccessibleObjectFromWindow, STATE_SYSTEM_INDETERMINATE, STATE_SYSTEM_MIXED
+from controlTypes import ROLE_PANE, ROLE_EDITABLETEXT
 from datetime import datetime
 import os
 import api
 from scriptHandler import getLastScriptRepeatCount
-from winUser import setFocus, mouse_event, MOUSEEVENTF_LEFTDOWN, MOUSEEVENTF_LEFTUP
+from winUser import OBJID_CLIENT, setFocus, mouse_event, MOUSEEVENTF_LEFTDOWN, MOUSEEVENTF_LEFTUP
 from ui import message
 import speech
-from NVDAObjects.IAccessible import IAccessible
-
-hr, min, sec, hun, th = _('hours'), _('minutes'), _('seconds'), _('hundredths'), _('thousandths')
-programName = 'mp3DirectCut'
+from NVDAObjects.IAccessible import IAccessible, getNVDAObjectFromEvent
 
 oldSpeechMode = speech.speechMode
+hr, min, sec, hun, th = _('hours'), _('minutes'), _('seconds'), _('hundredths'), _('thousandths')
+programName = 'mp3DirectCut'
 _addonDir = os.path.join(os.path.dirname(__file__), '..').decode('mbcs')
 _curAddon = addonHandler.Addon(_addonDir)
 _addonSummary = _curAddon.manifest['summary']
@@ -56,7 +55,21 @@ announce = (
 	# Translators: Message to prompt the user to verify that no selection has been made.
 	_('Please check that no selection has been made.'),
 	# Translators: Message to prompt the user to verify that it is not in recording mode.
-	_('Please chek that you are not in a recording mode.')
+	_('Please chek that you are not in a recording mode.'),
+		# Translators: Message to inform the user that the recording is ready.
+	_('The recording is ready ! It remains only to press spacebar for begin the recording. This same spacebar  will stop the recording !'),
+	# Translators: Message to inform the user that a recording is in progress.
+	_('A recording is in progress, please press spacebar for stop it and start a new one.'),
+	# Translators: Message to inform the user that the recording is not ready.
+	_('The recording is not ready !'),
+	# Translators: Message to indicate that the vu-meter is not available.
+	_('The vu-meter is not available. Please verify if a recording is in progress, and that the checkbox enable the margin button is checked in the options of %s.') % programName,
+	# Translators: Message to confirm that the level of the vu-meter has been reset.
+	_('The level of the vu-meter has been reset !'),
+	# Translators: Message to confirm the placement of the selection start marker.
+	_("Start selection marker set."),
+	# Translators: Message to confirm the placement of the selection end marker.
+	_("End selection marker set.")
 )
 
 def timeSplitter(sTime):
@@ -97,8 +110,8 @@ def isRecordingReady():
 	fg = api.getForegroundObject ()
 	hTime = readOrRecord ()
 	hRecord = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-	text = AccessibleObjectFromWindow(hTime, -4).accValue (0)
-	text1 = AccessibleObjectFromWindow(hRecord, -4).accValue (0)
+	text = AccessibleObjectFromWindow(hTime, OBJID_CLIENT).accValue (0)
+	text1 = AccessibleObjectFromWindow(hRecord, OBJID_CLIENT).accValue (0)
 	if text1.isspace() and (text != '' and not text.isspace()):
 		return True
 	return False
@@ -117,35 +130,36 @@ def sayMessage(msg, space = None, marker = None):
 
 def isReading():
 	fg = api.getForegroundObject ()
-	readingBtn = fg.firstChild.firstChild.children[-1].children[-2]
-	if STATE_CHECKED in readingBtn.states:
+	hwnd = fg.firstChild.firstChild.lastChild.windowHandle
+	readingBtn = getNVDAObjectFromEvent (hwnd, OBJID_CLIENT, 15)
+	if all(x in readingBtn.states for x in [STATE_SYSTEM_INDETERMINATE, STATE_SYSTEM_MIXED]):
 		return True
 	return False
 
 def readOrRecord():
-	hWnd = windowUtils.findDescendantWindow(api.getForegroundObject().windowHandle, controlID=161)
-	return hWnd
+	hwnd = windowUtils.findDescendantWindow(api.getForegroundObject().windowHandle, controlID=161)
+	return hwnd
 
 def isStarting():
 	focus = api.getFocusObject ()
 	if focus.role == ROLE_PANE and focus.name == u'mp3DirectCut':
-		hWnd = readOrRecord()
-		if not hWnd: return False
-		o = AccessibleObjectFromWindow(hWnd, -4)
+		hwnd = readOrRecord()
+		if not hwnd: return False
+		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
 		sStarting = o.accValue(0)
 		if sStarting == ' ':
 			return True
 	return False
 
 def vuMeterHandle():
-	hWnd = windowUtils.findDescendantWindow(api.getForegroundObject().windowHandle, controlID=138)
-	return hWnd
+	hwnd = windowUtils.findDescendantWindow(api.getForegroundObject().windowHandle, controlID=138)
+	return hwnd
 
 def isRecording ():
 	fg = api.getForegroundObject ()
-	hWnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-	if hWnd:
-		o = AccessibleObjectFromWindow(hWnd, -4)
+	hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
+	if hwnd:
+		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
 		text = o.accValue(0)
 		if not text.isspace() and not text == None:
 			text=text.split()
@@ -155,9 +169,9 @@ def isRecording ():
 
 def checkPart():
 	fg = api.getForegroundObject ()
-	hWnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-	if hWnd:
-		o = AccessibleObjectFromWindow(hWnd, -4)
+	hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
+	if hwnd:
+		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
 		text = o.accValue(0)
 		if not text.isspace() and not text == None:
 			text=text.split()
@@ -167,9 +181,9 @@ def checkPart():
 
 def checkSelection ():
 	fg = api.getForegroundObject ()
-	hWnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-	if hWnd:
-		o = AccessibleObjectFromWindow(hWnd, -4)
+	hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
+	if hwnd:
+		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
 		text = o.accValue(0)
 		if not text.isspace() and not text == None:
 			text=text.split()
@@ -180,8 +194,8 @@ def checkSelection ():
 def part(flag=None):
 	if checkPart ():
 		fg = api.getForegroundObject ()
-		hWnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-		o = AccessibleObjectFromWindow(hWnd, -4)
+		hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
+		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
 		text = o.accValue(0)
 		text = text.split('(')
 		text = text[1]
@@ -193,8 +207,8 @@ def part(flag=None):
 def selectionDuration():
 	if checkSelection ():
 		fg = api.getForegroundObject ()
-		hWnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-		o = AccessibleObjectFromWindow(hWnd, -4)
+		hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
+		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
 		text = o.accValue(0)
 		selectionDuration = text.split('(')
 		selectionDuration = selectionDuration[1]
@@ -204,8 +218,8 @@ def selectionDuration():
 def beginSelection():
 	if checkSelection():
 		fg = api.getForegroundObject ()
-		hWnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-		o = AccessibleObjectFromWindow(hWnd, -4)
+		hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
+		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
 		text = o.accValue(0)
 		beginSelection = text.split(' - ')
 		beginSelection = beginSelection[0]
@@ -215,8 +229,8 @@ def beginSelection():
 def endSelection():
 	if checkSelection ():
 		fg = api.getForegroundObject ()
-		hWnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-		o = AccessibleObjectFromWindow(hWnd, -4)
+		hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
+		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
 		text = o.accValue(0)
 		endSelection = text.split(' - ')
 		endSelection = endSelection[1]
@@ -225,8 +239,8 @@ def endSelection():
 		return timeSplitter(endSelection)
 
 def actualDuration():
-	hWnd = readOrRecord()
-	o = AccessibleObjectFromWindow(hWnd, -4)
+	hwnd = readOrRecord()
+	o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
 	sActual = o.accValue(0)
 	if sActual and not sActual.isspace() and '   ' in sActual:
 		sActual = sActual.split(': ')
@@ -236,8 +250,8 @@ def actualDuration():
 	return sActual
 
 def actualDurationPercentage():
-	hWnd = readOrRecord()
-	o = AccessibleObjectFromWindow(hWnd, -4)
+	hwnd = readOrRecord()
+	o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
 	sActual = o.accValue(0)
 	if sActual.index('('):
 		sActual = sActual.split('(')
@@ -247,8 +261,8 @@ def actualDurationPercentage():
 
 def totalTime():
 	if checkPart () or checkSelection ():
-		hWnd = readOrRecord()
-		o = AccessibleObjectFromWindow(hWnd, -4)
+		hwnd = readOrRecord()
+		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
 		sTime = o.accValue(0)
 		sTime = sTime.split(': ')
 		sTime = sTime[1]
@@ -256,8 +270,8 @@ def totalTime():
 		return sTotal
 
 def timeRemaining():
-	hWnd = readOrRecord()
-	o = AccessibleObjectFromWindow(hWnd, -4)
+	hwnd = readOrRecord()
+	o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
 	sActual = o.accValue(0)
 	if sActual != '' and not sActual.isspace() and '   ' in sActual:
 		sActual = sActual.split(': ')
@@ -281,7 +295,7 @@ def timeRemaining():
 	result = str(result).decode('utf-8')
 	result = result.replace(':', "'")
 	result = result.replace("'", ':', 1)
-	result = result[:-4] if hORm == 2 else result[:-3]
+	result = result[:OBJID_CLIENT] if hORm == 2 else result[:-3]
 	return timeSplitter(result)
 
 class SoundManager (IAccessible):
@@ -291,14 +305,11 @@ class SoundManager (IAccessible):
 	def script_checkRecording(self, gesture):
 		gesture.send()
 		if isRecordingReady ():
-			# Translators: Message to inform the user that the recording is ready.
-			sayMessage (_('The recording is ready ! It remains only to press spacebar for begin the recording. This same spacebar  will stop the recording !'))
+			sayMessage (announce[15])
 		elif isRecording ():
-			# Translators: Message to inform the user that a recording is in progress.
-			sayMessage (_('A recording is in progress, please press spacebar for stop it and start a new one.'))
+			sayMessage (announce[16])
 		else:
-			# Translators: Message to inform the user that the recording is not ready.
-			sayMessage (_('The recording is not ready !'))
+			sayMessage (announce[17])
 
 	def script_space(self, gesture):
 		gesture.send()
@@ -455,26 +466,24 @@ class SoundManager (IAccessible):
 			sayMessage (announce[3])
 			return
 		h=self.windowHandle
-		hWnd = vuMeterHandle()
-		if not hWnd:
-			# Translators: Message to indicate that the vu-meter is not available.
-			sayMessage(_('The vu-meter is not available. Please verify if a recording is in progress, and that the checkbox enable the margin button is checked in the options of %s.') % programName)
+		hwnd = vuMeterHandle()
+		if not hwnd:
+			sayMessage (announce[18])
 			return
 		repeat = getLastScriptRepeatCount()
-		o = AccessibleObjectFromWindow(hWnd, -4)
+		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
 		sLevel = o.accValue(0)
 		if sLevel:
 			if repeat == 0:
 				sayMessage(announce[7] + ' : ' + sLevel)
 			elif repeat == 1:
-				setFocus(hWnd)
+				setFocus(hwnd)
 				mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, None, None)
 				mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, None, None)
-				# Translators: Message to confirm that the level of the vu-meter has been reset.
-				sayMessage(_('The level of the vu-meter has been reset !'))
 				setFocus(h)
+				sayMessage (announce[19])
 		else:
-			sayMessage(_('The vu-meter is not available. Please verify if a recording is in progress, and that the checkbox enable the margin button is checked in the options of %s.') % programName)
+			sayMessage(announce[18])
 
 	# Translators: message presented in input mode.
 	script_vuMeter.__doc__ = _('Used to determine the current level of the vu-meter, during recording, double pressure reset it.')
@@ -485,8 +494,7 @@ class SoundManager (IAccessible):
 			sayMessage (announce[3])
 			return
 		if not isReading():
-			# Translators: Message to confirm the placement of the selection start marker.
-			sayMessage(_("Start selection marker set."), marker = True)
+			sayMessage (announce[20], marker = True)
 
 	def script_nPosition(self, gesture):
 		gesture.send()
@@ -494,8 +502,7 @@ class SoundManager (IAccessible):
 			sayMessage (announce[3])
 			return
 		if not isReading():
-			# Translators: Message to confirm the placement of the selection end marker.
-			sayMessage(_("End selection marker set."), marker = True)
+			sayMessage (announce[21], marker = True)
 
 	def script_beginningOfSelection(self, gesture):
 		if isStarting():

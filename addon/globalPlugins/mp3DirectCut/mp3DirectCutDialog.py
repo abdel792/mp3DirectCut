@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-#mp3DirectCutDialog
+# mp3DirectCutDialog.py
 
 import addonHandler
 addonHandler.initTranslation()
@@ -10,8 +10,10 @@ import wx
 import os
 
 class Mp3DirectCutDialog(SettingsDialog):
+
 	# Translators: The title of the add-on configuration dialog box.
 	title = _("Configuration of the addon {0}").format("mp3DirectCut")
+
 	def makeSettings(self, settingsSizer):
 		dialogSizer=wx.BoxSizer(wx.VERTICAL)
 		reportSpaceID = wx.NewId()

@@ -7,13 +7,13 @@ addonHandler.initTranslation()
 
 import appModuleHandler
 import windowUtils
-from oleacc import AccessibleObjectFromWindow, STATE_SYSTEM_INDETERMINATE, STATE_SYSTEM_MIXED
+from oleacc import STATE_SYSTEM_INDETERMINATE, STATE_SYSTEM_MIXED
 from controlTypes import ROLE_PANE, ROLE_EDITABLETEXT
 from datetime import datetime
 import os
 import api
 from scriptHandler import getLastScriptRepeatCount
-from winUser import OBJID_CLIENT, setFocus, mouse_event, MOUSEEVENTF_LEFTDOWN, MOUSEEVENTF_LEFTUP
+from winUser import CHILDID_SELF, OBJID_CLIENT, setFocus, mouse_event, MOUSEEVENTF_LEFTDOWN, MOUSEEVENTF_LEFTUP
 from ui import message
 import speech
 from NVDAObjects.IAccessible import IAccessible, getNVDAObjectFromEvent
@@ -110,9 +110,9 @@ def isRecordingReady():
 	fg = api.getForegroundObject ()
 	hTime = readOrRecord ()
 	hRecord = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-	text = AccessibleObjectFromWindow(hTime, OBJID_CLIENT).accValue (0)
-	text1 = AccessibleObjectFromWindow(hRecord, OBJID_CLIENT).accValue (0)
-	if text1.isspace() and (text != '' and not text.isspace()):
+	text = getNVDAObjectFromEvent(hTime, OBJID_CLIENT, CHILDID_SELF).value
+	text1 = getNVDAObjectFromEvent(hRecord, OBJID_CLIENT, CHILDID_SELF).value
+	if not text1 and (text and not text.isspace()):
 		return True
 	return False
 
@@ -137,66 +137,64 @@ def isReading():
 	return False
 
 def readOrRecord():
-	hwnd = windowUtils.findDescendantWindow(api.getForegroundObject().windowHandle, controlID=161)
+	fg = api.getForegroundObject ()
+	hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=161)
 	return hwnd
 
 def isStarting():
 	focus = api.getFocusObject ()
 	if focus.role == ROLE_PANE and focus.name == u'mp3DirectCut':
 		hwnd = readOrRecord()
-		if not hwnd: return False
-		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
-		sStarting = o.accValue(0)
-		if sStarting == ' ':
+		o = getNVDAObjectFromEvent(hwnd, OBJID_CLIENT, CHILDID_SELF)
+		sStarting = o.value
+		if not sStarting:
 			return True
 	return False
 
 def vuMeterHandle():
-	hwnd = windowUtils.findDescendantWindow(api.getForegroundObject().windowHandle, controlID=138)
+	fg = api.getForegroundObject ()
+	hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=138)
 	return hwnd
 
 def isRecording ():
 	fg = api.getForegroundObject ()
 	hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-	if hwnd:
-		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
-		text = o.accValue(0)
-		if not text.isspace() and not text == None:
-			text=text.split()
-			if text[1].startswith ("'"):
-				return True
+	o = getNVDAObjectFromEvent(hwnd, OBJID_CLIENT, CHILDID_SELF)
+	text = o.value
+	if text and not text.isspace():
+		text=text.split()
+		if text[1].startswith ("'"):
+			return True
 	return False
 
 def checkPart():
 	fg = api.getForegroundObject ()
 	hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-	if hwnd:
-		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
-		text = o.accValue(0)
-		if not text.isspace() and not text == None:
-			text=text.split()
-			if text[1].startswith ('('):
-				return True
+	o = getNVDAObjectFromEvent(hwnd, OBJID_CLIENT, CHILDID_SELF)
+	text = o.value
+	if text and not text.isspace():
+		text=text.split()
+		if text[1].startswith ('('):
+			return True
 	return False
 
 def checkSelection ():
 	fg = api.getForegroundObject ()
 	hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-	if hwnd:
-		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
-		text = o.accValue(0)
-		if not text.isspace() and not text == None:
-			text=text.split()
-			if text[0].endswith(':'):
-				return True
+	o = getNVDAObjectFromEvent(hwnd, OBJID_CLIENT, CHILDID_SELF)
+	text = o.value
+	if text and not text.isspace():
+		text=text.split()
+		if text[0].endswith(':'):
+			return True
 	return False
 
 def part(flag=None):
 	if checkPart ():
 		fg = api.getForegroundObject ()
 		hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
-		text = o.accValue(0)
+		o = getNVDAObjectFromEvent(hwnd, OBJID_CLIENT, CHILDID_SELF)
+		text = o.value
 		text = text.split('(')
 		text = text[1]
 		text = text.split(')')
@@ -208,8 +206,8 @@ def selectionDuration():
 	if checkSelection ():
 		fg = api.getForegroundObject ()
 		hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
-		text = o.accValue(0)
+		o = getNVDAObjectFromEvent(hwnd, OBJID_CLIENT, CHILDID_SELF)
+		text = o.value
 		selectionDuration = text.split('(')
 		selectionDuration = selectionDuration[1]
 		selectionDuration = selectionDuration[:-1]
@@ -219,8 +217,8 @@ def beginSelection():
 	if checkSelection():
 		fg = api.getForegroundObject ()
 		hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
-		text = o.accValue(0)
+		o = getNVDAObjectFromEvent(hwnd, OBJID_CLIENT, CHILDID_SELF)
+		text = o.value
 		beginSelection = text.split(' - ')
 		beginSelection = beginSelection[0]
 		beginSelection = beginSelection.split()[1]
@@ -230,8 +228,8 @@ def endSelection():
 	if checkSelection ():
 		fg = api.getForegroundObject ()
 		hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
-		text = o.accValue(0)
+		o = getNVDAObjectFromEvent(hwnd, OBJID_CLIENT, CHILDID_SELF)
+		text = o.value
 		endSelection = text.split(' - ')
 		endSelection = endSelection[1]
 		endSelection = endSelection.split(' ')
@@ -240,8 +238,8 @@ def endSelection():
 
 def actualDuration():
 	hwnd = readOrRecord()
-	o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
-	sActual = o.accValue(0)
+	o = getNVDAObjectFromEvent(hwnd, OBJID_CLIENT, CHILDID_SELF)
+	sActual = o.value
 	if sActual and not sActual.isspace() and '   ' in sActual:
 		sActual = sActual.split(': ')
 		sActual = sActual[2].split()
@@ -251,8 +249,8 @@ def actualDuration():
 
 def actualDurationPercentage():
 	hwnd = readOrRecord()
-	o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
-	sActual = o.accValue(0)
+	o = getNVDAObjectFromEvent(hwnd, OBJID_CLIENT, CHILDID_SELF)
+	sActual = o.value
 	if sActual.index('('):
 		sActual = sActual.split('(')
 		sActual = sActual[1]
@@ -262,8 +260,8 @@ def actualDurationPercentage():
 def totalTime():
 	if checkPart () or checkSelection ():
 		hwnd = readOrRecord()
-		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
-		sTime = o.accValue(0)
+		o = getNVDAObjectFromEvent(hwnd, OBJID_CLIENT, CHILDID_SELF)
+		sTime = o.value
 		sTime = sTime.split(': ')
 		sTime = sTime[1]
 		sTotal = timeSplitter(sTime)
@@ -271,15 +269,15 @@ def totalTime():
 
 def timeRemaining():
 	hwnd = readOrRecord()
-	o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
-	sActual = o.accValue(0)
+	o = getNVDAObjectFromEvent(hwnd, OBJID_CLIENT, CHILDID_SELF)
+	sActual = o.value
 	if sActual != '' and not sActual.isspace() and '   ' in sActual:
 		sActual = sActual.split(': ')
 		sActual = sActual[2].split()
 		sActual=sActual[0]
 	else:
 		sActual = 1
-	sTotal = o.accValue(0)
+	sTotal = o.value
 	sTotal = sTotal.split(': ')
 	sTotal = sTotal[1]
 	sTotal = sTotal.split('   ')[0]
@@ -467,12 +465,9 @@ class SoundManager (IAccessible):
 			return
 		h=self.windowHandle
 		hwnd = vuMeterHandle()
-		if not hwnd:
-			sayMessage (announce[18])
-			return
 		repeat = getLastScriptRepeatCount()
-		o = AccessibleObjectFromWindow(hwnd, OBJID_CLIENT)
-		sLevel = o.accValue(0)
+		o = getNVDAObjectFromEvent(hwnd, OBJID_CLIENT, CHILDID_SELF)
+		sLevel = o.value
 		if sLevel:
 			if repeat == 0:
 				sayMessage(announce[7] + ' : ' + sLevel)
@@ -480,8 +475,8 @@ class SoundManager (IAccessible):
 				setFocus(hwnd)
 				mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, None, None)
 				mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, None, None)
-				setFocus(h)
 				sayMessage (announce[19])
+				setFocus(h)
 		else:
 			sayMessage(announce[18])
 

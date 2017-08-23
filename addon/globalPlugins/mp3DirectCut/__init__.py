@@ -21,7 +21,9 @@ confSpec = {
 config.conf.spec['mp3DCReport'] = confSpec
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
+
 	scriptCategory = _addonSummary
+
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
 		self.createSubMenu()
@@ -45,4 +47,5 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_activateMP3DirectCutConfigurationDialog(self, gesture):
 		wx.CallAfter(self.onMp3DirectCutDialog, None)
 
+	# Translators: message presented in input mode.
 	script_activateMP3DirectCutConfigurationDialog.__doc__ = _("Allows you display the configuration dialog of {0} addon.").format("mp3DirectCut")

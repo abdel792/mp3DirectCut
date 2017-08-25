@@ -22,6 +22,7 @@ msgstr ""
 msgid "{0} addon configuration"
 msgstr "Настройки на добавката {0}..."
 
+#. Translators: message presented in input mode.
 #, python-brace-format
 msgid "Allows you display the configuration dialog of {0} addon."
 msgstr ""
@@ -87,10 +88,6 @@ msgid ""
 msgstr ""
 "Тази команда не се поддържа в режим на записване, а само при възпроизвеждане."
 
-#. Translators: Message to inform the user that he must close the menu to use this command.
-msgid "Please close the opened menu to use this command."
-msgstr "Моля, затворете отвореното меню, за да използвате тази команда."
-
 #. Translators: Message to indicate the position of the selection start marker.
 msgid "The marker of the beginning of selection B is at"
 msgstr "Маркерът за начало на селекцията (B) е на позиция: "
@@ -131,15 +128,6 @@ msgstr "Моля, уверете се, че няма направена селе
 msgid "Please chek that you are not in a recording mode."
 msgstr "Моля, уверете се, че не сте в режим на записване."
 
-msgid "of"
-msgstr "от"
-
-msgid "Part"
-msgstr "Част"
-
-msgid "No time remaining !"
-msgstr "Няма оставащо време."
-
 #. Translators: Message to inform the user that the recording is ready.
 msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
@@ -161,7 +149,37 @@ msgstr ""
 msgid "The recording is not ready !"
 msgstr "Няма готовност за записване."
 
-#. Translators: Message to indicate the elapsed time.
+#. Translators: Message to indicate that the vu-meter is not available.
+#, python-format
+msgid ""
+"The vu-meter is not available. Please verify if a recording is in progress, "
+"and that the checkbox enable the margin button is checked in the options of "
+"%s."
+msgstr ""
+"VU-meter не е наличен. Моля, уверете се че записването е в ход и че опцията "
+"\"Enable Margin button (VU)\" в менюто \"Настройки\" на %s е включена."
+
+#. Translators: Message to confirm that the level of the vu-meter has been reset.
+msgid "The level of the vu-meter has been reset !"
+msgstr "Нивото на VU-meter беше занулено."
+
+#. Translators: Message to confirm the placement of the selection start marker.
+msgid "Start selection marker set."
+msgstr ""
+
+#. Translators: Message to confirm the placement of the selection end marker.
+msgid "End selection marker set."
+msgstr ""
+
+msgid "of"
+msgstr "от"
+
+msgid "Part"
+msgstr "Част"
+
+msgid "No time remaining !"
+msgstr "Няма оставащо време."
+
 #. Translators: Message  to indicate the elapsed time.
 #. Translators: Message to indicate the elapsed time.
 msgid "Elapsed time: "
@@ -187,20 +205,6 @@ msgstr ""
 "Съобщава оставащото време от текущата позиция на курсора за възпроизвеждане "
 "до края на файла."
 
-#. Translators: Message to indicate that the vu-meter is not available.
-#, python-format
-msgid ""
-"The vu-meter is not available. Please verify if a recording is in progress, "
-"and that the checkbox enable the margin button is checked in the options of "
-"%s."
-msgstr ""
-"VU-meter не е наличен. Моля, уверете се че записването е в ход и че опцията "
-"\"Enable Margin button (VU)\" в менюто \"Настройки\" на %s е включена."
-
-#. Translators: Message to confirm that the level of the vu-meter has been reset.
-msgid "The level of the vu-meter has been reset !"
-msgstr "Нивото на VU-meter беше занулено."
-
 #. Translators: message presented in input mode.
 msgid ""
 "Used to determine the current level of the vu-meter, during recording, "
@@ -208,14 +212,6 @@ msgid ""
 msgstr ""
 "Съобщава текущото ниво на VU-meter при записване. Двукратно натискане го "
 "занулява"
-
-#. Translators: Message to confirm the placement of the selection start marker.
-msgid "It's OK, your marker of the beginning of selection B has been posed."
-msgstr "Добре, вашият маркер за начало на селекцията (B) беше поставен."
-
-#. Translators: Message to confirm the placement of the selection end marker.
-msgid "It's OK, your marker of the end of selection N has been posed."
-msgstr "Добре, вашият маркер за край на селекцията (N) беше поставен."
 
 #. Translators: message presented in input mode.
 msgid ""
@@ -248,3 +244,12 @@ msgstr "Отваря помощната документация за добав
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "some commands to use mp3directcut with NVDA"
 msgstr "Допълнителни команди за използване на mp3DirectCut с NVDA"
+
+#~ msgid "Please close the opened menu to use this command."
+#~ msgstr "Моля, затворете отвореното меню, за да използвате тази команда."
+
+#~ msgid "It's OK, your marker of the beginning of selection B has been posed."
+#~ msgstr "Добре, вашият маркер за начало на селекцията (B) беше поставен."
+
+#~ msgid "It's OK, your marker of the end of selection N has been posed."
+#~ msgstr "Добре, вашият маркер за край на селекцията (N) беше поставен."

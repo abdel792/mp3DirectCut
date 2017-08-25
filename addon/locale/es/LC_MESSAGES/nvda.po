@@ -9,12 +9,12 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
 "PO-Revision-Date: 2017-07-09 18:37+0100\n"
+"Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
+"Language-Team: NVDA add-ons Spanish translation team <remyruiz@gmail.com>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
-"Language-Team: NVDA add-ons Spanish translation team <remyruiz@gmail.com>\n"
 "X-Generator: Poedit 1.6.11\n"
 
 #. Translators: name of the option in the menu.
@@ -22,6 +22,7 @@ msgstr ""
 msgid "{0} addon configuration"
 msgstr "Configuración del complemento {0}"
 
+#. Translators: message presented in input mode.
 #, python-brace-format
 msgid "Allows you display the configuration dialog of {0} addon."
 msgstr "Permite visualizar el cuadro de diálogo de configuración de {0}"
@@ -86,10 +87,6 @@ msgstr ""
 "Esta orden no está disponible en modo de grabación, está disponible sólo en "
 "modo de reproducción."
 
-#. Translators: Message to inform the user that he must close the menu to use this command.
-msgid "Please close the opened menu to use this command."
-msgstr "Por favor, cierra el menú abierto para utilizar esta orden."
-
 #. Translators: Message to indicate the position of the selection start marker.
 msgid "The marker of the beginning of selection B is at"
 msgstr "El Tag de inicio de selección B está en"
@@ -130,15 +127,6 @@ msgstr "Compruebe que no se ha realizado ninguna selección."
 msgid "Please chek that you are not in a recording mode."
 msgstr "Compruebe que no está en modo de grabación."
 
-msgid "of"
-msgstr "de"
-
-msgid "Part"
-msgstr "Sector"
-
-msgid "No time remaining !"
-msgstr "¡No hay tiempo restante!"
-
 #. Translators: Message to inform the user that the recording is ready.
 msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
@@ -159,7 +147,38 @@ msgstr ""
 msgid "The recording is not ready !"
 msgstr "¡ La grabación no está lista!"
 
-#. Translators: Message to indicate the elapsed time.
+#. Translators: Message to indicate that the vu-meter is not available.
+#, python-format
+msgid ""
+"The vu-meter is not available. Please verify if a recording is in progress, "
+"and that the checkbox enable the margin button is checked in the options of "
+"%s."
+msgstr ""
+"El vúmetro no está disponible. Compruebe que una grabación está bien en "
+"curso, y mirar que la casilla de verificación Habilitar botón Margen está  "
+"bien marcada en las opciones de %s."
+
+#. Translators: Message to confirm that the level of the vu-meter has been reset.
+msgid "The level of the vu-meter has been reset !"
+msgstr "¡El nivel del vúmetro se ha reiniciado!"
+
+#. Translators: Message to confirm the placement of the selection start marker.
+msgid "Start selection marker set."
+msgstr ""
+
+#. Translators: Message to confirm the placement of the selection end marker.
+msgid "End selection marker set."
+msgstr ""
+
+msgid "of"
+msgstr "de"
+
+msgid "Part"
+msgstr "Sector"
+
+msgid "No time remaining !"
+msgstr "¡No hay tiempo restante!"
+
 #. Translators: Message  to indicate the elapsed time.
 #. Translators: Message to indicate the elapsed time.
 msgid "Elapsed time: "
@@ -185,21 +204,6 @@ msgstr ""
 "Da el tiempo restante desde la posición actual del cursor de reproducción "
 "hasta el final del archivo."
 
-#. Translators: Message to indicate that the vu-meter is not available.
-#, python-format
-msgid ""
-"The vu-meter is not available. Please verify if a recording is in progress, "
-"and that the checkbox enable the margin button is checked in the options of "
-"%s."
-msgstr ""
-"El vúmetro no está disponible. Compruebe que una grabación está bien en "
-"curso, y mirar que la casilla de verificación Habilitar botón Margen está  "
-"bien marcada en las opciones de %s."
-
-#. Translators: Message to confirm that the level of the vu-meter has been reset.
-msgid "The level of the vu-meter has been reset !"
-msgstr "¡El nivel del vúmetro se ha reiniciado!"
-
 #. Translators: message presented in input mode.
 msgid ""
 "Used to determine the current level of the vu-meter, during recording, "
@@ -207,14 +211,6 @@ msgid ""
 msgstr ""
 "Permite indicar el valor actual del nivel del vúmetro. Pulsando dos veces "
 "permite reiniciar este nivel."
-
-#. Translators: Message to confirm the placement of the selection start marker.
-msgid "It's OK, your marker of the beginning of selection B has been posed."
-msgstr "Está bien, , tu Tag de inicio de selección B ha sido bien pausado."
-
-#. Translators: Message to confirm the placement of the selection end marker.
-msgid "It's OK, your marker of the end of selection N has been posed."
-msgstr "Está bien, , tu Tag de final de selección N ha sido bien pausado."
 
 #. Translators: message presented in input mode.
 msgid ""
@@ -249,3 +245,12 @@ msgstr "Permite abrir la ayuda del actual complemento."
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "some commands to use mp3directcut with NVDA"
 msgstr "Algunas órdenes para utilizar mp3DirectCut con NVDA"
+
+#~ msgid "Please close the opened menu to use this command."
+#~ msgstr "Por favor, cierra el menú abierto para utilizar esta orden."
+
+#~ msgid "It's OK, your marker of the beginning of selection B has been posed."
+#~ msgstr "Está bien, , tu Tag de inicio de selección B ha sido bien pausado."
+
+#~ msgid "It's OK, your marker of the end of selection N has been posed."
+#~ msgstr "Está bien, , tu Tag de final de selección N ha sido bien pausado."

@@ -22,6 +22,7 @@ msgstr ""
 msgid "{0} addon configuration"
 msgstr "{0} Podešavanja dodatka"
 
+#. Translators: message presented in input mode.
 #, python-brace-format
 msgid "Allows you display the configuration dialog of {0} addon."
 msgstr "Prikazuje dijalog podešavanja {0} dodatka."
@@ -86,10 +87,6 @@ msgstr ""
 "Ova prečica nije dostupna u režimu snimanja, dostupna je samo u režimu "
 "čitanja."
 
-#. Translators: Message to inform the user that he must close the menu to use this command.
-msgid "Please close the opened menu to use this command."
-msgstr "Molimo zatvorite otvoren meni za korišćenje ove komande"
-
 #. Translators: Message to indicate the position of the selection start marker.
 msgid "The marker of the beginning of selection B is at"
 msgstr "Marker početka izbora slovom b je na poziciji"
@@ -130,15 +127,6 @@ msgstr "Molimo proverite da izbor ne postoji."
 msgid "Please chek that you are not in a recording mode."
 msgstr "Molimo proverite da niste u režimu snimanja."
 
-msgid "of"
-msgstr "Od"
-
-msgid "Part"
-msgstr "Deo"
-
-msgid "No time remaining !"
-msgstr "Nema preostalog vremena!"
-
 #. Translators: Message to inform the user that the recording is ready.
 msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
@@ -159,7 +147,37 @@ msgstr ""
 msgid "The recording is not ready !"
 msgstr "Snimanje nije spremno!"
 
-#. Translators: Message to indicate the elapsed time.
+#. Translators: Message to indicate that the vu-meter is not available.
+#, python-format
+msgid ""
+"The vu-meter is not available. Please verify if a recording is in progress, "
+"and that the checkbox enable the margin button is checked in the options of "
+"%s."
+msgstr ""
+"vu-metar nije dostupan. Molimo proverite da je snimanje u toku, i da je "
+"opcija omogući dugme margine omogućena u podešavanjima %s."
+
+#. Translators: Message to confirm that the level of the vu-meter has been reset.
+msgid "The level of the vu-meter has been reset !"
+msgstr "Nivo vu-metra je ponovo podešen!"
+
+#. Translators: Message to confirm the placement of the selection start marker.
+msgid "Start selection marker set."
+msgstr ""
+
+#. Translators: Message to confirm the placement of the selection end marker.
+msgid "End selection marker set."
+msgstr ""
+
+msgid "of"
+msgstr "Od"
+
+msgid "Part"
+msgstr "Deo"
+
+msgid "No time remaining !"
+msgstr "Nema preostalog vremena!"
+
 #. Translators: Message  to indicate the elapsed time.
 #. Translators: Message to indicate the elapsed time.
 msgid "Elapsed time: "
@@ -185,20 +203,6 @@ msgstr ""
 "Daje preostalo vreme od trenutne pozicije kursora reprodukcije do kraja "
 "datoteke."
 
-#. Translators: Message to indicate that the vu-meter is not available.
-#, python-format
-msgid ""
-"The vu-meter is not available. Please verify if a recording is in progress, "
-"and that the checkbox enable the margin button is checked in the options of "
-"%s."
-msgstr ""
-"vu-metar nije dostupan. Molimo proverite da je snimanje u toku, i da je "
-"opcija omogući dugme margine omogućena u podešavanjima %s."
-
-#. Translators: Message to confirm that the level of the vu-meter has been reset.
-msgid "The level of the vu-meter has been reset !"
-msgstr "Nivo vu-metra je ponovo podešen!"
-
 #. Translators: message presented in input mode.
 msgid ""
 "Used to determine the current level of the vu-meter, during recording, "
@@ -206,14 +210,6 @@ msgid ""
 msgstr ""
 "Koristi se za trenutni nivo vu-metra, dok ga dvostruki pritisak ponovno "
 "postavlja."
-
-#. Translators: Message to confirm the placement of the selection start marker.
-msgid "It's OK, your marker of the beginning of selection B has been posed."
-msgstr "Uredu je, vaš izbor početnog markera slovom b je podešen."
-
-#. Translators: Message to confirm the placement of the selection end marker.
-msgid "It's OK, your marker of the end of selection N has been posed."
-msgstr "Uredu je, vaš izbor završnog markera slovom n je podešen."
 
 #. Translators: message presented in input mode.
 msgid ""
@@ -247,3 +243,12 @@ msgstr "Otvara pomoć dodatka."
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "some commands to use mp3directcut with NVDA"
 msgstr "Neke komande za korišćenje programa MP3 Direct cut sa programom NVDA."
+
+#~ msgid "Please close the opened menu to use this command."
+#~ msgstr "Molimo zatvorite otvoren meni za korišćenje ove komande"
+
+#~ msgid "It's OK, your marker of the beginning of selection B has been posed."
+#~ msgstr "Uredu je, vaš izbor početnog markera slovom b je podešen."
+
+#~ msgid "It's OK, your marker of the end of selection N has been posed."
+#~ msgstr "Uredu je, vaš izbor završnog markera slovom n je podešen."

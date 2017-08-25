@@ -9,12 +9,12 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
 "PO-Revision-Date: 2017-06-23 17:28+0200\n"
+"Last-Translator: Alex Yeshanu <eshanuap@gmail.com>\n"
+"Language-Team: NVDA add-ons Russian translation team <eshanuap@gmail.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Alex Yeshanu <eshanuap@gmail.com>\n"
-"Language-Team: NVDA add-ons Russian translation team <eshanuap@gmail.com>\n"
 "X-Generator: Poedit 2.0.2\n"
 
 #. Translators: name of the option in the menu.
@@ -22,6 +22,7 @@ msgstr ""
 msgid "{0} addon configuration"
 msgstr "Настройки {0}"
 
+#. Translators: message presented in input mode.
 #, python-brace-format
 msgid "Allows you display the configuration dialog of {0} addon."
 msgstr "Позволяет отобразить диалоговое окно настройки {0}."
@@ -86,10 +87,6 @@ msgstr ""
 "Эта команда недоступна в режиме записи, она доступна только в режиме "
 "воспроизведения !"
 
-#. Translators: Message to inform the user that he must close the menu to use this command.
-msgid "Please close the opened menu to use this command."
-msgstr "Пожалуйста, закройте открытое меню, чтобы использовать эту команду."
-
 #. Translators: Message to indicate the position of the selection start marker.
 msgid "The marker of the beginning of selection B is at"
 msgstr "Маркер начала выделения B на"
@@ -130,15 +127,6 @@ msgstr "Пожалуйста, убедитесь, что не сделано в�
 msgid "Please chek that you are not in a recording mode."
 msgstr "Пожалуйста убедитесь, что вы не в режиме записи."
 
-msgid "of"
-msgstr "из"
-
-msgid "Part"
-msgstr "Фрагмент"
-
-msgid "No time remaining !"
-msgstr "Время закончилось !"
-
 #. Translators: Message to inform the user that the recording is ready.
 msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
@@ -158,7 +146,37 @@ msgstr ""
 msgid "The recording is not ready !"
 msgstr "Запись не готова !"
 
-#. Translators: Message to indicate the elapsed time.
+#. Translators: Message to indicate that the vu-meter is not available.
+#, python-format
+msgid ""
+"The vu-meter is not available. Please verify if a recording is in progress, "
+"and that the checkbox enable the margin button is checked in the options of "
+"%s."
+msgstr ""
+"Запас не доступен. Пожалуйста, проверьте, идёт ли запись, и что флажок "
+"\"Кнопка 'Запас' доступна\" отмечен в опциях для %s."
+
+#. Translators: Message to confirm that the level of the vu-meter has been reset.
+msgid "The level of the vu-meter has been reset !"
+msgstr "Уровень 'запаса' сброшен !"
+
+#. Translators: Message to confirm the placement of the selection start marker.
+msgid "Start selection marker set."
+msgstr ""
+
+#. Translators: Message to confirm the placement of the selection end marker.
+msgid "End selection marker set."
+msgstr ""
+
+msgid "of"
+msgstr "из"
+
+msgid "Part"
+msgstr "Фрагмент"
+
+msgid "No time remaining !"
+msgstr "Время закончилось !"
+
 #. Translators: Message  to indicate the elapsed time.
 #. Translators: Message to indicate the elapsed time.
 msgid "Elapsed time: "
@@ -183,20 +201,6 @@ msgid ""
 msgstr ""
 "Предоставляет время, оставшееся от текущей позиции курсора до конца файла."
 
-#. Translators: Message to indicate that the vu-meter is not available.
-#, python-format
-msgid ""
-"The vu-meter is not available. Please verify if a recording is in progress, "
-"and that the checkbox enable the margin button is checked in the options of "
-"%s."
-msgstr ""
-"Запас не доступен. Пожалуйста, проверьте, идёт ли запись, и что флажок "
-"\"Кнопка 'Запас' доступна\" отмечен в опциях для %s."
-
-#. Translators: Message to confirm that the level of the vu-meter has been reset.
-msgid "The level of the vu-meter has been reset !"
-msgstr "Уровень 'запаса' сброшен !"
-
 #. Translators: message presented in input mode.
 msgid ""
 "Used to determine the current level of the vu-meter, during recording, "
@@ -204,14 +208,6 @@ msgid ""
 msgstr ""
 "Используется для определения текущего уровня 'запаса' во время записи. "
 "Двойное нажатие сбрасывает его."
-
-#. Translators: Message to confirm the placement of the selection start marker.
-msgid "It's OK, your marker of the beginning of selection B has been posed."
-msgstr "Маркер начала выделения установлен."
-
-#. Translators: Message to confirm the placement of the selection end marker.
-msgid "It's OK, your marker of the end of selection N has been posed."
-msgstr "Маркер окончания выделения установлен."
 
 #. Translators: message presented in input mode.
 msgid ""
@@ -244,3 +240,12 @@ msgstr "Позволяет открыть справку текущего доп
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "some commands to use mp3directcut with NVDA"
 msgstr "некоторые команды использования mp3directcut с NVDA"
+
+#~ msgid "Please close the opened menu to use this command."
+#~ msgstr "Пожалуйста, закройте открытое меню, чтобы использовать эту команду."
+
+#~ msgid "It's OK, your marker of the beginning of selection B has been posed."
+#~ msgstr "Маркер начала выделения установлен."
+
+#~ msgid "It's OK, your marker of the end of selection N has been posed."
+#~ msgstr "Маркер окончания выделения установлен."

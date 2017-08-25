@@ -9,12 +9,12 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
 "PO-Revision-Date: 2017-07-02 14:02+0300\n"
+"Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
+"Language-Team: \n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
-"Language-Team: \n"
 "X-Generator: Poedit 1.8.9\n"
 
 #. Translators: name of the option in the menu.
@@ -22,6 +22,7 @@ msgstr ""
 msgid "{0} addon configuration"
 msgstr "Configurarea suplimentului {0}"
 
+#. Translators: message presented in input mode.
 #, python-brace-format
 msgid "Allows you display the configuration dialog of {0} addon."
 msgstr "Vă permite să afișați dialogul de configurare al suplimentului {0}."
@@ -87,10 +88,6 @@ msgstr ""
 "Această comandă nu este disponibilă în modul de înregistrare, ea "
 "funcționează doar în modul de citire."
 
-#. Translators: Message to inform the user that he must close the menu to use this command.
-msgid "Please close the opened menu to use this command."
-msgstr "Vă rugăm să închideți meniul deschis pentru a utiliza această comandă."
-
 #. Translators: Message to indicate the position of the selection start marker.
 msgid "The marker of the beginning of selection B is at"
 msgstr "Marcajul începutului selecției B este la"
@@ -131,15 +128,6 @@ msgstr "Vă rugăm să verificați dacă nicio selecție nu a fost făcută."
 msgid "Please chek that you are not in a recording mode."
 msgstr "Vă rugăm să verificați dacă nu sunteți în modul de înregistrare."
 
-msgid "of"
-msgstr "din"
-
-msgid "Part"
-msgstr "Parte"
-
-msgid "No time remaining !"
-msgstr "Fără timp rămas!"
-
 #. Translators: Message to inform the user that the recording is ready.
 msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
@@ -160,7 +148,38 @@ msgstr ""
 msgid "The recording is not ready !"
 msgstr "Înregistrarea nu este gata!"
 
-#. Translators: Message to indicate the elapsed time.
+#. Translators: Message to indicate that the vu-meter is not available.
+#, python-format
+msgid ""
+"The vu-meter is not available. Please verify if a recording is in progress, "
+"and that the checkbox enable the margin button is checked in the options of "
+"%s."
+msgstr ""
+"vu-meter nu este disponibil. Vă rugăm verificați dacă o înregistrare este în "
+"desfășurare și dacă caseta de bifat „Activează butonul margin” este bifată "
+"în opțiunile %s."
+
+#. Translators: Message to confirm that the level of the vu-meter has been reset.
+msgid "The level of the vu-meter has been reset !"
+msgstr "Nivelul vu-meter-ului a fost resetat!"
+
+#. Translators: Message to confirm the placement of the selection start marker.
+msgid "Start selection marker set."
+msgstr ""
+
+#. Translators: Message to confirm the placement of the selection end marker.
+msgid "End selection marker set."
+msgstr ""
+
+msgid "of"
+msgstr "din"
+
+msgid "Part"
+msgstr "Parte"
+
+msgid "No time remaining !"
+msgstr "Fără timp rămas!"
+
 #. Translators: Message  to indicate the elapsed time.
 #. Translators: Message to indicate the elapsed time.
 msgid "Elapsed time: "
@@ -186,21 +205,6 @@ msgstr ""
 "Afișează timpul rămas de la poziția curentă a cursorului de redare până la "
 "sfârșitul fișierului."
 
-#. Translators: Message to indicate that the vu-meter is not available.
-#, python-format
-msgid ""
-"The vu-meter is not available. Please verify if a recording is in progress, "
-"and that the checkbox enable the margin button is checked in the options of "
-"%s."
-msgstr ""
-"vu-meter nu este disponibil. Vă rugăm verificați dacă o înregistrare este în "
-"desfășurare și dacă caseta de bifat „Activează butonul margin” este bifată "
-"în opțiunile %s."
-
-#. Translators: Message to confirm that the level of the vu-meter has been reset.
-msgid "The level of the vu-meter has been reset !"
-msgstr "Nivelul vu-meter-ului a fost resetat!"
-
 #. Translators: message presented in input mode.
 msgid ""
 "Used to determine the current level of the vu-meter, during recording, "
@@ -208,18 +212,6 @@ msgid ""
 msgstr ""
 "Utilizat pentru a determina nivelul curent a vu-meter-ului, în timpul "
 "înregistrării. Dacă este apăsat de două ori, îl va reseta."
-
-#. Translators: Message to confirm the placement of the selection start marker.
-msgid "It's OK, your marker of the beginning of selection B has been posed."
-msgstr ""
-"Este OK, marcajul Dumneavoastră de la începutul selecției B a fost pus pe "
-"pauză."
-
-#. Translators: Message to confirm the placement of the selection end marker.
-msgid "It's OK, your marker of the end of selection N has been posed."
-msgstr ""
-"Este OK, marcajul Dumneavoastră de la sfârșitul selecției N, a fost pus pe "
-"pauză."
 
 #. Translators: message presented in input mode.
 msgid ""
@@ -255,3 +247,17 @@ msgstr "Hai să Deschidem ghidul de utilizare al suplimentului curent."
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "some commands to use mp3directcut with NVDA"
 msgstr "Niște comenzi pentru utilizarea mp3directcut cu NVDA"
+
+#~ msgid "Please close the opened menu to use this command."
+#~ msgstr ""
+#~ "Vă rugăm să închideți meniul deschis pentru a utiliza această comandă."
+
+#~ msgid "It's OK, your marker of the beginning of selection B has been posed."
+#~ msgstr ""
+#~ "Este OK, marcajul Dumneavoastră de la începutul selecției B a fost pus pe "
+#~ "pauză."
+
+#~ msgid "It's OK, your marker of the end of selection N has been posed."
+#~ msgstr ""
+#~ "Este OK, marcajul Dumneavoastră de la sfârșitul selecției N, a fost pus "
+#~ "pe pauză."

@@ -69,7 +69,9 @@ announce = (
 	# Translators: Message to confirm the placement of the selection start marker.
 	_("Start selection marker set."),
 	# Translators: Message to confirm the placement of the selection end marker.
-	_("End selection marker set.")
+	_("End selection marker set."),
+	# Translators: Message to confirm that the selection has been canceled.
+	_('Selection canceled.')
 )
 
 def timeSplitter(sTime):
@@ -251,7 +253,7 @@ def actualDurationPercentage():
 	hwnd = readOrRecord()
 	o = getNVDAObjectFromEvent(hwnd, OBJID_CLIENT, CHILDID_SELF)
 	sActual = o.value
-	if sActual.index('('):
+	if '(' in sActual:
 		sActual = sActual.split('(')
 		sActual = sActual[1]
 		sActual = sActual[:-1]
@@ -263,7 +265,7 @@ def totalTime():
 		o = getNVDAObjectFromEvent(hwnd, OBJID_CLIENT, CHILDID_SELF)
 		sTime = o.value
 		sTime = sTime.split(': ')
-		sTime = sTime[1]
+		sTime = sTime[1].split('   ')[0]
 		sTotal = timeSplitter(sTime)
 		return sTotal
 
@@ -275,13 +277,12 @@ def timeRemaining():
 		sActual = sActual.split(': ')
 		sActual = sActual[2].split()
 		sActual=sActual[0]
-	else:
-		sActual = 1
 	sTotal = o.value
 	sTotal = sTotal.split(': ')
 	sTotal = sTotal[1]
 	sTotal = sTotal.split('   ')[0]
 	if sTotal == sActual:
+		# Translators: Message to inform the user that there is no remaining time.
 		return _('No time remaining !')
 	hORm = len(sTotal.split('.')[1])
 	fmt = "%H:%M'%S.%f"
@@ -293,7 +294,7 @@ def timeRemaining():
 	result = str(result).decode('utf-8')
 	result = result.replace(':', "'")
 	result = result.replace("'", ':', 1)
-	result = result[:OBJID_CLIENT] if hORm == 2 else result[:-3]
+	result = result[:-4] if hORm == 2 else result[:-3]
 	return timeSplitter(result)
 
 class SoundManager (IAccessible):
@@ -309,6 +310,15 @@ class SoundManager (IAccessible):
 		else:
 			sayMessage (announce[17])
 
+	def script_cancelSelection(self, gesture):
+		selection = checkSelection ()
+		gesture.send ()
+		if isStarting ():
+			sayMessage (announce[3])
+			return
+		text = announce[22] if selection else announce[0]
+		message(text)
+
 	def script_space(self, gesture):
 		gesture.send()
 		if isReading():
@@ -323,7 +333,7 @@ class SoundManager (IAccessible):
 		if not sActual:
 			sayMessage(announce[1], space = True)
 			return
-		sActual = sActual + ' ' + actualDurationPercentage()
+		sActual = sActual + ' ' + actualDurationPercentage() if not sActual == totalTime() else announce[2] + ' ' + sActual + ' ' + actualDurationPercentage ()
 		sayMessage(sActual, space = True)
 
 	def script_nextSplittingPoint(self, gesture):
@@ -529,7 +539,7 @@ class SoundManager (IAccessible):
 			bSelection = announce[1]
 		if not eSelection:
 			eSelection = announce[1]
-		if partOrSelection() == 2:
+		if checkSelection ():
 			if repeat == 0:
 				sayMessage(announce[6] + ' : ' + eSelection)
 			elif repeat == 1:
@@ -562,6 +572,7 @@ class SoundManager (IAccessible):
 		'kb:r':'checkRecording',
 		'kb:control+shift+d': 'elapsedTime',
 		'kb:control+shift+r': 'timeRemaining',
+		'kb:control+r':'cancelSelection',
 		'kb:space': 'space',
 		'kb:control+leftArrow':'previousSplittingPoint',
 		'kb:control+rightArrow':'nextSplittingPoint',
@@ -571,7 +582,7 @@ class SoundManager (IAccessible):
 		'kb:b': 'bPosition',
 		'kb:n': 'nPosition',
 		'kb:control+shift+b': 'beginningOfSelection',
-		'kb:control+shift+n': 'endOfSelection',
+		'kb:control+shift+e': 'endOfSelection',
 		'kb:control+shift+p': 'actualPart'
 	}
 
@@ -590,7 +601,8 @@ class AppModule (appModuleHandler.AppModule):
 				else:
 					sActual = sActual + ' ' + actualDurationPercentage()
 				if not isReading():
-					return sayMessage(sActual)
+					sayMessage(sActual)
+					return
 		nextHandler ()
 
 	def chooseNVDAObjectOverlayClasses (self, obj, clsList):

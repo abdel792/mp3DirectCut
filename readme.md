@@ -8,7 +8,7 @@
 
 This add-on improves the accessibility of the software mp3DirectCut with NVDA.
 
-It has been tested with versions of mp3DirectCut ranging from 212 up to 222.
+It has been tested with versions of mp3DirectCut ranging from 212 up to 223.
 
 ## Keyboard shortcuts ##
 
@@ -22,9 +22,11 @@ This addon offers the following commands, which you can change by going to the m
 *	Ctrl+Shift+D
 	*	Gives the duration from the beginning of the file to the current position of the playback cursor.
 	*	Double pressure lets give you the total duration.
+*	Ctrl+R
+	*	Confirms that the selection has been canceled.
 *	Ctrl+Shift+R
 	*	Gives the time remaining from the current position of the playback cursor to the end of the file.
-*	Ctrl+Shift+N
+*	Ctrl+Shift+E
 	*	Used to indicate the position of the marker of the end of selection N.
 	*	Double pressure gives recapitulatif positions B and N, and the duration of the selection.
 *	Ctrl+Shift+P
@@ -83,6 +85,8 @@ This addon offers the following commands, which you can change by going to the m
 
 ## Change for version 2.2 ##
 
+*	 Adding a script to confirm that the selection has been canceled with 'Ctrl+r';
+*	 Making some correction in the code of the appModule 'mp3directcut.py';
 *	 Correction of the scripts giving the selection markers' locations.
 
 ## Change for version 2.1.1 ##

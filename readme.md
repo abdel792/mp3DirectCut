@@ -123,6 +123,6 @@ This addon offers the following commands, which you can change by going to the m
 
 *	 Initial version.
 
-[1]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.2.nvda-addon
+[1]: https://github.com/abdel792/mp3DirectCut/releases/download/v2.2/mp3DirectCut-2.2.nvda-addon
 
-[2]: http://cyber25.free.fr/nvda-addons/mp3DirectCut-2.2-dev.nvda-addon
+[2]: https://github.com/abdel792/mp3DirectCut/releases/download/v2.2/mp3DirectCut-2.2.nvda-addon

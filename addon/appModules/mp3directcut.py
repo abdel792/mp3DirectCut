@@ -132,8 +132,10 @@ def sayMessage(msg, space = None, marker = None):
 
 def isReading():
 	fg = api.getForegroundObject ()
-	hwnd = fg.firstChild.firstChild.lastChild.windowHandle
-	readingBtn = getNVDAObjectFromEvent (hwnd, OBJID_CLIENT, 15)
+	o = fg.firstChild.firstChild.lastChild.firstChild
+	hwnd = o.windowHandle
+	childID = o.childCount - 1
+	readingBtn = getNVDAObjectFromEvent (hwnd, OBJID_CLIENT, childID)
 	if all(x in readingBtn.states for x in [STATE_SYSTEM_INDETERMINATE, STATE_SYSTEM_MIXED]):
 		return True
 	return False

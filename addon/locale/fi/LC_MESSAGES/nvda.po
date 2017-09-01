@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2017-06-23 17:15+0200\n"
+"PO-Revision-Date: 2017-08-25 13:35+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -160,11 +160,16 @@ msgstr "VU-mittarin taso on nollattu!"
 
 #. Translators: Message to confirm the placement of the selection start marker.
 msgid "Start selection marker set."
-msgstr ""
+msgstr "Valinnan aloitusmerkki asetettu"
 
 #. Translators: Message to confirm the placement of the selection end marker.
 msgid "End selection marker set."
-msgstr ""
+msgstr "Valinnan lopetusmerkki asetettu"
+
+#. Translators: Message to confirm that the selection has been canceled.
+#, fuzzy
+msgid "Selection canceled."
+msgstr "Valintaa ei löydy."
 
 msgid "of"
 msgstr "/"
@@ -172,6 +177,7 @@ msgstr "/"
 msgid "Part"
 msgstr "Osa"
 
+#. Translators: Message to inform the user that there is no remaining time.
 msgid "No time remaining !"
 msgstr "Ei jäljellä olevaa aikaa!"
 

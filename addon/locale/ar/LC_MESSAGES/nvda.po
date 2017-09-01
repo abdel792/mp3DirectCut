@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2017-06-23 12:32+0200\n"
+"PO-Revision-Date: 2017-08-25 15:42+0100\n"
 "Last-Translator: Abdellah Zineddine <abdellahzineddin@gmail.com>\n"
 "Language-Team: NVDA add-ons Arabic translation team <abdellahzineddin@gmail."
 "com>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #. Translators: name of the option in the menu.
 #, python-brace-format
@@ -161,11 +161,16 @@ msgstr "لقد تَمَّ إعادةُ تحديد مُستَوى درجة الت
 
 #. Translators: Message to confirm the placement of the selection start marker.
 msgid "Start selection marker set."
-msgstr ""
+msgstr "وضع مؤشر بداية التحديد."
 
 #. Translators: Message to confirm the placement of the selection end marker.
 msgid "End selection marker set."
-msgstr ""
+msgstr "وضع مؤشر نهاية التحديد."
+
+#. Translators: Message to confirm that the selection has been canceled.
+#, fuzzy
+msgid "Selection canceled."
+msgstr "لا يوجد هنالك أي تحديد."
 
 msgid "of"
 msgstr "من"
@@ -173,6 +178,7 @@ msgstr "من"
 msgid "Part"
 msgstr "جُزْء"
 
+#. Translators: Message to inform the user that there is no remaining time.
 msgid "No time remaining !"
 msgstr "لا يوجد وقت مُتَبَق\"يْ"
 

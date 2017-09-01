@@ -165,12 +165,18 @@ msgstr ""
 msgid "End selection marker set."
 msgstr ""
 
+#. Translators: Message to confirm that the selection has been canceled.
+#, fuzzy
+msgid "Selection canceled."
+msgstr "הבחירה לא נמצאה."
+
 msgid "of"
 msgstr "של"
 
 msgid "Part"
 msgstr "חלק"
 
+#. Translators: Message to inform the user that there is no remaining time.
 msgid "No time remaining !"
 msgstr "אין זמן שנותר!"
 

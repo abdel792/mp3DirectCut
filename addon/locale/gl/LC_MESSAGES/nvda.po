@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2017-07-09 18:32+0100\n"
+"PO-Revision-Date: 2017-08-27 18:44+0100\n"
 "Last-Translator: Juan C. Buño <oprisniki@gmail.com>\n"
 "Language-Team: NVDA add-ons galician translation team <oprisniki@gmail.com>\n"
 "Language: gl\n"
@@ -165,11 +165,16 @@ msgstr "¡O nivel do vúmetro reiniciouse!"
 
 #. Translators: Message to confirm the placement of the selection start marker.
 msgid "Start selection marker set."
-msgstr ""
+msgstr "Marca de comezo de seleción definida."
 
 #. Translators: Message to confirm the placement of the selection end marker.
 msgid "End selection marker set."
-msgstr ""
+msgstr "Marca de remate de seleción definida."
+
+#. Translators: Message to confirm that the selection has been canceled.
+#, fuzzy
+msgid "Selection canceled."
+msgstr "Seleción non atopada."
 
 msgid "of"
 msgstr "de"
@@ -177,6 +182,7 @@ msgstr "de"
 msgid "Part"
 msgstr "Parte"
 
+#. Translators: Message to inform the user that there is no remaining time.
 msgid "No time remaining !"
 msgstr "¡Sen tempo restante!"
 

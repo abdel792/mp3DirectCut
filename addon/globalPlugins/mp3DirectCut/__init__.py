@@ -1,5 +1,9 @@
 # coding: utf-8
 
+# Copyright 2017-2018 Abdelkrim Bensaïd and other contributors, released under gPL.
+#This file is covered by the GNU General Public License.
+#See the file COPYING for more details.
+
 import globalPluginHandler
 import addonHandler
 from mp3DirectCutDialog import Mp3DirectCutDialog

@@ -1,4 +1,4 @@
-﻿# mp3DirectCut-2.2
+﻿# mp3DirectCut
 
 *	 Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
 *	 Download [stable version][1]
@@ -12,7 +12,7 @@ It has been tested with versions of mp3DirectCut ranging from 212 up to 223.
 
 ## Keyboard shortcuts ##
 
-This addon offers the following commands, which you can change by going to the menu Preferences / Input Gestures' in the category 'mp3DirectCut':
+This addon offers the following commands:
 
 *	B
 	*	Used to confirm correct placement of the marker of the beginning of the selection B.
@@ -83,11 +83,15 @@ This addon offers the following commands, which you can change by going to the m
 *	NVDA+H
 	*	Lets open the help of the current add-on.
 
+## Change for version 2.3 ##
+
+*	 Added the GPL license to the addon;
+*	 Changed the shortcut of the script giving the end of selection from Ctrl + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work with the latest versions of mp3DirectCut;
+*	 Added a script to confirm that the selection has been canceled with 'Ctrl+r';
+*	 Maked some correction in the code of the appModule 'mp3directcut.py'.
+
 ## Change for version 2.2 ##
 
-*	 Changed the shortcut of the script giving the end of selection from Ctrl + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work with the latest versions of mp3DirectCut;
-*	 Adding a script to confirm that the selection has been canceled with 'Ctrl+r';
-*	 Making some correction in the code of the appModule 'mp3directcut.py';
 *	 Correction of the scripts giving the selection markers' locations.
 
 ## Change for version 2.1.1 ##
@@ -124,6 +128,6 @@ This addon offers the following commands, which you can change by going to the m
 
 *	 Initial version.
 
-[1]: https://github.com/abdel792/mp3DirectCut/releases/download/v2.2/mp3DirectCut-2.2.nvda-addon
+[1]: https://github.com/abdel792/mp3DirectCut/releases/download/v2.3/mp3DirectCut-2.3.nvda-addon
 
-[2]: https://github.com/abdel792/mp3DirectCut/releases/download/v2.2/mp3DirectCut-2.2.nvda-addon
+[2]: https://github.com/abdel792/mp3DirectCut/releases/download/v2.3/mp3DirectCut-2.3.nvda-addon

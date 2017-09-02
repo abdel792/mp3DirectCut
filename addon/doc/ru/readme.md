@@ -8,12 +8,11 @@
 
 Это дополнение улучшает доступность программы mp3DirectCut в NVDA.
 
-Оно проверялось с версиями mp3DirectCut-от 212 до 222.
+It has been tested with versions of mp3DirectCut ranging from 212 up to 223.
 
 ## Горячие клавиши ##
 
-Это дополнение предлагает следующие команды, которые вы можете изменить,
-зайдя в меню настройки / жесты ввода' в категорию 'mp3DirectCut':
+This addon offers the following commands:
 
 *	B
 	*	Used to confirm correct placement of the marker of the beginning of the selection B.
@@ -23,9 +22,11 @@
 *	Ctrl+Shift+D
 	*	Gives the duration from the beginning of the file to the current position of the playback cursor.
 	*	Double pressure lets give you the total duration.
+*	Ctrl+R
+	*	Confirms that the selection has been canceled.
 *	Ctrl+Shift+R
 	*	Gives the time remaining from the current position of the playback cursor to the end of the file.
-*	Ctrl+Shift+N
+*	Ctrl+Shift+E
 	*	Used to indicate the position of the marker of the end of selection N.
 	*	Double pressure gives recapitulatif positions B and N, and the duration of the selection.
 *	Ctrl+Shift+P
@@ -82,9 +83,26 @@
 *	NVDA+H
 	*	Lets open the help of the current add-on.
 
+## Change for version 3.0 ##
+
+*	 Used the gui.guiHelper module to ensure the correct appearance of the
+   addon's configuration dialog;
+*	 Used format instead of %s for formatted strings;
+*	 Used compliance with guidelines for implementation.
+
+## Change for version 2.3 ##
+
+*	 Added the GPL license to the addon;
+*	 Changed the shortcut of the script giving the end of selection from Ctrl
+   + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work
+   with the latest versions of mp3DirectCut;
+*	 Added a script to confirm that the selection has been canceled with
+   'Ctrl+r';
+*	 Maked some correction in the code of the appModule 'mp3directcut.py'.
+
 ## Изменение версии 2.2 ##
 
-*     Исправление скриптов для предоставления расположения меток выделения.
+*	 Исправление скриптов для предоставления расположения меток выделения.
 
 ## Изменение версии 2.1.1 ##
 

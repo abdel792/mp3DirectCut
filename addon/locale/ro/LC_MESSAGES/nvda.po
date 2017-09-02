@@ -149,11 +149,11 @@ msgid "The recording is not ready !"
 msgstr "Înregistrarea nu este gata!"
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, python-format
+#, fuzzy, python-brace-format
 msgid ""
 "The vu-meter is not available. Please verify if a recording is in progress, "
 "and that the checkbox enable the margin button is checked in the options of "
-"%s."
+"{0}."
 msgstr ""
 "vu-meter nu este disponibil. Vă rugăm verificați dacă o înregistrare este în "
 "desfășurare și dacă caseta de bifat „Activează butonul margin” este bifată "

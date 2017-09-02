@@ -9,83 +9,101 @@
 Ovaj dodatak poboljšava pristupačnost programa mp3DirectCut sa programom
 NVDA.
 
-Testiran je sa verzijama programa mp3DirectCut od 212 do 222.
+It has been tested with versions of mp3DirectCut ranging from 212 up to 223.
 
 ## Prečice ##
 
-Ovaj dodatak pruža sledeće komande, koje možete promeniti iz menija
-podešavanja/ ulazne komande' u kategoriji 'mp3DirectCut':
+This addon offers the following commands:
 
 *	B
-	*	Koristi se za potvrdu početka izbora tasterom B.
-*	Kontrol+Šift+B
-	*	Koristi se za izgovor pozicije početka izbora tasterom B.
-	*	Dvostruki pritisak vam daje ukupno trajanje izbora.
-*	Kontrol+Šift+D
-	*	Daje trajanje od početka datoteke do pozicije kursora.
-	*	Dvostruki pritisak vam daje ukupno trajanje.
-*	Kontrol+Šift+R
-	*	Daje preostalo vreme od trenutne pozicije kursora do kraja datoteke.
-*	Kontrol+Šift+N
-	*	Koristi se za izgovor pozicije završnog izbora teksta tasterom N.
-	*	Dvostruki pritisak daje bliske pozicije tasterom B i N, i trajanje izbora.
-*	Kontrol+Šift+P
-	*	Daje broj dela i ukupan broj delova trenutne datoteke.
-*	Kontrol+Šift+razmak
-	*	Koristi se za trenutni nivo gornjeg metra, u toku snimanja.
-	*	Dvostruki pritisak ga vraća.
-*	Strelica dole
-	*	Dozvoljava  vam da vidite trenutnu poziciju reprodukcije.
-	*	Ova komanda takođe postavlja kursor na poziciju završnog izbora tasterom N, dok ako je izabran daje lokaciju markera.
-	*	U dijalogu za jačinu, pronađite sledeću vrednost koju možete postaviti strelicom dole.
-	*	Ova vrednost nije podešena podrazumevano.
+	*	Used to confirm correct placement of the marker of the beginning of the selection B.
+*	Ctrl+Shift+B
+	*	Used to indicate the position of the marker of the beginning of selection B.
+	*	Double pressure lets give you the duration of the selection.
+*	Ctrl+Shift+D
+	*	Gives the duration from the beginning of the file to the current position of the playback cursor.
+	*	Double pressure lets give you the total duration.
+*	Ctrl+R
+	*	Confirms that the selection has been canceled.
+*	Ctrl+Shift+R
+	*	Gives the time remaining from the current position of the playback cursor to the end of the file.
+*	Ctrl+Shift+E
+	*	Used to indicate the position of the marker of the end of selection N.
+	*	Double pressure gives recapitulatif positions B and N, and the duration of the selection.
+*	Ctrl+Shift+P
+	*	Give the reference of the actual part and the total number of parts in the current file.
+*	Ctrl+Shift+Space
+	*	Used to determine the current level of the vu-meter, during recording.
+	*	Double pressure reset it.
+*	Down Arrow
+	*	Lets you see the current position of the playhead.
+	*	This command also position the cursor at the location of the marker of the end of selection N, while giving the location of this marker if a selection has been made.
+	*	In the volume dialog box, vocalise the next value that can be reached generally with downArrow.
+	*	This value is not vocalized default.
 *	End
-	*	Pomera kursor reprodukcije na kraj trenutne datoteke i daje ukupno vreme.
+	*	Moves the playback cursor at the end of the current file and give the total time.
 *	Home
-	*	Pomera kursor reprodukcije na početak trenutne datoteke.
-*	Strelica levo
-	*	Dozvoljava vam vraćanje za jednu sekundu u toku reprodukcije, i daje trenutno trajanje.
-	*	Ovo trajanje se može podesiti u podešavanjima.
+	*	Moves the playback cursor at the beginning of the current file.
+*	Left Arrow
+	*	Lets make a brief return back of one second during playback, while giving the current duration.
+	*	This duration is configurable in the options of mp3directcut.
 *	N
-	*	Koristi se za potvrdu mesta završnog markera tasterom N.
+	*	Used to confirm correct placement of the marker of the end of the selection N.
 *	Page Down
-	*	Dozvoljava vam skok za deset sekundi napred u toku reprodukcije, i daje trenutno trajanje.
-	*	Ovo trajanje se može podesiti u podešavanjima programa mp3directcut.
+	*	Lets make a leap forward of 10 seconds during playback, while giving the current duration.
+	*	This duration is configurable in the options of mp3directcut.
 *	Page Up
-	*	Dozvoljava vam vraćanje za deset sekundi u toku reprodukcije, i daje trenutno trajanje.
-	*	Ovo trajanje se može podesiti u podešavanjima programa mp3directcut.
+	*	Lets make a return back of 10 seconds during playback, while giving the current duration.
+	*	This duration is configurable in the options of mp3directcut.
 *	R
-	*	Dozvoljava pripremu snimanja i da li se može pritisnuti razmak za početak.
-*	Strelica desno
-	*	Dozvoljava kratak skok od jedne sekunde u toku reprodukcije, i daje trenutno trajanje.
-	*	Ovo trajanje se može podesiti u podešavanjima programa mp3directcut.
-*	Kontrol+strelica desno
-	*	Pomera se na sledeću tačku odvajanja, i daje trenutno trajanje.
-*	Kontrol+strelica levo
-	*	Pomera se na prethodnu tačku odvajanja, i daje trenutno trajanje.
-*	Šift+strelica desno
-	*	Dozvoljava skok za četiri stotinke u toku reprodukcije, i daje trenutno trajanje.
-*	Šift+strelica levo
-	*	Dozvoljava mali skok od četiri stotinke nazad u toku reprodukcije, i daje trenutno trajanje. 
+	*	Allows to prepare a record and whether you can press spacebar to start.
+*	Right Arrow
+	*	Lets do a brief forward of one second during playback, while giving the current duration.
+	*	This duration is configurable in the options of mp3directcut.
+*	Ctrl+Right Arrow
+	*	Moves to the next splitting point, while giving the current duration.
+*	Ctrl+Left Arrow
+	*	Moves to the previous splitting point, while giving the current duration.
+*	Shift+Right Arrow
+	*	Lets do a brief forward of four hundredths of seconds during playback, while giving the current duration.
+*	Shift+Left Arrow
+	*	Lets do a brief backwards of four hundredths of seconds during playback, while giving the current duration. 
 *	S
-	*	Koristi se za zaustavljanje čitanja i izgovor trenutnog trajanja.
-*	Razmak
-	*	Ako je snimanje spremno, započinje snimanje.
-	*	Ako je snimanje u toku, zaustavlja ga i postavlja kursor na početak.
-	*	Ako je datoteka učitana, započinje čitanje.
-	*	Ako je čitanje u toku, dozvoljava pauzu i daje trenutno trajanje.
-	*	Ako je čitanje pauzirano, dozvoljava početak čitanja od trenutne lokacije.
-*	Strelica gore
-	*	Dozvoljava vam da vidite trenutnu poziciju reprodukcije.
-	*	Ova komanda takođe postavlja kursor na lokaciju početnog markera tasterom B, i daje lokaciju markera ako je izbor podešen.
-	*	U dijalogu za jačinu, pronalazi prethodnu vrednost koja se može promeniti strelicom gore.
-	*	Ova vrednost nije podešena podrazumevano.
+	*	Used to stop the reading and give the current duration.
+*	Space
+	*	If the recording is ready, start this recording.
+	*	If a recording is in progress, stop it by positioning the cursor at the beginning.
+	*	If a file is loaded, start the reading.
+	*	If a read is in progress, allows to do a pause by giving current duration.
+	*	If read is paused, allows to restart the reading from the current location.
+*	Up Arrow
+	*	Lets you see the current position of the playhead.
+	*	This command also position the cursor at the location of the marker of the beginning of selection B, while giving the location of this marker if a selection has been made.
+	*	In the volume dialog box, vocalise the previous value that can be reached generally with upArrow.
+	*	This value is not vocalized default.
 *	NVDA+H
-	*	Dozvoljava vam da otvorite pomoć dodatka.
+	*	Lets open the help of the current add-on.
+
+## Change for version 3.0 ##
+
+*	 Used the gui.guiHelper module to ensure the correct appearance of the
+   addon's configuration dialog;
+*	 Used format instead of %s for formatted strings;
+*	 Used compliance with guidelines for implementation.
+
+## Change for version 2.3 ##
+
+*	 Added the GPL license to the addon;
+*	 Changed the shortcut of the script giving the end of selection from Ctrl
+   + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work
+   with the latest versions of mp3DirectCut;
+*	 Added a script to confirm that the selection has been canceled with
+   'Ctrl+r';
+*	 Maked some correction in the code of the appModule 'mp3directcut.py'.
 
 ## Promene u verziji 2.2 ##
 
-*     Popravljene prečice za lokaciju izbora
+*	 Popravljene prečice za lokaciju izbora
 
 ## Promene u verziji 2.1.1 ##
 

@@ -9,12 +9,11 @@
 Acest supliment îmbunătățește accesibilitatea programului mp3DirectCut cu
 NVDA.
 
-A fost testat cu versiuni ale mp3DirectCut de la 212 până la 222.
+It has been tested with versions of mp3DirectCut ranging from 212 up to 223.
 
 ## Scurtături ##
 
-Acest supliment oferă următoarele comenzi pe care le puteți modifica mergând
-în meniul preferințe / Gesturi de intrare' în categoria 'mp3DirectCut':
+This addon offers the following commands:
 
 *	B
 	*	Used to confirm correct placement of the marker of the beginning of the selection B.
@@ -24,9 +23,11 @@ Acest supliment oferă următoarele comenzi pe care le puteți modifica mergând
 *	Ctrl+Shift+D
 	*	Gives the duration from the beginning of the file to the current position of the playback cursor.
 	*	Double pressure lets give you the total duration.
+*	Ctrl+R
+	*	Confirms that the selection has been canceled.
 *	Ctrl+Shift+R
 	*	Gives the time remaining from the current position of the playback cursor to the end of the file.
-*	Ctrl+Shift+N
+*	Ctrl+Shift+E
 	*	Used to indicate the position of the marker of the end of selection N.
 	*	Double pressure gives recapitulatif positions B and N, and the duration of the selection.
 *	Ctrl+Shift+P
@@ -83,9 +84,26 @@ Acest supliment oferă următoarele comenzi pe care le puteți modifica mergând
 *	NVDA+H
 	*	Lets open the help of the current add-on.
 
+## Change for version 3.0 ##
+
+*	 Used the gui.guiHelper module to ensure the correct appearance of the
+   addon's configuration dialog;
+*	 Used format instead of %s for formatted strings;
+*	 Used compliance with guidelines for implementation.
+
+## Change for version 2.3 ##
+
+*	 Added the GPL license to the addon;
+*	 Changed the shortcut of the script giving the end of selection from Ctrl
+   + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work
+   with the latest versions of mp3DirectCut;
+*	 Added a script to confirm that the selection has been canceled with
+   'Ctrl+r';
+*	 Maked some correction in the code of the appModule 'mp3directcut.py'.
+
 ## Modificări aduse în versiunea 2.2 ##
 
-*     Corecția scripturilor care dau locația selectată a marcajelor.
+*	 Corecția scripturilor care dau locația selectată a marcajelor.
 
 ## Modificări aduse în versiunea 2.1.1 ##
 

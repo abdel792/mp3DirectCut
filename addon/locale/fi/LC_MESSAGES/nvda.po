@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2017-08-25 13:35+0200\n"
+"PO-Revision-Date: 2017-09-01 07:31+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -144,11 +144,11 @@ msgid "The recording is not ready !"
 msgstr "Äänite ei ole valmiina!"
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, python-format
+#, fuzzy, python-brace-format
 msgid ""
 "The vu-meter is not available. Please verify if a recording is in progress, "
 "and that the checkbox enable the margin button is checked in the options of "
-"%s."
+"{0}."
 msgstr ""
 "VU-mittari ei ole käytettävissä. Varmista, että äänitys on käynnissä ja että "
 "Näytä tasonäppäin (Enable Margin button) -valintaruutu on valittuna %sin "
@@ -167,9 +167,8 @@ msgid "End selection marker set."
 msgstr "Valinnan lopetusmerkki asetettu"
 
 #. Translators: Message to confirm that the selection has been canceled.
-#, fuzzy
 msgid "Selection canceled."
-msgstr "Valintaa ei löydy."
+msgstr "Valinta peruttu"
 
 msgid "of"
 msgstr "/"

@@ -8,7 +8,6 @@
 
 import addonHandler
 addonHandler.initTranslation()
-
 import appModuleHandler
 import windowUtils
 from oleacc import STATE_SYSTEM_INDETERMINATE, STATE_SYSTEM_MIXED
@@ -24,10 +23,11 @@ from NVDAObjects.IAccessible import IAccessible, getNVDAObjectFromEvent
 
 oldSpeechMode = speech.speechMode
 hr, min, sec, hun, th = _('hours'), _('minutes'), _('seconds'), _('hundredths'), _('thousandths')
-programName = 'mp3DirectCut'
-_addonDir = os.path.join(os.path.dirname(__file__), '..').decode('mbcs')
-_curAddon = addonHandler.Addon(_addonDir)
-_addonSummary = _curAddon.manifest['summary']
+
+### Constants
+PROGRAM_NAME = 'mp3DirectCut'
+ADDON_DIR = os.path.join(os.path.dirname(__file__), '..').decode('mbcs')
+ADDON_SUMMARY = addonHandler.Addon(ADDON_DIR).manifest['summary']
 
 announce = (
 	# Translators: Message to inform that no selection has been realized.
@@ -67,7 +67,7 @@ announce = (
 	# Translators: Message to inform the user that the recording is not ready.
 	_('The recording is not ready !'),
 	# Translators: Message to indicate that the vu-meter is not available.
-	_('The vu-meter is not available. Please verify if a recording is in progress, and that the checkbox enable the margin button is checked in the options of %s.') % programName,
+	_(u'The vu-meter is not available. Please verify if a recording is in progress, and that the checkbox enable the margin button is checked in the options of {0}.').format(PROGRAM_NAME),
 	# Translators: Message to confirm that the level of the vu-meter has been reset.
 	_('The level of the vu-meter has been reset !'),
 	# Translators: Message to confirm the placement of the selection start marker.
@@ -83,7 +83,7 @@ def timeSplitter(sTime):
 	if ':' in sTime:
 		hrs = sTime.split(':')
 		if hrs[0] != '00' and hrs[0] != '0':
-			hours = '%s %s, ' % (hrs[0], hr)
+			hours = u'{0} {1}, '.format(hrs[0], hr)
 		if hrs[1].split("'")[0] != '00':
 			minutes = hrs[1].split("'")[0]
 	else:
@@ -94,7 +94,7 @@ def timeSplitter(sTime):
 		if len(minutes) > 1:
 			if minutes[0] == '0':
 				minutes = minutes[1]
-		minutes = '%s %s, ' % (minutes, min)
+		minutes = u'{0} {1}, '.format(minutes, min)
 	scnds = sTime.split("'")[1].split('.')[0]
 	if scnds != '00' and scnds != '0':
 		seconds = scnds
@@ -102,13 +102,13 @@ def timeSplitter(sTime):
 		if len(seconds) > 1:
 			if seconds[0] == '0':
 				seconds = seconds[1]
-		seconds = '%s %s, ' % (seconds, sec)
+		seconds = u'{0} {1}, '.format(seconds, sec)
 	hd=sTime.split('.')[1].split()[0]
 	if hd != '00' and hd != '000':
 		if len(hd) == 3:
-			thousandths = '%s %s.' % (hd, th)
+			thousandths = u'{0} {1}.'.format(hd, th)
 		else:
-			hundredths = '%s %s.' % (hd, hun)
+			hundredths = u'{0} {1}.'.format(hd, hun)
 	timeSplitter = hours + minutes + seconds + hundredths if not thousandths else hours + minutes + seconds + thousandths
 	return timeSplitter
 
@@ -207,8 +207,8 @@ def part(flag=None):
 		text = text[1]
 		text = text.split(')')
 		text = text[0]
-		text = text.replace('/', ' %s ' % _('of'))
-		return '%s %s' % (announce[10], text) if not flag else '%s %s' % (_('Part'), text)
+		text = text.replace(u'/', ' {0} '.format(_('of')))
+		return u'{0} {1}'.format(announce[10], text) if not flag else '{0} {1}'.format(_('Part'), text)
 
 def selectionDuration():
 	if checkSelection ():
@@ -293,9 +293,9 @@ def timeRemaining():
 	hORm = len(sTotal.split('.')[1])
 	fmt = "%H:%M'%S.%f"
 	if not ':' in sActual:
-		sActual = '0:%s' % sActual
+		sActual = u'0:{0}'.format(sActual)
 	if not ':' in sTotal:
-		sTotal = '0:%s' % sTotal
+		sTotal = u'0:{0}'.format(sTotal)
 	result = datetime.strptime(sTotal, fmt) - datetime.strptime(sActual, fmt)
 	result = str(result).decode('utf-8')
 	result = result.replace(':', "'")
@@ -305,7 +305,7 @@ def timeRemaining():
 
 class SoundManager (IAccessible):
 
-	scriptCategory = _addonSummary
+	scriptCategory = ADDON_SUMMARY
 
 	def script_checkRecording(self, gesture):
 		gesture.send()
@@ -393,18 +393,18 @@ class SoundManager (IAccessible):
 					if not sActual:
 						sActual = announce[1]
 					if sActual == totalTime():
-						sActual = '%s %s' % (sActual, announce[2])
+						sActual = u'{0} {1}'.format(sActual, announce[2])
 					sayMessage (announce[5] + ' : ' + sActual + ' ' + actualDurationPercentage())
 			else:
 				if not isReading():
 					sActual = actualDuration()
 					if not sActual:
-						sayMessage('%s, %s' % (announce[0], announce[1]))
+						sayMessage(u'{0}, {1}'.format(announce[0], announce[1]))
 						return
 					if sActual == totalTime():
-						sActual = '%s %s' % (sActual, announce[2])
+						sActual = u'{0} {1}'.format(sActual, announce[2])
 					# Translators: Message  to indicate the elapsed time.
-					sayMessage ('%s, %s %s %s' % (announce[0], _('Elapsed time: '), sActual, actualDurationPercentage()))
+					sayMessage (u'{0}, {1} {2} {3}'.format(announce[0], _('Elapsed time: '), sActual, actualDurationPercentage()))
 
 	def script_down(self, gesture):
 		gesture.send()
@@ -423,18 +423,18 @@ class SoundManager (IAccessible):
 					if not sActual:
 						sActual = announce[1]
 					if sActual == totalTime():
-						sActual = '%s %s' % (sActual, announce[2])
+						sActual = u'{0} {1}'.format(sActual, announce[2])
 					sayMessage (announce[6] + ' : ' + sActual + ' ' + actualDurationPercentage())
 			else:
 				if not isReading():
 					sActual = actualDuration()
 					if not sActual:
-						sayMessage('%s, %s' % (announce[0], announce[1]))
+						sayMessage(u'{0}, {1}'.format(announce[0], announce[1]))
 						return
 					if sActual == totalTime():
-						sActual = '%s %s' % (sActual, announce[2])
+						sActual = u'{0} {1}'.format(sActual, announce[2])
 					# Translators: Message  to indicate the elapsed time.
-					sayMessage ('%s, %s %s %s' % (announce[0], _('Elapsed time: '), sActual, actualDurationPercentage()))
+					sayMessage (u'{0}, {1} {2} {3}'.format(announce[0], _('Elapsed time: '), sActual, actualDurationPercentage()))
 
 	def script_elapsedTime(self, gesture):
 		if isStarting():
@@ -447,15 +447,15 @@ class SoundManager (IAccessible):
 			if not actualDuration():
 				text = announce[1]
 			elif actualDuration() == totalTime():
-				text = '%s %s %s %s' % (_('Elapsed time: '), actualDuration(), announce[2], actualDurationPercentage())
+				text = u'{0} {1} {2} {3}'.format(_('Elapsed time: '), actualDuration(), announce[2], actualDurationPercentage())
 			else:
 				# Translators: Message to indicate the elapsed time.
-				text = '%s %s %s' % (_('Elapsed time: '), actualDuration(), actualDurationPercentage())
+				text = u'{0} {1} {2}'.format(_('Elapsed time: '), actualDuration(), actualDurationPercentage())
 			repeat = getLastScriptRepeatCount()
 			if repeat == 0:
 				message(text)
 			elif repeat == 1:
-				message('%s %s' % (announce[8], totalTime()))
+				message(u'{0} {1}'.format(announce[8], totalTime()))
 
 	# Translators: message presented in input mode.
 	script_elapsedTime.__doc__ = _('Gives the duration from the beginning of the file to the current position of the playback cursor. If pressed twice, gives the total duration.')
@@ -469,7 +469,7 @@ class SoundManager (IAccessible):
 			return
 		if checkSelection () or checkPart ():
 			# Translators: Message to indicate the remaining time.
-			message('%s %s' % (_('Remaining time: '), timeRemaining()))
+			message(u'{0} {1}'.format(_('Remaining time: '), timeRemaining()))
 
 	# Translators: message presented in input mode.
 	script_timeRemaining.__doc__ = _('Gives the time remaining from the current position of the playback cursor to the end of the file.')
@@ -594,7 +594,7 @@ class SoundManager (IAccessible):
 
 class AppModule (appModuleHandler.AppModule):
 
-	scriptCategory = _addonSummary
+	scriptCategory = ADDON_SUMMARY
 
 	def event_valueChange (self, obj, nextHandler):
 		if obj.role == ROLE_EDITABLETEXT and obj.value and all (x in obj.value for x in ['   ', ':']):

@@ -12,6 +12,8 @@ import config
 from gui.settingsDialogs import SettingsDialog
 import wx
 import os
+import globalVars
+from gui import guiHelper
 
 class Mp3DirectCutDialog(SettingsDialog):
 
@@ -19,30 +21,34 @@ class Mp3DirectCutDialog(SettingsDialog):
 	title = _("Configuration of the addon {0}").format("mp3DirectCut")
 
 	def makeSettings(self, settingsSizer):
-		dialogSizer=wx.BoxSizer(wx.VERTICAL)
-		reportSpaceID = wx.NewId()
+		settingsSizerHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 		# Translators: The label of the checkbox to enable or disable the spacebar announcements.
-		self.reportSpace=wx.CheckBox(parent = self, id = reportSpaceID, label=_("Enable announcements of the space key"))
-		self.reportSpace.SetValue(config.conf['mp3DCReport']['space'])
-		dialogSizer.Add(item=self.reportSpace)
-		reportMarkerID = wx.NewId()
+		self.reportSpaceCheckBox=wx.CheckBox(parent = self, label=_("Enable announcements of the space key"))
+		self.reportSpaceCheckBox.SetValue(config.conf['mp3DCReport']['space'])
+		if globalVars.appArgs.secure:
+			self.reportSpaceCheckBox.Disable()
+		settingsSizerHelper.addItem(self.reportSpaceCheckBox)
+
 		# Translators: The label of the checkbox to enable or disable the announcements of the selection markers.
-		self.reportMarker=wx.CheckBox(parent = self, id = reportMarkerID, label=_("Announce the placement of the selection markers"))
-		self.reportMarker.SetValue(config.conf['mp3DCReport']['marker'])
-		dialogSizer.Add(item=self.reportMarker)
-		reportOtherID = wx.NewId()
+		self.reportMarkerCheckBox=wx.CheckBox(parent = self, label=_("Announce the placement of the selection markers"))
+		self.reportMarkerCheckBox.SetValue(config.conf['mp3DCReport']['marker'])
+		if globalVars.appArgs.secure:
+			self.reportMarkerCheckBox.Disable()
+		settingsSizerHelper.addItem(self.reportMarkerCheckBox)
+
 		# Translators: The label of the checkbox to enable or disable the other announcements.
-		self.reportOther=wx.CheckBox(parent = self, id = reportOtherID, label=_("Enable the other announces"))
-		self.reportOther.SetValue(config.conf['mp3DCReport']['other'])
-		dialogSizer.Add(item=self.reportOther)
-		settingsSizer.Add(dialogSizer, border=10, flag=wx.BOTTOM)
+		self.reportOtherCheckBox=wx.CheckBox(parent = self, label=_("Enable the other announces"))
+		self.reportOtherCheckBox.SetValue(config.conf['mp3DCReport']['other'])
+		if globalVars.appArgs.secure:
+			self.reportOtherCheckBox.Disable()
+		settingsSizerHelper.addItem(self.reportOtherCheckBox)
 
 	def postInit(self):
-		self.reportSpace.SetFocus()
+		self.reportSpaceCheckBox.SetFocus()
 
 	def onOk(self, evt):
-		config.conf['mp3DCReport']['space'] = self.reportSpace.GetValue()
-		config.conf['mp3DCReport']['marker'] = self.reportMarker.GetValue()
-		config.conf['mp3DCReport']['other'] = self.reportOther.GetValue()
+		config.conf['mp3DCReport']['space'] = self.reportSpaceCheckBox.GetValue()
+		config.conf['mp3DCReport']['marker'] = self.reportMarkerCheckBox.GetValue()
+		config.conf['mp3DCReport']['other'] = self.reportOtherCheckBox.GetValue()
 		super(Mp3DirectCutDialog, self).onOk(evt)
 

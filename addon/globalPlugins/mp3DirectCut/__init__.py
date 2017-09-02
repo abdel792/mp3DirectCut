@@ -13,9 +13,9 @@ import os
 addonHandler.initTranslation()
 import config
 
-_addonDir = os.path.join(os.path.dirname(__file__), "..", "..").decode("mbcs")
-_curAddon = addonHandler.Addon(_addonDir)
-_addonSummary = _curAddon.manifest['summary']
+### Constants
+ADDON_DIR = os.path.join(os.path.dirname(__file__), '..', '..').decode('mbcs')
+ADDON_SUMMARY = addonHandler.Addon(ADDON_DIR).manifest['summary']
 
 confSpec = {
 	'space': 'boolean(default=True)',
@@ -26,7 +26,7 @@ config.conf.spec['mp3DCReport'] = confSpec
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
-	scriptCategory = _addonSummary
+	scriptCategory = ADDON_SUMMARY
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)

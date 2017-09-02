@@ -83,6 +83,12 @@ This addon offers the following commands:
 *	NVDA+H
 	*	Lets open the help of the current add-on.
 
+## Change for version 3.0 ##
+
+*	 Used the gui.guiHelper module to ensure the correct appearance of the addon's configuration dialog;
+*	 Used format instead of %s for formatted strings;
+*	 Used compliance with guidelines for implementation.
+
 ## Change for version 2.3 ##
 
 *	 Added the GPL license to the addon;
@@ -128,6 +134,6 @@ This addon offers the following commands:
 
 *	 Initial version.
 
-[1]: https://github.com/abdel792/mp3DirectCut/releases/download/v2.3/mp3DirectCut-2.3.nvda-addon
+[1]: https://github.com/abdel792/mp3DirectCut/releases/download/v3.0/mp3DirectCut-3.0.nvda-addon
 
-[2]: https://github.com/abdel792/mp3DirectCut/releases/download/v2.3/mp3DirectCut-2.3.nvda-addon
+[2]: https://github.com/abdel792/mp3DirectCut/releases/download/v3.0/mp3DirectCut-3.0.nvda-addon

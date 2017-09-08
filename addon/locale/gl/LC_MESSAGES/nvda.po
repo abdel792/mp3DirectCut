@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2017-08-27 18:44+0100\n"
+"PO-Revision-Date: 2017-09-03 12:54+0100\n"
 "Last-Translator: Juan C. Buño <oprisniki@gmail.com>\n"
 "Language-Team: NVDA add-ons galician translation team <oprisniki@gmail.com>\n"
 "Language: gl\n"
@@ -149,7 +149,7 @@ msgid "The recording is not ready !"
 msgstr "¡A grabación non está lista!"
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "The vu-meter is not available. Please verify if a recording is in progress, "
 "and that the checkbox enable the margin button is checked in the options of "
@@ -157,7 +157,7 @@ msgid ""
 msgstr ""
 "O vúmetro non está dispoñible. Comproba que unha grabación está ben en "
 "curso, e mira que a Caixa de verificación Habilitar botón Marxe está  ben "
-"marcada nas opcións de %s."
+"marcada nas opcións de {0}."
 
 #. Translators: Message to confirm that the level of the vu-meter has been reset.
 msgid "The level of the vu-meter has been reset !"
@@ -172,9 +172,8 @@ msgid "End selection marker set."
 msgstr "Marca de remate de seleción definida."
 
 #. Translators: Message to confirm that the selection has been canceled.
-#, fuzzy
 msgid "Selection canceled."
-msgstr "Seleción non atopada."
+msgstr "Seleción cancelada."
 
 msgid "of"
 msgstr "de"

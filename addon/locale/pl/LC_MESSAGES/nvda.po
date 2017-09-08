@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2017-09-01 22:47+0100\n"
+"PO-Revision-Date: 2017-09-02 23:17+0100\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: pl <LL@li.org>\n"
 "Language: pl\n"
@@ -147,14 +147,14 @@ msgid "The recording is not ready !"
 msgstr "Nagrywanie nie jest gotowe!"
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "The vu-meter is not available. Please verify if a recording is in progress, "
 "and that the checkbox enable the margin button is checked in the options of "
 "{0}."
 msgstr ""
 "Miernik VU jest niedostępny. Upewnij się, że nagrywanie jest włączone, i że "
-"pole wyboru włącz przycisk na marginesie jest włączony w opcjach %s."
+"pole wyboru włącz przycisk na marginesie jest włączony w opcjach {0}."
 
 #. Translators: Message to confirm that the level of the vu-meter has been reset.
 msgid "The level of the vu-meter has been reset !"

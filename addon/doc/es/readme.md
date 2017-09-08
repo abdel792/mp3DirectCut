@@ -9,97 +9,99 @@
 Este complemento permite mejorar la accesibilidad del software mp3DirectCut
 con NVDA.
 
-It has been tested with versions of mp3DirectCut ranging from 212 up to 223.
+Se ha probado con las versiones de mp3DirectCut que van desde la 212 hasta
+la 223.
 
 ## Órdenes de teclado ##
 
-This addon offers the following commands:
+Este complemento ofrece las siguientes órdenes:
 
 *	B
-	*	Used to confirm correct placement of the marker of the beginning of the selection B.
-*	Ctrl+Shift+B
-	*	Used to indicate the position of the marker of the beginning of selection B.
-	*	Double pressure lets give you the duration of the selection.
-*	Ctrl+Shift+D
-	*	Gives the duration from the beginning of the file to the current position of the playback cursor.
-	*	Double pressure lets give you the total duration.
-*	Ctrl+R
-	*	Confirms that the selection has been canceled.
-*	Ctrl+Shift+R
-	*	Gives the time remaining from the current position of the playback cursor to the end of the file.
-*	Ctrl+Shift+E
-	*	Used to indicate the position of the marker of the end of selection N.
-	*	Double pressure gives recapitulatif positions B and N, and the duration of the selection.
-*	Ctrl+Shift+P
-	*	Give the reference of the actual part and the total number of parts in the current file.
-*	Ctrl+Shift+Space
-	*	Used to determine the current level of the vu-meter, during recording.
-	*	Double pressure reset it.
-*	Down Arrow
-	*	Lets you see the current position of the playhead.
-	*	This command also position the cursor at the location of the marker of the end of selection N, while giving the location of this marker if a selection has been made.
-	*	In the volume dialog box, vocalise the next value that can be reached generally with downArrow.
-	*	This value is not vocalized default.
-*	End
-	*	Moves the playback cursor at the end of the current file and give the total time.
-*	Home
-	*	Moves the playback cursor at the beginning of the current file.
-*	Left Arrow
-	*	Lets make a brief return back of one second during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	Permite confirmar la colocación correcta de la marca de inicio de la selección B.
+*	Control+Shift+B
+	*	Permite indicar la ubicación de la marca de inicio de selección B.
+	*	Pulsando dos veces da la duración de la selección.
+*	Control+Shift+D
+	*	Da la duración transcurrida desde el inicio del archivo hasta la ubicación actual del cursor de reproducción.
+	*	Pulsando dos veces da el tiempo total.
+*	Control+R
+	*	Confirma que la selección se ha cancelado.
+*	Control+Shift+R
+	*	Da el tiempo restante desde la posición actual del cursor de reproducción hasta el final del archivo.
+*	Control+Shift+E
+	*	Permite indicar la ubicación de la marca de final de selección N.
+	*	Pulsando dos veces da un recapitulativo de la ubicación de los Tags B y N, así como la duración de la selección.
+*	Control+Shift+P
+	*	Da la referencia de la parte actual, así como el número total de partes.
+*	Control+Shift+Espacio
+	*	Permite indicar el valor actual del nivel del vúmetro.
+	*	Pulsando dos veces permite reiniciar este nivel.
+*	Flecha Abajo
+	*	Permite dar la duración actual.
+	*	Si se ha hecho una selección, coloca el cursor en la ubicación de la marca de final de selección N dando la ubicación de esta marca.
+	*	En las opciones del control del volumen de mp3directcut, da el valor siguiente que generalmente se accede con la flecha abajo.
+	*	Y que no es verbalizado por defecto.
+*	Fin
+	*	Permite mover el cursor de reproducción al final del archivo actual y da el tiempo total.
+*	Inicio
+	*	Permite mover el cursor de reproducción al inicio del archivo actual.
+*	Flecha Izquierda
+	*	Permite hacer un salto hacia atrás de un segundo durante una reproducción, dando la duración actual.
+	*	La duración de este retroceso es configurable en las opciones de mp3directcut.
 *	N
-	*	Used to confirm correct placement of the marker of the end of the selection N.
-*	Page Down
-	*	Lets make a leap forward of 10 seconds during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
-*	Page Up
-	*	Lets make a return back of 10 seconds during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	Permite confirmar la colocación correcta de la marca de final de selección N.
+*	Avance de página
+	*	Permite hacer un salto hacia adelante de 10 segundos durante una reproducción, dando la duración actual.
+	*	La duración de este salto hacia adelante es configurable en las opciones de mp3directcut.
+*	Retroceso de página
+	*	Permite hacer un salto hacia atrás de 10 segundos durante una reproducción, dando la duración actual.
+	*	La duración de este salto hacia atrás es configurable en las opciones de mp3directcut.
 *	R
-	*	Allows to prepare a record and whether you can press spacebar to start.
-*	Right Arrow
-	*	Lets do a brief forward of one second during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
-*	Ctrl+Right Arrow
-	*	Moves to the next splitting point, while giving the current duration.
-*	Ctrl+Left Arrow
-	*	Moves to the previous splitting point, while giving the current duration.
-*	Shift+Right Arrow
-	*	Lets do a brief forward of four hundredths of seconds during playback, while giving the current duration.
-*	Shift+Left Arrow
-	*	Lets do a brief backwards of four hundredths of seconds during playback, while giving the current duration. 
+	*	Permite preparar una grabación e indica si puedes pulsar sobre la barra espaciadora para iniciar.
+*	Flecha Derecha
+	*	Permite hacer un avance hacia adelante de un segundo durante una reproducción, dando la duración actual.
+	*	La duración de este avance es configurable en las opciones de mp3directcut.
+*	Control+Flecha Derecha
+	*	Desplaza al siguiente punto de corte, dando la duración actual.
+*	Control+Flecha Izquierda
+	*	Desplaza al punto de corte anterior, dando la duración actual.
+*	Shift+Flecha Derecha
+	*	Permite hacer un avance hacia adelante de cuatro centésimas de segundo durante una reproducción, dando la duración actual.
+*	Shift+Flecha Izquierda
+	*	Permite hacer un retroceso de cuatro centésimas de segundo durante una reproducción, dando la duración actual.
 *	S
-	*	Used to stop the reading and give the current duration.
-*	Space
-	*	If the recording is ready, start this recording.
-	*	If a recording is in progress, stop it by positioning the cursor at the beginning.
-	*	If a file is loaded, start the reading.
-	*	If a read is in progress, allows to do a pause by giving current duration.
-	*	If read is paused, allows to restart the reading from the current location.
-*	Up Arrow
-	*	Lets you see the current position of the playhead.
-	*	This command also position the cursor at the location of the marker of the beginning of selection B, while giving the location of this marker if a selection has been made.
-	*	In the volume dialog box, vocalise the previous value that can be reached generally with upArrow.
-	*	This value is not vocalized default.
+	*	Permite detener la reproducción en curso, dando la duración actual.
+*	Espacio
+	*	Si la grabación está lista, permite iniciar ésta.
+	*	Si una grabación está en curso, permite detenerla, colocando el cursor al inicio del archivo.
+	*	Si un archivo está abierto, permite iniciar la reproducción.
+	*	Si una reproducción está en curso, permite efectuar una pausa, dando la duración actual.
+	*	Si una reproducción está en pausa, permite reiniciar la reproducción desde la ubicación actual.
+*	Flecha Arriba
+	*	Permite dar la duración actual.
+	*	Si se ha hecho una selección, coloca el cursor en la ubicación de la marca de inicio de selección B, dando la ubicación de esta marca.
+	*	En las opciones del control del volumen de mp3directcut, da el valor anterior al que generalmente se accede con la flecha arriba.
+	*	Y que no es verbalizado por defecto.
 *	NVDA+H
-	*	Lets open the help of the current add-on.
+	*	Permite abrir la ayuda del actual complemento.
 
-## Change for version 3.0 ##
+## Cambios para la versión 3.0 ##
 
-*	 Used the gui.guiHelper module to ensure the correct appearance of the
-   addon's configuration dialog;
-*	 Used format instead of %s for formatted strings;
-*	 Used compliance with guidelines for implementation.
+*	 Se utiliza el módulo gui.guiHelper para asegurarse de la correcta
+   apariencia del diálogo de configuración del complemento;
+*	 Se utiliza formato en lugar de %s para cadenas formateadas;
+*	 Se cumplen las directrices de cumplimentación.
 
-## Change for version 2.3 ##
+## Cambios para la versión 2.3 ##
 
-*	 Added the GPL license to the addon;
-*	 Changed the shortcut of the script giving the end of selection from Ctrl
-   + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work
-   with the latest versions of mp3DirectCut;
-*	 Added a script to confirm that the selection has been canceled with
-   'Ctrl+r';
-*	 Maked some correction in the code of the appModule 'mp3directcut.py'.
+*	 Se añade la licencia GPL al complemento;
+*	 Se cambia el atajo de teclado del script que da fin a la selección de
+   Ctrl + Shift + N a Ctrl + Shift + E porque Ctrl + Shift + N no funciona
+   con  las últimas versiones de mp3DirectCut;
+*	 Se añadió un script para confirmar que la selección se ha cancelado con
+   'Control+r';
+*	 Se hicieron algunas correcciones en el código del appModule
+   'mp3directcut.py'.
 
 ## Cambios para la versión 2.2 ##
 

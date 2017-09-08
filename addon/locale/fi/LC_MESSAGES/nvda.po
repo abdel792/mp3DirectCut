@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2017-09-01 07:31+0200\n"
+"PO-Revision-Date: 2017-09-06 16:08+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -21,7 +21,7 @@ msgstr ""
 #. Translators: name of the option in the menu.
 #, python-brace-format
 msgid "{0} addon configuration"
-msgstr "{0}-lisäosan asetukset"
+msgstr "{0}"
 
 #. Translators: message presented in input mode.
 #, python-brace-format
@@ -77,14 +77,14 @@ msgid ""
 "Not file is loaded. Please check that you are in a file, open one with "
 "Control O, or R to start recording."
 msgstr ""
-"Tiedostoa ei ole avoinna. Varmista, että olet tiedostossa, avaa sellainen "
-"näppäinkomennolla Control+O tai käynnistä äänitys painamalla R."
+"Tiedostoa ei ole avoinna. Varmista, että olet avoimessa tiedostossa, avaa "
+"sellainen näppäinkomennolla Control+O tai aloita äänitys painamalla R."
 
 #. Translators: Message to inform the user that the current command is not available in a recording mode.
 msgid ""
 "This command is not available in a recording mode, it is available only in a "
 "reading mode !"
-msgstr "Tämä komento ei ole käytettävissä äänitystilassa!"
+msgstr "Tämä komento ei ole käytettävissä äänitystilassa"
 
 #. Translators: Message to indicate the position of the selection start marker.
 msgid "The marker of the beginning of selection B is at"
@@ -112,7 +112,7 @@ msgstr "Nykyinen osa"
 
 #. Translators: Message to inform that no selection was found.
 msgid "Selection not found."
-msgstr "Valintaa ei löydy."
+msgstr "Valintaa ei löydy"
 
 #. Translators: Message to indicate that the information of the current part is not available.
 msgid "Information specific to the actual part is not available."
@@ -131,7 +131,7 @@ msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
 "recording. This same spacebar  will stop the recording !"
 msgstr ""
-"Äänite on valmiina! Aloita uusi äänitys ja lopeta se painamalla välilyöntiä."
+"Äänitystila on valmiina. Aloita ja lopeta äänitys painamalla välilyöntiä."
 
 #. Translators: Message to inform the user that a recording is in progress.
 msgid ""
@@ -141,22 +141,22 @@ msgstr "Äänitys on käynnissä. Lopeta ja aloita uusi painamalla välilyönti�
 
 #. Translators: Message to inform the user that the recording is not ready.
 msgid "The recording is not ready !"
-msgstr "Äänite ei ole valmiina!"
+msgstr "Äänitystila ei ole valmiina"
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "The vu-meter is not available. Please verify if a recording is in progress, "
 "and that the checkbox enable the margin button is checked in the options of "
 "{0}."
 msgstr ""
 "VU-mittari ei ole käytettävissä. Varmista, että äänitys on käynnissä ja että "
-"Näytä tasonäppäin (Enable Margin button) -valintaruutu on valittuna %sin "
+"Näytä tasonäppäin (Enable Margin button) -valintaruutu on valittuna {0}in "
 "asetuksissa."
 
 #. Translators: Message to confirm that the level of the vu-meter has been reset.
 msgid "The level of the vu-meter has been reset !"
-msgstr "VU-mittarin taso on nollattu!"
+msgstr "VU-mittarin taso nollattu"
 
 #. Translators: Message to confirm the placement of the selection start marker.
 msgid "Start selection marker set."

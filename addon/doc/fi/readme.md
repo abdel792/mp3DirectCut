@@ -8,97 +8,97 @@
 
 Tämä lisäosa parantaa mp3DirectCut-ohjelman esteettömyyttä NVDA:n kanssa.
 
-It has been tested with versions of mp3DirectCut ranging from 212 up to 223.
+Toimivuus on testattu mp3DirectCutin versioilla 2.12 - 2.23.
 
 ## Pikanäppäimet ##
 
-This addon offers the following commands:
+Tämä lisäosa tarjoaa seuraavat komennot:
 
 *	B
-	*	Used to confirm correct placement of the marker of the beginning of the selection B.
+	*	Asettaa valinnan aloitusmerkin nykyiseen sijaintiin.
 *	Ctrl+Shift+B
-	*	Used to indicate the position of the marker of the beginning of selection B.
-	*	Double pressure lets give you the duration of the selection.
+	*	Ilmoittaa valinnan aloitusmerkin sijainnin.
+	*	Ilmoittaa kahdesti painettaessa valinnan keston.
 *	Ctrl+Shift+D
-	*	Gives the duration from the beginning of the file to the current position of the playback cursor.
-	*	Double pressure lets give you the total duration.
+	*	Ilmoittaa keston tiedoston alusta toistokohdistimen nykyiseen sijaintiin saakka.
+	*	Ilmoittaa kahdesti painettaessa tiedoston kokonaiskeston.
 *	Ctrl+R
-	*	Confirms that the selection has been canceled.
+	*	Vahvistaa, että valinta on peruttu.
 *	Ctrl+Shift+R
-	*	Gives the time remaining from the current position of the playback cursor to the end of the file.
+	*	Ilmoittaa jäljellä olevan ajan toistokohdistimen nykyisestä sijainnista tiedoston loppuun saakka.
 *	Ctrl+Shift+E
-	*	Used to indicate the position of the marker of the end of selection N.
-	*	Double pressure gives recapitulatif positions B and N, and the duration of the selection.
+	*	Ilmoittaa valinnan lopetusmerkin sijainnin.
+	*	Antaa kahdesti painettaessa yhteenvedon valinnan aloitus- ja lopetusmerkkien sijainneista sekä ilmoittaa valinnan keston.
 *	Ctrl+Shift+P
-	*	Give the reference of the actual part and the total number of parts in the current file.
-*	Ctrl+Shift+Space
-	*	Used to determine the current level of the vu-meter, during recording.
-	*	Double pressure reset it.
-*	Down Arrow
-	*	Lets you see the current position of the playhead.
-	*	This command also position the cursor at the location of the marker of the end of selection N, while giving the location of this marker if a selection has been made.
-	*	In the volume dialog box, vocalise the next value that can be reached generally with downArrow.
-	*	This value is not vocalized default.
+	*	Ilmoittaa nykyisen osan sekä tiedostossa olevien osien määrän.
+*	Ctrl+Shift+Välilyönti
+	*	Ilmoittaa VU-mittarin nykyisen tason äänityksen aikana.
+	*	Kahdesti painaminen nollaa tason.
+*	Nuoli alas
+	*	Ilmoittaa toistokohdistimen nykyisen sijainnin.
+	*	Lisäksi, mikäli valinta on tehty, tämä komento siirtää kohdistimen valinnan lopetusmerkin kohdalle ja ilmoittaa sen sijainnin.
+	*	Ilmoittaa äänenvoimakkuusvalintaikkunassa seuraavan arvon.
+	*	Oletuksena arvoa ei ilmoiteta.
 *	End
-	*	Moves the playback cursor at the end of the current file and give the total time.
+	*	Siirtää toistokohdistimen tiedoston loppuun ja ilmoittaa kokonaiskeston.
 *	Home
-	*	Moves the playback cursor at the beginning of the current file.
-*	Left Arrow
-	*	Lets make a brief return back of one second during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	Siirtää toistokohdistimen tiedoston alkuun.
+*	Nuoli vasemmalle
+	*	Siirtää toistettaessa sekunnin taaksepäin ja ilmoittaa nykyisen sijainnin.
+	*	Mp3DirectCutin asetuksista on mahdollista määrittää, paljonko tämä komento siirtää.
 *	N
-	*	Used to confirm correct placement of the marker of the end of the selection N.
-*	Page Down
-	*	Lets make a leap forward of 10 seconds during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
-*	Page Up
-	*	Lets make a return back of 10 seconds during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	Asettaa valinnan lopetusmerkin nykyiseen sijaintiin.
+*	Page down
+	*	Siirtää toistettaessa kymmenen sekuntia eteenpäin ja ilmoittaa nykyisen sijainnin.
+	*	Mp3DirectCutin asetuksista on mahdollista määrittää, paljonko tämä komento siirtää.
+*	Page up
+	*	Siirtää toistettaessa 10 sekuntia taaksepäin ja ilmoittaa nykyisen sijainnin.
+	*	Mp3DirectCutin asetuksista on mahdollista määrittää, paljonko tämä komento siirtää.
 *	R
-	*	Allows to prepare a record and whether you can press spacebar to start.
-*	Right Arrow
-	*	Lets do a brief forward of one second during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
-*	Ctrl+Right Arrow
-	*	Moves to the next splitting point, while giving the current duration.
-*	Ctrl+Left Arrow
-	*	Moves to the previous splitting point, while giving the current duration.
-*	Shift+Right Arrow
-	*	Lets do a brief forward of four hundredths of seconds during playback, while giving the current duration.
-*	Shift+Left Arrow
-	*	Lets do a brief backwards of four hundredths of seconds during playback, while giving the current duration. 
+	*	Aktivoi äänityksen, jonka voit aloittaa painamalla Välilyöntiä.
+*	Nuoli oikealle
+	*	Siirtää toistettaessa sekunnin eteenpäin ja ilmoittaa nykyisen sijainnin.
+	*	Mp3DirectCutin asetuksista on mahdollista määrittää, paljonko tämä komento siirtää.
+*	Ctrl+Nuoli oikealle
+	*	Siirtää seuraavaan leikkauskohtaan ja ilmoittaa sen sijainnin.
+*	Ctrl+Nuoli vasemmalle
+	*	Siirtää edelliseen leikkauskohtaan ja ilmoittaa sen sijainnin.
+*	Shift+Nuoli oikealle
+	*	Siirtää toistettaessa neljä sekunnin sadasosaa eteenpäin ja ilmoittaa nykyisen sijainnin.
+*	Shift+Nuoli vasemmalle
+	*	Siirtää toistettaessa neljä sekunnin sadasosaa taaksepäin ja ilmoittaa nykyisen sijainnin.
 *	S
-	*	Used to stop the reading and give the current duration.
-*	Space
-	*	If the recording is ready, start this recording.
-	*	If a recording is in progress, stop it by positioning the cursor at the beginning.
-	*	If a file is loaded, start the reading.
-	*	If a read is in progress, allows to do a pause by giving current duration.
-	*	If read is paused, allows to restart the reading from the current location.
-*	Up Arrow
-	*	Lets you see the current position of the playhead.
-	*	This command also position the cursor at the location of the marker of the beginning of selection B, while giving the location of this marker if a selection has been made.
-	*	In the volume dialog box, vocalise the previous value that can be reached generally with upArrow.
-	*	This value is not vocalized default.
+	*	Pysäyttää toiston ja ilmoittaa nykyisen sijainnin.
+*	Välilyönti
+	*	Aloittaa äänityksen, mikäli se on valmiina aloitettavaksi.
+	*	Keskeyttää äänityksen, mikäli se on käynnissä, ja siirtää tiedoston alkuun.
+	*	Aloittaa toiston, mikäli tiedosto on avoinna.
+	*	Pysäyttää toiston, mikäli se on käynnissä, ja ilmoittaa nykyisen sijainnin.
+	*	Jatkaa toistoa nykyisestä sijainnista, mikäli se on pysäytetty.
+*	Nuoli ylös
+	*	Ilmoittaa toistokohdistimen nykyisen sijainnin.
+	*	Lisäksi, mikäli valinta on tehty,  tämä komento siirtää kohdistimen valinnan aloitusmerkin kohdalle ja puhuu sen sijainnin.
+	*	Ilmoittaa äänenvoimakkuusvalintaikkunassa edellisen arvon.
+	*	Oletuksena arvoa ei puhuta.
 *	NVDA+H
-	*	Lets open the help of the current add-on.
+	*	Avaa lisäosan ohjeen.
 
-## Change for version 3.0 ##
+## Muutokset versiossa 3.0 ##
 
-*	 Used the gui.guiHelper module to ensure the correct appearance of the
-   addon's configuration dialog;
-*	 Used format instead of %s for formatted strings;
-*	 Used compliance with guidelines for implementation.
+*	 Käytetään gui.guiHelper-moduulia lisäosan asetusvalintaikkunan
+   asianmukaisen ulkoasun varmistamiseen;
+*	 Käytetään muotoa %s:n asemesta muotoilluille merkkijonoille;
+*	 Noudatetaan toteutusohjeita.
 
-## Change for version 2.3 ##
+## Muutokset versiossa 2.3 ##
 
-*	 Added the GPL license to the addon;
-*	 Changed the shortcut of the script giving the end of selection from Ctrl
-   + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work
-   with the latest versions of mp3DirectCut;
-*	 Added a script to confirm that the selection has been canceled with
-   'Ctrl+r';
-*	 Maked some correction in the code of the appModule 'mp3directcut.py'.
+*	 Lisätty GPL-lisenssi;
+*	 Muutettu valinnan lopetuskohdan ilmoittavan komennon pikanäppäin
+   Ctrl+Shift+N:stä Ctrl+Shift+E:ksi, koska ensin mainittu ei toimi
+   mp3DirectCutin uusimmissa versioissa;
+*	 Lisätty skripti, joka varmistaa näppäinkomennolla Ctrl+R, että valinta on
+   peruttu;
+*	 Tehty joitakin korjauksia sovellusmoduulin mp3directcut.py koodiin.
 
 ## Muutokset versiossa 2.2 ##
 
@@ -141,9 +141,9 @@ This addon offers the following commands:
 
 ## Muutokset versiossa 1.1 ##
 
-*	 Syöte-eleet-valintaikkunaan lisätty mp3DirectCut-kategoria;
+*	 Lisätty Syötekomennot-valintaikkunaan mp3DirectCut-kategoria;
 	*	 sen sisältämät komennot ovat näkyvissä vain ohjelman ollessa käynnissä.
-*	 Lisätty mahdollisuus automaattisten ilmoitusten käyttöön ottamiseen tai käytöstä poistamiseen NVDA:n Työkalut-valikon mp3DirectCut-kohteeseen;
+*	 Lisäosan asetusvalintaikkunaan lisätty mahdollisuus automaattisten ilmoitusten käyttöön ottamiseen tai käytöstä poistamiseen;
 
 ## Muutokset versiossa 1.0 ##
 

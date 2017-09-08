@@ -9,97 +9,95 @@
 هذه الإِضافةُ البرمجيةُ سَتُمَكِّنُكُم من تحسين القُدرةِ على استعمال
 البرنامج mp3DirectCut مع NVDA.
 
-It has been tested with versions of mp3DirectCut ranging from 212 up to 223.
+لقد تمت تجرِبَتُهَا مع النُّسَخ من 212 إلى 223 من mp3DirectCut.
 
 ## اختصارات لوحة المفاتيح ##
 
-This addon offers the following commands:
+هذه الإضافةُ البرمجيةُ تمنحُكم الإختصارات التالية :
 
 *	B
-	*	Used to confirm correct placement of the marker of the beginning of the selection B.
+	*	يُمَكِّنكم من التَّأكُّد من صِحَّةِ وضع مؤشرِ بداية التحديد B.
 *	Ctrl+Shift+B
-	*	Used to indicate the position of the marker of the beginning of selection B.
-	*	Double pressure lets give you the duration of the selection.
+	*	يُمَكِّنكم من معرفةِ مكان تَوَاجُدِ مؤشرِ بداية التحديد B.
+	*	ضَغطٌ مُزْدَوِجٌ يعطي مُدَّةَ التحديد.
 *	Ctrl+Shift+D
-	*	Gives the duration from the beginning of the file to the current position of the playback cursor.
-	*	Double pressure lets give you the total duration.
+	*	يعطي المُدَّةَ المسموعةَ من بداية المُسْتَند, إلى غاية المكان الحالي الَّذِي يوجد فيه رأسُ القراءة.
+	*	ضغطٌ مُزْدَوِجٌ يعطي الوقت الكامل.
 *	Ctrl+R
-	*	Confirms that the selection has been canceled.
+	*	يؤكد عمليةَ إلغاء التحديد.
 *	Ctrl+Shift+R
-	*	Gives the time remaining from the current position of the playback cursor to the end of the file.
+	*	يعطي المُدَّةَ المُتَبَقيةَ من المكان الحالي الَّذِي يوجد فيه رأسُ القراءة إلى نهاية الملف.
 *	Ctrl+Shift+E
-	*	Used to indicate the position of the marker of the end of selection N.
-	*	Double pressure gives recapitulatif positions B and N, and the duration of the selection.
+	*	يُمَكِّنكم من معرفةِ مكان تَوَاجُدِ مؤشرِ نهايةِ التحديد N.
+	*	ضَغطٌ مُزْدَوِجٌ يُذكِّرُكم بمكان تَوَاجُدِ المؤشرَيْن B وَ N و يعطيكم مُدَّةََ التحديد.
 *	Ctrl+Shift+P
-	*	Give the reference of the actual part and the total number of parts in the current file.
-*	Ctrl+Shift+Space
-	*	Used to determine the current level of the vu-meter, during recording.
-	*	Double pressure reset it.
+	*	يُمَكِّنكم من معرفة الجُزْءِ الحالي و كافَّةَ الأجزاء الخاصَّة بالمستند الحالي إذا كانت موجودة.
+*	Ctrl+Shift+مسافة
+	*	يُمَكِّنكم من معرفةِ مُستَوى درجة التسجيل الحالي.
+	*	ضغطٌ مُزدَوِجٌ سَيعيد تحديد مُستَوى هذه الدَّرجة.
 *	Down Arrow
-	*	Lets you see the current position of the playhead.
-	*	This command also position the cursor at the location of the marker of the end of selection N, while giving the location of this marker if a selection has been made.
-	*	In the volume dialog box, vocalise the next value that can be reached generally with downArrow.
-	*	This value is not vocalized default.
+	*	يُمَكِّنكم من معرفة المدَّة المسموعة إلى الوقت الحالي, من بدايةِ المُستَنَد.
+	*	إذا كانت هناك منطقةٌ محدَّدَةٌ, يضع رأس القراءة عند مؤشّر نهايةِ التحديد N, مع إعطائ مكان هذا المؤشِّر.
+	*	إذا كُنْتُم داخلَ صندوق تحديد الصوت, يَضَعُكُم على الدرجة اللّاحقة;
+	*	و الَّتي لَيْست مَنْطوقَةً عادةً.
 *	End
-	*	Moves the playback cursor at the end of the current file and give the total time.
+	*	يضع رأس القراءة في نهاية المستند المفتوح حاليًا, مع إعطائ الوقت الكامل.
 *	Home
-	*	Moves the playback cursor at the beginning of the current file.
+	*	يضع رأس القراءة في بداية المستند المفتوح حاليًا.
 *	Left Arrow
-	*	Lets make a brief return back of one second during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	يُمَكِّنكم من العوْدة إلى الوَرائ, مُدَّةَ ثانيةٍ واحدة أثنائَ القراءة, مع إعطائ الوقت الحالي.
+	*	يُمْكن تحديد هذه المُدَّة في إاعدادات mp3directcut.
 *	N
-	*	Used to confirm correct placement of the marker of the end of the selection N.
+	*	يُمَكِّنكم من التَّأكُّد من صِحَّةِ وضع مؤشرِ نهايةِ التحديد N.
 *	Page Down
-	*	Lets make a leap forward of 10 seconds during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	يُمَكِّنكم من التقدُّم إلى الأمام , مُدَّةَ عشرِ ثَوَانٍ أثنائَ القراءة, مع إعطائ الوقت الحالي.
+	*	يُمْكن تحديد هذه المُدَّة في إاعدادات mp3directcut.
 *	Page Up
-	*	Lets make a return back of 10 seconds during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	يُمَكِّنكم من العوْدة إلى الوَرائ, مُدَّةَ عشرِ ثَوانٍ أثنائَ القراءة, مع إعطائ الوقت الحالي.
+	*	يُمْكن تحديد هذه المُدَّة في إاعدادات mp3directcut.
 *	R
-	*	Allows to prepare a record and whether you can press spacebar to start.
+	*	يمَكِّنكم من تحضير التسجيل, و يخبِرُكُم إنْ كنتم تستطيعون أنْ تَضْغطوا على زر المسافة لبدايةِ عمليّةِ التسجيل.
 *	Right Arrow
-	*	Lets do a brief forward of one second during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	يُمَكِّنكم من التقدُّم إلى الأمام , مُدَّةَ ثانيةٍ واحدة أثنائَ القراءة, مع إعطائ الوقت الحالي.
+	*	يُمْكن تحديد هذه المُدَّة في إاعدادات mp3directcut.
 *	Ctrl+Right Arrow
-	*	Moves to the next splitting point, while giving the current duration.
+	*	يُمَكِّنُكم من التنقل إلى نقطة القطع المقبلة, مع معرفة الوقت الحالي.
 *	Ctrl+Left Arrow
-	*	Moves to the previous splitting point, while giving the current duration.
+	*	يُمَكِّنُكم من التنقل إلى نقطة القطع السَّابقة, مع معرفة الوقت الحالي.
 *	Shift+Right Arrow
-	*	Lets do a brief forward of four hundredths of seconds during playback, while giving the current duration.
+	*	يُمَكِّنكم من التقَدُّم إلى الأمام , مُدَّةَ أربع أجزاء من المائة, أثنائَ القراءة, مع إعطائ الوقت الحالي.
 *	Shift+Left Arrow
-	*	Lets do a brief backwards of four hundredths of seconds during playback, while giving the current duration. 
+	*	يُمَكِّنكم من العَودة إلى الوراء, مُدَّةَ أربع أجزاء من المائة, أثنائَ القراءة, مع إعطائ الوقت الحالي.
 *	S
-	*	Used to stop the reading and give the current duration.
-*	Space
-	*	If the recording is ready, start this recording.
-	*	If a recording is in progress, stop it by positioning the cursor at the beginning.
-	*	If a file is loaded, start the reading.
-	*	If a read is in progress, allows to do a pause by giving current duration.
-	*	If read is paused, allows to restart the reading from the current location.
+	*	يُمَكِّنكم من توقيف القراءة, مع معرفة المُدَّةِ الحالية.
+*	مسافة
+	*	اذا كان التسجيلُ جاهزًا, يُمَكِّنكم من بدايةِ هذا التسجيل.
+	*	إذا كان التسجيلُ جاريًا, يُمَكِّنكم من توقيف هذا التسجيل, و وضع رأس القراءة في بدايةِ المُستَند.
+	*	إذا كُنْتُم داخل مستند, يمَكِّنكم من بداية القراءة.
+	*	إذا كانت القِراءةُ جاريةً, يُمَكِّنكم من توقيف هذه القراءة.
+	*	إذا كانت القِراءةُ متوقفة, يُمَكِّنكم من استئناف القراءة من جديد من المكان الحالي.
 *	Up Arrow
-	*	Lets you see the current position of the playhead.
-	*	This command also position the cursor at the location of the marker of the beginning of selection B, while giving the location of this marker if a selection has been made.
-	*	In the volume dialog box, vocalise the previous value that can be reached generally with upArrow.
-	*	This value is not vocalized default.
+	*	يُمَكِّنكم من معرفة المدَّةِ المسموعةِ إلى الوقت الحالي, من بدايةِ المُستَنَد.
+	*	إذا كانت هناك منطقةٌ مُحَدَّدَةٌ, يضع رأس القراءة عند مؤشّر بدايةِ التحديد B, مع إعطائ مكان هذا المؤشِّر.
+	*	إذا كُنْتُم داخلَ صندوق تحديد الصوتْ, يَضَعُكُم على الدرجة السابقة.
+	*	و الَّتي لَيْست مَنْطوقَةً عادةً.
 *	NVDA+H
-	*	Lets open the help of the current add-on.
+	*	يُمَكِّنُكم من فتح ملف المساعدة للإضافة البرمجية الجارية.
 
-## Change for version 3.0 ##
+## مستجدات النسخة 3.0 ##
 
-*	 Used the gui.guiHelper module to ensure the correct appearance of the
-   addon's configuration dialog;
-*	 Used format instead of %s for formatted strings;
-*	 Used compliance with guidelines for implementation.
+*	 إستعمال gui.guiHelper لعرض إعدادات الإضىفة البرمجية;
+*	 إستعمال format عوض %s فيما يخص السلاسل المنسقة;
+*	 إستعمال استخدام توصيات المبادئ التوجيهية للتنفيذ.
 
-## Change for version 2.3 ##
+## مستجدات النسخة 2.3 ##
 
-*	 Added the GPL license to the addon;
-*	 Changed the shortcut of the script giving the end of selection from Ctrl
-   + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work
-   with the latest versions of mp3DirectCut;
-*	 Added a script to confirm that the selection has been canceled with
-   'Ctrl+r';
-*	 Maked some correction in the code of the appModule 'mp3directcut.py'.
+*	 إضافة ترخيص GPL للإضافة البرمجية;
+*	 تغيير مختصر لوحة المفاتيح الذي يعطي نهاية التحديد من 'Ctrl+Shift+N' إلى
+   'Ctrl+Shift+E' لأن 'Ctrl+Shift+N' لا يعمل مع النسخ الأواخر للبرنامج
+   mp3DirectCut;
+*	 إضافةُ إمكانيةِ تأكيد إلغاؤ التحديد بالضغط على 'Ctrl+R';
+*	 إضافة بعض التصحيحات داخل الappModule 'mp3directcut.py'.
 
 ## مستجدات النسخة 2.2 ##
 

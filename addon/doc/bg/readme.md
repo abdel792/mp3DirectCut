@@ -9,97 +9,96 @@
 Тази добавка подобрява достъпността на програмата mp3DirectCut при работа с
 NVDA.
 
-It has been tested with versions of mp3DirectCut ranging from 212 up to 223.
+Изпробвана е с версии на mp3DirectCut от 2.12 до 2.23.
 
 ## Клавишни комбинации ##
 
-This addon offers the following commands:
+Тази добавка предлага следните команди:
 
 *	B
-	*	Used to confirm correct placement of the marker of the beginning of the selection B.
+	*	Използва се за потвърждаване на правилното позициониране на маркера за начало на селекцията (B).
 *	Ctrl+Shift+B
-	*	Used to indicate the position of the marker of the beginning of selection B.
-	*	Double pressure lets give you the duration of the selection.
+	*	Използва се за съобщаване на позицията на маркера за начало на селекцията (B).
+	*	Двукратното й натискане съобщава времетраенето на селекцията.
 *	Ctrl+Shift+D
-	*	Gives the duration from the beginning of the file to the current position of the playback cursor.
-	*	Double pressure lets give you the total duration.
-*	Ctrl+R
-	*	Confirms that the selection has been canceled.
+	*	Съобщава времетраенето от началото на файла до текущата позиция на курсора за възпроизвеждане.
+	*	Двукратното й натискане съобщава общото времетраене.
 *	Ctrl+Shift+R
-	*	Gives the time remaining from the current position of the playback cursor to the end of the file.
+	*	Съобщава оставащото времетраене от текущата позиция на курсора за възпроизвеждане до края на файла.
 *	Ctrl+Shift+E
-	*	Used to indicate the position of the marker of the end of selection N.
-	*	Double pressure gives recapitulatif positions B and N, and the duration of the selection.
+	*	Използва се за съобщаване на текущата позиция на маркера за край на селекцията (N).
+	*	Двукратното й натискане съобщава позициите на B и N, както и времетраенето на селекцията.
 *	Ctrl+Shift+P
-	*	Give the reference of the actual part and the total number of parts in the current file.
-*	Ctrl+Shift+Space
-	*	Used to determine the current level of the vu-meter, during recording.
-	*	Double pressure reset it.
-*	Down Arrow
-	*	Lets you see the current position of the playhead.
-	*	This command also position the cursor at the location of the marker of the end of selection N, while giving the location of this marker if a selection has been made.
-	*	In the volume dialog box, vocalise the next value that can be reached generally with downArrow.
-	*	This value is not vocalized default.
+	*	Съобщава коя е текущата част и общия брой на частите в целия файл.
+*	Ctrl+Shift+Интервал
+	*	Използва се за съобщаване на текущото ниво на VU-Meter по време на записване.
+	*	Двукратното й натискане го нулира.
+*	Стрелка надолу
+	*	Позволява ви да прегледате текущата позиция на маркера за възпроизвеждане.
+	*	Тази команда също така позиционира курсора върху маркера отбелязващ края на селекцията (N), давайки и местоположението на маркера, ако е била направена селекция.
+	*	В диалоговия прозорец за силата на звука, съобщава следващата стойност достижима със стрелка надолу.
+	*	Тази стойност по подразбиране не бива съобщавана.
 *	End
-	*	Moves the playback cursor at the end of the current file and give the total time.
+	*	Премества курсора за възпроизвеждане в края на текущия файл и съобщава общото времетраене.
 *	Home
-	*	Moves the playback cursor at the beginning of the current file.
-*	Left Arrow
-	*	Lets make a brief return back of one second during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	Премества курсора за възпроизвеждане в началото на текущия файл.
+*	Стрелка наляво
+	*	Превърта с 1 секунда назад по време на възпроизвеждане, съобщавайки текущото времетраене.
+	*	Времетраенето на стъпката за превъртане може да се променя в настройките на mp3DirectCut.
 *	N
-	*	Used to confirm correct placement of the marker of the end of the selection N.
+	*	Използва се за потвърждаване на правилното позициониране на маркера за край на селекцията (N).
 *	Page Down
-	*	Lets make a leap forward of 10 seconds during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	Превърта с 10 секунди напред по време на възпроизвеждане, съобщавайки текущото времетраене.
+	*	Времетраенето на стъпката за превъртане може да се променя в настройките на mp3DirectCut.
 *	Page Up
-	*	Lets make a return back of 10 seconds during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	Превърта с 10 секунди назад по време на възпроизвеждане, съобщавайки текущото времетраене.
+	*	Времетраенето на стъпката за превъртане може да се променя в настройките на mp3DirectCut.
 *	R
-	*	Allows to prepare a record and whether you can press spacebar to start.
-*	Right Arrow
-	*	Lets do a brief forward of one second during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
-*	Ctrl+Right Arrow
-	*	Moves to the next splitting point, while giving the current duration.
-*	Ctrl+Left Arrow
-	*	Moves to the previous splitting point, while giving the current duration.
-*	Shift+Right Arrow
-	*	Lets do a brief forward of four hundredths of seconds during playback, while giving the current duration.
-*	Shift+Left Arrow
-	*	Lets do a brief backwards of four hundredths of seconds during playback, while giving the current duration. 
+	*	Позволява подготовка за запис, след което можете да натиснете клавиша за интервал, за да започнете записването.
+*	Стрелка надясно
+	*	Превърта с 1 секунда напред по време на възпроизвеждане, съобщавайки текущото времетраене.
+	*	Времетраенето на стъпката за превъртане може да се променя в настройките на mp3DirectCut.
+*	Ctrl+Стрелка надясно
+	*	Преминава до следващата разделителна точка, съобщавайки текущото времетраене.
+*	Ctrl+Стрелка наляво
+	*	Преминава до предишната разделителна точка, съобщавайки текущото времетраене.
+*	Shift+Стрелка надясно
+	*	Превърта с 4 стотни от секундата напред по време на възпроизвеждане, съобщавайки текущото времетраене.
+*	Shift+Стрелка наляво
+	*	Превърта с 4 стотни от секундата назад по време на възпроизвеждане, съобщавайки текущото времетраене.
 *	S
-	*	Used to stop the reading and give the current duration.
-*	Space
-	*	If the recording is ready, start this recording.
-	*	If a recording is in progress, stop it by positioning the cursor at the beginning.
-	*	If a file is loaded, start the reading.
-	*	If a read is in progress, allows to do a pause by giving current duration.
-	*	If read is paused, allows to restart the reading from the current location.
-*	Up Arrow
-	*	Lets you see the current position of the playhead.
-	*	This command also position the cursor at the location of the marker of the beginning of selection B, while giving the location of this marker if a selection has been made.
-	*	In the volume dialog box, vocalise the previous value that can be reached generally with upArrow.
-	*	This value is not vocalized default.
+	*	Използва се за спиране на възпроизвеждането и съобщаване на текущото времетраене.
+*	Клавиш за интервал
+	*	Ако режимът за запис е в готовност, се започва записване.
+	*	Ако записът е в ход, се спира записването и се позиционира курсора в началото.
+	*	Ако има отворен файл, се започва възпроизвеждането му.
+	*	Ако възпроизвеждането е в ход, позволява да се постави на пауза и се съобщава текущото времетраене.
+	*	Ако възпроизвеждането е на пауза, се подновява от текущата позиция на курсора.
+*	Стрелка нагоре
+	*	Позволява ви да прегледате текущата позиция на маркера за възпроизвеждане.
+	*	Тази команда също така позиционира курсора върху маркера отбелязващ началото на селекцията (B), давайки и местоположението на маркера, ако е била направена селекция.
+	*	В диалоговия прозорец за силата на звука, съобщава предишната стойност достижима със стрелка нагоре.
+	*	Тази стойност по подразбиране не бива съобщавана.
 *	NVDA+H
-	*	Lets open the help of the current add-on.
+	*	Отваря помощната документация за текущата добавка.
 
-## Change for version 3.0 ##
+## Промени във версия 3.0 ##
 
-*	 Used the gui.guiHelper module to ensure the correct appearance of the
-   addon's configuration dialog;
-*	 Used format instead of %s for formatted strings;
-*	 Used compliance with guidelines for implementation.
+*	 Използван е модулът gui.guiHelper с цел по-коректно визуализиране на
+   диалоговия прозорец с настройките на добавката;
+*	 Използва се формат (format) вместо %s за форматирани низове;
+*	 Прилага се съответствие с указанията за имплементиране.
 
-## Change for version 2.3 ##
+## Промени във версия 2.3 ##
 
-*	 Added the GPL license to the addon;
-*	 Changed the shortcut of the script giving the end of selection from Ctrl
-   + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work
-   with the latest versions of mp3DirectCut;
-*	 Added a script to confirm that the selection has been canceled with
-   'Ctrl+r';
-*	 Maked some correction in the code of the appModule 'mp3directcut.py'.
+*	 Добавен е GPL лиценза към добавката;
+*	 Променена е клавишната комбинация на командата за съобщаване на края на
+   селекцията от Control+Shift+N на Control+Shift+E, защото Control+Shift+N
+   не работи в новите версии на mp3DirectCut;
+*	 Добавен е скрипт за потвърждаване че селекцията е била отменена с
+   Control+R;
+*	 Направени са някои корекции в кода на модула за приложението
+   'mp3directcut.py'.
 
 ## Промени във версия 2.2 ##
 

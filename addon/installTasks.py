@@ -1,5 +1,7 @@
 # -*- coding: UTF-8 -*-
 
+# installTasks.py.
+
 # Copyright 2017-2018 Abdelkrim Bensaïd and other contributors, released under gPL.
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.

@@ -134,6 +134,6 @@ This addon offers the following commands:
 
 *	 Initial version.
 
-[1]: https://github.com/abdel792/mp3DirectCut/releases/download/v3.0/mp3DirectCut-3.0.nvda-addon
+[1]: https://github.com/abdel792/mp3DirectCut/releases/download/v3.1/mp3DirectCut-3.2.nvda-addon
 
-[2]: https://github.com/abdel792/mp3DirectCut/releases/download/v3.0/mp3DirectCut-3.0.nvda-addon
+[2]: https://github.com/abdel792/mp3DirectCut/releases/download/v3.1/mp3DirectCut-3.2.nvda-addon

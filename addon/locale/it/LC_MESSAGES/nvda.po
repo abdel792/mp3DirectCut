@@ -1,0 +1,255 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the mp3DirectCut package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mp3DirectCut 2.2\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2017-06-20 15:57+1000\n"
+"PO-Revision-Date: 2017-09-25 11:26+0200\n"
+"Last-Translator: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+
+#. Translators: name of the option in the menu.
+#, python-brace-format
+msgid "{0} addon configuration"
+msgstr "Configurazione componente aggiuntivo {0}"
+
+#. Translators: message presented in input mode.
+#, python-brace-format
+msgid "Allows you display the configuration dialog of {0} addon."
+msgstr ""
+"Consente di visualizzare la configurazione per il componente aggiuntivo {0}"
+
+#. Translators: The title of the add-on configuration dialog box.
+#, python-brace-format
+msgid "Configuration of the addon {0}"
+msgstr "Configurazione del componente aggiuntivo {0}"
+
+#. Translators: The label of the checkbox to enable or disable the spacebar announcements.
+msgid "Enable announcements of the space key"
+msgstr "Abilita gli annunci per il tasto spazio"
+
+#. Translators: The label of the checkbox to enable or disable the announcements of the selection markers.
+msgid "Announce the placement of the selection markers"
+msgstr "Notifica la posizione del marcatore di selezione"
+
+#. Translators: The label of the checkbox to enable or disable the other announcements.
+msgid "Enable the other announces"
+msgstr "Abilita annunci aggiuntivi"
+
+msgid "hours"
+msgstr "ore"
+
+msgid "minutes"
+msgstr "minuti"
+
+msgid "seconds"
+msgstr "secondi"
+
+msgid "hundredths"
+msgstr "centinaia"
+
+msgid "thousandths"
+msgstr "migliaia"
+
+#. Translators: Message to inform that no selection has been realized.
+msgid "No selection"
+msgstr "Nessuna selezione"
+
+#. Translators: Message to inform the user that the playback cursor is at the top of the file.
+msgid "Beginning of the file."
+msgstr "Inizio del file."
+
+#. Translators: Message to inform the user that the playback cursor is at the end of the file.
+msgid "End of the file."
+msgstr "Fine del file."
+
+#. Translators: Message to inform the user that not file is loaded.
+msgid ""
+"Not file is loaded. Please check that you are in a file, open one with "
+"Control O, or R to start recording."
+msgstr ""
+"Nessun file caricato. Aprirne uno con ctrl-o, oppure premere r per iniziare "
+"una registrazione."
+
+#. Translators: Message to inform the user that the current command is not available in a recording mode.
+msgid ""
+"This command is not available in a recording mode, it is available only in a "
+"reading mode !"
+msgstr ""
+"Questo comando non è disponibile in modalità di registrazione, è disponibile "
+"solo in modalità di lettura!"
+
+#. Translators: Message to indicate the position of the selection start marker.
+msgid "The marker of the beginning of selection B is at"
+msgstr "Il marcatore di inizio selezione B è a "
+
+#. Translators: Message to indicate the position of the selection end marker.
+msgid "The marker of the End of selection N is at"
+msgstr "Il marcatore di fine selezione N è a "
+
+#. Translators: Message to indicate the level of the vu-meter.
+msgid "The level of the vu-meter is at"
+msgstr "Il livello di vu-meter è a "
+
+#. Translators: Message to indicate the total duration of the current file.
+msgid "Total time: "
+msgstr "Tempo totale:"
+
+#. Translators: Message to indicate the duration of the selection.
+msgid "Duration of selection"
+msgstr "Durata della selezione"
+
+#. Translators: Message to indicate the actual part.
+msgid "Actual part"
+msgstr "Parte attuale"
+
+#. Translators: Message to inform that no selection was found.
+msgid "Selection not found."
+msgstr "Selezione non trovata."
+
+#. Translators: Message to indicate that the information of the current part is not available.
+msgid "Information specific to the actual part is not available."
+msgstr "Non sono disponibili informazioni per la parte specifica."
+
+#. Translators: Message to prompt the user to verify that no selection has been made.
+msgid "Please check that no selection has been made."
+msgstr "Si prega di verificare di non aver effettuato alcuna selezione."
+
+#. Translators: Message to prompt the user to verify that it is not in recording mode.
+msgid "Please chek that you are not in a recording mode."
+msgstr "Si prega di controllare di non essere in modalità di registrazione."
+
+#. Translators: Message to inform the user that the recording is ready.
+msgid ""
+"The recording is ready ! It remains only to press spacebar for begin the "
+"recording. This same spacebar  will stop the recording !"
+msgstr ""
+"La registrazione è pronta! Resta solo da premere la barra spaziatrice per "
+"iniziare la registrazione. Ripremere spazio per interromperla in qualsiasi "
+"momento."
+
+#. Translators: Message to inform the user that a recording is in progress.
+msgid ""
+"A recording is in progress, please press spacebar for stop it and start a "
+"new one."
+msgstr ""
+"È in corso una registrazione, si prega di premere la barra spaziatrice per "
+"interrompere ed avviarne una di nuova."
+
+#. Translators: Message to inform the user that the recording is not ready.
+msgid "The recording is not ready !"
+msgstr "La registrazione non è pronta!"
+
+#. Translators: Message to indicate that the vu-meter is not available.
+#, fuzzy, python-brace-format
+msgid ""
+"The vu-meter is not available. Please verify if a recording is in progress, "
+"and that the checkbox enable the margin button is checked in the options of "
+"{0}."
+msgstr ""
+"Il vu-meter non è disponibile. Si prega di verificare se è in corso una "
+"registrazione, e che la casella di controllo abilita il pulsante margine sia "
+"selezionata nelle opzioni di %s."
+
+#. Translators: Message to confirm that the level of the vu-meter has been reset.
+msgid "The level of the vu-meter has been reset !"
+msgstr "Il livello di v-meter è stato resettato."
+
+#. Translators: Message to confirm the placement of the selection start marker.
+msgid "Start selection marker set."
+msgstr "Marcatore di inizio selezione impostato."
+
+#. Translators: Message to confirm the placement of the selection end marker.
+msgid "End selection marker set."
+msgstr "Marcatore di fine selezione impostato."
+
+#. Translators: Message to confirm that the selection has been canceled.
+msgid "Selection canceled."
+msgstr "Selezione cancellata."
+
+msgid "of"
+msgstr "di"
+
+msgid "Part"
+msgstr "Parte"
+
+#. Translators: Message to inform the user that there is no remaining time.
+msgid "No time remaining !"
+msgstr "Nessun tempo rimanente!"
+
+#. Translators: Message  to indicate the elapsed time.
+#. Translators: Message to indicate the elapsed time.
+msgid "Elapsed time: "
+msgstr "Tempo trascorso:"
+
+#. Translators: message presented in input mode.
+msgid ""
+"Gives the duration from the beginning of the file to the current position of "
+"the playback cursor. If pressed twice, gives the total duration."
+msgstr ""
+"Fornisce la durata dall'inizio del file alla posizione corrente del cursore "
+"di riproduzione. Se premuto due volte, legge la durata totale."
+
+#. Translators: Message to indicate the remaining time.
+msgid "Remaining time: "
+msgstr "Tempo rimanente:"
+
+#. Translators: message presented in input mode.
+msgid ""
+"Gives the time remaining from the current position of the playback cursor to "
+"the end of the file."
+msgstr ""
+"Fornisce il tempo rimanente dalla posizione corrente del cursore di "
+"riproduzione fino alla fine del file."
+
+#. Translators: message presented in input mode.
+msgid ""
+"Used to determine the current level of the vu-meter, during recording, "
+"double pressure reset it."
+msgstr ""
+"Utilizzato per determinare il livello attuale del vu-meter, durante la "
+"registrazione, la doppia pressione lo resetta."
+
+#. Translators: message presented in input mode.
+msgid ""
+"Used to indicate the position of the marker of the beginning of selection B. "
+"Double pressure lets give you the duration of the selection."
+msgstr ""
+"Utilizzato per indicare la posizione del marcatore di inizio della selezione "
+"B. La doppia pressione consente di conoscere la durata della selezione."
+
+#. Translators: message presented in input mode.
+msgid ""
+"Used to indicate the position of the marker of the end of selection N. "
+"Double pressure gives recapitulatif positions B and N, and the duration of "
+"the selection."
+msgstr ""
+"Utilizzato per indicare la posizione del marcatore di fine selezione N. La "
+"doppia pressione fornisce un riepilogo delle posizioni B e N e la durata "
+"della selezione."
+
+#. Translators: message presented in input mode.
+msgid ""
+"Give the reference of the actual part and the total number of parts in the "
+"current file."
+msgstr ""
+"Fornisce i riferimenti alla sezione corrente e del numero totale di parti "
+"presenti nel file."
+
+#. Translators: message presented in input mode.
+msgid "Lets open the help of the current add-on."
+msgstr "Apre l'aiuto di questo componente aggiuntivo."
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid "some commands to use mp3directcut with NVDA"
+msgstr "Alcuni comandi per usare mp3DirectCut con NVDA"

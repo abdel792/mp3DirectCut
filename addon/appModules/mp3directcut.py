@@ -21,13 +21,10 @@ from ui import message
 import speech
 from NVDAObjects.IAccessible import IAccessible, getNVDAObjectFromEvent
 
-oldSpeechMode = speech.speechMode
-hr, min, sec, hun, th = _('hours'), _('minutes'), _('seconds'), _('hundredths'), _('thousandths')
-
 ### Constants
 PROGRAM_NAME = 'mp3DirectCut'
-ADDON_DIR = os.path.join (os.path.dirname (__file__), '..').decode ('mbcs')
-ADDON_SUMMARY = addonHandler.Addon (ADDON_DIR).manifest['summary']
+ADDON_SUMMARY = addonHandler.Addon (os.path.join (os.path.dirname (__file__), '..').decode ('mbcs')).manifest['summary']
+hr, min, sec, hun, th = _('hours'), _('minutes'), _('seconds'), _('hundredths'), _('thousandths')
 
 announce = (
 	# Translators: Message to inform that no selection has been realized.
@@ -320,14 +317,14 @@ class SoundManager (IAccessible):
 			sayMessage (announce[3])
 			return
 		actual = actualDuration ()
-		speech.speechMode = speech.speechMode_off
+		self.appModule.runValueChange = False
 		api.processPendingEvents ()
-		speech.speechMode = oldSpeechMode
 		if not actual:
 			sayMessage (announce[1], space = True)
 			return
 		actual = actual + ' ' + actualDurationPercentage () if not actual == totalTime () else announce[2] + ' ' + actual + ' ' + actualDurationPercentage ()
 		sayMessage (actual, space = True)
+		self.appModule.runValueChange = True
 
 	def script_nextSplittingPoint (self, gesture):
 		gesture.send ()
@@ -340,11 +337,11 @@ class SoundManager (IAccessible):
 				actual = announce[2] + ' ' + actualDuration () + ' ' + actualDurationPercentage () if checkSelection () else announce[2] + ' ' + actualDuration () + ' ' + part (flag = True)
 			else:
 				actual = actual + ' ' + actualDurationPercentage () if checkSelection () else actual + ' ' + part (flag = True)
-			speech.speechMode = speech.speechMode_off
-			api.processPendingEvents ()
-			speech.speechMode = oldSpeechMode
 			if not isReading ():
+				self.appModule.runValueChange = False
+				api.processPendingEvents ()
 				sayMessage (actual)
+				self.appModule.runValueChange = True
 
 	def script_previousSplittingPoint (self, gesture):
 		gesture.send ()
@@ -357,11 +354,11 @@ class SoundManager (IAccessible):
 				actual = announce[1] + ' ' + actualDurationPercentage () if checkSelection () else announce[1] + ' ' + part (flag = True)
 			else:
 				actual = actual + ' ' + actualDurationPercentage () if checkSelection () else actual + ' ' + part (flag = True)
-			speech.speechMode = speech.speechMode_off
-			api.processPendingEvents ()
-			speech.speechMode = oldSpeechMode
 			if not isReading ():
+				self.appModule.runValueChange = False
+				api.processPendingEvents ()
 				sayMessage (actual)
+				self.appModule.runValueChange = True
 
 	def script_up (self, gesture):
 		gesture.send ()
@@ -371,9 +368,8 @@ class SoundManager (IAccessible):
 		if isRecording ():
 			return
 		if checkSelection () or checkPart ():
-			speech.speechMode = speech.speechMode_off
+			self.appModule.runValueChange = False
 			api.processPendingEvents ()
-			speech.speechMode = oldSpeechMode
 			if not isReading ():
 				if checkSelection ():
 					actual = actualDuration ()
@@ -391,6 +387,7 @@ class SoundManager (IAccessible):
 						actual = u'{0} {1}'.format (actual, announce[2])
 					# Translators: Message  to indicate the elapsed time.
 					sayMessage (u'{0}, {1} {2} {3}'.format (announce[0], _('Elapsed time: '), actual, actualDurationPercentage ()))
+		self.appModule.runValueChange = True
 
 	def script_down (self, gesture):
 		gesture.send ()
@@ -400,9 +397,8 @@ class SoundManager (IAccessible):
 		if isRecording ():
 			return
 		if checkSelection () or checkPart ():
-			speech.speechMode = speech.speechMode_off
+			self.appModule.runValueChange = False
 			api.processPendingEvents ()
-			speech.speechMode = oldSpeechMode
 			if not isReading ():
 				if checkSelection ():
 					actual = actualDuration ()
@@ -420,6 +416,7 @@ class SoundManager (IAccessible):
 						actual = u'{0} {1}'.format (actual, announce[2])
 					# Translators: Message  to indicate the elapsed time.
 					sayMessage (u'{0}, {1} {2} {3}'.format (announce[0], _('Elapsed time: '), actual, actualDurationPercentage ()))
+		self.appModule.runValueChange = True
 
 	def script_elapsedTime (self, gesture):
 		if isStarting ():
@@ -573,8 +570,11 @@ class SoundManager (IAccessible):
 class AppModule (appModuleHandler.AppModule):
 
 	scriptCategory = ADDON_SUMMARY
+	runValueChange = True
 
 	def event_valueChange (self, obj, nextHandler):
+		if not self.runValueChange:
+			return
 		if obj.role == ROLE_EDITABLETEXT and obj.value and all (x in obj.value for x in ['   ', ':']):
 			if checkSelection () or checkPart ():
 				actual = actualDuration ()

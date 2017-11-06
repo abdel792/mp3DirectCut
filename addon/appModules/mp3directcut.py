@@ -164,6 +164,7 @@ def isStarting ():
 	return False
 
 def vuMeterHandle ():
+	fg = api.getForegroundObject ()
 	hwnd = windowUtils.findDescendantWindow (fg.windowHandle, controlID = 138)
 	return hwnd
 

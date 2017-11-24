@@ -97,7 +97,7 @@
    'Ctrl+Shift+E' لأن 'Ctrl+Shift+N' لا يعمل مع النسخ الأواخر للبرنامج
    mp3DirectCut;
 *	 إضافةُ إمكانيةِ تأكيد إلغاؤ التحديد بالضغط على 'Ctrl+R';
-*	 إضافة بعض التصحيحات داخل الappModule 'mp3directcut.py'.
+*	 Made some correction in the code of the appModule 'mp3directcut.py'.
 
 ## مستجدات النسخة 2.2 ##
 

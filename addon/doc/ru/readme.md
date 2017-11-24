@@ -98,7 +98,7 @@ This addon offers the following commands:
    with the latest versions of mp3DirectCut;
 *	 Added a script to confirm that the selection has been canceled with
    'Ctrl+r';
-*	 Maked some correction in the code of the appModule 'mp3directcut.py'.
+*	 Made some correction in the code of the appModule 'mp3directcut.py'.
 
 ## Изменение версии 2.2 ##
 

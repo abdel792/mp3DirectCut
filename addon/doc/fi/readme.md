@@ -98,7 +98,7 @@ Tämä lisäosa tarjoaa seuraavat komennot:
    mp3DirectCutin uusimmissa versioissa;
 *	 Lisätty skripti, joka varmistaa näppäinkomennolla Ctrl+R, että valinta on
    peruttu;
-*	 Tehty joitakin korjauksia sovellusmoduulin mp3directcut.py koodiin.
+*	 Made some correction in the code of the appModule 'mp3directcut.py'.
 
 ## Muutokset versiossa 2.2 ##
 

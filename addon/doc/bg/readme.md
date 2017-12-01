@@ -97,7 +97,8 @@ NVDA.
    не работи в новите версии на mp3DirectCut;
 *	 Добавен е скрипт за потвърждаване че селекцията е била отменена с
    Control+R;
-*	 Made some correction in the code of the appModule 'mp3directcut.py'.
+*	 Направени са някои корекции в кода на модула за приложението
+   „mp3directcut.py“.
 
 ## Промени във версия 2.2 ##
 

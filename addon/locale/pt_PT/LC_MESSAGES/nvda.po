@@ -26,7 +26,7 @@ msgstr "{0} Configuração do extra"
 #. Translators: message presented in input mode.
 #, python-brace-format
 msgid "Allows you display the configuration dialog of {0} addon."
-msgstr "Permite visualizar o quadro do diálogo de configuração do {0} extra"
+msgstr "Permite-lhe visualizar o quadro do diálogo de configuração do {0} extra"
 
 #. Translators: The title of the add-on configuration dialog box.
 #, python-brace-format

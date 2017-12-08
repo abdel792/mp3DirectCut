@@ -4,123 +4,144 @@
 *	 [Stabile Version herunterladen][1]
 *	 Herunterladen der [Entwickler-Version][2]
 
-# Presentation #
+# Beschreibung #
 
 Diese Erweiterung verbessert die Zugänglichkeit von Mp3DirectCut mit NVDA.
 
-Getestet wurde es mit den Versionen von 212 bis 222.
+Getestet wurde es mit den mp3Direktcut-Versionen von 212 bis 223.
 
 ## Tastenkurzbefehle ##
 
-Diese Erweiterung bietet die folgenden Befehle an, die Sie im NVDA-Menü bei
-den Eingabe-Gesten für Mp3DirectCut selbstverständlich nach Belieben selbst
-anpassen können:
+Diese Erweiterung bietet folgende Tastaturbefehle:
 
 *	B
-	*	Used to confirm correct placement of the marker of the beginning of the selection B.
-*	Strg+Umschalt+B
-	*	Used to indicate the position of the marker of the beginning of selection B.
-	*	Doppelt gedrückt gibt die Dauer des ausgewählten Bereichs aus.
-*	Strg+Umschalt+D
-	*	Gibt die Dauer vom Anfang der Datei bis zur aktuellen Cursor-Position aus.
-	*	Doppelt gedrückt gibt die Gesamtdauer aus.
-*	Strg+Umschalt+R
-	*	Gibt die Dauer von der aktuellen Cursor-Position bis zum Ende der Datei aus.
-*	Strg+Umschalt+N
-	*	Used to indicate the position of the marker of the end of selection N.
-	*	Double pressure gives recapitulatif positions B and N, and the duration of the selection.
-*	Strg+Umschalt+P
-	*	Nennt den tatsächlichen Bereich und die Gesamtanzahl aller Teilbereiche der aktuellen Datei.
-*	Strg+Umschalt+Leertaste
-	*	Used to determine the current level of the vu-meter, during recording.
-	*	Doppelt gedrückt wird es wieder zurückgesetzt.
-*	Pfeiltaste nach unten
-	*	Gibt die aktuelle Position der Wiedergabe aus.
-	*	This command also position the cursor at the location of the marker of the end of selection N, while giving the location of this marker if a selection has been made.
-	*	In the volume dialog box, vocalise the next value that can be reached generally with downArrow.
-	*	Dieser Wert wird standardmäßig nicht angesagt.
+	*	Bestätigt die korrekte Platzierung des Markers am Anfang der Auswahl B.
+*	STRG+Umschalt+B
+	*	Gibt die Position des Markers für den Beginn der Auswahl B an.
+	*	Doppelter Druck gibt die Dauer der Auswahl an.
+*	STRG+Umschalt+D
+	*	Gibt die Dauer vom Anfang der Datei bis zur aktuellen Position des Wiedergabe-Cursors an.
+	*	Doppelter Druck gibt die Gesamtdauer an.
+*	STRG+R
+	*	Bestätigt, dass die Auswahl abgebrochen wurde.
+*	STRG+Umschalt+R
+	*	Gibt die verbleibende Zeit von der aktuellen Position des Wiedergabe-Cursors bis zum Ende der Datei an.
+*	STRG+Umschalt+E
+	*	Gibt die Position des Markers für das Ende der Auswahl  N an.
+	*	Doppelter Druck gibt zusammenfassende Positionen der Auswahl B und N an und spricht die Dauer der Auswahl aus.
+*	STRG+Umschalt+P
+	*	Gibt die Referenz des aktuellen Abschnitts und die Gesamtzahl der Abschnitte in der aktuellen Datei an.
+*	STRG+Umschalt+Leerzeichen
+	*	Regelt den aktuellen Pegel des Vu-Meters während der Aufnahme.
+	*	Doppelter Druck setzt den Pegel zurück.
+*	Abwärtspfeil
+	*	Damit sehen Sie die aktuelle Position des Spielkopfes.
+	*	Dieser Befehl positioniert den Cursor auch an der Position des Markers am Ende der Auswahl N, während die Position dieses Markers ausgesprochen wird.
+	*	Im Lautstärke-Dialog spricht den nächsten Wert aus, der generell mit Abwärtspfeil erreicht werden kann.
+	*	Dieser Wert wird standardmäßig nicht ausgesprochen.
 *	Ende
-	*	Moves the playback cursor at the end of the current file and give the total time.
-*	Pos1
-	*	Moves the playback cursor at the beginning of the current file.
-*	Pfeiltaste nach links
-	*	Lets make a brief return back of one second during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	Bewegt den Wiedergabe-Cursor am Ende der aktuellen Datei und gibt die Gesamtzeit an.
+*	Home
+	*	Bewegt den Wiedergabe-Cursor an den Anfang der aktuellen Datei.
+*	Linkspfeil
+	*	Springt während der Wiedergabe um eine Sekunde zurück, wobei die aktuelle Dauer angegeben wird.
+	*	Diese Vorspuhldauer ist in den Optionen von mp3Directcut konfigurierbar.
 *	N
-	*	Used to confirm correct placement of the marker of the end of the selection N.
-*	Seite nach unten
-	*	Lets make a leap forward of 10 seconds during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
-*	Seite nach oben
-	*	Lets make a return back of 10 seconds during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	Bestätigt die korrekte Platzierung des Markers am Ende der Auswahl N.
+*	Seite ab
+	*	Springt während der Wiedergabe um 10 Sekunden vorwärts, wobei die aktuelle Dauer angegeben wird.
+	*	Diese Vorspuhldauer ist in den Optionen von mp3Directcut konfigurierbar.
+*	Seite auf
+	*	Springt während der Wiedergabe 10 Sekunden zurück, wobei die aktuelle Dauer angegeben wird.
+	*	Diese RückwärtsDauer ist in den Optionen von mp3directcut konfigurierbar.
 *	R
-	*	Allows to prepare a record and whether you can press spacebar to start.
-*	Pfeiltaste nach rechts
-	*	Lets do a brief forward of one second during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
-*	Strg+Pfeiltaste nach rechts
-	*	Moves to the next splitting point, while giving the current duration.
-*	Strg+Pfeiltaste nach links
-	*	Moves to the previous splitting point, while giving the current duration.
-*	Umschalt+Pfeiltaste nach rechts
-	*	Lets do a brief forward of four hundredths of seconds during playback, while giving the current duration.
-*	Umschalt+Pfeiltaste nach links
-	*	Lets do a brief backwards of four hundredths of seconds during playback, while giving the current duration. 
+	*	Erlaubt es, eine Aufnahme vorzubereiten. Um zu beginnen, können Sie danach die Leertaste drücken.
+*	Rechtspfeil
+	*	Springt während der Wiedergabe um eine Sekunde vorwärts, während die aktuelle Dauer angegeben wird.
+	*	Diese Vorspuhldauer ist in den Optionen von mp3directcut konfigurierbar.
+*	STRG+Rechtspfeil
+	*	Spring während der Wiedergabe vorwärts zum nächsten Orientierungspunkt und gibt gleichzeitig die aktuelle Dauer an.
+*	STRG+Linkspfeil
+	*	Springt während der Wiedergabe zum vorherigen Orientierungspunkt zurück und gibt gleichzeitig die aktuelle Dauer an.
+*	Umschalt+Rechtspfeil
+	*	Springt während der wiedergabe um vier Hundertstelsekunden vorwärts, wobei die aktuelle Dauer ausgesprochen wird.
+*	Umschalt+Linkspfeil
+	*	Springt während der Wiedergabe um vier Hundertstelsekunden zurück, wobei die aktuelle Dauer ausgesprochen wird.
 *	S
-	*	Used to stop the reading and give the current duration.
+	*	Stoppt das Vorlesen und gibt die aktuelle Dauer an.
 *	Leertaste
-	*	If the recording is ready, start this recording.
-	*	If a recording is in progress, stop it by positioning the cursor at the beginning.
-	*	If a file is loaded, start the reading.
-	*	If a read is in progress, allows to do a pause by giving current duration.
-	*	If read is paused, allows to restart the reading from the current location.
-*	Pfeiltaste nach oben
-	*	Gibt die aktuelle Position der Wiedergabe aus.
-	*	This command also position the cursor at the location of the marker of the beginning of selection B, while giving the location of this marker if a selection has been made.
-	*	In the volume dialog box, vocalise the previous value that can be reached generally with upArrow.
-	*	Dieser Wert wird standardmäßig nicht angesagt.
+	*	Beginnt mit der Aufnahme, wenn die Aufnahme nach dem Drücken  von r vorbereitet ist.
+	*	Stoppt die Aufnahme und setzt den Cursor am Anfang, wenn eine Aufnahme läuft.
+	*	Startet das Einlesen, nachdem eine Datei geladen ist.
+	*	Pausiert das Einlesen und gibt die aktuelle Dauer an, wenn der Einlesevorgang läuft.
+	*	Startet das Einlesen von der aktuellen Position, wenn der Vorgang vorher angehalten wurde.
+*	Pfeil nach oben
+	*	Damit sehen Sie die aktuelle Position des Spielkopfes.
+	*	Dieser Befehl positioniert den Cursor auch auf die Position des Markers am Anfang der Auswahl B, während die Position dieses Markers ausgesprochen wird.
+	*	Im Lautstärke-Dialog können Sie den vorherigen Wert hören, der im Allgemeinen mit Pfeil nach oben erreicht werden kann.
+	*	Dieser Wert wird standardmäßig nicht ausgesprochen.
 *	NVDA+H
-	*	Öffnet die Hilfe zu dieser Erweiterung.
+	*	Öffnet die Hilfe der aktuellen Erweiterung.
 
-## Change for version 2.2 ##
+## Änderungen in Version 3.0 ##
 
-*     Correction of the scripts giving the selection markers' locations.
+*	 Das Modul gui.guiHelper wurde anbewendet, um das Konfigurationsdialog der
+   Erweiterung korrekt anzuzeigen.
+*	 Statt %s wurde Format für formatierte Strings eingesetzt;
+*	 Die Übereinstimmung mit Implementierungsvorgaben wurde finalisiert.
+
+## Änderungen in Version 2.3 ##
+
+*	 Die Erweiterung verfügt nun über eine GPL-Lizenz;
+*	 Wegen Inkompatibilität mit den letzten Versionen dieser Erweiterung wurde
+   die Tastenkombination für das Skript, welches das Ende der Auswahl
+   ansagt, von STRG+Umschalt+N zu STRG+Umschalt+E geändert;
+*	 Ein Skript wurde eingefügt, welches das Abbrechen der Auswahl mit STRG+R
+   bestätigt;
+*	 Es wurden Einige Verbesserungen im Appmodul 'mp3directcut.py'
+   vorgenommen.
+
+## Änderungen in Version 2.2 ##
+
+*	 Es wurden die Skripte verbessert, die die Position der Auswahlmarker
+   ausgeben.
 
 ## Änderungen in Version 2.1.1 ##
 
-*	 Removing the script giving the total time and adding this information to
-   the script giving the elapsed time;
-*	 Added the ability to enable or disable the announcements related to the
-   space key in the module's configuration options, separately from other
-   announcements;
-*	 Added the ability to enable or disable the announcement of placement of
-   the selection marqueures in the module's configuration options;
-*	 Adding the announcement of the current part when moving through the
-   cutting points;
-*	 Correction of announcements related to vertical keys;
-*	 Adding a script to open the help of the current add-on with 'NVDA+H';
-*	 Displacement of the add-on's configuration menu from the Tools menu to
-   the Preferences menu of NVDA.
+*	 Das Skript, das die Gesamtzeit ausgibt, wurde entfernt. Die Information
+   wird nun das Skript für die verstrichene Zeit mit ausgeben.
+*	 Die Ansagen, die sich auf die Leertaste beziehen, können nun in den
+   Einstellungen des Moduls unabhängig von anderen Ansagen aktiviert oder
+   deaktiviert werden;
+*	 Die Ankündigung der Platzierung von Auswahlmarkern können nun in den
+   Einstellungen des Moduls aktiviert oder deaktiviert werden;
+*	 Der aktuelle Abschnitt beim Durchlaufen der Schnittpunkte wird nun
+   angesagt;
+*	 Ansagen, die sich auf vertikale Schlüssel beziehen, wurden verbessert;
+*	 Ein Skript wurde hinzugefügt, welches das Öffnen der Hilfe der aktuellen
+   Erweiterung mit NVDA + H ermöglicht;
+*	 Das Konfigurationsmenü der Erweiterung wurde aus dem Menü Extras in das
+   Menü Einstellungen von NVDA verschoben.
 
 ## Änderungen in Version 2.1 ##
 
-*	 Adding a script to vocalize moving to the next splitting point with
-   Control+Right Arrow;
-*	 Adding a script to vocalize moving to the previous splitting point with
-   Control+Left Arrow;
-*	 Adding a script to vocalize the displacement of 4 hundredths of second
-   ahead, with Shift+Right Arrow;
-*	 Adding a script to vocalize the displacement of 4 hundredths of second
-   back, with Shift+Left Arrow;
-*	 Correction of the addon's summary from 'for mp3DirectCut' to
-   'mp3DirectCut'.
+*	 Ein Script wurde hinzugefügt, um die Bewegung zum nächsten
+   Orientierungspunkt mit STRG+Rechtspfeil auszusprechen;
+*	 Ein Script wurde hinzugefügt, um die Bewegung zum vorherigen
+   Orientierungspunkt mit STRG+Linkspfeil auszusprechen;
+*	 Ein Skript wurde hinzugefügt, um die Verschiebung um vierhundertstel
+   Sekunden vorwärts mit Umschalt+Rechtspfeil auszusprechen;
+*	 Ein Skript wurde hinzugefügt, um die Verschiebung um vierhundertstel
+   Sekunden rückwärts mit Umschalt+Linkspfeil auszusprechen;
+*	 Kleine Verbesserungen des Titels.
 
 ## Änderungen in Version 2.0 ##
 
-*	 Adding a script to know the remaining time with 'Control Shift R';
-*	 Fixed reading durations including hours;
-*	 Added ability to differentiate thousandths or hundredths of seconds.
+*	 Ein Skript wurde hinzugefüt, um die verstrichene Zeit mit STRG+Umschalt+R
+   auszusprechen;
+*	 Das Vorlesen der Dauer (inkl. Stunden) wurde verbessert;
+*	 Es besteht nun die Möglichkeit, zwischen hundertstel und tausendstel
+   Sekunden zu unterscheiden;
 
 ## Änderungen in Version 1.1 ##
 

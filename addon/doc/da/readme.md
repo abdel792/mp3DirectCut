@@ -99,7 +99,7 @@ gå til menuen Indstillinger / Input-bevægelser og lede efter kategorien
    nyeste versioner af mp3DirectCut;
 *	 Tilføjet et script for at bekræfte, at udvælgelsen er blevet annulleret
    med 'CTRL+R';
-*	 Made some correction in the code of the appModule 'mp3directcut.py'.
+*	 Made some corrections in the code of the appModule 'mp3directcut.py'.
 
 ## Ændringer for version 2.2 ##
 

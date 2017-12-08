@@ -99,7 +99,7 @@ Este complemento ofrece as seguintes ordes-:
    últimas versións do mp3DirectCut;
 *	 engadiuse un script para confirmar que a selección cancelouse con
    'Control+r';
-*	 Made some correction in the code of the appModule 'mp3directcut.py'.
+*	 Made some corrections in the code of the appModule 'mp3directcut.py'.
 
 ## Cambio para la versión 2.2 ##
 

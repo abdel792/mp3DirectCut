@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2017-09-02 23:17+0100\n"
+"PO-Revision-Date: 2017-12-14 09:06-0800\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: pl <LL@li.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.8.9\n"
 
 #. Translators: name of the option in the menu.
 #, python-brace-format
@@ -246,12 +246,3 @@ msgstr "Otwiera pomoc aktualnego dodatku."
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "some commands to use mp3directcut with NVDA"
 msgstr "Niektóre komendy do używania Mp3 Direct cut z NVDA"
-
-#~ msgid "Please close the opened menu to use this command."
-#~ msgstr "Proszę zamknąć otwarte meni aby móc użyć tę komendę."
-
-#~ msgid "It's OK, your marker of the beginning of selection B has been posed."
-#~ msgstr "W porzątku, marker początkowy B jest zatrzymany."
-
-#~ msgid "It's OK, your marker of the end of selection N has been posed."
-#~ msgstr "W porządku, marker tkńcowy N jest zatrzymany."

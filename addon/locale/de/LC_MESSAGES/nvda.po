@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2017-12-05 17:21+0100\n"
+"PO-Revision-Date: 2017-12-12 21:28+0100\n"
 "Last-Translator: Adriani Botez <adriani.botez@gmail.com>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -18,18 +18,15 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 
 #. Translators: name of the option in the menu.
-#, python-brace-format
 msgid "{0} addon configuration"
 msgstr "{0} Konfiguration der Erweiterung"
 
 #. Translators: message presented in input mode.
-#, python-brace-format
 msgid "Allows you display the configuration dialog of {0} addon."
 msgstr ""
 "Ermöglicht es, den Konfigurationsdialog für die Erweiterung {0} zu öffnen."
 
 #. Translators: The title of the add-on configuration dialog box.
-#, python-brace-format
 msgid "Configuration of the addon {0}"
 msgstr "Konfiguration der Erweiterung {0}"
 
@@ -152,7 +149,6 @@ msgid "The recording is not ready !"
 msgstr "Die Aufnahme ist noch nicht fertig"
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, fuzzy, python-brace-format
 msgid ""
 "The vu-meter is not available. Please verify if a recording is in progress, "
 "and that the checkbox enable the margin button is checked in the options of "
@@ -160,7 +156,7 @@ msgid ""
 msgstr ""
 "Das vu-meter ist nicht verfügbar. Bitte überprüfen Sie, ob eine Aufzeichnung "
 "läuft und ob das Kontrollkästchen\"Schalter für Begrenzung aktivieren\" in "
-"den Optionen von %s aktiviert ist."
+"den Optionen von {0} aktiviert ist."
 
 #. Translators: Message to confirm that the level of the vu-meter has been reset.
 msgid "The level of the vu-meter has been reset !"

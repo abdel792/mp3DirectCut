@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2017-09-06 16:08+0200\n"
+"PO-Revision-Date: 2017-12-14 08:51-0800\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.11\n"
+"X-Generator: Poedit 1.8.9\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: name of the option in the menu.
@@ -245,12 +245,3 @@ msgstr "Avaa lisäosan ohjeen."
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "some commands to use mp3directcut with NVDA"
 msgstr "Muutamia komentoja NVDA:lle mp3DirectCutin käyttämiseen"
-
-#~ msgid "Please close the opened menu to use this command."
-#~ msgstr "Sulje avoin valikko käyttääksesi tätä komentoa."
-
-#~ msgid "It's OK, your marker of the beginning of selection B has been posed."
-#~ msgstr "Valinnan aloitusmerkki on asetettu."
-
-#~ msgid "It's OK, your marker of the end of selection N has been posed."
-#~ msgstr "Valinnan lopetusmerkki on asetettu."

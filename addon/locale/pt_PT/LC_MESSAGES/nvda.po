@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 1.8.9\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: name of the option in the menu.
@@ -204,12 +204,3 @@ msgstr "Permite abrir a ajuda do extra."
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "some commands to use mp3directcut with NVDA"
 msgstr "Alguns comandos para utilizar o MP3 Direct Cut com o NVDA."
-
-#~ msgid "Please close the opened menu to use this command."
-#~ msgstr "Por favor, cierra el menÃº abierto para utilizar esta orden."
-
-#~ msgid "It's OK, your marker of the beginning of selection B has been posed."
-#~ msgstr "EstÃ¡ bien, , tu Tag de inicio de selecciÃ³n B ha sido bien pausado."
-
-#~ msgid "It's OK, your marker of the end of selection N has been posed."
-#~ msgstr "EstÃ¡ bien, , tu Tag de final de selecciÃ³n N ha sido bien pausado."

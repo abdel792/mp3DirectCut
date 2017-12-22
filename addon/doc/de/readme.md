@@ -8,9 +8,10 @@
 
 Diese Erweiterung verbessert die Zugänglichkeit von Mp3DirectCut mit NVDA.
 
-Getestet wurde es mit den mp3Direktcut-Versionen von 212 bis 223.
+Die Erweiterung wurde mit den mp3Direktcut-Versionen von 212 bis 223
+getestet.
 
-## Tastenkurzbefehle ##
+## Tastenkombinationen ##
 
 Diese Erweiterung bietet folgende Tastaturbefehle:
 
@@ -130,17 +131,17 @@ Diese Erweiterung bietet folgende Tastaturbefehle:
 *	 Ein Script wurde hinzugefügt, um die Bewegung zum vorherigen
    Orientierungspunkt mit STRG+Linkspfeil auszusprechen;
 *	 Ein Skript wurde hinzugefügt, um die Verschiebung um vierhundertstel
-   Sekunden vorwärts mit Umschalt+Rechtspfeil auszusprechen;
+   Sekunden vorwärts mit Umschalt+Rechtspfeil anzusagen;
 *	 Ein Skript wurde hinzugefügt, um die Verschiebung um vierhundertstel
-   Sekunden rückwärts mit Umschalt+Linkspfeil auszusprechen;
+   Sekunden rückwärts mit Umschalt+Linkspfeil anzusagen;
 *	 Kleine Verbesserungen des Titels.
 
 ## Änderungen in Version 2.0 ##
 
-*	 Ein Skript wurde hinzugefüt, um die verstrichene Zeit mit STRG+Umschalt+R
-   auszusprechen;
+*	 Ein Skript wurde hinzugefügt, um die verstrichene Zeit mit
+   STRG+Umschalt+R anzusagen;
 *	 Das Vorlesen der Dauer (inkl. Stunden) wurde verbessert;
-*	 Es besteht nun die Möglichkeit, zwischen hundertstel und tausendstel
+*	 Es besteht nun die Möglichkeit zwischen hundertstel und tausendstel
    Sekunden zu unterscheiden;
 
 ## Änderungen in Version 1.1 ##

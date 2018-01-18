@@ -8,7 +8,7 @@
 
 import globalPluginHandler
 import addonHandler
-from mp3DirectCutDialog import Mp3DirectCutDialog
+from .mp3DirectCutDialog import Mp3DirectCutDialog
 import gui
 import wx
 import os

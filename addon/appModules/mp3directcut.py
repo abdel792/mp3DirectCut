@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+from __future__ import unicode_literals # To ensure unicode compatibility with both python 2 and 3.
 
 # appModules/mp3directcut.py.
 
@@ -64,7 +65,7 @@ announce = (
 	# Translators: Message to inform the user that the recording is not ready.
 	_('The recording is not ready !'),
 	# Translators: Message to indicate that the vu-meter is not available.
-	_(u'The vu-meter is not available. Please verify if a recording is in progress, and that the checkbox enable the margin button is checked in the options of {0}.').format (PROGRAM_NAME),
+	_('The vu-meter is not available. Please verify if a recording is in progress, and that the checkbox enable the margin button is checked in the options of {0}.').format (PROGRAM_NAME),
 	# Translators: Message to confirm that the level of the vu-meter has been reset.
 	_('The level of the vu-meter has been reset !'),
 	# Translators: Message to confirm the placement of the selection start marker.
@@ -80,7 +81,7 @@ def timeSplitter (time):
 	if ':' in time:
 		hrs = time.split (':')
 		if hrs[0] != '00' and hrs[0] != '0':
-			hours = u'{0} {1}, '.format (hrs[0], hr)
+			hours = '{0} {1}, '.format (hrs[0], hr)
 		if hrs[1].split ("'")[0] != '00':
 			minutes = hrs[1].split ("'")[0]
 	else:
@@ -91,7 +92,7 @@ def timeSplitter (time):
 		if len (minutes) > 1:
 			if minutes[0] == '0':
 				minutes = minutes[1]
-		minutes = u'{0} {1}, '.format (minutes, min)
+		minutes = '{0} {1}, '.format (minutes, min)
 	scnds = time.split ("'")[1].split ('.')[0]
 	if scnds != '00' and scnds != '0':
 		seconds = scnds
@@ -99,13 +100,13 @@ def timeSplitter (time):
 		if len (seconds) > 1:
 			if seconds[0] == '0':
 				seconds = seconds[1]
-		seconds = u'{0} {1}, '.format (seconds, sec)
+		seconds = '{0} {1}, '.format (seconds, sec)
 	hd = time.split ('.')[1].split ()[0]
 	if hd != '00' and hd != '000':
 		if len (hd) == 3:
-			thousandths = u'{0} {1}.'.format (hd, th)
+			thousandths = '{0} {1}.'.format (hd, th)
 		else:
-			hundredths = u'{0} {1}.'.format (hd, hun)
+			hundredths = '{0} {1}.'.format (hd, hun)
 	timeSplitter = hours + minutes + seconds + hundredths if not thousandths else hours + minutes + seconds + thousandths
 	return timeSplitter
 
@@ -156,7 +157,7 @@ def getTextFromWindow (hwnd):
 
 def isStarting ():
 	focus = api.getFocusObject ()
-	if focus.role == ROLE_PANE and focus.name == u'mp3DirectCut':
+	if focus.role == ROLE_PANE and focus.name == 'mp3DirectCut':
 		hwnd = readingWindow ()
 		starting = getTextFromWindow (hwnd)
 		if not starting:
@@ -202,8 +203,8 @@ def part (flag = None):
 	text = text[1]
 	text = text.split (')')
 	text = text[0]
-	text = text.replace (u'/', ' {0} '.format (_('of')))
-	return u'{0} {1}'.format (announce[10], text) if not flag else '{0} {1}'.format (_('Part'), text)
+	text = text.replace ('/', ' {0} '.format (_('of')))
+	return '{0} {1}'.format (announce[10], text) if not flag else '{0} {1}'.format (_('Part'), text)
 
 def selectionDuration ():
 	hwnd = recAndSelWindow ()
@@ -278,9 +279,9 @@ def timeRemaining ():
 	hORm = len (total.split ('.')[1])
 	fmt = "%H:%M'%S.%f"
 	if not ':' in actual:
-		actual = u'0:{0}'.format (actual)
+		actual = '0:{0}'.format (actual)
 	if not ':' in total:
-		total = u'0:{0}'.format (total)
+		total = '0:{0}'.format (total)
 	result = datetime.strptime (total, fmt) - datetime.strptime (actual, fmt)
 	result = str (result).decode ('utf-8')
 	result = result.replace (':', "'")
@@ -377,17 +378,17 @@ class SoundManager (IAccessible):
 					if not actual:
 						actual = announce[1]
 					if actual == totalTime ():
-						actual = u'{0} {1}'.format (actual, announce[2])
+						actual = '{0} {1}'.format (actual, announce[2])
 					sayMessage (announce[5] + ' : ' + actual + ' ' + actualDurationPercentage ())
 				else:
 					actual = actualDuration ()
 					if not actual:
-						sayMessage (u'{0}, {1}'.format (announce[0], announce[1]))
+						sayMessage ('{0}, {1}'.format (announce[0], announce[1]))
 						return
 					if actual == totalTime ():
-						actual = u'{0} {1}'.format (actual, announce[2])
+						actual = '{0} {1}'.format (actual, announce[2])
 					# Translators: Message  to indicate the elapsed time.
-					sayMessage (u'{0}, {1} {2} {3}'.format (announce[0], _('Elapsed time: '), actual, actualDurationPercentage ()))
+					sayMessage ('{0}, {1} {2} {3}'.format (announce[0], _('Elapsed time: '), actual, actualDurationPercentage ()))
 		self.appModule.runValueChange = True
 
 	def script_down (self, gesture):
@@ -406,17 +407,17 @@ class SoundManager (IAccessible):
 					if not actual:
 						actual = announce[1]
 					if actual == totalTime ():
-						actual = u'{0} {1}'.format (actual, announce[2])
+						actual = '{0} {1}'.format (actual, announce[2])
 					sayMessage (announce[6] + ' : ' + actual + ' ' + actualDurationPercentage ())
 				else:
 					actual = actualDuration ()
 					if not actual:
-						sayMessage (u'{0}, {1}'.format (announce[0], announce[1]))
+						sayMessage ('{0}, {1}'.format (announce[0], announce[1]))
 						return
 					if actual == totalTime ():
-						actual = u'{0} {1}'.format (actual, announce[2])
+						actual = '{0} {1}'.format (actual, announce[2])
 					# Translators: Message  to indicate the elapsed time.
-					sayMessage (u'{0}, {1} {2} {3}'.format (announce[0], _('Elapsed time: '), actual, actualDurationPercentage ()))
+					sayMessage ('{0}, {1} {2} {3}'.format (announce[0], _('Elapsed time: '), actual, actualDurationPercentage ()))
 		self.appModule.runValueChange = True
 
 	def script_elapsedTime (self, gesture):
@@ -430,15 +431,15 @@ class SoundManager (IAccessible):
 			if not actualDuration ():
 				text = announce[1]
 			elif actualDuration () == totalTime ():
-				text = u'{0} {1} {2} {3}'.format (_('Elapsed time: '), actualDuration (), announce[2], actualDurationPercentage ())
+				text = '{0} {1} {2} {3}'.format (_('Elapsed time: '), actualDuration (), announce[2], actualDurationPercentage ())
 			else:
 				# Translators: Message to indicate the elapsed time.
-				text = u'{0} {1} {2}'.format (_('Elapsed time: '), actualDuration (), actualDurationPercentage ())
+				text = '{0} {1} {2}'.format (_('Elapsed time: '), actualDuration (), actualDurationPercentage ())
 			repeat = getLastScriptRepeatCount ()
 			if repeat == 0:
 				message (text)
 			elif repeat == 1:
-				message (u'{0} {1}'.format (announce[8], totalTime ()))
+				message ('{0} {1}'.format (announce[8], totalTime ()))
 
 	# Translators: message presented in input mode.
 	script_elapsedTime.__doc__ = _('Gives the duration from the beginning of the file to the current position of the playback cursor. If pressed twice, gives the total duration.')
@@ -452,7 +453,7 @@ class SoundManager (IAccessible):
 			return
 		if checkSelection () or checkPart ():
 			# Translators: Message to indicate the remaining time.
-			message (u'{0} {1}'.format (_('Remaining time: '), timeRemaining ()))
+			message ('{0} {1}'.format (_('Remaining time: '), timeRemaining ()))
 
 	# Translators: message presented in input mode.
 	script_timeRemaining.__doc__ = _('Gives the time remaining from the current position of the playback cursor to the end of the file.')
@@ -474,7 +475,7 @@ class SoundManager (IAccessible):
 				mouse_event (MOUSEEVENTF_LEFTDOWN, 0, 0, None, None)
 				mouse_event (MOUSEEVENTF_LEFTUP, 0, 0, None, None)
 				sayMessage (announce[19])
-				setFocus (h)
+				#setFocus (h)
 		else:
 			sayMessage (announce[18])
 
@@ -591,7 +592,7 @@ class AppModule (appModuleHandler.AppModule):
 		nextHandler ()
 
 	def chooseNVDAObjectOverlayClasses (self, obj, clsList):
-		if obj.role == ROLE_PANE and obj.name and any (x in obj.name for x in [u'mp3DirectCut', '.mp3']):
+		if obj.role == ROLE_PANE and obj.name and any (x in obj.name for x in ['mp3DirectCut', '.mp3']):
 			clsList.insert (0, SoundManager)
 
 	def script_openHelp (self, gesture):

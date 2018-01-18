@@ -83,6 +83,10 @@ This addon offers the following commands:
 *	NVDA+H
 	*	Lets open the help of the current add-on.
 
+## Change for version 4.0 ##
+
+*	 Added the Compatibility of the add-on with both Python 2.7 and 3.
+
 ## Change for version 3.0 ##
 
 *	 Used the gui.guiHelper module to ensure the correct appearance of the addon's configuration dialog;
@@ -136,4 +140,4 @@ This addon offers the following commands:
 
 [1]: https://github.com/abdel792/mp3DirectCut/releases/download/v3.6/mp3DirectCut-3.6.nvda-addon
 
-[2]: https://github.com/abdel792/mp3DirectCut/releases/download/v3.6/mp3DirectCut-3.6.nvda-addon
+[2]: https://github.com/abdel792/mp3DirectCut/releases/download/v4.0-dev/mp3DirectCut-4.0-dev.nvda-addon

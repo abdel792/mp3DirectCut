@@ -16,8 +16,7 @@ addonHandler.initTranslation ()
 import config
 
 ### Constants
-ADDON_DIR = os.path.join (os.path.dirname (__file__), '..', '..').decode ('mbcs')
-ADDON_SUMMARY = addonHandler.Addon (ADDON_DIR).manifest['summary']
+ADDON_SUMMARY = addonHandler.getCodeAddon ().manifest["summary"]
 
 confSpec = {
 	'space': 'boolean(default = True)',

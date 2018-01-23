@@ -24,7 +24,7 @@ from NVDAObjects.IAccessible import IAccessible, getNVDAObjectFromEvent
 
 ### Constants
 PROGRAM_NAME = 'mp3DirectCut'
-ADDON_SUMMARY = addonHandler.Addon (os.path.join (os.path.dirname (__file__), '..').decode ('mbcs')).manifest['summary']
+ADDON_SUMMARY = addonHandler.getCodeAddon ().manifest["summary"]
 hr, min, sec, hun, th = _('hours'), _('minutes'), _('seconds'), _('hundredths'), _('thousandths')
 
 announce = (

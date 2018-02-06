@@ -99,7 +99,7 @@ This addon offers the following commands:
 *	 Added the GPL license to the addon;
 *	 Changed the shortcut of the script giving the end of selection from Ctrl + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work with the latest versions of mp3DirectCut;
 *	 Added a script to confirm that the selection has been canceled with 'Ctrl+r';
-*	 Maked some correction in the code of the appModule 'mp3directcut.py'.
+*	 Made some corrections in the code of the appModule 'mp3directcut.py'.
 
 ## Change for version 2.2 ##
 
@@ -139,6 +139,6 @@ This addon offers the following commands:
 
 *	 Initial version.
 
-[1]: https://github.com/abdel792/mp3DirectCut/releases/download/v3.6/mp3DirectCut-3.6.nvda-addon
+[1]: https://github.com/abdel792/mp3DirectCut/releases/download/v4.0/mp3DirectCut-4.0.nvda-addon
 
-[2]: https://github.com/abdel792/mp3DirectCut/releases/download/v4.0-dev/mp3DirectCut-4.0-dev.nvda-addon
+[2]: https://github.com/abdel792/mp3DirectCut/releases/download/v4.0/mp3DirectCut-4.0.nvda-addon

@@ -83,6 +83,11 @@ This addon offers the following commands:
 *	NVDA+H
 	*	Lets open the help of the current add-on.
 
+## Change for version 4.0 ##
+
+*	 Added the Compatibility of the add-on with both Python 2.7 and 3;
+*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+
 ## Change for version 3.0 ##
 
 *	 Used the gui.guiHelper module to ensure the correct appearance of the

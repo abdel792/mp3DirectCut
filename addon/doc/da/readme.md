@@ -84,6 +84,11 @@ gå til menuen Indstillinger / Input-bevægelser og lede efter kategorien
 *	NVDA+H
 	*	Åbner hjælpen for denne tilføjelsespakke.
 
+## Change for version 4.0 ##
+
+*	 Added the Compatibility of the add-on with both Python 2.7 and 3;
+*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+
 ## Ændringer for version 3.0 ##
 
 *	 Brugte gui.guiHelper modulet til at sikre korrekt udseende af

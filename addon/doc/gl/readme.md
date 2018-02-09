@@ -84,6 +84,11 @@ Este complemento ofrece as seguintes ordes-:
 *	NVDA+H
 	*	Permite abrir a axuda do complemento actual.
 
+## Change for version 4.0 ##
+
+*	 Added the Compatibility of the add-on with both Python 2.7 and 3;
+*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+
 ## Cambios para a versión 3.0 ##
 
 *	 Utilízase o módulo gui.guiHelper para asegurarse da correcta aparencia do
@@ -99,7 +104,7 @@ Este complemento ofrece as seguintes ordes-:
    últimas versións do mp3DirectCut;
 *	 engadiuse un script para confirmar que a selección cancelouse con
    'Control+r';
-*	 Fixéronse algunhas correcións no código do appModule 'mp3directcut.py'.
+*	 Made some corrections in the code of the appModule 'mp3directcut.py'.
 
 ## Cambio para la versión 2.2 ##
 

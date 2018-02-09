@@ -84,6 +84,11 @@
 *	NVDA+H
 	*	يُمَكِّنُكم من فتح ملف المساعدة للإضافة البرمجية الجارية.
 
+## Change for version 4.0 ##
+
+*	 Added the Compatibility of the add-on with both Python 2.7 and 3;
+*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+
 ## مستجدات النسخة 3.0 ##
 
 *	 إستعمال gui.guiHelper لعرض إعدادات الإضىفة البرمجية;

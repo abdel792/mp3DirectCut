@@ -83,6 +83,12 @@ Tämä lisäosa tarjoaa seuraavat komennot:
 *	NVDA+H
 	*	Avaa lisäosan ohjeen.
 
+## Muutokset versiossa 4.0 ##
+
+*	 Lisäosa on nyt yhteensopiva sekä Python 2.7:n että 3:n kanssa;
+*	 Korjattu bugi lisäosan hakemistopolkujen nimissä, jotka sisältävät muita
+   kuin ASCII-merkkejä.
+
 ## Muutokset versiossa 3.0 ##
 
 *	 Käytetään gui.guiHelper-moduulia lisäosan asetusvalintaikkunan
@@ -98,7 +104,7 @@ Tämä lisäosa tarjoaa seuraavat komennot:
    mp3DirectCutin uusimmissa versioissa;
 *	 Lisätty skripti, joka varmistaa näppäinkomennolla Ctrl+R, että valinta on
    peruttu;
-*	 Tehty joitakin korjauksia sovellusmoduulin mp3directcut.py koodiin.
+*	 Tehty joitakin korjauksia mp3directcut.py-sovellusmoduulin koodiin.
 
 ## Muutokset versiossa 2.2 ##
 

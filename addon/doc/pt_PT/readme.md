@@ -83,6 +83,12 @@ Este extra oferece os seguintes comandos:
 * NVDA + H
 * Permite abrir a ajuda deste extra.
 
+## Alterações para a versão 4.0 ##
+
+*	 Adicionada a compatibilidade do extra com o Python 2.7 e 3;
+*	 Corrigido um bug com caminhos de localização do extra que contenham
+   caracteres não-ASCII.
+
 ## Alterações para a versão 3.0 ##
 
 *	 Utilizou-se o módulo gui.guiHelper para garantir a aparência correcta do
@@ -99,7 +105,7 @@ Este extra oferece os seguintes comandos:
    versões mais recentes do mp3DirectCut;
 *	 Adicionado um script para confirmar que a selecção foi cancelada com
    'Ctrl+r';
-*	 Foram feitas algumas correções no código do appModule 'mp3directcut.py'.
+*	 Foram feitas algumas correcções no código do appModule 'mp3directcut.py'.
 
 ## Alterações para a versão 2.2 ##
 

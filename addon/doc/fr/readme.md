@@ -85,6 +85,12 @@ Ce module complémentaire offre les commandes suivantes :
 *	NVDA+H
 	*	Permet d'ouvrir l'aide du module complémentaire courant.
 
+## Changements pour la version 4.0 ##
+
+*	 Ajout de la compatibilité du module complémentaire avec Python 2.7 et 3;
+*	 Correction d'un bug avec les chemins du module complémentaire contenant
+   des caractères non-ASCII.
+
 ## Changements pour la version 3.0 ##
 
 *	 Utilisation du module gui.guiHelper pour assurer la bonne apparence de la
@@ -101,7 +107,7 @@ Ce module complémentaire offre les commandes suivantes :
    avec les dernières versions de mp3DirectCut;
 *	 Ajout d'un script pour confirmer que la sélection a été annulée avec
    "Ctrl+R";
-*	 Fait certaines corrections dans le appModule "mp3directcut.py".
+*	 Made some corrections in the code of the appModule 'mp3directcut.py'.
 
 ## Changements pour la version 2.2 ##
 

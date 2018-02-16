@@ -84,10 +84,11 @@ Diese Erweiterung bietet folgende Tastaturbefehle:
 *	NVDA+H
 	*	Öffnet die Hilfe der aktuellen Erweiterung.
 
-## Change for version 4.0 ##
+## Änderungen in Version 4.0 ##
 
-*	 Added the Compatibility of the add-on with both Python 2.7 and 3;
-*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+*	 Die Kompatibilität mit Python 2.7 und Python 3 wurde integriert
+*	 Ein Problem wurde behoben, welches bei Pfaden der Erweiterung mit
+   Nicht-ASCII-Zeichen auftrat.
 
 ## Änderungen in Version 3.0 ##
 
@@ -104,7 +105,8 @@ Diese Erweiterung bietet folgende Tastaturbefehle:
    ansagt, von STRG+Umschalt+N zu STRG+Umschalt+E geändert;
 *	 Ein Skript wurde eingefügt, welches das Abbrechen der Auswahl mit STRG+R
    bestätigt;
-*	 Made some corrections in the code of the appModule 'mp3directcut.py'.
+*	 Es wurden Einige Verbesserungen im Appmodul 'mp3directcut.py'
+   vorgenommen.
 
 ## Änderungen in Version 2.2 ##
 

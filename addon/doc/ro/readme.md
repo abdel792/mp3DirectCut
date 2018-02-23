@@ -9,102 +9,102 @@
 Acest supliment îmbunătățește accesibilitatea programului mp3DirectCut cu
 NVDA.
 
-It has been tested with versions of mp3DirectCut ranging from 212 up to 223.
+A fost testat cu versiuni ale mp3DirectCut de la 212 până la 223.
 
 ## Scurtături ##
 
-This addon offers the following commands:
+Acest supliment oferă următoarele comenzi:
 
 *	B
-	*	Used to confirm correct placement of the marker of the beginning of the selection B.
+	*	Folosită pentru a confirma plasarea corectă a reperului la începutul selecției B.
 *	Ctrl+Shift+B
-	*	Used to indicate the position of the marker of the beginning of selection B.
-	*	Double pressure lets give you the duration of the selection.
+	*	Folosită pentru a indica poziția reperului a începutului selecției B.
+	*	Dubla apăsare oferă durata selecției.
 *	Ctrl+Shift+D
-	*	Gives the duration from the beginning of the file to the current position of the playback cursor.
-	*	Double pressure lets give you the total duration.
+	*	Oferă durata de la începutul fișierului până la poziția curentă a cursorului de redare.
+	*	Dubla apăsare oferă durata totală.
 *	Ctrl+R
-	*	Confirms that the selection has been canceled.
+	*	Confirmă că selecția a fost anulată..
 *	Ctrl+Shift+R
-	*	Gives the time remaining from the current position of the playback cursor to the end of the file.
+	*	Oferă timpul rămas de la poziția curentă a cursorului de redare până la sfârșitul fișierului..
 *	Ctrl+Shift+E
-	*	Used to indicate the position of the marker of the end of selection N.
-	*	Double pressure gives recapitulatif positions B and N, and the duration of the selection.
+	*	Folosită pentru indicarea poziției reperului sfârșitului de selecției N.
+	*	Dubla apăsare oferă recapitularea pozițiilor B și N și durata selecției..
 *	Ctrl+Shift+P
-	*	Give the reference of the actual part and the total number of parts in the current file.
+	*	Oferă referința la partea prezentă și numărul total de părți în fișierul curent.
 *	Ctrl+Shift+Space
-	*	Used to determine the current level of the vu-meter, during recording.
-	*	Double pressure reset it.
+	*	Folosită pentru determinarea nivelului curent al vu-metrului, în timpul înregistrării.
+	*	Dubla apăsare îl resetează.
 *	Down Arrow
-	*	Lets you see the current position of the playhead.
-	*	This command also position the cursor at the location of the marker of the end of selection N, while giving the location of this marker if a selection has been made.
-	*	In the volume dialog box, vocalise the next value that can be reached generally with downArrow.
-	*	This value is not vocalized default.
+	*	Permite vederea poziției curente a capului de redare.
+	*	Această comandă poziționează și cursorul la locația reperului sfârșitului selecției N, oferind locația acestui reper dacă a fost făcută o selecție.
+	*	În caseta de dialog a volumului, pronunță următoarea valoare care poate fi atinsă în mod general cu săgeată jos.
+	*	Această valoare nu este pronunțată implicit.
 *	End
-	*	Moves the playback cursor at the end of the current file and give the total time.
+	*	Mută cursorul de redare la sfârșitul fișierului curent și oferă timpul total.
 *	Home
-	*	Moves the playback cursor at the beginning of the current file.
+	*	Mută cursorul de redare la începutul fișierului curent.
 *	Left Arrow
-	*	Lets make a brief return back of one second during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	Permite execuția unei întoarceri scurte de o secundă în timpul redării, oferind și durata curentă.
+	*	Acest interval este configurabil din opțiunile mp3directcut.
 *	N
-	*	Used to confirm correct placement of the marker of the end of the selection N.
+	*	Folosită pentru a confirma poziționarea corectă a reperului sfârșitului selecției N.
 *	Page Down
-	*	Lets make a leap forward of 10 seconds during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	Permite un salt în avans cu 10 secunde în timpul redării, oferind și durata curentă.
+	*	Acest interval este configurabil din opțiunile mp3directcut.
 *	Page Up
-	*	Lets make a return back of 10 seconds during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	Permite un salt înapoi cu 10 secunde în timpul redării, oferind și durata curentă.
+	*	Acest interval este configurabil din opțiunile mp3directcut.
 *	R
-	*	Allows to prepare a record and whether you can press spacebar to start.
+	*	Permite pregătirea unei înregistrări și dacă puteți apăsa tasta spațiu pentru a începe.
 *	Right Arrow
-	*	Lets do a brief forward of one second during playback, while giving the current duration.
-	*	This duration is configurable in the options of mp3directcut.
+	*	Permite execuția unei salt scurt de o secundă în timpul redării, oferind și durata curentă.
+	*	Acest interval este configurabil din opțiunile mp3directcut.
 *	Ctrl+Right Arrow
-	*	Moves to the next splitting point, while giving the current duration.
+	*	Mută la următorul punct de diviziune , oferind și durata curentă.
 *	Ctrl+Left Arrow
-	*	Moves to the previous splitting point, while giving the current duration.
+	*	Mută la anteriorul punct de diviziune , oferind și durata curentă.
 *	Shift+Right Arrow
-	*	Lets do a brief forward of four hundredths of seconds during playback, while giving the current duration.
+	*	Permite execuția unei salt scurt înainte de patru sutimi de secundă în timpul redării, oferind și durata curentă.
 *	Shift+Left Arrow
-	*	Lets do a brief backwards of four hundredths of seconds during playback, while giving the current duration. 
+	*	Permite execuția unei salt scurt înapoi de patru sutimi de secundă în timpul redării, oferind și durata curentă.
 *	S
-	*	Used to stop the reading and give the current duration.
+	*	Folosită pentru a opri citirea și a oferi durata curentă.
 *	Space
-	*	If the recording is ready, start this recording.
-	*	If a recording is in progress, stop it by positioning the cursor at the beginning.
-	*	If a file is loaded, start the reading.
-	*	If a read is in progress, allows to do a pause by giving current duration.
-	*	If read is paused, allows to restart the reading from the current location.
+	*	Dacă înregistrarea este pregătită, începe această înregistrare.
+	*	Dacă o înregistrare este în derulare, o oprește prin poziționarea cursorului la început.
+	*	Dacă este încărcat un fișier, începeți citirea.
+	*	Dacă o citire este în desfășurare, permite să faceți o pauză și oferă durata curentă.
+	*	Dacă citirea e pe pauză, permite repornirea acesteia de la locația curentă.
 *	Up Arrow
-	*	Lets you see the current position of the playhead.
-	*	This command also position the cursor at the location of the marker of the beginning of selection B, while giving the location of this marker if a selection has been made.
-	*	In the volume dialog box, vocalise the previous value that can be reached generally with upArrow.
-	*	This value is not vocalized default.
+	*	Permite vederea poziției curente a capului de redare.
+	*	Acestă comandă, de asemenea, poziționează cursorul la locația reperului începutului slecției B, oferind și locația acestui reper, dacă a fost făcută o selecție.
+	*	În caseta de dialog a volumului, pronunță valoarea anterioară care poate fi atinsă în mod general cu săgeată sus.
+	*	Această valoare nu este pronunțată implicit.
 *	NVDA+H
-	*	Lets open the help of the current add-on.
+	*	Permite deschiderea ajutorului pentru suplimentul curent.
 
-## Change for version 4.0 ##
+## Modificări pentru versiunea 4.0 ##
 
-*	 Added the Compatibility of the add-on with both Python 2.7 and 3;
-*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+*	 Adăugat compatibilitate pentru supliment atât cu Python 2.7 cât și 3;
+*	 Rezolvat defect cu căile suplimentului care conțin caractere non-ASCII.
 
-## Change for version 3.0 ##
+## Modificări pentru versiunea 3.0 ##
 
-*	 Used the gui.guiHelper module to ensure the correct appearance of the
-   addon's configuration dialog;
-*	 Used format instead of %s for formatted strings;
-*	 Used compliance with guidelines for implementation.
+*	 Folosit modulul gui.guiHelper pentru a asigura afișarea corectă a
+   dialogului de configurare pentru supliment;
+*	 Folosit format în loc de %s pentru formatarea șirurilor de caractere;
+*	 Folosit conformarea la principiile generale pentru implementare.
 
-## Change for version 2.3 ##
+## Modificări pentru versiunea 2.3 ##
 
-*	 Added the GPL license to the addon;
-*	 Changed the shortcut of the script giving the end of selection from Ctrl
-   + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work
-   with the latest versions of mp3DirectCut;
-*	 Added a script to confirm that the selection has been canceled with
-   'Ctrl+r';
-*	 Made some corrections in the code of the appModule 'mp3directcut.py'.
+*	 Adăugat licența GPL pentru supliment;
+*	 Schimbat scurtătura scriptului care dă sfârșitul selecției din
+   Ctrl+Shift+N în Ctrl+Shift+E, deoarece Ctrl+Shift+N nu funcționează cu
+   noile versiuni de mp3DirectCut;
+*	 Adăugat un script pentru a confirma că selecția a fost anulată cu
+   ‚Ctrl+r’;
+*	 Făcut niște corecturi în codul modulului 'mp3directcut.py'.
 
 ## Modificări aduse în versiunea 2.2 ##
 
@@ -149,9 +149,9 @@ This addon offers the following commands:
 
 ## Modificări aduse în versiunea 1.1 ##
 
-*	 Added the ability to include the mp3DirectCut category into the Input Gestures;
-	*	 They will be visible only during use of the mp3DirectCut software.
-*	 Added the ability to enable or disable automatic messages, in the tools menu of NVDA, item 'mp3DirectCut configuration';
+*	 Adăugat posibilitatea de a include categoria mp3DirectCut în gesturile de intrare;
+	*	 Vor fi vizibile doar în timpul folosirii software-ului mp3DirectCut.
+*	 Adăugat abilitatea de a activa sau dezactiva mesajele automate în meniul de unelte al NVDA, elementul 'configurare mp3DirectCut';
 
 ## Modificări adyse în 1.0 ##
 

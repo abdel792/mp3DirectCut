@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the mp3DirectCut package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL@ADDREss>, YEAR.
 #
 msgid ""
 msgstr ""
@@ -9,9 +9,9 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
 "PO-Revision-Date: 2017-12-12 21:28+0100\n"
-"Last-Translator: Adriani Botez <adriani.botez@gmail.com>\n"
+"Last-Translator: Robert Hänggi, <aarjay.robert@gmail.com\n"
 "Language-Team: \n"
-"Language: de\n"
+"Language: de_CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -142,7 +142,7 @@ msgid ""
 "new one."
 msgstr ""
 "Eine Aufnahme ist im Gange, bitte drücken Sie die Leertaste um diese zu "
-"stoppen, starten Sie anschließend eine neue."
+"stoppen, starten Sie anschliessend eine neue."
 
 #. Translators: Message to inform the user that the recording is not ready.
 msgid "The recording is not ready !"

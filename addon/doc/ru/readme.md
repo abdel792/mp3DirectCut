@@ -8,7 +8,7 @@
 
 Это дополнение улучшает доступность программы mp3DirectCut в NVDA.
 
-It has been tested with versions of mp3DirectCut ranging from 212 up to 223.
+Оно проверялось с версиями mp3DirectCut-от 212 до 223.
 
 ## Горячие клавиши ##
 
@@ -83,19 +83,19 @@ This addon offers the following commands:
 *	NVDA+H
 	*	Lets open the help of the current add-on.
 
-## Change for version 4.0 ##
+## Изменение версии 4.0 ##
 
 *	 Added the Compatibility of the add-on with both Python 2.7 and 3;
 *	 Fixed a bug with add-on paths that contain non-ASCII characters.
 
-## Change for version 3.0 ##
+## Изменение версии 3.0 ##
 
 *	 Used the gui.guiHelper module to ensure the correct appearance of the
    addon's configuration dialog;
 *	 Used format instead of %s for formatted strings;
 *	 Used compliance with guidelines for implementation.
 
-## Change for version 2.3 ##
+## Изменение версии 2.3 ##
 
 *	 Added the GPL license to the addon;
 *	 Changed the shortcut of the script giving the end of selection from Ctrl

@@ -107,7 +107,8 @@ Ce module complémentaire offre les commandes suivantes :
    avec les dernières versions de mp3DirectCut;
 *	 Ajout d'un script pour confirmer que la sélection a été annulée avec
    "Ctrl+R";
-*	 Made some corrections in the code of the appModule 'mp3directcut.py'.
+*	 Apporté quelques corrections dans le code de l'appModule
+   "mp3directcut.py".
 
 ## Changements pour la version 2.2 ##
 

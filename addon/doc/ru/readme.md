@@ -12,7 +12,7 @@
 
 ## Горячие клавиши ##
 
-This addon offers the following commands:
+Это дополнение предлагает следующие команды:
 
 *	B
 	*	Used to confirm correct placement of the marker of the beginning of the selection B.

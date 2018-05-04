@@ -16,22 +16,22 @@ Tämä lisäosa tarjoaa seuraavat komennot:
 
 *	B
 	*	Asettaa valinnan aloitusmerkin nykyiseen sijaintiin.
-*	Ctrl+Shift+B
+*	Ctrl+Vaihto+B
 	*	Ilmoittaa valinnan aloitusmerkin sijainnin.
 	*	Ilmoittaa kahdesti painettaessa valinnan keston.
-*	Ctrl+Shift+D
+*	Ctrl+Vaihto+D
 	*	Ilmoittaa keston tiedoston alusta toistokohdistimen nykyiseen sijaintiin saakka.
 	*	Ilmoittaa kahdesti painettaessa tiedoston kokonaiskeston.
 *	Ctrl+R
 	*	Vahvistaa, että valinta on peruttu.
-*	Ctrl+Shift+R
+*	Ctrl+Vaihto+R
 	*	Ilmoittaa jäljellä olevan ajan toistokohdistimen nykyisestä sijainnista tiedoston loppuun saakka.
-*	Ctrl+Shift+E
+*	Ctrl+Vaihto+E
 	*	Ilmoittaa valinnan lopetusmerkin sijainnin.
 	*	Antaa kahdesti painettaessa yhteenvedon valinnan aloitus- ja lopetusmerkkien sijainneista sekä ilmoittaa valinnan keston.
-*	Ctrl+Shift+P
+*	Ctrl+Vaihto+P
 	*	Ilmoittaa nykyisen osan sekä tiedostossa olevien osien määrän.
-*	Ctrl+Shift+Välilyönti
+*	Ctrl+Vaihto+Väli
 	*	Ilmoittaa VU-mittarin nykyisen tason äänityksen aikana.
 	*	Kahdesti painaminen nollaa tason.
 *	Nuoli alas
@@ -63,13 +63,13 @@ Tämä lisäosa tarjoaa seuraavat komennot:
 	*	Siirtää seuraavaan leikkauskohtaan ja ilmoittaa sen sijainnin.
 *	Ctrl+Nuoli vasemmalle
 	*	Siirtää edelliseen leikkauskohtaan ja ilmoittaa sen sijainnin.
-*	Shift+Nuoli oikealle
+*	Vaihto+Nuoli oikealle
 	*	Siirtää toistettaessa neljä sekunnin sadasosaa eteenpäin ja ilmoittaa nykyisen sijainnin.
-*	Shift+Nuoli vasemmalle
+*	Vaihto+Nuoli vasemmalle
 	*	Siirtää toistettaessa neljä sekunnin sadasosaa taaksepäin ja ilmoittaa nykyisen sijainnin.
 *	S
 	*	Pysäyttää toiston ja ilmoittaa nykyisen sijainnin.
-*	Välilyönti
+*	Väli
 	*	Aloittaa äänityksen, mikäli se on valmiina aloitettavaksi.
 	*	Keskeyttää äänityksen, mikäli se on käynnissä, ja siirtää tiedoston alkuun.
 	*	Aloittaa toiston, mikäli tiedosto on avoinna.

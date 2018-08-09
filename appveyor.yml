@@ -3,7 +3,9 @@ environment:
   PY_PYTHON: 2.7-32
 install:
 - cmd: >-
-    py -m pip install --egg scons
+    python -m pip install wheel
+
+    py -m pip install scons
 
     py -m pip install markdown
 build_script:
@@ -20,7 +22,7 @@ deploy:
   release: Release $(APPVEYOR_REPO_TAG_NAME)
   description: This is the release $(APPVEYOR_REPO_TAG_NAME) of the $(REPO_NAME) addon for the NVDA screen reader built and uploaded to GitHub using Appveyor.
   auth_token:
-    secure: FUNamfvx8NFYKlfb1RI+f6ioYoNjCXo66ytr44e5Ivjix1+tKuhyukCEMio2vFos
+    secure: OMSQRuEvMJ93KUPktLhYCHWU2y9SphJ7k8WLcEleLBVfYlRtt7DZq2kAOA8AFj9T
   artifact: addon
   on:
     appveyor_repo_tag: true

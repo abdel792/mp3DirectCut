@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2017-12-12 21:28+0100\n"
-"Last-Translator: Adriani Botez <adriani.botez@gmail.com>\n"
+"PO-Revision-Date: 2018-11-01 14:10+0100\n"
+"Last-Translator: Adriani <adriani.botez@gmail.com>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 2.2\n"
 
 #. Translators: name of the option in the menu.
 msgid "{0} addon configuration"
@@ -63,11 +63,11 @@ msgstr "Keine Auswahl"
 
 #. Translators: Message to inform the user that the playback cursor is at the top of the file.
 msgid "Beginning of the file."
-msgstr "Anfang der Datei."
+msgstr "Dateianfang."
 
 #. Translators: Message to inform the user that the playback cursor is at the end of the file.
 msgid "End of the file."
-msgstr "Ende der Datei."
+msgstr "Dateiende."
 
 #. Translators: Message to inform the user that not file is loaded.
 msgid ""
@@ -141,8 +141,8 @@ msgid ""
 "A recording is in progress, please press spacebar for stop it and start a "
 "new one."
 msgstr ""
-"Eine Aufnahme ist im Gange, bitte drücken Sie die Leertaste um diese zu "
-"stoppen, starten Sie anschließend eine neue."
+"Eine Aufnahme wird gerade ausgeführt. Bitte drücken Sie die Leertaste um "
+"diese zu stoppen und starten Sie anschließend eine neue Aufnahme."
 
 #. Translators: Message to inform the user that the recording is not ready.
 msgid "The recording is not ready !"

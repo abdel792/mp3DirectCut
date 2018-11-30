@@ -84,10 +84,11 @@ gå til menuen Indstillinger / Input-bevægelser og lede efter kategorien
 *	NVDA+H
 	*	Åbner hjælpen for denne tilføjelsespakke.
 
-## Change for version 4.0 ##
+## Ændringer til version 4.0 ##
 
-*	 Added the Compatibility of the add-on with both Python 2.7 and 3;
-*	 Fixed a bug with add-on paths that contain non-ASCII characters.
+*	 Tilføjet kompatibilitet med Python 2.7 og 3;
+*	 Rettede en fejl med stier tilhørende tilføjelsespakken der indholder
+   non-ASCII-tegn.
 
 ## Ændringer for version 3.0 ##
 
@@ -104,7 +105,7 @@ gå til menuen Indstillinger / Input-bevægelser og lede efter kategorien
    nyeste versioner af mp3DirectCut;
 *	 Tilføjet et script for at bekræfte, at udvælgelsen er blevet annulleret
    med 'CTRL+R';
-*	 Made some corrections in the code of the appModule 'mp3directcut.py'.
+*	 Lavede nogle rettelser til modulet mp3directcut.py.
 
 ## Ændringer for version 2.2 ##
 

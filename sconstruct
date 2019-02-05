@@ -8,6 +8,8 @@ import gettext
 import os
 import os.path
 import zipfile
+import sys
+sys.dont_write_bytecode = True
 
 import buildVars
 
@@ -170,4 +172,4 @@ for dir in langDirs:
 		env.Depends(htmlFile, [mdFile, moFile])
 		env.Depends(addon, htmlFile)
 env.Default(addon)
-env.Clean (addon, ['buildVars.pyc', '.sconsign.dblite', 'addon/doc/en/'])
+env.Clean (addon, ['.sconsign.dblite', 'addon/doc/en/'])

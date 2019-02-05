@@ -132,6 +132,10 @@ This addon offers the following commands:
 
     * Lets open the help of the current add-on.
 
+## Compatibility ##
+
+* This add-on is compatible with the versions of NVDA ranging from 2016.4 until 2019.1.
+
 ## Change for version 19.02 ##
 
 * Added the add-on's configuration in the settings panel available since nvda 2018.2;
@@ -196,6 +200,6 @@ This addon offers the following commands:
 
 * Initial version.
 
-[1]: https://github.com/abdel792/mp3DirectCut/releases/download/v4.3.1/mp3DirectCut-4.3.1.nvda-addon
+[1]: https://addons.nvda-project.org/files/get.php?file=mp3dc
 
-[2]: https://github.com/abdel792/mp3DirectCut/releases/download/v4.3.1/mp3DirectCut-4.3.1.nvda-addon
+[2]: https://addons.nvda-project.org/files/get.php?file=mp3dc-dev

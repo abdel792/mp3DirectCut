@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut 4.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2018-03-23 13:00+1000\n"
-"PO-Revision-Date: 2018-05-18 12:58+0300\n"
+"PO-Revision-Date: 2019-02-06 10:24+0300\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #. Translators: name of the option in the menu.
 #, python-brace-format
@@ -236,6 +236,7 @@ msgid ""
 "Give the reference of the actual part and the total number of parts in the "
 "current file."
 msgstr ""
+"Mevcut dosyada geçerli bölüme referans  ve toplam bölüm sayısını verir. "
 
 #. Translators: message presented in input mode.
 msgid "Lets open the help of the current add-on."

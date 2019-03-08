@@ -6,15 +6,14 @@
 
 # Présentation #
 
-Ce module complémentaire permet d'améliorer l'accessibilité du logiciel
-mp3DirectCut avec NVDA.
+Cette extension améliore l'accessibilité du logiciel mp3DirectCut avec NVDA.
 
-Il a été testé avec les versions de mp3DirectCut allant de la 212 jusqu'à la
-223.
+Elle a été testée avec les versions de mp3DirectCut allant de la 212 jusqu'à
+la 223.
 
 ## Raccourcis-clavier ##
 
-Ce module complémentaire offre les commandes suivantes :
+Cette extension offre les commandes suivantes :
 
 * B
 
@@ -164,27 +163,27 @@ Ce module complémentaire offre les commandes suivantes :
 
 * NVDA+H
 
-    * Permet d'ouvrir l'aide du module complémentaire courant.
+    * Permet d'ouvrir l'aide de l'extension courante.
 
 ## Compatibilité ##
 
-* Ce module complémentaire est compatible avec les versions de NVDA allant
-  de 2016.4 à 2019.1.
+* Cette extension est compatible avec les versions de NVDA allant de 2016.4
+  à 2019.1.
 
 ## Changements pour la version 19.02 ##
 
-* Ajout de la configuration du module complémentaire dans le panneau
-  Paramètres disponible depuis nvda 2018.2;
+* Ajout de la configuration de l'extension dans le panneau Paramètres
+  disponible depuis nvda 2018.2;
 * Modification de la numérotation des versions en utilisant YY.MM (L'année
   en 2 chiffres, suivie d'un point, suivie du mois en 2 chiffres);
 * Ajout de la compatibilité avec le nouveau format de gestion des versions
-  du module complémentaire, apparu depuis nvda 2019.1.
+  des extensions, apparu depuis nvda 2019.1.
 
 ## Changements pour la version 4.0 ##
 
-* Ajout de la compatibilité du module complémentaire avec Python 2.7 et 3;
-* Correction d'un bug avec les chemins du module complémentaire contenant
-  des caractères non-ASCII.
+* Ajout de la compatibilité de l'extension avec Python 2.7 et 3;
+* Correction d'un bug avec les chemins d'extension contenant des caractères
+  non-ASCII.
 
 ## Changements pour la version 3.0 ##
 
@@ -196,7 +195,7 @@ Ce module complémentaire offre les commandes suivantes :
 
 ## Changements pour la version 2.3 ##
 
-* Ajout de la licence GPL pour le module complémentaire;
+* Ajout de la licence GPL à l'extension;
 * Changement du raccourci-clavier du script donnant la fin de la sélection
   de "Ctrl+Shift+N" en "Ctrl+Shift+E" car "Ctrl+Shift+N" ne fonctionne pas
   avec les dernières versions de mp3DirectCut;
@@ -215,17 +214,17 @@ Ce module complémentaire offre les commandes suivantes :
 * Suppression du script permettant de donner la durée totale et ajout de
   cette information au script donnant le temps écoulé;
 * Ajout de la possibilité d'activer ou non les annonces liées à la touche
-  espace dans les options de configuration du module, distinctement des
+  espace dans les options de configuration de l'extension, distinctement des
   autres annonces;
 * Ajout de la possibilité d'activer ou non l'annonce du bon placement des
-  marqueures de sélection dans les options de configuration du module;
+  marqueures de sélection dans les options de configuration de l'extension;
 * Ajout de l'annonce de la plage courante lors du déplacement parmi les
   points de coupe;
 * Correction des annonces liées aux touches verticales;
 * Ajout d'un script pour ouvrir l'aide du module complémentaire accessible
   grâce au racourci-clavier "NVDA+H";
-* Déplacement du menu de configuration du module complémentaire du menu
-  Outils vers le menu Préférences de NVDA.
+* Déplacement du menu de configuration de l'extension du menu Outils vers le
+  menu Préférences de NVDA.
 
 ## Changements pour la version 2.1 ##
 
@@ -237,7 +236,8 @@ Ce module complémentaire offre les commandes suivantes :
   en avant, avec Maj+Flèche droite;
 * Ajout d'un script pour vocaliser le déplacement de 4 centièmes de secondes
   en arrière, avec Maj+Flèche gauche;
-* Corection du summary de l'addon de "Pour mp3DirectCut" en "mp3DirectCut".
+* Corection du summary de l'extension de "Pour mp3DirectCut" en
+  "mp3DirectCut".
 
 ## Changements pour la version 2.0 ##
 

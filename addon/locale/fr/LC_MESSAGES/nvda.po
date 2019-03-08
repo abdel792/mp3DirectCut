@@ -8,29 +8,31 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2017-12-14 08:11-0800\n"
-"Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
+"PO-Revision-Date: 2019-03-02 17:45+0100\n"
+"Last-Translator: Michel Such <michel.such@free.fr>\n"
 "Language-Team: NVDA add-ons French translation team <remyruiz@gmail.com>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #. Translators: name of the option in the menu.
 #, python-brace-format
 msgid "{0} addon configuration"
-msgstr "Configuration du module complémentaire {0}"
+msgstr "Configuration de l'extension {0}"
 
 #. Translators: message presented in input mode.
 #, python-brace-format
 msgid "Allows you display the configuration dialog of {0} addon."
-msgstr "Vous permet d'afficher la boîte de dialogue de configuration de {0}"
+msgstr ""
+"Vous permet d'afficher la boîte de dialogue de configuration de l'extension "
+"{0}"
 
 #. Translators: The title of the add-on configuration dialog box.
 #, python-brace-format
 msgid "Configuration of the addon {0}"
-msgstr "Configuration de l'addon {0}"
+msgstr "Configuration de l'extension {0}"
 
 #. Translators: The label of the checkbox to enable or disable the spacebar announcements.
 msgid "Enable announcements of the space key"
@@ -245,7 +247,7 @@ msgstr ""
 
 #. Translators: message presented in input mode.
 msgid "Lets open the help of the current add-on."
-msgstr "Permet d'ouvrir l'aide du module complémentaire courant."
+msgstr "Permet d'ouvrir l'aide de l'extension courante."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager

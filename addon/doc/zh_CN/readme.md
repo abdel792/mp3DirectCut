@@ -6,7 +6,7 @@
 
 # 插件介绍 #
 
-此插件改进了NVDA使用mp3DirectCut的可访问性。
+此插件改进了mp3DirectCut的无障碍支持。
 
 插件已经过mp3DirectCut版本的测试，范围从212到223。
 
@@ -16,146 +16,121 @@
 
 * B
 
-    * Used to confirm correct placement of the marker of the beginning of
-      the selection B.
+    * 确认标记区间B的开头。
 
 * Ctrl+Shift+B
 
-    * Used to indicate the position of the marker of the beginning of
-      selection B.
-    * Double pressure lets give you the duration of the selection.
+    * 标记区间B的开头。
+    * 按两次选择时长。
 
 * Ctrl+Shift+D
 
-    * Gives the duration from the beginning of the file to the current
-      position of the playback cursor.
-    * Double pressure lets give you the total duration.
+    * 给出从文件开头到当前位置的时间。
+    * 按两次朗读总时长。
 
-* Ctrl+R
+* Ctrl + R
 
     * 确认所选内容已被取消。
 
 * Ctrl+Shift+R
 
-    * Gives the time remaining from the current position of the playback
-      cursor to the end of the file.
+    * 读出当前位置到文件末尾的剩余时间。
 
 * Ctrl+Shift+E
 
-    * Used to indicate the position of the marker of the end of selection N.
-    * Double pressure gives recapitulatif positions B and N, and the
-      duration of the selection.
+    * 标记区间N的结束位置。
+    * 按两次读出区间B和N的位置和时长。
 
 * Ctrl+Shift+P
 
-    * Give the reference of the actual part and the total number of parts in
-      the current file.
+    * 给出当前文件中实际零件和零件总数的参考。
 
-* Ctrl+Shift+Space
+* Ctrl + Shift + 空格
 
-    * Used to determine the current level of the vu-meter, during recording.
-    * Double pressure reset it.
+    * 用于在录制过程中确定流量计的当前级别。
+    * 按两次重置。
 
 * 下箭头
 
-    * Lets you see the current position of the playhead.
-    * This command also position the cursor at the location of the marker of
-      the end of selection N, while giving the location of this marker if a
-      selection has been made.
-    * In the volume dialog box, vocalise the next value that can be reached
-      generally with downArrow.
-    * This value is not vocalized default.
+    * 让您看到播放头的当前位置。
+    * 此命令还将光标定位在选择 N 结束的标记的位置, 同时在进行选择时给出此标记的位置。
+    * 在音量对话框中, 说出通常可以用向下箭头到达的下一个值。
+    * 这个数值默认不朗读。
 
 * 动作按钮: 结束
 
-    * Moves the playback cursor at the end of the current file and give the
-      total time.
+    * 将播放光标移动到当前文件的末尾, 并给出总时间。
 
 * 动作按钮: 第一张
 
-    * Moves the playback cursor at the beginning of the current file.
+    * 将播放光标移动到当前文件的开头。
 
 * 左箭头
 
-    * Lets make a brief return back of one second during playback, while
-      giving the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * 让我们在播放过程中短暂返回一秒, 同时给出当前持续时间。
+    * 此持续时间可在 mp3directcut 选项中进行配置。
 
 * N
 
-    * Used to confirm correct placement of the marker of the end of the
-      selection N.
+    * 用于确认选择 N 的末尾标记的正确位置。
 
-* Page Down
+* 下翻页
 
-    * Lets make a leap forward of 10 seconds during playback, while giving
-      the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * 让我们在播放过程中进行10秒的飞跃, 同时给出当前持续时间。
+    * 此持续时间可在 mp3directcut 选项中进行配置。
 
-* Page Up
+* 上翻页
 
-    * Lets make a return back of 10 seconds during playback, while giving
-      the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * 让我们在播放过程中返回 10秒, 同时给出当前持续时间。
+    * 此持续时间可在 mp3directcut 选项中进行配置。
 
-* R
+* 从第 {rowNumber} 列向下合并了 {rowSpan} 列
 
-    * Allows to prepare a record and whether you can press spacebar to
-      start.
+    * 允许准备记录以及是否可以按空格键启动。
 
 * 右箭头
 
-    * Lets do a brief forward of one second during playback, while giving
-      the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * 让我们在播放过程中做一秒钟的短暂转发, 同时给出当前的持续时间。
+    * 此持续时间可在 mp3directcut 选项中进行配置。
 
-* Ctrl+Right Arrow
+* Ctrl + 右箭头
 
-    * Moves to the next splitting point, while giving the current duration.
+    * 移动到下一个拆分点, 同时给出当前持续时间。
 
-* Ctrl+Left Arrow
+* Ctrl + 左箭头
 
-    * Moves to the previous splitting point, while giving the current
-      duration.
+    * 移动到上一个拆分点, 同时给出当前持续时间。
 
-* Shift+Right Arrow
+* Shift+右箭头
 
-    * Lets do a brief forward of four hundredths of seconds during playback,
-      while giving the current duration.
+    * 让我们在播放过程中做一个四百分之一秒的简短转发, 同时给出当前的持续时间。
 
-* Shift+Left Arrow
+* Shift+左箭头
 
-    * Lets do a brief backwards of four hundredths of seconds during
-      playback, while giving the current duration.
+    * 让我们在播放过程中做一个简短的向后四百分之一秒, 同时给出当前的持续时间。
 
 * S
 
-    * Used to stop the reading and give the current duration.
+    * 用于停止读取并给出当前持续时间。
 
-* Space
+* 空格
 
-    * If the recording is ready, start this recording.
-    * If a recording is in progress, stop it by positioning the cursor at
-      the beginning.
-    * If a file is loaded, start the reading.
-    * If a read is in progress, allows to do a pause by giving current
-      duration.
-    * If read is paused, allows to restart the reading from the current
-      location.
+    * 如果录制已准备就绪, 请启动此录制。
+    * 如果录制正在进行中, 请通过将光标定位在开始处来停止录制。
+    * 如果加载了文件, 则开始朗读。
+    * 如果读取正在进行中, 则允许通过给出当前持续时间来进行暂停。
+    * 如果暂停读取, 则允许从当前位置重新启动读取。
 
 * 上箭头
 
-    * Lets you see the current position of the playhead.
-    * This command also position the cursor at the location of the marker of
-      the beginning of selection B, while giving the location of this marker
-      if a selection has been made.
-    * In the volume dialog box, vocalise the previous value that can be
-      reached generally with upArrow.
-    * This value is not vocalized default.
+    * 让您看到播放头的当前位置。
+    * 此命令还将光标定位在选择 B 开头的标记位置, 同时在进行选择时给出此标记的位置。
+    * 在音量对话框中, 将通常可以用 upArrow 到达的上一个值发声。
+    * 这个数值默认不朗读。
 
 * NVDA+H
 
-    * 添加快捷键使用'NVDA + H'打开当前插件的帮助;
+    * 添加快捷键使用'NVDA + H'打开当前插件的帮助;。
 
 ## 兼容性 ##
 
@@ -210,23 +185,21 @@
 
 ## 版本2.0 ##
 
-* Adding a script to know the remaining time with 'Control Shift R';
+* 添加一个快捷键, 朗读剩余的时间与 "Ctrl+Shift+R";
 * 固定阅读时间，包括小时;
 * 增加了区分千分之一秒或百分之一秒的功能。
 
 ## 版本1.1 ##
 
-* Added the ability to include the mp3DirectCut category into the Input
-  Gestures;
+* 可以在输入手势中mp3DirectCut这个分类里修改快捷键;
 
-    * They will be visible only during use of the mp3DirectCut software.
+    * 它们将仅在使用 mp3DirectCut 软件时可见。
 
-* Added the ability to enable or disable automatic messages, in the tools
-  menu of NVDA, item 'mp3DirectCut configuration';
+* 添加了在NVDA配置选项中启用或禁用朗读选择范围的功能;
 
 ## 版本1.0 ##
 
-* 发布初始版本
+* 发布初始版本。
 
 [[!tag dev stable]]
 

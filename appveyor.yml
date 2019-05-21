@@ -1,13 +1,17 @@
 version: '{branch}-{build}'
 environment:
-  PY_PYTHON: 2.7-32
+  PY_PYTHON: 3.7-32
 install:
 - cmd: >-
-    python -m pip install wheel
+    set PATH=C:\Python37;C:\Python37\Scripts;%PATH%
 
-    py -m pip install scons
+    python -m pip install -U pip
 
-    py -m pip install markdown
+    pip install wheel
+    
+    pip install scons
+
+    pip install markdown
 build_script:
 - cmd: scons
 artifacts:

@@ -2,7 +2,7 @@
 
 * Autoren: Abdel, Rémy, Abdellah zineddine, Jean-François Colas
 * [Stabile Version herunterladen][1]
-* [Entwicklungsversion herunterladen][2]
+* [Entwicklerversion herunterladen][2]
 
 # Beschreibung #
 

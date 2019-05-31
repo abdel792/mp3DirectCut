@@ -162,7 +162,7 @@ Este complemento ofrece as seguintes ordes-:
 ## compatibilidade ##
 
 * Este complemento é compatible coas versións de NVDA que van dende a 2016.4
-  ata a 2019.1.
+  ata a 2019.3.
 
 ## Cambios para a versión 19.02 ##
 

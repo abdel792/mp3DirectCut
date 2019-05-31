@@ -154,7 +154,7 @@ Este extra oferece os seguintes comandos:
 ## Compativilidade. ##
 
 * Este extra é compatível com as versões do NVDA desde a 2016.4 até a
-  2019.1.
+  2019.3.
 
 ## Alterações para a versão 19.0.2 ##
 

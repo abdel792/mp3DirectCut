@@ -153,7 +153,7 @@ Tämä lisäosa tarjoaa seuraavat komennot:
 
 ## Yhteensopivuus ##
 
-* NVDA:n versiot 2016.4-2019.1 ovat yhteensopivia tämän lisäosan kanssa.
+* NVDA:n versiot 2016.4-2019.3 ovat yhteensopivia tämän lisäosan kanssa.
 
 ## Muutokset versiossa 19.02 ##
 

@@ -158,7 +158,7 @@ Este complemento ofrece las siguientes órdenes:
 ## Compatibilidad ##
 
 * Este complemento es compatible con las versiones de NVDA que van desde la
-  2016.4 hasta la 2019.1.
+  2016.4 hasta la 2019.3.
 
 ## Cambios para la versión 19.02 ##
 

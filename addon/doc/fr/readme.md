@@ -168,7 +168,7 @@ Cette extension offre les commandes suivantes :
 ## Compatibilité ##
 
 * Cette extension est compatible avec les versions de NVDA allant de 2016.4
-  à 2019.1.
+  à 2019.3.
 
 ## Changements pour la version 19.02 ##
 

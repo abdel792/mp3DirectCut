@@ -195,7 +195,7 @@ msgid ""
 "the playback cursor. If pressed twice, gives the total duration."
 msgstr ""
 "Gibt die Dauer vom Anfang der Datei bis zur aktuellen Position des "
-"Wiedergabe-Cursors an. Bei zweimaligem Drücken wird die Gesamtdauer "
+"Wiedergabe-Cursors an. Bei zweimal Drücken wird die Gesamtdauer "
 "ausgesprochen."
 
 #. Translators: Message to indicate the remaining time.

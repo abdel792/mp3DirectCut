@@ -19,38 +19,38 @@ Ovaj dodatak nudi sljedeće naredbe:
     * Koristi se za potvrđivanje ispravnosti položaja oznake za početak B
       odabira.
 
-* Ctrl+Shift+B
+* Kontrol+šift+B
 
     * Koristi se za označavanje položaja oznake za početak B odabira.
     * Dvostrukim pritiskom se dobiva trajanje odabira.
 
-* Ctrl+Shift+D
+* Kontrol+šift+D
 
     * Navodi trajanje od početka datoteke do trenutačnog položaja kursora
       reprodukcije.
     * Dvostrukim pritiskom se navodi ukupno trajanje.
 
-* Ctrl+R
+* Kontrol+R
 
     * Potvrđuje da je odabir otkazan.
 
-* Ctrl+Shift+R
+* Kontrol+šift+R
 
     * Navodi preostalo vrijeme od trenutačnog položaja kursora reprodukcije
       do kraja datoteke.
 
-* Ctrl+Shift+E
+* Kontrol+šift+E
 
     * Koristi se za označavanje položaja oznake za kraj N odabira.
     * Dvostrukim pritiskom se navode položaji za B i N kao i trajanje
       odabira.
 
-* Ctrl+Shift+P
+* Kontrol+šift+P
 
     * Navedi referencu stvarnog dijela i ukupni broj dijelova u trenutačnoj
       datoteci.
 
-* Ctrl+Shift+razmaknica
+* Kontrol+šift+razmaknica
 
     * Koristi se za određivanje trenutačne razine vu-metra za vrijeme
       snimanja.
@@ -108,22 +108,22 @@ Ovaj dodatak nudi sljedeće naredbe:
       istodobno navođenje trajanja.
     * Trajanje je moguće konfigurirati u opcijama za mp3directcut.
 
-* Ctrl+strelica Desno
+* Kontrol+strelica desno
 
     * Premješta se na sljedeću točku podjele, uz istodobno navođenje
       trajanja.
 
-* Ctrl+strelica Lijevo
+* Kontrol+strelica lijevo
 
     * Premješta se na prethodnu točku podjele, uz istodobno navođenje
       trajanja.
 
-* Shift+strelica Desno
+* Shift+strelica desno
 
     * Omogućuje pomak naprijed od jedne stotinke sekunde tijekom
       reprodukcije, uz istodobno navođenje trajanja.
 
-* Shift+strelica Lijevo
+* Shift+strelica lijevo
 
     * Omogućuje pomak natrag od jedne stotinke sekunde tijekom reprodukcije,
       uz istodobno navođenje trajanja.
@@ -183,10 +183,10 @@ Ovaj dodatak nudi sljedeće naredbe:
 ## Promjene u verziji 2.3 ##
 
 * Dodana je GPL licenca u dodatak;
-* Promijenjena je kratica za skriptu koja daje kraj odabira iz Kontrol +
-  Šift + N u Kontrol + Šift + E jer Kontrol + Šift + N ne radi sa zadnjim
-  inačicama mp3DirectCut;
-* Dodana je skripta za potvrđivanje da je odabir otkazan sa 'Kontrol + r';
+* Promijenjen je prečac za skriptu koja daje kraj odabira, iz Kontrol+Šift+N
+  u Kontrol+Šift+E, jer Kontrol+Šift+N ne radi sa zadnjim mp3DirectCut
+  verzijama;
+* Dodana je skripta za potvrđivanje da je odabir otkazan sa 'Kontrol+r';
 * Učinjene su neke ispravke u kodu appModula 'mp3directcut.py..
 
 ## Promjene u verziji 2.2 ##
@@ -210,19 +210,20 @@ Ovaj dodatak nudi sljedeće naredbe:
 
 ## Promjene u verziji 2.1 ##
 
-* Dodana skripta za vokaliziranje prijelaza na sljedeću točku razdvajanja sa
-  Kontrol+Strelicom desno;
-* Dodana skripta za vokaliziranje prijelaza na prethodnu točku razdvajanja
-  sa Kontrol+Strelicom lijevo;
+* Dodana skripta za vokaliziranje prijelaza na sljedeću točku razdvajanja s
+  kontrol+strelica desno;
+* Dodana skripta za vokaliziranje prijelaza na prethodnu točku razdvajanja s
+  kontrol+strelica lijevo;
 * Dodana skripta za vokaliziranje pomaka od 4 stotinke sekunde unaprijed, sa
-  Šift + strelicom desno;
+  šift+strelica desno;
 * Dodana skripta za vokaliziranje pomaka od 4 stotinke sekunde unatrag, sa
-  Šift+Strelicom lijevo;
+  šift+strelica lijevo;
 * Ispravak sažetka dodatka iz 'za mp3DirectCut' u 'mp3DirectCut'.
 
 ## Promjene u verziji 2.0 ##
 
-* Dodana skripta kako bi se saznalo preostalo vrijeme sa 'Kontrol Šift R';
+* Dodana je skripta, kako bi se saznalo preostalo vrijeme s 'kontrol šift
+  R';
 * Poboljšan način čitanja trajanja uključujući sate;
 * Dodana mogućnost razlikovanja tisućinki ili stotinki sekunde.
 

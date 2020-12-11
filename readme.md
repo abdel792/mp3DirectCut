@@ -134,7 +134,7 @@ This addon offers the following commands:
 
 ## Compatibility ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2016.4 until 2020.3.
+* This add-on is compatible with the versions of NVDA ranging from 2016.4 until 2020.3 or higher.
 
 ## Change for version 20.12 ##
 

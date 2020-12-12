@@ -20,6 +20,7 @@ from scriptHandler import getLastScriptRepeatCount
 from winUser import CHILDID_SELF, OBJID_CLIENT, setFocus, mouse_event, MOUSEEVENTF_LEFTDOWN, MOUSEEVENTF_LEFTUP
 from ui import message
 import speech
+import sys
 from NVDAObjects.IAccessible import IAccessible, getNVDAObjectFromEvent
 
 ### Constants
@@ -132,14 +133,11 @@ def sayMessage (msg, space = None, marker = None):
 			message (msg)
 
 def isReading ():
-	fg = api.getForegroundObject ()
-	o = fg.firstChild.firstChild.lastChild.firstChild
-	hwnd = o.windowHandle
-	childID = o.childCount - 1
-	readingBtn = getNVDAObjectFromEvent (hwnd, OBJID_CLIENT, childID)
-	if all (x in readingBtn.states for x in [STATE_SYSTEM_INDETERMINATE, STATE_SYSTEM_MIXED]):
-		return True
-	return False
+	import time
+	firstValue = actualDuration ()
+	time.sleep(0.2)
+	secondValue = actualDuration ()
+	return firstValue != secondValue
 
 def readingWindow ():
 	fg = api.getForegroundObject ()
@@ -283,7 +281,7 @@ def timeRemaining ():
 	if not ':' in total:
 		total = '0:{0}'.format (total)
 	result = datetime.strptime (total, fmt) - datetime.strptime (actual, fmt)
-	result = str (result).decode ('utf-8')
+	result = str (result).decode ('utf-8') if sys.version_info.major == 2 else str (result)
 	result = result.replace (':', "'")
 	result = result.replace ("'", ':', 1)
 	result = result[:-4] if hORm == 2 else result[:-3]
@@ -312,6 +310,12 @@ class SoundManager (IAccessible):
 		message (text)
 
 	def script_space (self, gesture):
+		if isRecordingReady ():
+			self.appModule.runValueChange = False
+			gesture.send ()
+			api.processPendingEvents ()
+			self.appModule.runValueChange = True
+			return
 		gesture.send ()
 		if isReading ():
 			return

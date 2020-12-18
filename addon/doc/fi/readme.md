@@ -153,7 +153,15 @@ Tämä lisäosa tarjoaa seuraavat komennot:
 
 ## Yhteensopivuus ##
 
-* NVDA:n versiot 2016.4-2019.3 ovat yhteensopivia tämän lisäosan kanssa.
+* NVDA-versiot 2016.4-2020.3 tai uudemmat ovat yhteensopivia tämän lisäosan
+  kanssa.
+
+## Muutokset versiossa 20.12 ##
+
+* Keskeytä puhe nauhoituksen ja mp3directcutin viimeisimmän version
+  tarkistuksen aikana;
+* Korjattu jäljellä olevan ajan lukeminen uusilla Python 3:a käyttävillä
+  NVDA-versioilla.
 
 ## Muutokset versiossa 19.02 ##
 

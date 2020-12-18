@@ -161,8 +161,14 @@ Este complemento ofrece as seguintes ordes-:
 
 ## compatibilidade ##
 
-* Este complemento é compatible coas versións de NVDA que van dende a 2016.4
-  ata a 2019.3.
+* This add-on is compatible with the versions of NVDA ranging from 2016.4
+  until 2020.3 or higher.
+
+## Change for version 20.12 ##
+
+* Stop speech during recording and reading for the latest versions of
+  mp3directcut;
+* Fixed reading remaining time for new versions of NVDA using Python 3.
 
 ## Cambios para a versión 19.02 ##
 

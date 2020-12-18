@@ -158,7 +158,14 @@ Este complemento ofrece las siguientes órdenes:
 ## Compatibilidad ##
 
 * Este complemento es compatible con las versiones de NVDA que van desde la
-  2016.4 hasta la 2019.3.
+  2016.4 hasta la 2020.3 o posterior.
+
+## Cambios para la versión 20.12 ##
+
+* La voz se detiene durante la grabación y lectura en las versiones más
+  recientes de mp3directcut;
+* Corregida la lectura del tiempo restante en las nuevas versiones de NVDA
+  que utilizan Python 3.
 
 ## Cambios para la versión 19.02 ##
 

@@ -140,7 +140,14 @@ Dostupné sú tieto klávesové skratky:
 
 ## Kompatibilita ##
 
-* Doplnok funguje s NVDA od verzie 2016.4 do 2019.3.
+* This add-on is compatible with the versions of NVDA ranging from 2016.4
+  until 2020.3 or higher.
+
+## Change for version 20.12 ##
+
+* Stop speech during recording and reading for the latest versions of
+  mp3directcut;
+* Fixed reading remaining time for new versions of NVDA using Python 3.
 
 ## Verzia 19.2 ##
 

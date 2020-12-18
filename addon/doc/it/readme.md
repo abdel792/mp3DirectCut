@@ -163,7 +163,14 @@ Questo add-on offre i seguenti comandi:
 ## Compatibilità ##
 
 * Questo add-on è compatibile con le versioni di NVDA dalla 2016.4 alla
-  2019.3.
+  2020.3 o successive.
+
+## Novità nella versione 20.12 ##
+
+* Disattivazione della sintesi durante la registrazione o la riproduzione
+  nelle versioni più recenti di mp3directcut;
+* Corretta la vocalizzazione del tempo di riproduzione rimanente per le
+  nuove versioni di NVDA, utilizzando Python 3.
 
 ## Novità nella versione 19.02 ##
 
@@ -172,8 +179,8 @@ Questo add-on offre i seguenti comandi:
 * Modificato il sistema di numerazione delle versioni, che ora è del tipo
   YY.MM (due cifre per l'anno, seguite da un punto, seguito da due cifre per
   il mese);
-* Aggiunta la compatibilità con il nuovo formato delle versioni degli
-  add-on, presente a partire da NVDA 2019.1.
+* Aggiunta la compatibilità con il nuovo formato per il numero di versione
+  degli add-on, presente a partire da NVDA 2019.1.
 
 ## Novità nella versione 4.0 ##
 
@@ -186,7 +193,7 @@ Questo add-on offre i seguenti comandi:
 * Si utilizza il modulo gui.guiHelper per assicurare il corretto layout
   della finestra di configurazione dell'add-on;
 * Per le stringhe formattate, si utilizza format invece di %s;
-* Per l'implementazione si utilizza la compatibilità con le linee guida.
+* Si utilizza la compatibilità con le linee guida per l'implementazione.
 
 ## Novità nella versione 2.3 ##
 

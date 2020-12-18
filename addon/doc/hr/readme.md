@@ -156,7 +156,14 @@ Ovaj dodatak nudi sljedeće naredbe:
 
 ## Kompatibilnost ##
 
-* Dodatak je kompatibilan s NVDA verzijama 2016.4 do 2019.3.
+* Dodatak je kompatibilan s NVDA verzijama 2016.4 do 2020.3 ili novijima.
+
+## Promjene u verziji 20.12 ##
+
+* Zaustavi govor tijekom snimanja i čitanja za najnovije verzije
+  mp3directcut-a;
+* Ispravljeno je čitanje preostalog vremena za nove NVDA verzije pomoću
+  Pythona 3.
 
 ## Promjene u verziji 19.02 ##
 

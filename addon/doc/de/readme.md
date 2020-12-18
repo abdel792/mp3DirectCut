@@ -163,8 +163,14 @@ Diese Erweiterung bietet folgende Tastaturbefehle:
 
 ## Kompatibilität ##
 
-* Diese Erweiterung ist kompatibel mit den NVDA-Versionen von 2016.4 bis
-  2019.3.
+* This add-on is compatible with the versions of NVDA ranging from 2016.4
+  until 2020.3 or higher.
+
+## Change for version 20.12 ##
+
+* Stop speech during recording and reading for the latest versions of
+  mp3directcut;
+* Fixed reading remaining time for new versions of NVDA using Python 3.
 
 ## Änderungen in Version 19.02 ##
 

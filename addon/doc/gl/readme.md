@@ -34,7 +34,7 @@ Este complemento ofrece as seguintes ordes-:
 
 * Ctrl+R
 
-    * confirma que a selección foi cancelada.
+    * Confirma que a selección foi cancelada.
 
 * Ctrl+Shift+R
 
@@ -159,16 +159,17 @@ Este complemento ofrece as seguintes ordes-:
 
     * Permite abrir a axuda do complemento actual.
 
-## compatibilidade ##
+## Compatibilidade ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2016.4
-  until 2020.3 or higher.
+* Este complemento é compatible coas versións de NVDA que van dende a 2016.4
+  ata a 2020.3 ou superior.
 
-## Change for version 20.12 ##
+## Cambio para la versión 20.12 ##
 
-* Stop speech during recording and reading for the latest versions of
+* Parar a fala durante a grabación e a lectura nas últimas versións de
   mp3directcut;
-* Fixed reading remaining time for new versions of NVDA using Python 3.
+* Arranxada a lectura do tempo restante para versións novas de NVDA baseadas
+  en Python 3.
 
 ## Cambios para a versión 19.02 ##
 
@@ -198,7 +199,7 @@ Este complemento ofrece as seguintes ordes-:
 * Cámbiase o atallo de teclado do script que da fin á seleción de Ctrl +
   Shift + N a Ctrl + Shift + E porque Ctrl + Shift + N non funciona coas
   últimas versións do mp3DirectCut;
-* engadiuse un script para confirmar que a selección cancelouse con
+* Engadiuse un script para confirmar que a selección cancelouse con
   'Control+r';
 * Fixéronse algunhas correcións no código do appModule 'mp3directcut.py'.
 
@@ -255,7 +256,7 @@ Este complemento ofrece as seguintes ordes-:
 
 ## Cambios para a versión 1.0 ##
 
-* versión inicial
+* versión inicial.
 
 [[!tag dev stable]]
 

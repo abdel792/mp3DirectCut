@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mp3DirectCut 4.1\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2018-03-23 13:00+1000\n"
 "PO-Revision-Date: 2019-02-06 10:24+0300\n"
 "Language: tr\n"

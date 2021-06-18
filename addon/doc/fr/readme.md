@@ -167,14 +167,15 @@ Cette extension offre les commandes suivantes :
 
 ## Compatibilité ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2016.4
-  until 2020.3 or higher.
+* Cette extension est compatible avec les versions de NVDA allant de 2016.4
+  à 20.4 et supérieures.
 
-## Change for version 20.12 ##
+## Changements pour la version 20.12 ##
 
-* Stop speech during recording and reading for the latest versions of
-  mp3directcut;
-* Fixed reading remaining time for new versions of NVDA using Python 3.
+* Arrête la parole pendant l'enregistrement et la lecture dans la dernière
+  version de MP3DirectCut
+* Correction de la lecture du temps restants pour les nouvelles versions de
+  NVDA utilisant Python 3.
 
 ## Changements pour la version 19.02 ##
 

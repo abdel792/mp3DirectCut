@@ -4,7 +4,7 @@
 * Baixar [versão estável][1]
 * Baixar [versão de desenvolvimento][2]
 
-# Apresentação: #
+# Apresentação #
 
 Este extra melhora a acessibilidade do software mp3DirectCut com o NVDA.
 
@@ -151,16 +151,17 @@ Este extra oferece os seguintes comandos:
 
     * Permite abrir a ajuda do extra actual.
 
-## Compativilidade. ##
+## Compatibilidade: ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2016.4
-  until 2020.3 or higher.
+* Este extra é compatível com as versões do NVDA que vão desde a 2016.4 até
+  à 2020.3 ou superior.
 
-## Change for version 20.12 ##
+## Alteração para a versão 20.12 ##
 
-* Stop speech during recording and reading for the latest versions of
+* Pára a fala durante a gravação e leitura nas últimas versões do
   mp3directcut;
-* Fixed reading remaining time for new versions of NVDA using Python 3.
+* fixou-se a Leitura do tempo restante para novas versões do NVDA usando
+  Python 3.
 
 ## Alterações para a versão 19.0.2 ##
 
@@ -226,14 +227,14 @@ Este extra oferece os seguintes comandos:
   segundo, com Shift+Seta para a esquerda;
 * Correção do resumo do addon de 'para mp3DirectCut' para 'mp3DirectCut'.
 
-## Alterações para a versão 2.0: ##
+## Alteração para a versão 2.0 ##
 
 * Adicionado um script para saber o tempo restante com 'Control+Shift+R';
 * Fixada a uração da leitura, incluindo horas;
 * Adicionada a Habilidade para diferenciar milésimos ou centésimos de
   segundo.
 
-## Alterações para a versão 1.1: ##
+## Alteração para a versão 1.1 ##
 
 * Acrescentada a capacidade de incluir a categoria mp3DirectCut na entrada
   de comandos;

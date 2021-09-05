@@ -8,7 +8,7 @@
 
 This add-on improves the accessibility of the software mp3DirectCut with NVDA.
 
-It has been tested with versions of mp3DirectCut ranging from 212 up to 223.
+It has been tested with versions of mp3DirectCut ranging from 212 up to 233.
 
 ## Keyboard shortcuts ##
 
@@ -134,7 +134,7 @@ This addon offers the following commands:
 
 ## Compatibility ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2016.4 until 2020.3 or higher.
+* This add-on is compatible with the versions of NVDA ranging from 2016.4 and beyond.
 
 ## Change for version 20.12 ##
 

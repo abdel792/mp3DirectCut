@@ -12,7 +12,12 @@ addonHandler.initTranslation ()
 import appModuleHandler
 import windowUtils
 from oleacc import STATE_SYSTEM_INDETERMINATE, STATE_SYSTEM_MIXED
-from controlTypes import ROLE_PANE, ROLE_EDITABLETEXT
+import controlTypes
+if hasattr(controlTypes, "ROLE_PANE"):
+	from controlTypes import ROLE_PANE, ROLE_EDITABLETEXT
+else:
+	ROLE_PANE = controlTypes.Role.PANE
+	ROLE_EDITABLETEXT = controlTypes.Role.EDITABLETEXT
 from datetime import datetime
 import os
 import api

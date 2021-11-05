@@ -9,13 +9,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Ângelo Miguel Abrantes <ampa4374@gmail.com>\n"
+"Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: name of the option in the menu.
@@ -26,7 +26,7 @@ msgstr "{0} Configuração do extra"
 #. Translators: message presented in input mode.
 #, python-brace-format
 msgid "Allows you display the configuration dialog of {0} addon."
-msgstr "Permite-lhe visualizar o quadro do diálogo de configuração do {0} extra"
+msgstr "Permite-lhe visualizar o quadro do diálogo de configuração do {0} extra."
 
 #. Translators: The title of the add-on configuration dialog box.
 #, python-brace-format
@@ -35,7 +35,7 @@ msgstr "Configuração do extra {0}"
 
 #. Translators: The label of the checkbox to enable or disable the spacebar announcements.
 msgid "Enable announcements of the space key"
-msgstr "activar os anúncios da barra de espaços"
+msgstr "Activar os anúncios da barra de espaços"
 
 #. Translators: The label of the checkbox to enable or disable the announcements of the selection markers.
 msgid "Announce the placement of the selection markers"
@@ -43,7 +43,7 @@ msgstr "Anunciar a colocação das etiquetas de selecção"
 
 #. Translators: The label of the checkbox to enable or disable the other announcements.
 msgid "Enable the other announces"
-msgstr "Activar os outros anúncios."
+msgstr "Activar os outros anúncios"
 
 msgid "hours"
 msgstr "horas"
@@ -78,15 +78,15 @@ msgstr "Não há nenhum ficheiro aberto. Verifique se está num ficheiro, abra u
 
 #. Translators: Message to inform the user that the current command is not available in a recording mode.
 msgid "This command is not available in a recording mode, it is available only in a reading mode !"
-msgstr "Este comando não está disponível em modo de gravação, mas apenas em modo de leitura"
+msgstr "Este comando não está disponível em modo de gravação, mas apenas em modo de leitura!"
 
 #. Translators: Message to indicate the position of the selection start marker.
 msgid "The marker of the beginning of selection B is at"
-msgstr "A etiqueta de início de selecção, b,  está em "
+msgstr "A etiqueta de início de selecção, b,  está em"
 
 #. Translators: Message to indicate the position of the selection end marker.
 msgid "The marker of the End of selection N is at"
-msgstr "A etiqueta de final de selecção, n,  está em "
+msgstr "A etiqueta de final de selecção, n,  está em"
 
 #. Translators: Message to indicate the level of the vu-meter.
 msgid "The level of the vu-meter is at"
@@ -106,15 +106,15 @@ msgstr "Sector actual"
 
 #. Translators: Message to inform that no selection was found.
 msgid "Selection not found."
-msgstr "Selecção não encontrada. "
+msgstr "Selecção não encontrada."
 
 #. Translators: Message to indicate that the information of the current part is not available.
 msgid "Information specific to the actual part is not available."
-msgstr "A informação específica do sector actual não está disponível"
+msgstr "A informação específica do sector actual não está disponível."
 
 #. Translators: Message to prompt the user to verify that no selection has been made.
 msgid "Please check that no selection has been made."
-msgstr "Verifique se se realizou alguma selecção"
+msgstr "Verifique se se realizou alguma selecção."
 
 #. Translators: Message to prompt the user to verify that it is not in recording mode.
 msgid "Please chek that you are not in a recording mode."
@@ -122,7 +122,7 @@ msgstr "Verifique que não está em modo de gravação."
 
 #. Translators: Message to inform the user that the recording is ready.
 msgid "The recording is ready ! It remains only to press spacebar for begin the recording. This same spacebar  will stop the recording !"
-msgstr "A gravação está pronta. Pressione a barra de espaço para a iniciar e, depois, volte a pressioná-la para terminar."
+msgstr "A gravação está pronta. Pressione a barra de espaço para a iniciar e, depois, volte a pressioná-la para terminar!"
 
 #. Translators: Message to inform the user that a recording is in progress.
 msgid "A recording is in progress, please press spacebar for stop it and start a new one."
@@ -151,7 +151,7 @@ msgstr "Definida a marca final de selecção."
 
 #. Translators: Message to confirm that the selection has been canceled.
 msgid "Selection canceled."
-msgstr "Selecção cancelada!"
+msgstr "Selecção cancelada."
 
 msgid "of"
 msgstr "de"
@@ -166,7 +166,7 @@ msgstr "Não há mais tempo!"
 #. Translators: Message  to indicate the elapsed time.
 #. Translators: Message to indicate the elapsed time.
 msgid "Elapsed time: "
-msgstr "Tempo passado"
+msgstr "Tempo passado "
 
 #. Translators: message presented in input mode.
 msgid "Gives the duration from the beginning of the file to the current position of the playback cursor. If pressed twice, gives the total duration."
@@ -203,4 +203,4 @@ msgstr "Permite abrir a ajuda do extra."
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "some commands to use mp3directcut with NVDA"
-msgstr "Alguns comandos para utilizar o MP3 Direct Cut com o NVDA."
+msgstr "Alguns comandos para utilizar o MP3 Direct Cut com o NVDA"

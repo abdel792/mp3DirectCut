@@ -203,4 +203,4 @@ msgstr "Permite abrir a ajuda do extra."
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "some commands to use mp3directcut with NVDA"
-msgstr "Alguns comandos para utilizar o MP3 Direct Cut com o NVDA"
+msgstr "alguns comandos para utilizar o MP3 Direct Cut com o NVDA"

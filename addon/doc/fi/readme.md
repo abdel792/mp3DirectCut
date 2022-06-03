@@ -236,7 +236,7 @@ Tämä lisäosa tarjoaa seuraavat komennot:
 
 ## Muutokset versiossa 1.1 ##
 
-* Lisätty Mp3DirectCut-kategoria Syötekomennot-valintaikkunaan;
+* Lisätty Mp3DirectCut-kategoria Näppäinkomennot-valintaikkunaan;
 
     * Se on näkyvissä vain sovellusta käytettäessä.
 

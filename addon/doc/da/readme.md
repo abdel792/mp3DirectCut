@@ -36,7 +36,7 @@ gå til menuen Indstillinger / Input-bevægelser og lede efter kategorien
 
 * Ctrl+R
 
-    * Confirms that the selection has been canceled.
+    * Bekræfter, at valget er blevet annulleret.
 
 * Ctrl+Shift+R
 
@@ -72,114 +72,110 @@ gå til menuen Indstillinger / Input-bevægelser og lede efter kategorien
 
 * Slut
 
-    * Moves the playback cursor at the end of the current file and give the
-      total time.
+    * Flytter afspilningsmarkøren til slutningen af den aktuelle fil og
+      oplyser den samlede tid.
 
-* Home
+* Hjem
 
-    * Moves the playback cursor at the beginning of the current file.
+    * Flytter afspilningsmarkøren til begyndelsen af den aktuelle fil.
 
-* Left Arrow
+* Venstre pil
 
-    * Lets make a brief return back of one second during playback, while
-      giving the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Spoler ét sekund tilbage under afspilning og opkyser den samlede tid.
+    * Denne varighed kan konfigureres i mulighederne for mp3directcut.
 
-* N
+* Slut
 
-    * Used to confirm correct placement of the marker of the end of the
-      selection N.
+    * Bruges til at bekræfte korrekt placering af markøren for slutningen af
+      markeringen N.
 
-* Page Down
+* Side ned
 
-    * Lets make a leap forward of 10 seconds during playback, while giving
-      the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Spoler hurtigt 10 sekunder fremad og oplyser den samlede tid.
+    * Denne varighed kan konfigureres i mulighederne for mp3directcut.
 
-* Page Up
+* Side op
 
-    * Lets make a return back of 10 seconds during playback, while giving
-      the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Spoler hurtigt 10 sekunder tilbage og oplyser den samlede tid.
+    * Denne varighed kan konfigureres i mulighederne for mp3directcut.
 
 * R
 
-    * Allows to prepare a record and whether you can press spacebar to
-      start.
+    * Gør klar til optagelse, således du kan trykke mellemrum for at
+      begynde.
 
-* Right Arrow
+* Højre pil
 
-    * Lets do a brief forward of one second during playback, while giving
-      the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Spoler ét sekund fremad under afspilning og opkyser den samlede tid.
+    * Denne varighed kan konfigureres i mulighederne for mp3directcut.
 
-* Ctrl+Right Arrow
+* Ctrl+højre pil
 
-    * Moves to the next splitting point, while giving the current duration.
+    * Flytter til næste splitpunkt, mens den aktuelle varighed oplys.
 
-* Ctrl+Left Arrow
+* Ctrl+venstre pil
 
-    * Moves to the previous splitting point, while giving the current
-      duration.
+    * Flytter til det forrige splitpunkt, mens den aktuelle varighed
+      oplyses.
 
-* Shift+Right Arrow
+* Skift+højre pil
 
-    * Lets do a brief forward of four hundredths of seconds during playback,
-      while giving the current duration.
+    * Spoler fire hundrededele fremad af ét sekund under afspilning og
+      opkyser den samlede tid.
 
-* Shift+Left Arrow
+* Skift+venstre pil
 
-    * Lets do a brief backwards of four hundredths of seconds during
-      playback, while giving the current duration.
+    * Spoler fire hundrededele tilbage af ét sekund under afspilning og
+      opkyser den samlede tid.
 
 * S
 
-    * Used to stop the reading and give the current duration.
+    * Bruges til at stoppe aflytningen og oplyse den aktuelle varighed.
 
-* Space
+* Mellemrum
 
-    * If the recording is ready, start this recording.
-    * If a recording is in progress, stop it by positioning the cursor at
-      the beginning.
-    * If a file is loaded, start the reading.
-    * If a read is in progress, allows to do a pause by giving current
-      duration.
-    * If read is paused, allows to restart the reading from the current
-      location.
+    * Hvis optagelsen er klar, start denne optagelse.
+    * Hvis en optagelse er i gang, stoppes denne og markøren placeres i
+      begyndelsen.
+    * Hvis en fil er indlæst, start afspilning.
+    * Hvis en afspilning er undervejs, vil dette sætte afspilningen på pause
+      og oplyse den aktuelle position.
+    * Hvis afspilningen er stoppet, vil dette genoptage afspilningen fra den
+      aktuelle position.
 
-* Up Arrow
+* Pil op
 
     * Lader dig se den aktuelle position for afspilningshovedet.
-    * This command also position the cursor at the location of the marker of
-      the beginning of selection B, while giving the location of this marker
-      if a selection has been made.
-    * In the volume dialog box, vocalise the previous value that can be
-      reached generally with upArrow.
+    * Dette placerer markøren ved begyndelsen af markering B og oplyse
+      varrigheden, hvis du har foretaget en fuldstændig markering.
+    * I dialog for lydstyrke, oplys forrig værdi. Dette gøres typisk med pil
+      op.
     * Denne værdi er ikke oplyst som standard.
 
-* NVDA+H
+* NVDA+h
 
-    * Lets open the help of the current add-on.
+    * Lader os åbne hjælpen for den nuværende tilføjelse.
 
-## Compatibility ##
+## Kompatibilitet ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2016.4
-  until 2020.3 or higher.
+* Denne tilføjelse er kompatibel med versionerne af NVDA fra 2016.4 til
+  2020.3 eller nyere.
 
-## Change for version 20.12 ##
+## Ændringer for version 20.12 ##
 
-* Stop speech during recording and reading for the latest versions of
+* Afbryder tale under optagelse og afspilning i seneste version af
   mp3directcut;
-* Fixed reading remaining time for new versions of NVDA using Python 3.
+* Fast læsning af resterende tid for nye versioner af NVDA, der bruger
+  Python 3.
 
-## Change for version 19.02 ##
+## Ændringer for version 19.02 ##
 
-* Added the add-on's configuration in the settings panel available since
-  nvda 2018.2;
-* Changed version numbering using YY.MM (The year in 2 digits, followed by a
-  dot, followed by the month in 2 digits);
-* Added compatibility with the new versioning format of add-on, appeared
-  since nvda 2019.1.
+* Tilføjet konfigurationen af tilføjelsen til NVDAs indstillingspanel, der
+  har været tilgængeligt siden NVDA 2018.2.
+* Ændret versionsnummerering til åå.MM (År i 2 cifre efterfulgt af et
+  punktum, efterfulgt af måneden på 2 cifre);
+* Tilføjede kompatibilitet med det nye versionsformat der benyttes i
+  tilføjelser, der blev aktuelt siden NVDA 2019.1.
 
 ## Ændringer til version 4.0 ##
 
@@ -247,13 +243,13 @@ gå til menuen Indstillinger / Input-bevægelser og lede efter kategorien
 
 ## Ænderinger for version 1.1 ##
 
-* Added the ability to include the mp3DirectCut category into the Input
-  Gestures;
+* Tilføjet muligheden for at inkludere mp3DirectCut-kategorien i dialogen
+  "Håndter kommandoer";
 
-    * They will be visible only during use of the mp3DirectCut software.
+    * De vil kun være synlige under brug af mp3DirectCut-softwaren.
 
-* Added the ability to enable or disable automatic messages, in the tools
-  menu of NVDA, item 'mp3DirectCut configuration';
+* Tilføjet muligheden for at aktivere eller deaktivere automatiske beskeder,
+  i værktøjsmenuen i NVDA, punkt 'mp3DirectCut-konfiguration';
 
 ## Ændringer for version 1.0 ##
 

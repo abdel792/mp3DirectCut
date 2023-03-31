@@ -195,7 +195,7 @@ Cette extension offre les commandes suivantes :
 ## Changements pour la version 3.0 ##
 
 * Utilisation du module gui.guiHelper pour assurer la bonne apparence de la
-  boîte de dialogue de configuration du module complémentaire;
+  boîte de dialogue de configuration de l'extension;
 * Utilisation de format à la place de %s pour les chaînes formatées;
 * Utilisation de la conformité avec les règles du guidelines pour
   l'implémentation.
@@ -228,8 +228,8 @@ Cette extension offre les commandes suivantes :
 * Ajout de l'annonce de la plage courante lors du déplacement parmi les
   points de coupe;
 * Correction des annonces liées aux touches verticales;
-* Ajout d'un script pour ouvrir l'aide du module complémentaire accessible
-  grâce au racourci-clavier "NVDA+H";
+* Ajout d'un script pour ouvrir l'aide de l'extension accessible grâce au
+  racourci-clavier "NVDA+H";
 * Déplacement du menu de configuration de l'extension du menu Outils vers le
   menu Préférences de NVDA.
 

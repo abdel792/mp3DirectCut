@@ -6,7 +6,7 @@
 
 # Prezentacja #
 
-Ten dodatek ulepsza dpstępność programu mp3DirectCut z NVDA.
+Ten dodatek ulepsza dostępność programu mp3DirectCut z NVDA.
 
 Został przetestowany z wersjami mp3DirectCut od 212 do 223.
 
@@ -22,13 +22,13 @@ Ten dodatek oferuje następujące polecenia:
 * Ctrl+Shift+B
 
     * Służy do wskazania położenia znacznika początku zaznaczenia B.
-    * Podwójne ciśnienie pozwala podać czas trwania wyboru.
+    * Podwójne naciśnięcie pozwala podać czas trwania wyboru.
 
 * Ctrl+Shift+D
 
     * Podaje czas trwania od początku pliku do bieżącej pozycji kursora
       odtwarzania.
-    * Podwójne ciśnienie pozwala uzyskać całkowity czas trwania.
+    * Podwójne naciśnięcie pozwala uzyskać całkowity czas trwania.
 
 * Ctrl+R
 
@@ -43,18 +43,18 @@ Ten dodatek oferuje następujące polecenia:
 
     * Służy do wskazania położenia znacznika końca zaznaczenia N.
     * Podwójne ciśnienie daje pozycje recapitulatif B i N oraz czas trwania
-      selekcji.
+      zaznaczenia.
 
 * Ctrl+Shift+P
 
-    * Podaj odniesienie do rzeczywistej części i całkowitą liczbę części w
+    * Podaje odniesienie do rzeczywistej części i całkowitą liczbę części w
       bieżącym pliku.
 
 * Ctrl+Shift+spacja
 
     * Służy do określania aktualnego poziomu vu-miernika, podczas
       nagrywania.
-    * Podwójne ciśnienie resetuje go.
+    * Podwójne naciśnięcie resetuje go.
 
 * Strzałka w dół
 
@@ -62,16 +62,16 @@ Ten dodatek oferuje następujące polecenia:
     * To polecenie umieszcza również kursor w miejscu znacznika końca
       zaznaczenia N, podając jednocześnie położenie tego znacznika, jeśli
       dokonano wyboru.
-    * W oknie dialogowym głośności wygłoś następną wartość, do której można
-      dotrzeć zazwyczaj za pomocą downArrow.
-    * Ta wartość nie jest domyślnie wokalizowana.
+    * W oknie dialogowym głośności odczyta następną wartość, do której można
+      dotrzeć zazwyczaj za pomocą strzałki w dół.
+    * Ta wartość nie jest domyślnie wymawiana.
 
-* Koniec
+* End
 
     * Przesuwa kursor odtwarzania na końcu bieżącego pliku i podaje
       całkowity czas.
 
-* Strona główna
+* Home
 
     * Przesuwa kursor odtwarzania na początku bieżącego pliku.
 
@@ -86,13 +86,13 @@ Ten dodatek oferuje następujące polecenia:
     * Służy do potwierdzenia prawidłowego umieszczenia znacznika końca
       zaznaczenia N.
 
-* Strona w dół
+* Page Down
 
     * Zróbmy skok do przodu o 10 sekund podczas odtwarzania, podając bieżący
       czas trwania.
     * Ten czas trwania jest konfigurowalny w opcjach mp3directcut.
 
-* Strona góra
+* Page Up
 
     * Przywróćmy 10 sekund podczas odtwarzania, podając bieżący czas
       trwania.
@@ -100,8 +100,8 @@ Ten dodatek oferuje następujące polecenia:
 
 * R
 
-    * Umożliwia przygotowanie rekordu i to, czy można nacisnąć spację, aby
-      rozpocząć.
+    * Umożliwia przygotowanie nagrywania i to, czy można nacisnąć spację,
+      aby rozpocząć.
 
 * Strzałka w prawo
 
@@ -152,7 +152,7 @@ Ten dodatek oferuje następujące polecenia:
       dokonano wyboru.
     * W oknie dialogowym głośności swokalizuj poprzednią wartość, do której
       można dotrzeć zazwyczaj za pomocą upArrow.
-    * Ta wartość nie jest domyślnie wokalizowana.
+    * Ta wartość nie jest domyślnie wymawiana.
 
 * NVDA+H
 
@@ -254,6 +254,7 @@ Ten dodatek oferuje następujące polecenia:
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3dc
+[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
 
-[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3dc-dev
+
+[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut

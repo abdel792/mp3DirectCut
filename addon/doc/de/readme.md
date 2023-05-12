@@ -168,8 +168,8 @@ Diese Erweiterung bietet folgende Tastaturbefehle:
 
 ## Änderung für Version 20.12 ##
 
-* Stoppt die Sprachausgabe während der Aufnahme und des Lesens, um die
-  neuesten Versionen von mp3Directcut zu erhalten.
+* Anhalten der Sprachausgabe während der Aufnahme und des Vorlesens für die
+  neuesten Versionen von mp3directcut;
 * Die verbleibende Lesezeit für neue NVDA-Versionen mit Python 3 wurde
   behoben.
 
@@ -265,6 +265,7 @@ Diese Erweiterung bietet folgende Tastaturbefehle:
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3dc
+[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
 
-[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3dc-dev
+
+[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut

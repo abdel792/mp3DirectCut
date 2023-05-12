@@ -264,6 +264,7 @@ Questo add-on offre i seguenti comandi:
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3dc
+[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
 
-[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3dc-dev
+
+[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut

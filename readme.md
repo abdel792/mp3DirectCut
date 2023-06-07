@@ -135,6 +135,17 @@ This addon offers the following commands:
 ## Compatibility ##
 
 * This add-on is compatible with the versions of NVDA ranging from 2016.4 and beyond.
+## Changes for 20230607.0.0 ##
+
+* Added the following workflows:
+ * auto-update-translations - to automatically update translations from NVDA's translation system.
+ * release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
+ * manual-release.yaml: to build and release new versions of the add-on manually.
+* Updated translations.
+
+## Changes for version 20230508.0.0 and beyond ##
+
+* • Changed version number, minimum NVDA version and download link according to store conventions/requirements.
 
 ## Change for version 20.12 ##
 
@@ -205,6 +216,6 @@ This addon offers the following commands:
 
 * Initial version.
 
-[1]: https://addons.nvda-project.org/files/get.php?file=mp3dc
+[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
 
-[2]: https://addons.nvda-project.org/files/get.php?file=mp3dc-dev
+[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut

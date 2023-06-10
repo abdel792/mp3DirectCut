@@ -157,8 +157,13 @@ Bu eklenti aşağıdaki komutları sunar:
 
 ## uyumluluk ##
 
-* Bu eklenti, NVDA'nın 2016.4'ten başlayarak 2020.3 ve daha yüksek
-  sürümleriyle uyumludur.
+* This add-on is compatible with the versions of NVDA ranging from 2016.4
+  and beyond.
+
+## Changes for 20230508.0.0 and beyond ##
+
+* • Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## 20.12 sürümü için değişiklik ##
 

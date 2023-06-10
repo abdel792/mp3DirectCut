@@ -160,8 +160,13 @@ Ten dodatek oferuje następujące polecenia:
 
 ## Zgodność ##
 
-* Ten dodatek jest kompatybilny z wersjami NVDA od 2016.4 do 2020.3 lub
-  nowszymi.
+* This add-on is compatible with the versions of NVDA ranging from 2016.4
+  and beyond.
+
+## Changes for 20230508.0.0 and beyond ##
+
+* • Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## Zmiana wersji 20.12 ##
 

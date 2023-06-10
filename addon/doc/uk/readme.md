@@ -157,7 +157,13 @@
 
 ## Сумісність ##
 
-* Цей додаток сумісний з версіями NVDA від 2016.4 до 2020.3 та новіших.
+* This add-on is compatible with the versions of NVDA ranging from 2016.4
+  and beyond.
+
+## Changes for 20230508.0.0 and beyond ##
+
+* • Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## Зміни у версії 20.12 ##
 

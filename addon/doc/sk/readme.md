@@ -141,7 +141,12 @@ Dostupné sú tieto klávesové skratky:
 ## Kompatibilita ##
 
 * This add-on is compatible with the versions of NVDA ranging from 2016.4
-  until 2020.3 or higher.
+  and beyond.
+
+## Changes for 20230508.0.0 and beyond ##
+
+* • Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## Change for version 20.12 ##
 

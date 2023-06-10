@@ -153,8 +153,13 @@ Este extra oferece os seguintes comandos:
 
 ## Compatibilidade: ##
 
-* Este extra é compatível com as versões do NVDA que vão desde a 2016.4 até
-  à 2020.3 ou superior.
+* This add-on is compatible with the versions of NVDA ranging from 2016.4
+  and beyond.
+
+## Changes for 20230508.0.0 and beyond ##
+
+* • Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## Alteração para a versão 20.12 ##
 

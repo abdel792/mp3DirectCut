@@ -162,8 +162,13 @@ Questo add-on offre i seguenti comandi:
 
 ## Compatibilità ##
 
-* Questo add-on è compatibile con le versioni di NVDA dalla 2016.4 alla
-  2020.3 o successive.
+* This add-on is compatible with the versions of NVDA ranging from 2016.4
+  and beyond.
+
+## Changes for 20230508.0.0 and beyond ##
+
+* • Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## Novità nella versione 20.12 ##
 

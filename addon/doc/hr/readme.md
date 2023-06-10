@@ -156,7 +156,13 @@ Ovaj dodatak nudi sljedeće naredbe:
 
 ## Kompatibilnost ##
 
-* Dodatak je kompatibilan s NVDA verzijama 2016.4 do 2020.3 ili novijima.
+* This add-on is compatible with the versions of NVDA ranging from 2016.4
+  and beyond.
+
+## Changes for 20230508.0.0 and beyond ##
+
+* • Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## Promjene u verziji 20.12 ##
 

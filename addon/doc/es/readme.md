@@ -158,7 +158,12 @@ Este complemento ofrece las siguientes órdenes:
 ## Compatibilidad ##
 
 * Este complemento es compatible con las versiones de NVDA que van desde la
-  2016.4 hasta la 2020.3 o posterior.
+  2016.4 en adelante.
+
+## Cambios para 20230508.0.0 y posteriores ##
+
+* • Cambiado número de versión, versión mínima de NVDA y enlace de descarga
+  según las convenciones y los requisitos de la tienda.
 
 ## Cambios para la versión 20.12 ##
 

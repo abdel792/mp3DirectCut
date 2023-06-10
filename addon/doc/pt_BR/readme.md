@@ -157,8 +157,13 @@ Este complemento oferece os seguintes comandos:
 
 ## Compativilidade ##
 
-* Este complemento é compatível com as versões do NVDA que variam de 2016.4
-  a 2020.3 ou superior.
+* This add-on is compatible with the versions of NVDA ranging from 2016.4
+  and beyond.
+
+## Changes for 20230508.0.0 and beyond ##
+
+* • Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## Alterações para a versão 20.12 ##
 

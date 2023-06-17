@@ -153,13 +153,13 @@ Tämä lisäosa tarjoaa seuraavat komennot:
 
 ## Yhteensopivuus ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2016.4
-  and beyond.
+* NVDA-versiot 2016.4:stä eteenpäin ovat yhteensopivia tämän lisäosan
+  kanssa.
 
-## Changes for 20230508.0.0 and beyond ##
+## Muutokset versiossa 20230508.0.0 ja sitä uudemmissa ##
 
-* • Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+* • Versionumerointi, NVDA-version vähimmäisvaatimus ja latauslinkki
+  muutettu lisäosakaupan käytäntöjen/vaatimusten mukaisiksi.
 
 ## Muutokset versiossa 20.12 ##
 

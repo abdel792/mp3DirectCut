@@ -167,13 +167,13 @@ Cette extension offre les commandes suivantes :
 
 ## Compatibilité ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2016.4
-  and beyond.
+* Cette extension est compatible avec les versions de NVDA allant de 2016.4
+  et au-delà.
 
-## Changes for 20230508.0.0 and beyond ##
+## Changements pour la version 20230508.0.0 et au-delà ##
 
-* • Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+*   Numéro de version modifiée, version minimale NVDA et lien de
+  téléchargement en fonction des conventions / exigences de la store.
 
 ## Changements pour la version 20.12 ##
 

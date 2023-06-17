@@ -157,13 +157,12 @@ Bu eklenti aşağıdaki komutları sunar:
 
 ## uyumluluk ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2016.4
-  and beyond.
+* Bu eklenti, NVDA'nın 2016.4 ve sonrası sürümleriyle uyumludur.
 
-## Changes for 20230508.0.0 and beyond ##
+## 20230508.0.0 ve sonrası için değişiklikler ##
 
-* • Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+* • Mağaza kurallarına/gereksinimlerine göre sürüm numarası, minimum NVDA
+  sürümü ve indirme bağlantısı değiştirildi.
 
 ## 20.12 sürümü için değişiklik ##
 
@@ -178,8 +177,8 @@ Bu eklenti aşağıdaki komutları sunar:
   paneline eklendi;
 * Yıl.ay kullanılarak değiştirilen sürüm numaralandırması. (2 basamaklı yıl,
   ardından nokta, ardından 2 basamaklı ay);
-*  nvda 2019.1 ile  başlayan eklentinin yeni sürüm oluşturma biçimiyle
-  uyumluluk eklendi, .
+* Nvda 2019.1'den bu yana ortaya çıkan eklentinin yeni sürüm oluşturma
+  biçimiyle uyumluluk eklendi.
 
 ## 4.0 sürümü için değişiklikler ##
 
@@ -191,7 +190,7 @@ Bu eklenti aşağıdaki komutları sunar:
 
 * Eklentinin yapılandırma iletişim kutusunun doğru görünümünü sağlamak için
   gui.guiHelper modülünü kullandı;
-* biçimlendirilmiş stringler için %s yerine format kullanıldı;
+* Biçimlendirilmiş stringler için %s yerine format kullanıldı;
 * Uygulama için yönergelere uygunluk kullanıldı.
 
 ## 2.3 sürümü için değişiklikler ##
@@ -201,7 +200,7 @@ Bu eklenti aşağıdaki komutları sunar:
   sonuna dek seçmeyi sağlayan komut dosyasının kısayolu Ctrl + Shift + N'den
   Ctrl + Shift + E'ye değiştirildi;
 * Seçimin 'Ctrl+r' ile iptal edildiğini onaylamak için bir script eklendi;
-* appModule 'mp3directcut.py' kodunda bazı düzeltmeler yapıldı.
+* AppModule 'mp3directcut.py' kodunda bazı düzeltmeler yapıldı.
 
 ## 2.2 sürümü için değişiklikler ##
 
@@ -243,7 +242,7 @@ Bu eklenti aşağıdaki komutları sunar:
 
 ## 1.1 sürümü için değişiklikler ##
 
-* mp3DirectCut kategorisini Giriş Hareketlerine dahil etme yeteneği eklendi;
+* Girdi Hareketlerine mp3DirectCut kategorisini dahil etme yeteneği eklendi;
 
     * Yalnızca mp3DirectCut yazılımının kullanımı sırasında görünür
       olacaklardır.

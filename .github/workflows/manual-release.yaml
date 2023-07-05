@@ -88,7 +88,7 @@ jobs:
           f.truncate()
         with open("changelog.md", 'r+', encoding='utf-8') as f:
           text=f.read()
-          text=re.sub("#? Changes for .*?$", f"## Changes for {version}", text)
+          text=re.sub("#? Changes for .*?$", f"## Changes for {version}", text, re.M)
           f.seek(0)
           f.write(text)
           f.truncate()

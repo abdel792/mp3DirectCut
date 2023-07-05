@@ -77,11 +77,11 @@ jobs:
     - name: Add add-on version
       run: |
         import re
+        version='${{ env.BUILD_VERSION }}'
+        year='${{ env.CUR_YEAR }}'
         with open("buildVars.py", 'r+', encoding='utf-8') as f:
           text=f.read()
-          version='${{ env.BUILD_VERSION }}'
-          year='${{ env.CUR_YEAR }}'
-          text=re.sub(r"\"addon_version\": .*?,", f"\"addon_version\": \"{version}\",", text)
+         text=re.sub(r"\"addon_version\": .*?,", f"\"addon_version\": \"{version}\",", text)
           text=re.sub(r"\"addon_lastTestedNVDAVersion\": .*?,", f"\"addon_lastTestedNVDAVersion\": \"{year}.1.0\",", text)
           f.seek(0)
           f.write(text)

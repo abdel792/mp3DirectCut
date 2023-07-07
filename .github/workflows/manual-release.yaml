@@ -94,11 +94,18 @@ jobs:
           f.truncate()
       shell: python 
 
-    - name: Push changes
+
+    - name: Check if there are any changes
+      id: verify_diff
+      run: |
+        git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
+
+    - name: Commit and push changes
+      if: steps.verify_diff.outputs.changed == 'true'
       run: |
         git config --local user.name 'github-actions'
         git config --local user.email 'github-actions@github.com'
-        git diff-index --quiet HEAD || git commit -a -m "Update buildVars and changelog"
+        git commit -a -m "Update buildVars and changelog"
         git tag ${{ env.TAG_NAME }}
         git push origin HEAD:main
         git push origin ${{ env.TAG_NAME }}:refs/tags/${{ env.TAG_NAME }}

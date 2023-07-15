@@ -60,7 +60,10 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 			pass
 
 	def onMp3DirectCutDialog (self, evt):
-		gui.mainFrame._popupSettingsDialog (Mp3DirectCutDialog)
+		if hasattr (gui.mainFrame, "_popupSettingsDialog"):
+			gui.mainFrame._popupSettingsDialog (Mp3DirectCutDialog)
+		else:
+			gui.mainFrame.popupSettingsDialog (Mp3DirectCutDialog)
 
 	def script_activateMP3DirectCutConfigurationDialog (self, gesture):
 		wx.CallAfter (self.onMp3DirectCutDialog, None)

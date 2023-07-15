@@ -17,7 +17,10 @@ from gui import guiHelper
 if hasattr (gui, "SettingsPanel"):
 	from gui import SettingsPanel
 else:
-	from gui.settingsDialogs import SettingsDialog as SettingsPanel
+	if not hasattr (gui.settingsDialogs, "SettingsPanel"):
+		from gui.settingsDialogs import SettingsDialog
+	else:
+		from gui.settingsDialogs import SettingsPanel
 SettingsDialog = gui.SettingsDialog if hasattr (gui, "SettingsDialog") else SettingsPanel
 addonHandler.initTranslation ()
 

@@ -28,7 +28,7 @@ jobs:
       run: echo "CUR_DATE=$(date +%Y%m%d)" >> $GITHUB_ENV
 
     - name: Environment variable for tag_name
-      run: echo "TAG_NAME="v"$(echo ${{ env.CUR_DATE }} | cut -c 3-4)"."$(echo ${{ env.CUR_DATE }} | cut -c 5-6)" >> $GITHUB_ENV
+      run: echo "TAG_NAME="v"$(echo ${{ env.CUR_DATE }} | cut -c 3-4)"."$(echo ${{ env.CUR_DATE }} | cut -c 5-6)"."$(echo ${{ env.CUR_DATE }} | cut -c 7-8)" >> $GITHUB_ENV
 
     - name: Environment variable for current year
       run: echo "CUR_YEAR=$(echo ${{ env.CUR_DATE }} | cut -c 1-4)" >> $GITHUB_ENV

@@ -59,14 +59,8 @@ class GlobalPlugin (globalPluginHandler.GlobalPlugin):
 		except:
 			pass
 
-	def onMp3DirectCutDialog (self, evt):
-		if hasattr (gui.mainFrame, "_popupSettingsDialog"):
-			gui.mainFrame._popupSettingsDialog (Mp3DirectCutDialog)
-		else:
-			gui.mainFrame.popupSettingsDialog (Mp3DirectCutDialog)
-
 	def script_activateMP3DirectCutConfigurationDialog (self, gesture):
-		wx.CallAfter (self.onMp3DirectCutDialog, None)
+		wx.CallAfter ((gui.mainFrame.popupSettingsDialog if hasattr(gui.mainFrame, "popupSettingsDialog") else gui.mainFrame._popupSettingsDialog), gui.settingsDialogs.NVDASettingsDialog, Mp3DirectCutPanel)
 
 	# Translators: message presented in input mode.
 	script_activateMP3DirectCutConfigurationDialog.__doc__ = _("Allows you display the configuration dialog of {0} addon.").format ("mp3DirectCut")

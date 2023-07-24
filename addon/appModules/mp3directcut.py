@@ -92,7 +92,7 @@ announce = (
 )
 
 
-def timeSplitter(time):
+def timeSplitter(time):  # noqa: C901
 	hours = minutes = seconds = hundredths = thousandths = ''
 	if ':' in time:
 		hrs = time.split(':')

@@ -70,7 +70,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install scons markdown flake8 flake8-tabs
+        pip install -U pip scons markdown flake8 flake8-tabs
         sudo apt update
         sudo apt install gettext
 

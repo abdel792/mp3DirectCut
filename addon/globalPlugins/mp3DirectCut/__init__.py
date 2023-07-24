@@ -62,7 +62,7 @@ class GlobalPlugin   (globalPluginHandler.GlobalPlugin):
 	def script_activateMP3DirectCutConfigurationDialog(self, gesture):
 		wx.CallAfter(
 			(gui.mainFrame.popupSettingsDialog if hasattr(gui.mainFrame, "popupSettingsDialog")
-				else gui.mainFrame._popupSettingsDialog),
+			 else gui.mainFrame._popupSettingsDialog),
 			gui.settingsDialogs.NVDASettingsDialog, Mp3DirectCutPanel)
 
 	# Translators: message presented in input mode.

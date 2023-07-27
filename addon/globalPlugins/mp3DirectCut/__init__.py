@@ -9,12 +9,13 @@
 import globalPluginHandler
 import globalVars
 import addonHandler
-from .mp3DirectCutDialog import Mp3DirectCutPanel
+from .mp3DirectCutDialog import Mp3DirectCutDialog, Mp3DirectCutPanel
+from typing import Callable
 import gui
 import wx
 import config
 addonHandler.initTranslation()
-
+_: Callable[[str], str]
 # Constants
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
 
@@ -59,7 +60,19 @@ class GlobalPlugin   (globalPluginHandler.GlobalPlugin):
 		else:
 			self.preferencesMenu.RemoveItem(self.mp3DirectCut)
 
+	def onMp3DirectCutDialog(self, evt):
+		gui.mainFrame._popupSettingsDialog(Mp3DirectCutDialog)
+
 	def script_activateMP3DirectCutConfigurationDialog(self, gesture):
+		if not hasattr(
+			gui,
+			"SettingsPanel"
+		) and not hasattr(
+			gui.settingsDialogs,
+			"SettingsPanel"
+		):
+			wx.CallAfter(self.onMP3DirectCutDialog, None)
+			return
 		wx.CallAfter(
 			(gui.mainFrame.popupSettingsDialog if hasattr(gui.mainFrame, "popupSettingsDialog")
 			 else gui.mainFrame._popupSettingsDialog),

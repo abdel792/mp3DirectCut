@@ -8,8 +8,10 @@
 
 import addonHandler
 import gui
+from typing import Callable
 import wx
 addonHandler.initTranslation()
+_: Callable[[str], str]
 
 
 def onInstall():

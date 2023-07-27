@@ -9,16 +9,17 @@
 import addonHandler
 import config
 import wx
-import gui
 from gui import guiHelper
+from typing import Callable
 # This block ensures compatibility with NVDA versions prior to 2018.2 which includes the settings panel.
 try:
-	SettingsPanel = gui.SettingsPanel or gui.settingsDialog.SettingsPanel
-except AttributeError:
-	pass
+	from gui.settingsDialogs import SettingsPanel
+except ImportError:
+	from gui import SettingsPanel
 finally:
 	from gui.settingsDialogs import SettingsDialog
 addonHandler.initTranslation()
+_: Callable[[str], str]
 
 
 class Mp3DirectCutPanel   (SettingsPanel):

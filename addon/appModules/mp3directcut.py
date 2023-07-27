@@ -9,6 +9,7 @@
 from __future__ import unicode_literals  # To ensure unicode compatibility with both python 2 and 3.
 import appModuleHandler
 import windowUtils
+from typing import Callable
 import controlTypes
 if hasattr(controlTypes, "ROLE_PANE"):
 	from controlTypes import ROLE_PANE, ROLE_EDITABLETEXT
@@ -33,7 +34,7 @@ from NVDAObjects.IAccessible import IAccessible, getNVDAObjectFromEvent
 
 import addonHandler
 addonHandler.initTranslation()
-
+_: Callable[[str], str]
 # Constants
 PROGRAM_NAME = 'mp3DirectCut'
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]

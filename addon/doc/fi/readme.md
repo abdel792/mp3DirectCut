@@ -153,8 +153,14 @@ Tämä lisäosa tarjoaa seuraavat komennot:
 
 ## Yhteensopivuus ##
 
-* NVDA-versiot 2016.4:stä eteenpäin ovat yhteensopivia tämän lisäosan
+* Tämä lisäosa on yhteensopiva NVDA 2019.3:n ja sitä uudempien versioiden
   kanssa.
+
+## Muutokset versiossa 20230728.0.0 ##
+
+* Sovellettu koodiin flake8- ja mypy-sääntöjä.
+* Muutettu NVDA:n tuetuksi vähimmäisversioksi 2019.3 Python 3:ssa
+  esiteltyjen merkintöjen tukemiseksi.
 
 ## Muutokset versiossa 20230508.0.0 ja sitä uudemmissa ##
 

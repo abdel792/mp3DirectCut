@@ -167,8 +167,14 @@ Cette extension offre les commandes suivantes :
 
 ## Compatibilité ##
 
-* Cette extension est compatible avec les versions de NVDA allant de 2016.4
+* Cette extension est compatible avec les versions de NVDA allant de 2019.3
   et au-delà.
+
+## Changements pour la version 20230728.0.0 ##
+
+* Appliqué les règles flake8 et mypy au code ;
+* Modifiée la version minimale de NVDA prise en charge vers la 2019.3 pour
+  prendre en charge les annotations introduites dans Python 3.
 
 ## Changements pour la version 20230508.0.0 et au-delà ##
 

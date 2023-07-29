@@ -140,8 +140,14 @@ Dostupné sú tieto klávesové skratky:
 
 ## Kompatibilita ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2016.4
+* This add-on is compatible with the versions of NVDA ranging from 2019.3
   and beyond.
+
+## Changes for 20230728.0.0 ##
+
+* Applied the flake8 and mypy rules to the code;
+* Changed the minimum supported NVDA version to 2019.3 to support
+  annotations introduced in Python 3.
 
 ## Changes for 20230508.0.0 and beyond ##
 

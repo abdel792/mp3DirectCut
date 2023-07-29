@@ -4,7 +4,7 @@
 * [kararlı  sürüm][1] indir
 * [geliştirme sürümü][2] indir
 
-# sunum #
+# Sunum #
 
 Bu eklenti, NVDA ile mp3DirectCut yazılımının erişilebilirliğini
 iyileştirir.
@@ -30,7 +30,7 @@ Bu eklenti aşağıdaki komutları sunar:
 
     * Dosyanın başlangıcından oynatma imlecinin geçerli konumuna kadar olan
       süreyi verir.
-    * iki kez basıldığında size toplam süreyi verir.
+    * İki kez basıldığında size toplam süreyi verir.
 
 * Ctrl+R
 
@@ -44,7 +44,7 @@ Bu eklenti aşağıdaki komutları sunar:
 * Ctrl+Shift+E
 
     * N seçiminin sonundaki işaretçinin konumunu belirtmek için kullanılır.
-    * iki kez basıldığında, özet B ve N konumlarını ve seçimin süresini
+    * İki kez basıldığında, özet B ve N konumlarını ve seçimin süresini
       verir.
 
 * Ctrl+Shift+P
@@ -56,7 +56,7 @@ Bu eklenti aşağıdaki komutları sunar:
 
     * Kayıt sırasında vu-metrenin mevcut seviyesini belirlemek için
       kullanılır.
-    * iki kez basıldığında seviye sıfırlanır.
+    * İki kez basıldığında seviye sıfırlanır.
 
 * Aşağı ok
 
@@ -70,11 +70,11 @@ Bu eklenti aşağıdaki komutları sunar:
 
 * End
 
-    * çalma imlecini geçerli dosyanın sonuna taşır ve toplam süreyi verir.
+    * Çalma imlecini geçerli dosyanın sonuna taşır ve toplam süreyi verir.
 
 * Home
 
-    * çalma imlecini geçerli dosyanın başına getirirr.
+    * Çalma imlecini geçerli dosyanın başına taşır.
 
 * Sol ok
 
@@ -155,9 +155,15 @@ Bu eklenti aşağıdaki komutları sunar:
 
     * Mevcut eklentinin yardımını açar.
 
-## uyumluluk ##
+## Uyumluluk ##
 
-* Bu eklenti, NVDA'nın 2016.4 ve sonrası sürümleriyle uyumludur.
+* Bu eklenti, NVDA'nın 2019.3 ve sonrası sürümleriyle uyumludur.
+
+## 20230728.0.0 için değişiklikler ##
+
+* Flake8 ve mypy kuralları koda uygulandı;
+* Python 3'te tanıtılan ek açıklamaları desteklemek için desteklenen minimum
+  NVDA sürümü 2019.3 olarak değiştirildi.
 
 ## 20230508.0.0 ve sonrası için değişiklikler ##
 
@@ -182,7 +188,7 @@ Bu eklenti aşağıdaki komutları sunar:
 
 ## 4.0 sürümü için değişiklikler ##
 
-* Eklenti hem Python 2.7 hem de 3 ile uyumlu hale getirildi.
+* Eklenti hem Python 2.7 hem de 3 ile uyumlu hale getirildi;
 * ASCII olmayan karakterler içeren eklenti yollarıyla ilgili bir hata
   düzeltildi.
 
@@ -215,9 +221,9 @@ Bu eklenti aşağıdaki komutları sunar:
   özelliği eklendi;
 * Modülün yapılandırma seçeneklerinde seçim çerçevesinin yerleşim duyurusunu
   etkinleştirme veya devre dışı bırakma özelliği eklendi;
-* kesişim sınırlarından geçerken mevcut parçanın duyrulması eklendi;
+* Kesişim sınırlarından geçerken mevcut parçanın duyrulması eklendi;
 * Dikey harflerle ilgili duyuruların düzeltilmesi;
-* 'NVDA+H' ile mevcut eklentinin yardımını açmak için bir script eklendi;
+* 'NVDA+H' ile mevcut eklentinin yardımını açmak için bir komut eklendi;
 * Eklentinin yapılandırma menüsünün Araçlar menüsünden NVDA'nın Tercihler
   menüsüne kaydırılması.
 
@@ -229,16 +235,16 @@ Bu eklenti aşağıdaki komutları sunar:
   script eklendi;
 * Shift+Sağ Ok ile saniyenin yüzde 4'ü kadar ileri kaymayı seslendiren bir
   script eklendi;
-* saniyenin yüzde dördü kadar geri kaymayı Shift+Sol Ok ile seslendiren bir
-  script eklendi;
+* Saniyenin yüzde dördü kadar geri kaymayı Shift+Sol Ok ile seslendiren bir
+  komut eklendi;
 * Eklenti özetinin gösteriminin 'mp3DirectCut için'den 'mp3DirectCut'a
   düzeltildi.
 
 ## Sürüm 2.0 için değişiklikler ##
 
-* 'Control Shift R' ile kalan süreyi bilmek için bir script eklendi;
+* 'Control Shift R' ile kalan süreyi öğrenebilmek için bir komut eklendi;
 * Saatlerinde dahil edildiği okuma süeleri düzeltildi;
-* binli veya yüzlü saniyeleri ayırt etme yeteneği eklendi.
+* Saniyenin binde birini veya yüzde birini ayırt etme yeteneği eklendi.
 
 ## 1.1 sürümü için değişiklikler ##
 

@@ -158,7 +158,13 @@ Este complemento ofrece las siguientes órdenes:
 ## Compatibilidad ##
 
 * Este complemento es compatible con las versiones de NVDA que van desde la
-  2016.4 en adelante.
+  2019.3 en adelante.
+
+## Cambios para 20230728.0.0 ##
+
+* Aplicadas las reglas de Flake8 y Mipy al código;
+* Cambiada la versión mínima soportada de NVDA a la 2019.3 para soportar las
+  anotaciones de tipos introducidas en Python 3.
 
 ## Cambios para 20230508.0.0 y posteriores ##
 

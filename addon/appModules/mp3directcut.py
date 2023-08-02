@@ -17,6 +17,7 @@ else:
 	ROLE_PANE = controlTypes.Role.PANE
 	ROLE_EDITABLETEXT = controlTypes.Role.EDITABLETEXT
 from datetime import datetime
+from keyboardHandler import KeyboardInputGesture as kig
 import os
 import api
 from scriptHandler import getLastScriptRepeatCount
@@ -327,6 +328,24 @@ def timeRemaining():
 class SoundManager   (IAccessible):
 
 	scriptCategory = ADDON_SUMMARY
+
+	def initOverlayClass(self):
+		for key in (
+			"kb:1",
+			"kb:2",
+			"kb:3",
+			"kb:4",
+			"kb:5",
+			"kb:6"
+		):
+			self.bindGesture(key, "readFromSelection")
+
+	def script_readFromSelection(self, gesture):
+		gesture.send()
+		if gesture.mainKeyName in ("1", "2", "5"):
+			kig.fromName("upArrow").send()
+		else:
+			kig.fromName("downArrow").send()
 
 	def script_checkRecording(self, gesture):
 		gesture.send()

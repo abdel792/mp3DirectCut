@@ -325,6 +325,12 @@ def timeRemaining():
 	return timeSplitter(result)
 
 
+class PartProperties(IAccessible):
+
+	def _get_name(self):
+		return self.firstChild.name
+
+
 class SoundManager   (IAccessible):
 
 	scriptCategory = ADDON_SUMMARY
@@ -676,6 +682,8 @@ class AppModule   (appModuleHandler.AppModule):
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if obj.role == ROLE_PANE and obj.name and any(x in obj.name for x in ['mp3DirectCut', '.mp3']):
 			clsList.insert(0, SoundManager)
+		if obj.firstChild and obj.firstChild.windowControlID == 641:
+			clsList.insert(0, PartProperties)
 
 	def script_openHelp(self, gesture):
 		os.startfile(addonHandler.getCodeAddon().getDocFilePath())

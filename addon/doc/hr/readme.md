@@ -156,19 +156,18 @@ Ovaj dodatak nudi sljedeće naredbe:
 
 ## Kompatibilnost ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2019.3
-  and beyond.
+* Ovaj je dodatak kompatibilan s NVDA verzijom 2019.3 i novijim verzijama.
 
-## Changes for 20230728.0.0 ##
+## Promjene u 20230728.0.0 ##
 
-* Applied the flake8 and mypy rules to the code;
-* Changed the minimum supported NVDA version to 2019.3 to support
-  annotations introduced in Python 3.
+* Programskom kodu su dodana flake8 i mypy pravila.
+* Namjanja podržana NVDA verzija je promijenjena na 2019.3 kako bi se
+  podržale zabilješke koje su uvedene u Python 3.
 
-## Changes for 20230508.0.0 and beyond ##
+## Promjene u 20230508.0.0 i novijim verzijama ##
 
-* • Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+* • Promijenjen je broj verzije, minimalna NVDA verzija i poveznica za
+  preuzimanje prema konvencijama/zahtjevima trgovine.
 
 ## Promjene u verziji 20.12 ##
 

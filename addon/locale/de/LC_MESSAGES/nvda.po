@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2018-11-01 14:10+0100\n"
-"Last-Translator: Adriani <adriani.botez@gmail.com>\n"
+"PO-Revision-Date: 2023-07-31 00:17+0200\n"
+"Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #. Translators: name of the option in the menu.
 msgid "{0} addon configuration"
-msgstr "{0} Konfiguration der Erweiterung"
+msgstr "{0}-Konfiguration der NVDA-Erweiterung"
 
 #. Translators: message presented in input mode.
 msgid "Allows you display the configuration dialog of {0} addon."
@@ -36,7 +36,7 @@ msgstr "Ansage der Leertaste aktivieren"
 
 #. Translators: The label of the checkbox to enable or disable the announcements of the selection markers.
 msgid "Announce the placement of the selection markers"
-msgstr "gibt Die Platzierung der Markierungspunkte aus."
+msgstr "Gibt die Platzierung der Markierungspunkte aus"
 
 #. Translators: The label of the checkbox to enable or disable the other announcements.
 msgid "Enable the other announces"
@@ -100,7 +100,7 @@ msgstr "Der Vu-Meter liegt bei"
 
 #. Translators: Message to indicate the total duration of the current file.
 msgid "Total time: "
-msgstr "Gesamtzeit"
+msgstr "Gesamtzeit: "
 
 #. Translators: Message to indicate the duration of the selection.
 msgid "Duration of selection"
@@ -146,7 +146,7 @@ msgstr ""
 
 #. Translators: Message to inform the user that the recording is not ready.
 msgid "The recording is not ready !"
-msgstr "Die Aufnahme ist noch nicht fertig"
+msgstr "Die Aufnahme ist noch nicht fertig!"
 
 #. Translators: Message to indicate that the vu-meter is not available.
 msgid ""
@@ -187,7 +187,7 @@ msgstr "Keine verbleibende Zeit!"
 #. Translators: Message  to indicate the elapsed time.
 #. Translators: Message to indicate the elapsed time.
 msgid "Elapsed time: "
-msgstr "Abgelaufene Zeit:"
+msgstr "Abgelaufene Zeit: "
 
 #. Translators: message presented in input mode.
 msgid ""
@@ -200,7 +200,7 @@ msgstr ""
 
 #. Translators: Message to indicate the remaining time.
 msgid "Remaining time: "
-msgstr "Verbleibende Zeit:"
+msgstr "Verbleibende Zeit: "
 
 #. Translators: message presented in input mode.
 msgid ""

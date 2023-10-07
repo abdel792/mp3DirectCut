@@ -8,6 +8,7 @@
 
 from __future__ import unicode_literals  # To ensure unicode compatibility with both python 2 and 3.
 import appModuleHandler
+import re
 import windowUtils
 from typing import Callable
 import controlTypes
@@ -17,6 +18,7 @@ else:
 	ROLE_PANE = controlTypes.Role.PANE
 	ROLE_EDITABLETEXT = controlTypes.Role.EDITABLETEXT
 from datetime import datetime
+from keyboardHandler import KeyboardInputGesture as kig
 import os
 import api
 from scriptHandler import getLastScriptRepeatCount
@@ -321,12 +323,33 @@ def timeRemaining():
 	result = result.replace(':', "'")
 	result = result.replace("'", ':', 1)
 	result = result[:-4] if hORm == 2 else result[:-3]
-	return timeSplitter(result)
+	try:
+		return timeSplitter(result)
+	except IndexError:
+		return totalTime()
 
 
 class SoundManager   (IAccessible):
 
 	scriptCategory = ADDON_SUMMARY
+
+	def initOverlayClass(self):
+		for key in (
+			"kb:1",
+			"kb:2",
+			"kb:3",
+			"kb:4",
+			"kb:5",
+			"kb:6"
+		):
+			self.bindGesture(key, "readFromSelection")
+
+	def script_readFromSelection(self, gesture):
+		gesture.send()
+		if gesture.mainKeyName in ("1", "2", "5"):
+			kig.fromName("upArrow").send()
+		else:
+			kig.fromName("downArrow").send()
 
 	def script_checkRecording(self, gesture):
 		gesture.send()
@@ -653,6 +676,15 @@ class AppModule   (appModuleHandler.AppModule):
 					sayMessage(actual)
 					return
 		nextHandler()
+
+	def event_NVDAObject_init(self, obj):
+		if obj and obj.firstChild and obj.firstChild.windowControlID == 641:
+			obj.name = obj.firstChild.name
+		if self.productVersion < '2.2.1':
+			if "#" in obj.displayText:
+				match = re.search(r"(^.+?#[0-9]+)", obj.displayText)
+				if match:
+					obj.name = match.group(1)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if obj.role == ROLE_PANE and obj.name and any(x in obj.name for x in ['mp3DirectCut', '.mp3']):

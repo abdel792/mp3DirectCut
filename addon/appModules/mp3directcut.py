@@ -8,6 +8,7 @@
 
 from __future__ import unicode_literals  # To ensure unicode compatibility with both python 2 and 3.
 import appModuleHandler
+import re
 import windowUtils
 from typing import Callable
 import controlTypes
@@ -322,13 +323,10 @@ def timeRemaining():
 	result = result.replace(':', "'")
 	result = result.replace("'", ':', 1)
 	result = result[:-4] if hORm == 2 else result[:-3]
-	return timeSplitter(result)
-
-
-class PartProperties(IAccessible):
-
-	def _get_name(self):
-		return self.firstChild.name
+	try:
+		return timeSplitter(result)
+	except IndexError:
+		return totalTime()
 
 
 class SoundManager   (IAccessible):
@@ -679,11 +677,18 @@ class AppModule   (appModuleHandler.AppModule):
 					return
 		nextHandler()
 
+	def event_NVDAObject_init(self, obj):
+		if obj and obj.firstChild and obj.firstChild.windowControlID == 641:
+			obj.name = obj.firstChild.name
+		if self.productVersion < '2.2.1':
+			if "#" in obj.displayText:
+				match = re.search(r"(^.+?#[0-9]+)", obj.displayText)
+				if match:
+					obj.name = match.group(1)
+
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if obj.role == ROLE_PANE and obj.name and any(x in obj.name for x in ['mp3DirectCut', '.mp3']):
 			clsList.insert(0, SoundManager)
-		if obj.firstChild and obj.firstChild.windowControlID == 641:
-			clsList.insert(0, PartProperties)
 
 	def script_openHelp(self, gesture):
 		os.startfile(addonHandler.getCodeAddon().getDocFilePath())

@@ -12,6 +12,14 @@ on:
         type: boolean
         required: false
         default: false
+      channel:
+        type: choice
+        description: Choose a channel for your release
+        options:
+        - stable
+        - dev
+        - beta
+        default: stable
 
 jobs:
   buildAndUpload:
@@ -34,13 +42,19 @@ jobs:
       run: echo "CUR_YEAR=$(echo ${{ env.CUR_DATE }} | cut -c 1-4)" >> $GITHUB_ENV
 
     - name: Environment variable for dev
-      if: ${{ inputs.prerelease == true }}
+      if: ${{ inputs.prerelease == true && inputs.channel == 'dev'}}
       run: |
         echo 'MINOR_PATCH=1.0' >> $GITHUB_ENV
         echo 'TAG_NAME=${{ env.TAG_NAME }}-dev' >> $GITHUB_ENV
 
+    - name: Environment variable for beta
+      if: ${{ inputs.prerelease == true && inputs.channel == 'beta'}}
+      run: |
+        echo 'MINOR_PATCH=0.1' >> $GITHUB_ENV
+        echo 'TAG_NAME=${{ env.TAG_NAME }}-beta' >> $GITHUB_ENV
+
     - name: Environment variable for stable
-      if: ${{ inputs.prerelease == false }}
+      if: ${{ inputs.prerelease == false && inputs.channel == 'stable' }}
       run: echo 'MINOR_PATCH=0.0' >> $GITHUB_ENV
 
     - name: Set build version when version is empty
@@ -92,8 +106,12 @@ jobs:
         year='${{ env.CUR_YEAR }}'
         with open("buildVars.py", 'r+', encoding='utf-8') as f:
           text=f.read()
+          pattern=r"\"addon_lastTestedNVDAVersion\": .*?(\d{4})"
+          match=re.search(pattern, text)
+          checkYear=match.group(1)
           text=re.sub(r"\"addon_version\": .*?,", f"\"addon_version\": \"{version}\",", text)
-          text=re.sub(r"\"addon_lastTestedNVDAVersion\": .*?,", f"\"addon_lastTestedNVDAVersion\": \"{year}.1.0\",", text)
+          if checkYear<year:
+            text=re.sub(r"\"addon_lastTestedNVDAVersion\": .*?,", f"\"addon_lastTestedNVDAVersion\": \"{year}.1.0\",", text)
           f.seek(0)
           f.write(text)
           f.truncate()

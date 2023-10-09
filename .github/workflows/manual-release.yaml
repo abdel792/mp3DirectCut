@@ -20,6 +20,7 @@ on:
         - dev
         - beta
         default: stable
+        required: false
 
 jobs:
   buildAndUpload:
@@ -136,7 +137,7 @@ jobs:
         git config --local user.email 'github-actions@github.com'
         git commit -a -m "Update buildVars and changelog"
         git tag ${{ env.TAG_NAME }}
-        git push origin HEAD:main
+        git push origin HEAD:${{ github.ref_name }}
         git push origin ${{ env.TAG_NAME }}:refs/tags/${{ env.TAG_NAME }}
 
     - name: Build add-on

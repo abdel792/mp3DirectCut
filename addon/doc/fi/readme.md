@@ -156,6 +156,17 @@ Tämä lisäosa tarjoaa seuraavat komennot:
 * Tämä lisäosa on yhteensopiva NVDA 2019.3:n ja sitä uudempien versioiden
   kanssa.
 
+## Muutokset versiossa 20231007.0.0 ##
+
+* Leikkauskohtien asettamisen ja leikkausominaisuuksien ikkunan avaamisen
+  jälkeen voit lisätä saavutettavuuden ikkunan otsikolle osan indeksillä
+  Ctrl+N-näppäinkomentoa käyttäen.
+* Lisätty automaattinen lukemisen aloitus uudesta sijainnista, kun
+  lukutilassa valinnan aloitus- tai lopetuskohtia siirretään
+  numeronäppäimillä 1-6.
+* Korjattu bugi, joka ilmeni puhuttaessa jäljellä olevaa aikaa tiedoston
+  alussa Ctrl+Vaihto+R-näppäinkomennolla.
+
 ## Muutokset versiossa 20230728.0.0 ##
 
 * Sovellettu koodiin flake8- ja mypy-sääntöjä.

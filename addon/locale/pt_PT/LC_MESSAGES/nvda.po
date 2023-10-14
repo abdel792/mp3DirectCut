@@ -23,27 +23,26 @@ msgstr ""
 msgid "{0} addon configuration"
 msgstr "{0} Configuração do extra"
 
-#. Translators: message presented in input mode.
 #, python-brace-format
 msgid "Allows you display the configuration dialog of {0} addon."
-msgstr "Permite-lhe visualizar o quadro do diálogo de configuração do {0} extra."
-
-#. Translators: The title of the add-on configuration dialog box.
-#, python-brace-format
-msgid "Configuration of the addon {0}"
-msgstr "Configuração do extra {0}"
+msgstr ""
+"Permite-lhe visualizar o quadro do diálogo de configuração do {0} extra."
 
 #. Translators: The label of the checkbox to enable or disable the spacebar announcements.
 msgid "Enable announcements of the space key"
 msgstr "Activar os anúncios da barra de espaços"
 
-#. Translators: The label of the checkbox to enable or disable the announcements of the selection markers.
 msgid "Announce the placement of the selection markers"
 msgstr "Anunciar a colocação das etiquetas de selecção"
 
 #. Translators: The label of the checkbox to enable or disable the other announcements.
 msgid "Enable the other announces"
 msgstr "Activar os outros anúncios"
+
+#. Translators: The title of the add-on configuration dialog box.
+#, python-brace-format
+msgid "Configuration of the addon {0}"
+msgstr "Configuração do extra {0}"
 
 msgid "hours"
 msgstr "horas"
@@ -73,12 +72,21 @@ msgid "End of the file."
 msgstr "Fim do ficheiro."
 
 #. Translators: Message to inform the user that not file is loaded.
-msgid "Not file is loaded. Please check that you are in a file, open one with Control O, or R to start recording."
-msgstr "Não há nenhum ficheiro aberto. Verifique se está num ficheiro, abra um com \"CTRL+O ou pressione \"R\" para gravar."
+#, fuzzy
+msgid ""
+"Not file is loaded. Please check that you are in a file, open one with "
+"Control O,\tor R to start recording."
+msgstr ""
+"Não há nenhum ficheiro aberto. Verifique se está num ficheiro, abra um com "
+"\"CTRL+O ou pressione \"R\" para gravar."
 
 #. Translators: Message to inform the user that the current command is not available in a recording mode.
-msgid "This command is not available in a recording mode, it is available only in a reading mode !"
-msgstr "Este comando não está disponível em modo de gravação, mas apenas em modo de leitura!"
+msgid ""
+"This command is not available in a recording mode, it is available only in a "
+"reading mode !"
+msgstr ""
+"Este comando não está disponível em modo de gravação, mas apenas em modo de "
+"leitura!"
 
 #. Translators: Message to indicate the position of the selection start marker.
 msgid "The marker of the beginning of selection B is at"
@@ -121,21 +129,36 @@ msgid "Please chek that you are not in a recording mode."
 msgstr "Verifique que não está em modo de gravação."
 
 #. Translators: Message to inform the user that the recording is ready.
-msgid "The recording is ready ! It remains only to press spacebar for begin the recording. This same spacebar  will stop the recording !"
-msgstr "A gravação está pronta. Pressione a barra de espaço para a iniciar e, depois, volte a pressioná-la para terminar!"
+#, fuzzy
+msgid ""
+"The recording is ready ! It remains only to press spacebar for begin the "
+"recording.\tThis same spacebar  will stop the recording !"
+msgstr ""
+"A gravação está pronta. Pressione a barra de espaço para a iniciar e, "
+"depois, volte a pressioná-la para terminar!"
 
 #. Translators: Message to inform the user that a recording is in progress.
-msgid "A recording is in progress, please press spacebar for stop it and start a new one."
-msgstr "Está em progresso Uma gravação. Pressione barra de espaço para terminá-la e começar outra."
+msgid ""
+"A recording is in progress, please press spacebar for stop it and start a "
+"new one."
+msgstr ""
+"Está em progresso Uma gravação. Pressione barra de espaço para terminá-la e "
+"começar outra."
 
 #. Translators: Message to inform the user that the recording is not ready.
 msgid "The recording is not ready !"
 msgstr "A gravação não está preparada!"
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, python-brace-format
-msgid "The vu-meter is not available. Please verify if a recording is in progress, and that the checkbox enable the margin button is checked in the options of {0}."
-msgstr "O medidor de volume não está disponível. Verifique se uma gravação está em andamento e se a caixa de selecção habilitar o botão de margem está marcada nas opções de {0}."
+#, fuzzy, python-brace-format
+msgid ""
+"The vu-meter is not available. Please verify if a recording is in progress,"
+"\tand that the checkbox enable the margin button is checked in the options "
+"of {0}."
+msgstr ""
+"O medidor de volume não está disponível. Verifique se uma gravação está em "
+"andamento e se a caixa de selecção habilitar o botão de margem está marcada "
+"nas opções de {0}."
 
 #. Translators: Message to confirm that the level of the vu-meter has been reset.
 msgid "The level of the vu-meter has been reset !"
@@ -163,37 +186,57 @@ msgstr "Sector"
 msgid "No time remaining !"
 msgstr "Não há mais tempo!"
 
-#. Translators: Message  to indicate the elapsed time.
 #. Translators: Message to indicate the elapsed time.
 msgid "Elapsed time: "
 msgstr "Tempo passado "
 
-#. Translators: message presented in input mode.
-msgid "Gives the duration from the beginning of the file to the current position of the playback cursor. If pressed twice, gives the total duration."
-msgstr "Dá a duração decorrida desde o início do ficheiro até à posição actual do cursor de reprodução. Se pressionar duas vezes, dá o tempo total."
+#, fuzzy
+msgid ""
+"Gives the duration from the beginning of the file to the current position of "
+"the playback cursor.\t\t\tIf pressed twice, gives the total duration."
+msgstr ""
+"Dá a duração decorrida desde o início do ficheiro até à posição actual do "
+"cursor de reprodução. Se pressionar duas vezes, dá o tempo total."
 
 #. Translators: Message to indicate the remaining time.
 msgid "Remaining time: "
 msgstr "Tempo restante: "
 
-#. Translators: message presented in input mode.
-msgid "Gives the time remaining from the current position of the playback cursor to the end of the file."
-msgstr "Dá o tempo restante desde a posição do cursor de reprodução até ao final do ficheiro."
+msgid ""
+"Gives the time remaining from the current position of the playback cursor to "
+"the end of the file."
+msgstr ""
+"Dá o tempo restante desde a posição do cursor de reprodução até ao final do "
+"ficheiro."
 
-#. Translators: message presented in input mode.
-msgid "Used to determine the current level of the vu-meter, during recording, double pressure reset it."
-msgstr "Permite indicar o valor actual do nível do medidor de volume. Se for pressionado duas vezes, reinicia esse valor."
+msgid ""
+"Used to determine the current level of the vu-meter, during recording, "
+"double pressure reset it."
+msgstr ""
+"Permite indicar o valor actual do nível do medidor de volume. Se for "
+"pressionado duas vezes, reinicia esse valor."
 
-#. Translators: message presented in input mode.
-msgid "Used to indicate the position of the marker of the beginning of selection B. Double pressure lets give you the duration of the selection."
-msgstr "Permite indicar a posição da etiqueta de início de selecção B. Pressionando duas vezes, dá a duração da selecção."
+#, fuzzy
+msgid ""
+"Used to indicate the position of the marker of the beginning of selection B."
+"\t\t\tDouble pressure lets give you the duration of the selection."
+msgstr ""
+"Permite indicar a posição da etiqueta de início de selecção B. Pressionando "
+"duas vezes, dá a duração da selecção."
 
-#. Translators: message presented in input mode.
-msgid "Used to indicate the position of the marker of the end of selection N. Double pressure gives recapitulatif positions B and N, and the duration of the selection."
-msgstr "Permite indicar a posição da etiqueta de final de selecção N. Pressionando duas vezes, dá uma recapitulação da posição das etiquetas B e N, bem como a duração total da selecção."
+#, fuzzy
+msgid ""
+"Used to indicate the position of the marker of the end of selection N.\t\t"
+"\tDouble pressure gives recapitulatif positions B and N, and the duration of "
+"the selection."
+msgstr ""
+"Permite indicar a posição da etiqueta de final de selecção N. Pressionando "
+"duas vezes, dá uma recapitulação da posição das etiquetas B e N, bem como a "
+"duração total da selecção."
 
-#. Translators: message presented in input mode.
-msgid "Give the reference of the actual part and the total number of parts in the current file."
+msgid ""
+"Give the reference of the actual part and the total number of parts in the "
+"current file."
 msgstr "Dá a referência do sector actual, bem como o número total de sectores."
 
 #. Translators: message presented in input mode.

@@ -170,6 +170,18 @@ Cette extension offre les commandes suivantes :
 * Cette extension est compatible avec les versions de NVDA allant de 2019.3
   et au-delà.
 
+## Changements pour la version 20231007.0.0 ##
+
+* Après avoir placé les points de coupe et après avoir ouvert la fenêtre des
+  propriétés des points de coupe, avec "Contrôle+N", ajout de
+  l'accessibilité au titre de cette fenêtre en indiquant la plage de
+  l'index.
+* En mode lecture, après avoir déplacé les marqueurs de début ou de fin de
+  sélection avec les touches 1 à 6 du pavé alphanumérique, ajout du
+  démarrage automatique de la lecture à partir de la nouvelle position ;
+* Correction d'un bug qui survenait lors de la consultation de la durée
+  restante avec "Contrôle + Maj + R" depuis le début du morceau.
+
 ## Changements pour la version 20230728.0.0 ##
 
 * Appliqué les règles flake8 et mypy au code ;

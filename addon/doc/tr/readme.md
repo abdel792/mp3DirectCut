@@ -159,6 +159,17 @@ Bu eklenti aşağıdaki komutları sunar:
 
 * Bu eklenti, NVDA'nın 2019.3 ve sonrası sürümleriyle uyumludur.
 
+## 20231007.0.0 için değişiklikler ##
+
+* Kesim noktaları yerleştirildikten ve kesim özellikleri penceresi
+  açıldıktan sonra "Ctrl+N" ile bu pencerenin başlığına parça indeksi
+  belirtilerek erişilebilirlik eklenir.
+* Okuma modunda, seçimlerin başlangıç ​​veya bitiş işaretlerini alfanümerik
+  tuş takımının 1'den 6'ya kadar olan tuşlarıyla hareket ettirdikten sonra,
+  yeni konumdan otomatik okuma başlangıcının eklenmesi;
+* Parçanın başlangıcından itibaren "control+shift+r" ile kalan süreye
+  bakılırken oluşan bir hata düzeltildi.
+
 ## 20230728.0.0 için değişiklikler ##
 
 * Flake8 ve mypy kuralları koda uygulandı;

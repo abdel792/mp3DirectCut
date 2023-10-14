@@ -160,6 +160,17 @@ Este complemento ofrece las siguientes órdenes:
 * Este complemento es compatible con las versiones de NVDA que van desde la
   2019.3 en adelante.
 
+## Cambios para 20231007.0.0 ##
+
+* Tras situar los puntos de corte y abrir la ventana de propiedades de corte
+  con "control+n", se añade accesibilidad al título de esta ventana
+  indicando el índice de la parte.
+* En el modo lectura, tras desplazar los marcadores de inicio o fin de las
+  selecciones con las teclas 1 a 6 del teclado alfanumérico, se añade el
+  inicio automático de la lectura desde la nueva posición;
+* Se corrige un fallo que se producía al consultar el tiempo restante con
+  "control+shift+r" desde el principio de la pista.
+
 ## Cambios para 20230728.0.0 ##
 
 * Aplicadas las reglas de Flake8 y Mipy al código;

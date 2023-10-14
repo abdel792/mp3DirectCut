@@ -18,29 +18,30 @@ msgstr ""
 "X-Generator: Poedit 2.2\n"
 
 #. Translators: name of the option in the menu.
+#, python-brace-format
 msgid "{0} addon configuration"
 msgstr "{0} Konfiguration der Erweiterung"
 
-#. Translators: message presented in input mode.
+#, python-brace-format
 msgid "Allows you display the configuration dialog of {0} addon."
 msgstr ""
 "Ermöglicht es, den Konfigurationsdialog für die Erweiterung {0} zu öffnen."
-
-#. Translators: The title of the add-on configuration dialog box.
-msgid "Configuration of the addon {0}"
-msgstr "Konfiguration der Erweiterung {0}"
 
 #. Translators: The label of the checkbox to enable or disable the spacebar announcements.
 msgid "Enable announcements of the space key"
 msgstr "Ansage der Leertaste aktivieren"
 
-#. Translators: The label of the checkbox to enable or disable the announcements of the selection markers.
 msgid "Announce the placement of the selection markers"
 msgstr "gibt Die Platzierung der Markierungspunkte aus."
 
 #. Translators: The label of the checkbox to enable or disable the other announcements.
 msgid "Enable the other announces"
 msgstr "Andere Ansagen aktivieren"
+
+#. Translators: The title of the add-on configuration dialog box.
+#, python-brace-format
+msgid "Configuration of the addon {0}"
+msgstr "Konfiguration der Erweiterung {0}"
 
 msgid "hours"
 msgstr "Stunden"
@@ -70,9 +71,10 @@ msgid "End of the file."
 msgstr "Dateiende."
 
 #. Translators: Message to inform the user that not file is loaded.
+#, fuzzy
 msgid ""
 "Not file is loaded. Please check that you are in a file, open one with "
-"Control O, or R to start recording."
+"Control O,\tor R to start recording."
 msgstr ""
 "Es ist keine Datei geladen. Bitte überprüfen Sie, ob Sie sich in einer Datei "
 "befinden. Sie können mittels STRG+O eine Datei öffnen oder mittels R mit der "
@@ -128,9 +130,10 @@ msgstr ""
 "Bitte stellen Sie sicher, dass sie sich nicht im Aufnahmemodus befinden."
 
 #. Translators: Message to inform the user that the recording is ready.
+#, fuzzy
 msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
-"recording. This same spacebar  will stop the recording !"
+"recording.\tThis same spacebar  will stop the recording !"
 msgstr ""
 "Die Aufnahme ist bereit ! Drücken Sie die Leertaste, um mit der Aufnahme zu "
 "beginnen. Die Leertaste kann auch für das Anhalten der Aufnahme gedrückt "
@@ -149,10 +152,11 @@ msgid "The recording is not ready !"
 msgstr "Die Aufnahme ist noch nicht fertig"
 
 #. Translators: Message to indicate that the vu-meter is not available.
+#, fuzzy, python-brace-format
 msgid ""
-"The vu-meter is not available. Please verify if a recording is in progress, "
-"and that the checkbox enable the margin button is checked in the options of "
-"{0}."
+"The vu-meter is not available. Please verify if a recording is in progress,"
+"\tand that the checkbox enable the margin button is checked in the options "
+"of {0}."
 msgstr ""
 "Das vu-meter ist nicht verfügbar. Bitte überprüfen Sie, ob eine Aufzeichnung "
 "läuft und ob das Kontrollkästchen\"Schalter für Begrenzung aktivieren\" in "
@@ -184,15 +188,14 @@ msgstr "Abschnitt"
 msgid "No time remaining !"
 msgstr "Keine verbleibende Zeit!"
 
-#. Translators: Message  to indicate the elapsed time.
 #. Translators: Message to indicate the elapsed time.
 msgid "Elapsed time: "
 msgstr "Abgelaufene Zeit:"
 
-#. Translators: message presented in input mode.
+#, fuzzy
 msgid ""
 "Gives the duration from the beginning of the file to the current position of "
-"the playback cursor. If pressed twice, gives the total duration."
+"the playback cursor.\t\t\tIf pressed twice, gives the total duration."
 msgstr ""
 "Gibt die Dauer vom Anfang der Datei bis zur aktuellen Position des "
 "Wiedergabe-Cursors an. Bei zweimal Drücken wird die Gesamtdauer "
@@ -202,7 +205,6 @@ msgstr ""
 msgid "Remaining time: "
 msgstr "Verbleibende Zeit:"
 
-#. Translators: message presented in input mode.
 msgid ""
 "Gives the time remaining from the current position of the playback cursor to "
 "the end of the file."
@@ -210,7 +212,6 @@ msgstr ""
 "Gibt die Restzeit von der aktuellen Wiedergabeposition bis zum Ende der "
 "Datei aus."
 
-#. Translators: message presented in input mode.
 msgid ""
 "Used to determine the current level of the vu-meter, during recording, "
 "double pressure reset it."
@@ -218,26 +219,25 @@ msgstr ""
 "Dient zur Bestimmung des aktuellen Niveaus des Vu-Meters während der "
 "Aufzeichnung. Doppelter Druck setzt ihn zurück."
 
-#. Translators: message presented in input mode.
+#, fuzzy
 msgid ""
-"Used to indicate the position of the marker of the beginning of selection B. "
-"Double pressure lets give you the duration of the selection."
+"Used to indicate the position of the marker of the beginning of selection B."
+"\t\t\tDouble pressure lets give you the duration of the selection."
 msgstr ""
 "Kann verwendet werden, um die Position des Markers für den Beginn der "
 "Auswahl B anzuzeigen. Mit dem Doppeldruck können Sie die Dauer der Auswahl "
 "bestimmen."
 
-#. Translators: message presented in input mode.
+#, fuzzy
 msgid ""
-"Used to indicate the position of the marker of the end of selection N. "
-"Double pressure gives recapitulatif positions B and N, and the duration of "
+"Used to indicate the position of the marker of the end of selection N.\t\t"
+"\tDouble pressure gives recapitulatif positions B and N, and the duration of "
 "the selection."
 msgstr ""
 "Dient zur Anzeige der Position des Markers für das Ende der Auswahl N. Der "
 "doppelte Druck gibt eine Zusammenfassung der Positionen B und N und die "
 "Dauer der Auswahl."
 
-#. Translators: message presented in input mode.
 msgid ""
 "Give the reference of the actual part and the total number of parts in the "
 "current file."

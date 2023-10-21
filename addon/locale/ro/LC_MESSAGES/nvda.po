@@ -22,27 +22,25 @@ msgstr ""
 msgid "{0} addon configuration"
 msgstr "Configurarea suplimentului {0}"
 
-#. Translators: message presented in input mode.
 #, python-brace-format
 msgid "Allows you display the configuration dialog of {0} addon."
 msgstr "Vă permite să afișați dialogul de configurare al suplimentului {0}."
-
-#. Translators: The title of the add-on configuration dialog box.
-#, python-brace-format
-msgid "Configuration of the addon {0}"
-msgstr "Configurarea suplimentului {0}"
 
 #. Translators: The label of the checkbox to enable or disable the spacebar announcements.
 msgid "Enable announcements of the space key"
 msgstr "Activează anunțurile tastei spațiu"
 
-#. Translators: The label of the checkbox to enable or disable the announcements of the selection markers.
 msgid "Announce the placement of the selection markers"
 msgstr "Anunță plasarea marcajelor de selecție"
 
 #. Translators: The label of the checkbox to enable or disable the other announcements.
 msgid "Enable the other announces"
 msgstr "Activează alte anunțuri"
+
+#. Translators: The title of the add-on configuration dialog box.
+#, python-brace-format
+msgid "Configuration of the addon {0}"
+msgstr "Configurarea suplimentului {0}"
 
 msgid "hours"
 msgstr "ore"
@@ -72,9 +70,10 @@ msgid "End of the file."
 msgstr "Sfârșitul fișierului."
 
 #. Translators: Message to inform the user that not file is loaded.
+#, fuzzy
 msgid ""
 "Not file is loaded. Please check that you are in a file, open one with "
-"Control O, or R to start recording."
+"Control O,\tor R to start recording."
 msgstr ""
 "Niciun fișier nu este încărcat. Vă rugăm să verificați dacă sunteți într-un "
 "folder de fișiere, deschideți unul cu Control+O, sau apăsați R pentru a "
@@ -129,9 +128,10 @@ msgid "Please chek that you are not in a recording mode."
 msgstr "Vă rugăm să verificați dacă nu sunteți în modul de înregistrare."
 
 #. Translators: Message to inform the user that the recording is ready.
+#, fuzzy
 msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
-"recording. This same spacebar  will stop the recording !"
+"recording.\tThis same spacebar  will stop the recording !"
 msgstr ""
 "Înregistrarea este gata! Rămâne doar să apăsați spațiu pentru a reda "
 "înregistrarea. Din nou apăsat, spațiu va opri redarea!"
@@ -149,11 +149,11 @@ msgid "The recording is not ready !"
 msgstr "Înregistrarea nu este gata!"
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, python-brace-format
+#, fuzzy, python-brace-format
 msgid ""
-"The vu-meter is not available. Please verify if a recording is in progress, "
-"and that the checkbox enable the margin button is checked in the options of "
-"{0}."
+"The vu-meter is not available. Please verify if a recording is in progress,"
+"\tand that the checkbox enable the margin button is checked in the options "
+"of {0}."
 msgstr ""
 "vu-meter nu este disponibil. Vă rugăm verificați dacă o înregistrare este în "
 "desfășurare și dacă caseta de bifat „Activează butonul margin” este bifată "
@@ -185,15 +185,14 @@ msgstr "Parte"
 msgid "No time remaining !"
 msgstr "Fără timp rămas!"
 
-#. Translators: Message  to indicate the elapsed time.
 #. Translators: Message to indicate the elapsed time.
 msgid "Elapsed time: "
 msgstr "Timp scurs:"
 
-#. Translators: message presented in input mode.
+#, fuzzy
 msgid ""
 "Gives the duration from the beginning of the file to the current position of "
-"the playback cursor. If pressed twice, gives the total duration."
+"the playback cursor.\t\t\tIf pressed twice, gives the total duration."
 msgstr ""
 "Afișează durata de la începutul fișierului până la poziția curentă a "
 "cursorului de redare. Dacă este apăsat de două ori, afișează durata totală."
@@ -202,7 +201,6 @@ msgstr ""
 msgid "Remaining time: "
 msgstr "Timp rămas"
 
-#. Translators: message presented in input mode.
 msgid ""
 "Gives the time remaining from the current position of the playback cursor to "
 "the end of the file."
@@ -210,7 +208,6 @@ msgstr ""
 "Afișează timpul rămas de la poziția curentă a cursorului de redare până la "
 "sfârșitul fișierului."
 
-#. Translators: message presented in input mode.
 msgid ""
 "Used to determine the current level of the vu-meter, during recording, "
 "double pressure reset it."
@@ -218,25 +215,24 @@ msgstr ""
 "Utilizat pentru a determina nivelul curent a vu-meter-ului, în timpul "
 "înregistrării. Dacă este apăsat de două ori, îl va reseta."
 
-#. Translators: message presented in input mode.
+#, fuzzy
 msgid ""
-"Used to indicate the position of the marker of the beginning of selection B. "
-"Double pressure lets give you the duration of the selection."
+"Used to indicate the position of the marker of the beginning of selection B."
+"\t\t\tDouble pressure lets give you the duration of the selection."
 msgstr ""
 "Folosit pentru a indica poziția marcajului curent de la începutul selecției "
 "B. Apăsat de două, va afișa durata selecției."
 
-#. Translators: message presented in input mode.
+#, fuzzy
 msgid ""
-"Used to indicate the position of the marker of the end of selection N. "
-"Double pressure gives recapitulatif positions B and N, and the duration of "
+"Used to indicate the position of the marker of the end of selection N.\t\t"
+"\tDouble pressure gives recapitulatif positions B and N, and the duration of "
 "the selection."
 msgstr ""
 "Folosit pentru a indica poziția marcajului de la sfârșitul selecției N. "
 "Apăsată de două ori, afișează recapitularea pozițiilor B și N și durata "
 "selecției."
 
-#. Translators: message presented in input mode.
 msgid ""
 "Give the reference of the actual part and the total number of parts in the "
 "current file."

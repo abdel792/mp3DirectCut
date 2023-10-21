@@ -158,9 +158,20 @@ Ovaj dodatak nudi sljedeće naredbe:
 
 * Ovaj je dodatak kompatibilan s NVDA verzijom 2019.3 i novijim verzijama.
 
+## Promjene u 20231007.0.0 ##
+
+* After placing the cutting points and after opening the cutting properties
+  window, with "Ctrl+N", adding accessibility to the title of this window by
+  indicating the part index.
+* In reading mode, after moving the start or end markers of selections with
+  keys 1 to 6 of the alphanumeric pad, addition of automatic start of
+  reading from the new position;
+* Fixed a bug that occurred when consulting the remaining time with
+  "control+shift+r" from the beginning of the track.
+
 ## Promjene u 20230728.0.0 ##
 
-* Programskom kodu su dodana flake8 i mypy pravila.
+* Programskom kodu su dodana flake8 i mypy pravila;
 * Namjanja podržana NVDA verzija je promijenjena na 2019.3 kako bi se
   podržale zabilješke koje su uvedene u Python 3.
 

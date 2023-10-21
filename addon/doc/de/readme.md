@@ -163,19 +163,29 @@ Diese Erweiterung bietet folgende Tastaturbefehle:
 
 ## Kompatibilität ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2019.3
-  and beyond.
+* Diese NVDA-Erweiterung ist kompatibel ab NVDA-Version 2019.3.
 
-## Changes for 20230728.0.0 ##
+## Änderungen in 20231007.0.0 ##
 
-* Applied the flake8 and mypy rules to the code;
-* Changed the minimum supported NVDA version to 2019.3 to support
-  annotations introduced in Python 3.
+* Nach dem Platzieren der Schnittpunkte und dem Öffnen des Fensters
+  "Schnitteigenschaften" mit "Strg+N", fügen Sie dem Titel dieses Fensters
+  eine Zugänglichkeit hinzu, indem Sie den Teile-Index angeben.
+* Im Lesemodus, nach dem Verschieben der Start- oder Endmarkierungen der
+  Auswahlen mit den Tasten 1 bis 6 des alphanumerischen Pads, Hinzufügen des
+  automatischen Lesestarts von der neuen Position;
+* Es wurde ein Fehler behoben, der auftrat, wenn man die verbleibende Zeit
+  mit "Strg+Umschalt+R" am Anfang des Titels abfragte.
 
-## Changes for 20230508.0.0 and beyond ##
+## Änderungen in 20230728.0.0 ##
 
-* • Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+* Code angepasst für Flake8- und MyPy-Regeln;
+* Die minimal unterstützte NVDA-Version wurde auf 2019.3 geändert, um die in
+  Python 3 eingeführten Annotationen zu unterstützen.
+
+## Änderungen in 20230508.0.0 und neuer ##
+
+* • Die Versionsnummer, die minimale NVDA-Version und der Download-Link
+  wurden entsprechend den Konventionen/Anforderungen geändert.
 
 ## Änderung für Version 20.12 ##
 

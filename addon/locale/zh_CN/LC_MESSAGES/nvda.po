@@ -9,12 +9,12 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2018-03-23 13:00+1000\n"
 "PO-Revision-Date: 2020-12-13 10:06+0800\n"
+"Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
+"Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
-"Language-Team: \n"
 "X-Generator: Poedit 2.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -23,27 +23,25 @@ msgstr ""
 msgid "{0} addon configuration"
 msgstr "{0} 插件配置"
 
-#. Translators: message presented in input mode.
 #, python-brace-format
 msgid "Allows you display the configuration dialog of {0} addon."
 msgstr "允许您显示插件 {0} 的配置对话框。"
-
-#. Translators: The title of the add-on configuration dialog box.
-#, python-brace-format
-msgid "Configuration of the addon {0}"
-msgstr "插件 {0} 的配置"
 
 #. Translators: The label of the checkbox to enable or disable the spacebar announcements.
 msgid "Enable announcements of the space key"
 msgstr "朗读空格键"
 
-#. Translators: The label of the checkbox to enable or disable the announcements of the selection markers.
 msgid "Announce the placement of the selection markers"
 msgstr "朗读选中标记的位置"
 
 #. Translators: The label of the checkbox to enable or disable the other announcements.
 msgid "Enable the other announces"
 msgstr "朗读其他"
+
+#. Translators: The title of the add-on configuration dialog box.
+#, python-brace-format
+msgid "Configuration of the addon {0}"
+msgstr "插件 {0} 的配置"
 
 msgid "hours"
 msgstr "小时"
@@ -73,9 +71,10 @@ msgid "End of the file."
 msgstr "文件结尾。"
 
 #. Translators: Message to inform the user that not file is loaded.
+#, fuzzy
 msgid ""
 "Not file is loaded. Please check that you are in a file, open one with "
-"Control O, or R to start recording."
+"Control O,\tor R to start recording."
 msgstr "没有载入文件。请使用 ctrl+o打开或者按 r 直接录音。"
 
 #. Translators: Message to inform the user that the current command is not available in a recording mode.
@@ -125,9 +124,10 @@ msgid "Please chek that you are not in a recording mode."
 msgstr "请确保您并未处于录音模式。"
 
 #. Translators: Message to inform the user that the recording is ready.
+#, fuzzy
 msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
-"recording. This same spacebar  will stop the recording !"
+"recording.\tThis same spacebar  will stop the recording !"
 msgstr "已经准备好录音。按“空格键”可开始录音，再次按“空格键”停止录音 ！"
 
 #. Translators: Message to inform the user that a recording is in progress.
@@ -141,11 +141,11 @@ msgid "The recording is not ready !"
 msgstr "录音状态未就绪 ！"
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, python-brace-format
+#, fuzzy, python-brace-format
 msgid ""
-"The vu-meter is not available. Please verify if a recording is in progress, "
-"and that the checkbox enable the margin button is checked in the options of "
-"{0}."
+"The vu-meter is not available. Please verify if a recording is in progress,"
+"\tand that the checkbox enable the margin button is checked in the options "
+"of {0}."
 msgstr ""
 "音量指示器不可用。请确定是否正处于录音状态，或者 {0}的配置中勾选了“启用边"
 "界”。"
@@ -176,15 +176,14 @@ msgstr "区域"
 msgid "No time remaining !"
 msgstr "没有剩余时间 ！"
 
-#. Translators: Message  to indicate the elapsed time.
 #. Translators: Message to indicate the elapsed time.
 msgid "Elapsed time: "
 msgstr "使用时间： "
 
-#. Translators: message presented in input mode.
+#, fuzzy
 msgid ""
 "Gives the duration from the beginning of the file to the current position of "
-"the playback cursor. If pressed twice, gives the total duration."
+"the playback cursor.\t\t\tIf pressed twice, gives the total duration."
 msgstr ""
 "给出从文件开头到播放光标当前位置的持续时间。如果按两次，则给出总持续时间。"
 
@@ -192,32 +191,29 @@ msgstr ""
 msgid "Remaining time: "
 msgstr "剩余时间： "
 
-#. Translators: message presented in input mode.
 msgid ""
 "Gives the time remaining from the current position of the playback cursor to "
 "the end of the file."
 msgstr "给出从播放光标的当前位置到文件末尾的剩余时间。"
 
-#. Translators: message presented in input mode.
 msgid ""
 "Used to determine the current level of the vu-meter, during recording, "
 "double pressure reset it."
 msgstr "用来在录音时检测音量指示器的值，联按两次可以重置。"
 
-#. Translators: message presented in input mode.
+#, fuzzy
 msgid ""
-"Used to indicate the position of the marker of the beginning of selection B. "
-"Double pressure lets give you the duration of the selection."
+"Used to indicate the position of the marker of the beginning of selection B."
+"\t\t\tDouble pressure lets give you the duration of the selection."
 msgstr "描述选择开始点所在的位置，连按两次读出持续时间。"
 
-#. Translators: message presented in input mode.
+#, fuzzy
 msgid ""
-"Used to indicate the position of the marker of the end of selection N. "
-"Double pressure gives recapitulatif positions B and N, and the duration of "
+"Used to indicate the position of the marker of the end of selection N.\t\t"
+"\tDouble pressure gives recapitulatif positions B and N, and the duration of "
 "the selection."
 msgstr "描述选择结束点所在的位置，连按两次读出持续时间。"
 
-#. Translators: message presented in input mode.
 msgid ""
 "Give the reference of the actual part and the total number of parts in the "
 "current file."

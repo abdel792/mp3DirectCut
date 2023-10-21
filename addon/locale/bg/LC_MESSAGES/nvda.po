@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2019-03-11 09:19+0200\n"
+"PO-Revision-Date: 2023-10-13 17:07+0300\n"
 "Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
 "Language-Team: \n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 3.4\n"
 
 #. Translators: name of the option in the menu.
 #, python-brace-format
@@ -72,7 +72,6 @@ msgid "End of the file."
 msgstr "Край на файла."
 
 #. Translators: Message to inform the user that not file is loaded.
-#, fuzzy
 msgid ""
 "Not file is loaded. Please check that you are in a file, open one with "
 "Control O,\tor R to start recording."
@@ -128,7 +127,6 @@ msgid "Please chek that you are not in a recording mode."
 msgstr "Моля, уверете се, че не сте в режим на записване."
 
 #. Translators: Message to inform the user that the recording is ready.
-#, fuzzy
 msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
 "recording.\tThis same spacebar  will stop the recording !"
@@ -150,14 +148,14 @@ msgid "The recording is not ready !"
 msgstr "Няма готовност за записване."
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "The vu-meter is not available. Please verify if a recording is in progress,"
 "\tand that the checkbox enable the margin button is checked in the options "
 "of {0}."
 msgstr ""
 "VU-meter не е наличен. Моля, уверете се, че записването е в ход и че опцията "
-"\"Enable Margin button (VU)\" в менюто \"Settings\" на {0} е включена."
+"\"Enable Margin button\" в настройките на {0} е включена."
 
 #. Translators: Message to confirm that the level of the vu-meter has been reset.
 msgid "The level of the vu-meter has been reset !"
@@ -189,7 +187,6 @@ msgstr "Няма оставащо време."
 msgid "Elapsed time: "
 msgstr "Изминало време: "
 
-#, fuzzy
 msgid ""
 "Gives the duration from the beginning of the file to the current position of "
 "the playback cursor.\t\t\tIf pressed twice, gives the total duration."
@@ -215,7 +212,6 @@ msgstr ""
 "Съобщава текущото ниво на VU-meter при записване. Двукратно натискане го "
 "занулява."
 
-#, fuzzy
 msgid ""
 "Used to indicate the position of the marker of the beginning of selection B."
 "\t\t\tDouble pressure lets give you the duration of the selection."
@@ -223,11 +219,10 @@ msgstr ""
 "Съобщава позицията на маркера за начало на селекцията (B). Двукратно "
 "натискане съобщава времетраенето на селекцията."
 
-#, fuzzy
 msgid ""
-"Used to indicate the position of the marker of the end of selection N.\t\t"
-"\tDouble pressure gives recapitulatif positions B and N, and the duration of "
-"the selection."
+"Used to indicate the position of the marker of the end of selection N."
+"\t\t\tDouble pressure gives recapitulatif positions B and N, and the "
+"duration of the selection."
 msgstr ""
 "Съобщава позицията на маркера за край на селекцията (N). Двукратно натискане "
 "съобщава позициите на B и N и времетраенето на селекцията."

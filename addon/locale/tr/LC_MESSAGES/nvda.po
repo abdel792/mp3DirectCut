@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut 4.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2018-03-23 13:00+1000\n"
-"PO-Revision-Date: 2019-02-06 10:24+0300\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2023-10-13 16:30+0300\n"
+"Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language-Team: \n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 3.4\n"
 
 #. Translators: name of the option in the menu.
 #, python-brace-format
@@ -63,43 +63,42 @@ msgstr "Seçim yok"
 
 #. Translators: Message to inform the user that the playback cursor is at the top of the file.
 msgid "Beginning of the file."
-msgstr "Dosya başı"
+msgstr "Dosya başı."
 
 #. Translators: Message to inform the user that the playback cursor is at the end of the file.
 msgid "End of the file."
-msgstr "Dosya sonu"
+msgstr "Dosya sonu."
 
 #. Translators: Message to inform the user that not file is loaded.
-#, fuzzy
 msgid ""
 "Not file is loaded. Please check that you are in a file, open one with "
 "Control O,\tor R to start recording."
 msgstr ""
-"Hiçbir dosya açık değil. Bir dosya açtığınızdan emin olun, control+o ile bir "
-"tane açın ya da r ile kayda başlayın."
+"Hiçbir dosya yüklenmemiş. Bir dosya açtığınızdan emin olun, control+o ile "
+"bir dosya açın ya da r ile kayda başlayın."
 
 #. Translators: Message to inform the user that the current command is not available in a recording mode.
 msgid ""
 "This command is not available in a recording mode, it is available only in a "
 "reading mode !"
 msgstr ""
-"Bu komut kayıt modunda geçerli değil. Yalnızca okuma modunda kullanılabilir."
+"Bu komut kayıt modunda geçerli değil. Yalnızca okuma modunda kullanılabilir!"
 
 #. Translators: Message to indicate the position of the selection start marker.
 msgid "The marker of the beginning of selection B is at"
-msgstr "B seçiminin başlangıç işaretinin konumu:"
+msgstr "B seçiminin başlangıç işaretinin konumu"
 
 #. Translators: Message to indicate the position of the selection end marker.
 msgid "The marker of the End of selection N is at"
-msgstr "N seçiminin sonlanma işaretinin konumu:"
+msgstr "N seçiminin sonlanma işaretinin konumu"
 
 #. Translators: Message to indicate the level of the vu-meter.
 msgid "The level of the vu-meter is at"
-msgstr "vu-metrenin seviyesi:"
+msgstr "Vu-metrenin seviyesi"
 
 #. Translators: Message to indicate the total duration of the current file.
 msgid "Total time: "
-msgstr "Toplam süre:"
+msgstr "Toplam süre: "
 
 #. Translators: Message to indicate the duration of the selection.
 msgid "Duration of selection"
@@ -126,12 +125,11 @@ msgid "Please chek that you are not in a recording mode."
 msgstr "Kayıt modunda olmadığınızdan emin olun."
 
 #. Translators: Message to inform the user that the recording is ready.
-#, fuzzy
 msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
 "recording.\tThis same spacebar  will stop the recording !"
 msgstr ""
-"Kayıt hazır, başlatmak için aralık tuşuna basmanız yeterli. Aynı şekilde, "
+"Kayıt hazır, başlatmak için aralık tuşuna basmanız yeterli.\tAynı şekilde, "
 "durdurmak için de aralığa basın !"
 
 #. Translators: Message to inform the user that a recording is in progress.
@@ -147,23 +145,23 @@ msgid "The recording is not ready !"
 msgstr "Kayıt hazır değil !"
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "The vu-meter is not available. Please verify if a recording is in progress,"
 "\tand that the checkbox enable the margin button is checked in the options "
 "of {0}."
 msgstr ""
-"vu-metre mevcut değil. kayıt yapılmakta olduğunu doğrulayın ve {0} "
+"Vu-metre mevcut değil. kayıt yapılmakta olduğunu doğrulayın ve {0} "
 "seçeneklerinde, marjı etkinleştir onay kutusunun işaretli olduğundan emin "
 "olun."
 
 #. Translators: Message to confirm that the level of the vu-meter has been reset.
 msgid "The level of the vu-meter has been reset !"
-msgstr "vu-metre düzeyi sıfırlandı !"
+msgstr "Vu-metre düzeyi sıfırlandı !"
 
 #. Translators: Message to confirm the placement of the selection start marker.
 msgid "Start selection marker set."
-msgstr "Seçim başlangıç işareti konuldu"
+msgstr "Seçim başlangıç işareti konuldu."
 
 #. Translators: Message to confirm the placement of the selection end marker.
 msgid "End selection marker set."
@@ -177,7 +175,7 @@ msgid "of"
 msgstr "bölü"
 
 msgid "Part"
-msgstr "kısım"
+msgstr "Kısım"
 
 #. Translators: Message to inform the user that there is no remaining time.
 msgid "No time remaining !"
@@ -185,19 +183,18 @@ msgstr "Kalan süre yok !"
 
 #. Translators: Message to indicate the elapsed time.
 msgid "Elapsed time: "
-msgstr "Geçen süre:"
+msgstr "Geçen süre: "
 
-#, fuzzy
 msgid ""
 "Gives the duration from the beginning of the file to the current position of "
 "the playback cursor.\t\t\tIf pressed twice, gives the total duration."
 msgstr ""
-"Dosya başıyla çalma imlecinin arasındaki süreyi seslendirir. İki kez "
-"basılırsa toplam süre verilir."
+"Dosyanın başlangıcından oynatma imlecinin geçerli konumuna kadar geçen "
+"süreyi verir.\\t\\t\\tİki kez basıldığında toplam süreyi verir."
 
 #. Translators: Message to indicate the remaining time.
 msgid "Remaining time: "
-msgstr "Kalan süre:"
+msgstr "Kalan süre: "
 
 msgid ""
 "Gives the time remaining from the current position of the playback cursor to "
@@ -211,7 +208,6 @@ msgstr ""
 "Kayıt esnasında vu-metrenin mevcut düzeyinin belirlenmesi için kullanılır, "
 "iki kez basmak sıfırlar."
 
-#, fuzzy
 msgid ""
 "Used to indicate the position of the marker of the beginning of selection B."
 "\t\t\tDouble pressure lets give you the duration of the selection."
@@ -219,20 +215,19 @@ msgstr ""
 "B seçiminin başlangıç işaretinin konumunu Belirtmek için kullanılır. İki kez "
 "basmak seçimin süresini verir."
 
-#, fuzzy
 msgid ""
-"Used to indicate the position of the marker of the end of selection N.\t\t"
-"\tDouble pressure gives recapitulatif positions B and N, and the duration of "
-"the selection."
+"Used to indicate the position of the marker of the end of selection N."
+"\t\t\tDouble pressure gives recapitulatif positions B and N, and the "
+"duration of the selection."
 msgstr ""
-"N seçiminin sonlanma işaretinin konumunu Belirtmek için kullanılır. İki kez "
-"basmak B ve N'nin recapitulatif pozisyonlarını ve seçim süresini verir."
+"N seçiminin sonlanma işaretinin konumunu Belirtmek için kullanılır.\t\t\tİki "
+"kez basmak B ve N'nin recapitulatif pozisyonlarını ve seçim süresini verir."
 
 msgid ""
 "Give the reference of the actual part and the total number of parts in the "
 "current file."
 msgstr ""
-"Mevcut dosyada geçerli bölüme referans  ve toplam bölüm sayısını verir. "
+"Mevcut dosyada geçerli bölüme referans  ve toplam bölüm sayısını verir."
 
 #. Translators: message presented in input mode.
 msgid "Lets open the help of the current add-on."

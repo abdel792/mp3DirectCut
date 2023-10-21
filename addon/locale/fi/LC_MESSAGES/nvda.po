@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2017-12-14 08:51-0800\n"
-"Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
+"PO-Revision-Date: 2023-10-13 21:05+0200\n"
+"Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.6.11\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: name of the option in the menu.
@@ -71,12 +71,11 @@ msgid "End of the file."
 msgstr "Tiedoston loppu."
 
 #. Translators: Message to inform the user that not file is loaded.
-#, fuzzy
 msgid ""
 "Not file is loaded. Please check that you are in a file, open one with "
 "Control O,\tor R to start recording."
 msgstr ""
-"Tiedostoa ei ole avoinna. Varmista, että olet avoimessa tiedostossa, avaa "
+"Tiedostoa ei ole avattu. Varmista, että olet avoimessa tiedostossa, avaa "
 "sellainen näppäinkomennolla Control+O tai aloita äänitys painamalla R."
 
 #. Translators: Message to inform the user that the current command is not available in a recording mode.
@@ -126,12 +125,11 @@ msgid "Please chek that you are not in a recording mode."
 msgstr "Tarkista, että et ole äänitystilassa."
 
 #. Translators: Message to inform the user that the recording is ready.
-#, fuzzy
 msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
 "recording.\tThis same spacebar  will stop the recording !"
 msgstr ""
-"Äänitystila on valmiina. Aloita ja lopeta äänitys painamalla välilyöntiä."
+"Äänitystila on valmiina. Aloita ja lopeta äänitys painamalla Välilyöntiä."
 
 #. Translators: Message to inform the user that a recording is in progress.
 msgid ""
@@ -144,7 +142,7 @@ msgid "The recording is not ready !"
 msgstr "Äänitystila ei ole valmiina"
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "The vu-meter is not available. Please verify if a recording is in progress,"
 "\tand that the checkbox enable the margin button is checked in the options "
@@ -184,7 +182,6 @@ msgstr "Ei jäljellä olevaa aikaa!"
 msgid "Elapsed time: "
 msgstr "Aikaa kulunut: "
 
-#, fuzzy
 msgid ""
 "Gives the duration from the beginning of the file to the current position of "
 "the playback cursor.\t\t\tIf pressed twice, gives the total duration."
@@ -209,7 +206,6 @@ msgid ""
 msgstr ""
 "Ilmoittaa VU-mittarin tason äänityksen aikana. Nollaa painamalla kahdesti."
 
-#, fuzzy
 msgid ""
 "Used to indicate the position of the marker of the beginning of selection B."
 "\t\t\tDouble pressure lets give you the duration of the selection."
@@ -217,7 +213,6 @@ msgstr ""
 "Ilmoittaa valinnan alkumerkin sijainnin. Kahdesti painettaessa ilmoitetaan "
 "valinnan kesto."
 
-#, fuzzy
 msgid ""
 "Used to indicate the position of the marker of the end of selection N.\t\t"
 "\tDouble pressure gives recapitulatif positions B and N, and the duration of "

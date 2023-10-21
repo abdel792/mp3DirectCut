@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2017-12-14 08:05-0800\n"
-"Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
+"PO-Revision-Date: 2023-10-15 18:19+0200\n"
+"Last-Translator: José Manuel Delicado <jm.delicado@nvda.es>\n"
 "Language-Team: NVDA add-ons Spanish translation team <remyruiz@gmail.com>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 3.4\n"
 
 #. Translators: name of the option in the menu.
 #, python-brace-format
@@ -70,21 +70,20 @@ msgid "End of the file."
 msgstr "Final de pista."
 
 #. Translators: Message to inform the user that not file is loaded.
-#, fuzzy
 msgid ""
 "Not file is loaded. Please check that you are in a file, open one with "
 "Control O,\tor R to start recording."
 msgstr ""
-"No hay ningún archivo cargado. Compruebe que está en un archivo, o abre uno "
-"con Control O, o R para iniciar la grabación."
+"No hay ningún archivo cargado. Comprueba que estás en un archivo, o abre uno "
+"con Control O,\to pulsa R para iniciar la grabación."
 
 #. Translators: Message to inform the user that the current command is not available in a recording mode.
 msgid ""
 "This command is not available in a recording mode, it is available only in a "
 "reading mode !"
 msgstr ""
-"Esta orden no está disponible en modo de grabación, está disponible sólo en "
-"modo de reproducción."
+"¡Esta orden no está disponible en modo de grabación, está disponible sólo en "
+"modo de reproducción!"
 
 #. Translators: Message to indicate the position of the selection start marker.
 msgid "The marker of the beginning of selection B is at"
@@ -127,13 +126,12 @@ msgid "Please chek that you are not in a recording mode."
 msgstr "Compruebe que no está en modo de grabación."
 
 #. Translators: Message to inform the user that the recording is ready.
-#, fuzzy
 msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
 "recording.\tThis same spacebar  will stop the recording !"
 msgstr ""
-"¡La grabación está lista! Más que pulsar sobre la barra espaciadora para "
-"iniciar la grabación. ¡Esta misma barra espaciadora detendrá la grabación!"
+"¡La grabación está lista! Sólo falta pulsar la barra espaciadora para "
+"iniciar la grabación.\t¡La misma barra espaciadora detendrá la grabación!"
 
 #. Translators: Message to inform the user that a recording is in progress.
 msgid ""
@@ -148,15 +146,15 @@ msgid "The recording is not ready !"
 msgstr "¡ La grabación no está lista!"
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "The vu-meter is not available. Please verify if a recording is in progress,"
 "\tand that the checkbox enable the margin button is checked in the options "
 "of {0}."
 msgstr ""
-"El vúmetro no está disponible. Compruebe que una grabación está bien en "
-"curso, y mirar que la casilla de verificación Habilitar botón Margen está  "
-"bien marcada en las opciones de {0}."
+"El vúmetro no está disponible. Comprueba que una grabación está en progreso,"
+"\ty asegúrate de que la casilla de verificación Habilitar el botón de Margen "
+"está  marcada en las opciones de {0}."
 
 #. Translators: Message to confirm that the level of the vu-meter has been reset.
 msgid "The level of the vu-meter has been reset !"
@@ -188,13 +186,12 @@ msgstr "¡No hay tiempo restante!"
 msgid "Elapsed time: "
 msgstr "Tiempo transcurrido: "
 
-#, fuzzy
 msgid ""
 "Gives the duration from the beginning of the file to the current position of "
 "the playback cursor.\t\t\tIf pressed twice, gives the total duration."
 msgstr ""
-"Da la duración recorrida desde el inicio del archivo hasta la ubicación "
-"actual del cursor de reproducción. Una doble pulsación da el tiempo total."
+"Da la duración desde el inicio del archivo hasta la ubicación actual del "
+"cursor de reproducción.\t\t\tUna doble pulsación da el tiempo total."
 
 #. Translators: Message to indicate the remaining time.
 msgid "Remaining time: "
@@ -214,23 +211,21 @@ msgstr ""
 "Permite indicar el valor actual del nivel del vúmetro. Pulsando dos veces "
 "permite reiniciar este nivel."
 
-#, fuzzy
 msgid ""
 "Used to indicate the position of the marker of the beginning of selection B."
 "\t\t\tDouble pressure lets give you the duration of the selection."
 msgstr ""
-"Permite indicar la ubicación del Tag de inicio de selección B. Pulsando dos "
-"veces da la duración de la selección."
+"Permite indicar la ubicación del Tag de inicio de selección B.\t\t\tPulsando "
+"dos veces da la duración de la selección."
 
-#, fuzzy
 msgid ""
-"Used to indicate the position of the marker of the end of selection N.\t\t"
-"\tDouble pressure gives recapitulatif positions B and N, and the duration of "
-"the selection."
+"Used to indicate the position of the marker of the end of selection N."
+"\t\t\tDouble pressure gives recapitulatif positions B and N, and the "
+"duration of the selection."
 msgstr ""
-"Permite indicar la ubicación del Tag de final de selección N. Pulsando dos "
-"veces da un recapitulativo de la ubicación de los Tags B y N, así como la "
-"duración de la selección."
+"Permite indicar la ubicación del Tag de final de selección N.\t\t\tPulsando "
+"dos veces da un recapitulativo de la ubicación de los Tags B y N, así como "
+"la duración de la selección."
 
 msgid ""
 "Give the reference of the actual part and the total number of parts in the "
@@ -245,4 +240,4 @@ msgstr "Permite abrir la ayuda del actual complemento."
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "some commands to use mp3directcut with NVDA"
-msgstr "Algunas órdenes para utilizar mp3DirectCut con NVDA"
+msgstr "algunas órdenes para utilizar mp3DirectCut con NVDA"

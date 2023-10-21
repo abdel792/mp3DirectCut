@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: mp3DirectCut 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2019-03-02 17:45+0100\n"
+"PO-Revision-Date: 2023-10-14 10:32+0200\n"
 "Last-Translator: Michel Such <michel.such@free.fr>\n"
 "Language-Team: NVDA add-ons French translation team <remyruiz@gmail.com>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #. Translators: name of the option in the menu.
 #, python-brace-format
@@ -72,13 +72,13 @@ msgid "End of the file."
 msgstr "Fin du morceau."
 
 #. Translators: Message to inform the user that not file is loaded.
-#, fuzzy
 msgid ""
 "Not file is loaded. Please check that you are in a file, open one with "
 "Control O,\tor R to start recording."
 msgstr ""
 "Aucun fichier n'est chargé. Veuillez vérifier que vous êtes bien dans un "
-"fichier, ouvrez-en un avec Contrôle O, ou R pour commencer un enregistrement."
+"fichier,\touvrez-en un avec Contrôle O, ou R pour commencer un "
+"enregistrement."
 
 #. Translators: Message to inform the user that the current command is not available in a recording mode.
 msgid ""
@@ -129,13 +129,12 @@ msgid "Please chek that you are not in a recording mode."
 msgstr "Vérifiez que vous n'êtes pas en mode d'enregistrement."
 
 #. Translators: Message to inform the user that the recording is ready.
-#, fuzzy
 msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
 "recording.\tThis same spacebar  will stop the recording !"
 msgstr ""
-"L'enregistrement est prêt ! Plus qu'à appuyer sur la barre d'espacement. "
-"Cette même barre d'espacement arrêtera l'enregistrement !"
+"L'enregistrement est prêt ! Plus qu'à appuyer sur la barre d'espacement."
+"\tCette même barre d'espacement arrêtera l'enregistrement !"
 
 #. Translators: Message to inform the user that a recording is in progress.
 msgid ""
@@ -150,14 +149,14 @@ msgid "The recording is not ready !"
 msgstr "L'enregistrement n'est pas prêt !"
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "The vu-meter is not available. Please verify if a recording is in progress,"
 "\tand that the checkbox enable the margin button is checked in the options "
 "of {0}."
 msgstr ""
 "Le vu-mètre n'est pas disponible. Vérifier qu'un enregistrement est bien en "
-"cours, et regardez si la case à cocher activer le bouton marge est bien "
+"cours,\tet regardez si la case à cocher activer le bouton marge est bien "
 "cochée dans les options de {0}."
 
 #. Translators: Message to confirm that the level of the vu-meter has been reset.
@@ -190,13 +189,12 @@ msgstr "Aucune durée restante !"
 msgid "Elapsed time: "
 msgstr "Temps écoulé : "
 
-#, fuzzy
 msgid ""
 "Gives the duration from the beginning of the file to the current position of "
 "the playback cursor.\t\t\tIf pressed twice, gives the total duration."
 msgstr ""
 "Donne la durée parcourue depuis le début du fichier jusqu'à l'emplacement "
-"actuel du curseur de lecture. Une double pression donne la durée totale."
+"actuel du curseur de lecture.\t\t\tUne double pression donne la durée totale."
 
 #. Translators: Message to indicate the remaining time.
 msgid "Remaining time: "
@@ -216,21 +214,19 @@ msgstr ""
 "Permet d'indiquer la valeur actuelle du niveau du vu-mètre durant un "
 "enregistrement. Une double pression permet de réinitialiser ce niveau."
 
-#, fuzzy
 msgid ""
 "Used to indicate the position of the marker of the beginning of selection B."
 "\t\t\tDouble pressure lets give you the duration of the selection."
 msgstr ""
-"Permet d'indiquer l'emplacement du marqueur de début de sélection B. Une "
-"double pression donne la durée de la sélection."
+"Permet d'indiquer l'emplacement du marqueur de début de sélection B.\t\t"
+"\tUne double pression donne la durée de la sélection."
 
-#, fuzzy
 msgid ""
 "Used to indicate the position of the marker of the end of selection N.\t\t"
 "\tDouble pressure gives recapitulatif positions B and N, and the duration of "
 "the selection."
 msgstr ""
-"Permet d'indiquer l'emplacement du marqueur de fin de sélection N. Une "
+"Permet d'indiquer l'emplacement du marqueur de fin de sélection N.\t\t\tUne "
 "double pression donne un récapitulatif de l'emplacement des marqueurs B et "
 "N, ainsi que la durée de la sélection."
 

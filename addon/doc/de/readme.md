@@ -163,30 +163,29 @@ Diese Erweiterung bietet folgende Tastaturbefehle:
 
 ## Kompatibilität ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2019.3
-  and beyond.
+* Diese NVDA-Erweiterung ist kompatibel ab NVDA-Version 2019.3.
 
-## Changes for 20231007.0.0 ##
+## Änderungen in 20231007.0.0 ##
 
-* After placing the cutting points and after opening the cutting properties
-  window, with "Ctrl+N", adding accessibility to the title of this window by
-  indicating the part index.
-* In reading mode, after moving the start or end markers of selections with
-  keys 1 to 6 of the alphanumeric pad, addition of automatic start of
-  reading from the new position;
-* Fixed a bug that occurred when consulting the remaining time with
-  "control+shift+r" from the beginning of the track.
+* Nach dem Platzieren der Schnittpunkte und dem Öffnen des Fensters
+  "Schnitteigenschaften" mit "Strg+N", fügen Sie dem Titel dieses Fensters
+  eine Zugänglichkeit hinzu, indem Sie den Teile-Index angeben.
+* Im Lesemodus, nach dem Verschieben der Start- oder Endmarkierungen der
+  Auswahlen mit den Tasten 1 bis 6 des alphanumerischen Pads, Hinzufügen des
+  automatischen Lesestarts von der neuen Position;
+* Es wurde ein Fehler behoben, der auftrat, wenn man die verbleibende Zeit
+  mit "Strg+Umschalt+R" am Anfang des Titels abfragte.
 
-## Changes for 20230728.0.0 ##
+## Änderungen in 20230728.0.0 ##
 
-* Applied the flake8 and mypy rules to the code;
-* Changed the minimum supported NVDA version to 2019.3 to support
-  annotations introduced in Python 3.
+* Code angepasst für Flake8- und MyPy-Regeln;
+* Die minimal unterstützte NVDA-Version wurde auf 2019.3 geändert, um die in
+  Python 3 eingeführten Annotationen zu unterstützen.
 
-## Changes for 20230508.0.0 and beyond ##
+## Änderungen in 20230508.0.0 und neuer ##
 
-* • Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+* • Die Versionsnummer, die minimale NVDA-Version und der Download-Link
+  wurden entsprechend den Konventionen/Anforderungen geändert.
 
 ## Änderung für Version 20.12 ##
 

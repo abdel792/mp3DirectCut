@@ -8,7 +8,9 @@
 
 import globalPluginHandler
 import globalVars
+from scriptHandler import script
 import addonHandler
+import versionInfo
 from .mp3DirectCutDialog import Mp3DirectCutDialog, Mp3DirectCutPanel
 from typing import Callable
 import gui
@@ -18,6 +20,9 @@ addonHandler.initTranslation()
 _: Callable[[str], str]
 # Constants
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
+
+# For support of speak on demand feature.
+speakOnDemand = {"speakOnDemand": True} if versionInfo.version_year > 2023 else {}
 
 confSpec = {
 	'space': 'boolean(default = True)',
@@ -63,6 +68,11 @@ class GlobalPlugin   (globalPluginHandler.GlobalPlugin):
 	def onMp3DirectCutDialog(self, evt):
 		gui.mainFrame._popupSettingsDialog(Mp3DirectCutDialog)
 
+	@script(
+		# Translators: Message presented in input help mode.
+		description=_("Allows you display the configuration dialog of {0} addon.").format("mp3DirectCut"),
+		**speakOnDemand,
+	)
 	def script_activateMP3DirectCutConfigurationDialog(self, gesture):
 		if not hasattr(
 			gui,
@@ -77,7 +87,3 @@ class GlobalPlugin   (globalPluginHandler.GlobalPlugin):
 			(gui.mainFrame.popupSettingsDialog if hasattr(gui.mainFrame, "popupSettingsDialog")
 			 else gui.mainFrame._popupSettingsDialog),
 			gui.settingsDialogs.NVDASettingsDialog, Mp3DirectCutPanel)
-
-	# Translators: message presented in input mode.
-	script_activateMP3DirectCutConfigurationDialog.__doc__ = _(
-		"Allows you display the configuration dialog of {0} addon.").format("mp3DirectCut")

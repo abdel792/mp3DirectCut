@@ -20,8 +20,9 @@ else:
 from datetime import datetime
 from keyboardHandler import KeyboardInputGesture as kig
 import os
+import versionInfo
 import api
-from scriptHandler import getLastScriptRepeatCount
+from scriptHandler import getLastScriptRepeatCount, script
 from winUser import (
 	CHILDID_SELF,
 	OBJID_CLIENT,
@@ -41,6 +42,9 @@ _: Callable[[str], str]
 PROGRAM_NAME = 'mp3DirectCut'
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
 hr, min, sec, hun, th = _('hours'), _('minutes'), _('seconds'), _('hundredths'), _('thousandths')
+
+# For support of speak on demand feature.
+speakOnDemand = {"speakOnDemand": True} if versionInfo.version_year > 2023 else {}
 
 announce = (
 	# Translators: Message to inform that no selection has been realized.
@@ -170,8 +174,11 @@ def readingWindow():
 
 def recAndSelWindow():
 	fg = api.getForegroundObject()
-	hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
-	return hwnd
+	try:
+		hwnd = windowUtils.findDescendantWindow(fg.windowHandle, controlID=160)
+		return hwnd
+	except LookupError:
+		return None
 
 
 def getTextFromWindow(hwnd):
@@ -219,8 +226,7 @@ def checkSelection():
 	hwnd = recAndSelWindow()
 	text = getTextFromWindow(hwnd)
 	if text and not text.isspace():
-		text = text.split()
-		if text[0].endswith(':'):
+		if all(x in text for x in (": ", " - ")) and "/" not in text:
 			return True
 	return False
 
@@ -251,7 +257,11 @@ def beginSelection():
 	text = getTextFromWindow(hwnd)
 	beginSelection = text.split(' - ')
 	beginSelection = beginSelection[0]
-	beginSelection = beginSelection.split()[1]
+	beginSelection = beginSelection.split()
+	if len(beginSelection) > 2:
+		beginSelection = beginSelection[2]
+	else:
+		beginSelection = beginSelection[1]
 	beginSelection = timeSplitter(beginSelection) if timeSplitter(beginSelection) else announce[1]
 	return beginSelection
 
@@ -332,18 +342,19 @@ def timeRemaining():
 class SoundManager   (IAccessible):
 
 	scriptCategory = ADDON_SUMMARY
+	keys = (
+		"kb:1",
+		"kb:2",
+		"kb:3",
+		"kb:4",
+		"kb:5",
+		"kb:6",
+	)
 
-	def initOverlayClass(self):
-		for key in (
-			"kb:1",
-			"kb:2",
-			"kb:3",
-			"kb:4",
-			"kb:5",
-			"kb:6"
-		):
-			self.bindGesture(key, "readFromSelection")
-
+	@script(
+		gestures=keys,
+		**speakOnDemand,
+	)
 	def script_readFromSelection(self, gesture):
 		gesture.send()
 		if gesture.mainKeyName in ("1", "2", "5"):
@@ -351,6 +362,10 @@ class SoundManager   (IAccessible):
 		else:
 			kig.fromName("downArrow").send()
 
+	@script(
+		gesture='kb:r',
+		**speakOnDemand,
+	)
 	def script_checkRecording(self, gesture):
 		gesture.send()
 		if isRecordingReady():
@@ -360,6 +375,10 @@ class SoundManager   (IAccessible):
 		else:
 			sayMessage(announce[17])
 
+	@script(
+		gesture='kb:control+r',
+		**speakOnDemand,
+	)
 	def script_cancelSelection(self, gesture):
 		selection = checkSelection()
 		gesture.send()
@@ -369,6 +388,10 @@ class SoundManager   (IAccessible):
 		text = announce[22] if selection else announce[0]
 		message(text)
 
+	@script(
+		gesture='kb:space',
+		**speakOnDemand,
+	)
 	def script_space(self, gesture):
 		if isRecordingReady():
 			self.appModule.runValueChange = False
@@ -393,6 +416,10 @@ class SoundManager   (IAccessible):
 		sayMessage(actual, space=True)
 		self.appModule.runValueChange = True
 
+	@script(
+		gesture='kb:control+rightArrow',
+		**speakOnDemand,
+	)
 	def script_nextSplittingPoint(self, gesture):
 		gesture.send()
 		if isStarting():
@@ -412,6 +439,10 @@ class SoundManager   (IAccessible):
 				sayMessage(actual)
 				self.appModule.runValueChange = True
 
+	@script(
+		gesture='kb:control+leftArrow',
+		**speakOnDemand,
+	)
 	def script_previousSplittingPoint(self, gesture):
 		gesture.send()
 		if isStarting():
@@ -431,6 +462,10 @@ class SoundManager   (IAccessible):
 				sayMessage(actual)
 				self.appModule.runValueChange = True
 
+	@script(
+		gesture='kb:upArrow',
+		**speakOnDemand,
+	)
 	def script_up(self, gesture):
 		gesture.send()
 		if isStarting():
@@ -461,6 +496,10 @@ class SoundManager   (IAccessible):
 						announce[0], _('Elapsed time: '), actual, actualDurationPercentage()))
 		self.appModule.runValueChange = True
 
+	@script(
+		gesture='kb:downArrow',
+		**speakOnDemand,
+	)
 	def script_down(self, gesture):
 		gesture.send()
 		if isStarting():
@@ -491,6 +530,13 @@ class SoundManager   (IAccessible):
 						announce[0], _('Elapsed time: '), actual, actualDurationPercentage()))
 		self.appModule.runValueChange = True
 
+	@script(
+		gesture='kb:control+shift+d',
+		# Translators, Message presented in input help mode.
+		description=_('Gives the duration from the beginning of the file to the current position of the playback cursor.\
+			If pressed twice, gives the total duration.'),
+		**speakOnDemand,
+	)
 	def script_elapsedTime(self, gesture):
 		if isStarting():
 			sayMessage(announce[3])
@@ -513,12 +559,13 @@ class SoundManager   (IAccessible):
 			elif repeat == 1:
 				message('{0} {1}'.format(announce[8], totalTime()))
 
-	# Translators: message presented in input mode.
-	script_elapsedTime.__doc__ = _(
-		'Gives the duration from the beginning of the file to the current position of the playback cursor.\
-			If pressed twice, gives the total duration.'
+	@script(
+		gesture='kb:control+shift+r',
+		# Translators: Message presented in input help mode.
+		description=_('Gives the time remaining from the current position of the playback cursor '
+		              'to the end of the file.'),
+		**speakOnDemand,
 	)
-
 	def script_timeRemaining(self, gesture):
 		if isStarting():
 			sayMessage(announce[3])
@@ -530,11 +577,13 @@ class SoundManager   (IAccessible):
 			# Translators: Message to indicate the remaining time.
 			message('{0} {1}'.format(_('Remaining time: '), timeRemaining()))
 
-	# Translators: message presented in input mode.
-	script_timeRemaining.__doc__ = _(
-		'Gives the time remaining from the current position of the playback cursor to the end of the file.'
+	@script(
+		gesture='kb:control+shift+space',
+		# Translators: Message presented in input help mode.
+		description=_('Used to determine the current level of the vu-meter, '
+		              'during recording, double pressure reset it.'),
+		**speakOnDemand,
 	)
-
 	def script_vuMeter(self, gesture):
 		gesture.send()
 		if isStarting():
@@ -554,11 +603,10 @@ class SoundManager   (IAccessible):
 		else:
 			sayMessage(announce[18])
 
-	# Translators: message presented in input mode.
-	script_vuMeter.__doc__ = _(
-		'Used to determine the current level of the vu-meter, during recording, double pressure reset it.'
+	@script(
+		gesture='kb:b',
+		**speakOnDemand,
 	)
-
 	def script_bPosition(self, gesture):
 		gesture.send()
 		if isStarting():
@@ -567,6 +615,10 @@ class SoundManager   (IAccessible):
 		if not isReading():
 			sayMessage(announce[20], marker=True)
 
+	@script(
+		gesture='kb:n',
+		**speakOnDemand,
+	)
 	def script_nPosition(self, gesture):
 		gesture.send()
 		if isStarting():
@@ -575,6 +627,13 @@ class SoundManager   (IAccessible):
 		if not isReading():
 			sayMessage(announce[21], marker=True)
 
+	@script(
+		gesture='kb:control+shift+b',
+		# Translators: Message presented in input help mode.
+		description=_('Used to indicate the position of the marker of the beginning of selection B.\
+			Double pressure lets give you the duration of the selection.'),
+		**speakOnDemand,
+	)
 	def script_beginningOfSelection(self, gesture):
 		if isStarting():
 			sayMessage(announce[3])
@@ -589,12 +648,13 @@ class SoundManager   (IAccessible):
 		else:
 			sayMessage(announce[11])
 
-	# Translators: message presented in input mode.
-	script_beginningOfSelection.__doc__ = _(
-		'Used to indicate the position of the marker of the beginning of selection B.\
-			Double pressure lets give you the duration of the selection.'
+	@script(
+		gesture='kb:control+shift+e',
+		# Translators: Message presented in input help mode.
+		description=_('Used to indicate the position of the marker of the end of selection N.\
+			Double pressure gives recapitulatif positions B and N, and the duration of the selection.'),
+		**speakOnDemand,
 	)
-
 	def script_endOfSelection(self, gesture):
 		if isStarting():
 			sayMessage(announce[3])
@@ -612,12 +672,12 @@ class SoundManager   (IAccessible):
 		else:
 			sayMessage(announce[11])
 
-	# Translators: message presented in input mode.
-	script_endOfSelection.__doc__ = _(
-		'Used to indicate the position of the marker of the end of selection N.\
-			Double pressure gives recapitulatif positions B and N, and the duration of the selection.'
+	@script(
+		gesture='kb:control+shift+p',
+		# Translators: Message presented in input help mode.
+		description=_('Give the reference of the actual part and the total number of parts in the current file.'),
+		**speakOnDemand,
 	)
-
 	def script_actualPart(self, gesture):
 		if isStarting():
 			sayMessage(announce[3])
@@ -630,29 +690,6 @@ class SoundManager   (IAccessible):
 			message(announce[12] + ' ' + announce[13])
 		else:
 			message(announce[12])
-
-	# Translators: message presented in input mode.
-	script_actualPart.__doc__ = _(
-		'Give the reference of the actual part and the total number of parts in the current file.'
-	)
-
-	__gestures = {
-		'kb:r': 'checkRecording',
-		'kb:control+shift+d': 'elapsedTime',
-		'kb:control+shift+r': 'timeRemaining',
-		'kb:control+r': 'cancelSelection',
-		'kb:space': 'space',
-		'kb:control+leftArrow': 'previousSplittingPoint',
-		'kb:control+rightArrow': 'nextSplittingPoint',
-		'kb:upArrow': 'up',
-		'kb:downArrow': 'down',
-		'kb:control+shift+space': 'vuMeter',
-		'kb:b': 'bPosition',
-		'kb:n': 'nPosition',
-		'kb:control+shift+b': 'beginningOfSelection',
-		'kb:control+shift+e': 'endOfSelection',
-		'kb:control+shift+p': 'actualPart'
-	}
 
 
 class AppModule   (appModuleHandler.AppModule):
@@ -690,12 +727,10 @@ class AppModule   (appModuleHandler.AppModule):
 		if obj.role == ROLE_PANE and obj.name and any(x in obj.name for x in ['mp3DirectCut', '.mp3']):
 			clsList.insert(0, SoundManager)
 
+	@script(
+		gesture="kb:nvda+h",
+		description=_('Lets open the help of the current add-on.'),
+		**speakOnDemand,
+	)
 	def script_openHelp(self, gesture):
 		os.startfile(addonHandler.getCodeAddon().getDocFilePath())
-
-	# Translators: message presented in input mode.
-	script_openHelp.__doc__ = _('Lets open the help of the current add-on.')
-
-	__gestures = {
-		'kb:nvda+h': 'openHelp',
-	}

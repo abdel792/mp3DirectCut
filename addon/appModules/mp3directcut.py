@@ -116,7 +116,10 @@ def timeSplitter(time):  # noqa: C901
 			if minutes[0] == '0':
 				minutes = minutes[1]
 		minutes = '{0} {1}, '.format(minutes, min)
-	scnds = time.split("'")[1].split('.')[0]
+	try:
+		scnds = time.split("'")[1].split('.')[0]
+	except IndexError:
+		scnds = ''
 	if scnds != '00' and scnds != '0':
 		seconds = scnds
 	if seconds:

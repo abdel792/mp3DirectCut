@@ -75,10 +75,10 @@ class GlobalPlugin   (globalPluginHandler.GlobalPlugin):
 	)
 	def script_activateMP3DirectCutConfigurationDialog(self, gesture):
 		if not hasattr(
-			gui,
+			gui.settingsDialogs,
 			"SettingsPanel"
 		) and not hasattr(
-			gui.settingsDialogs,
+			gui,
 			"SettingsPanel"
 		):
 			wx.CallAfter(self.onMP3DirectCutDialog, None)

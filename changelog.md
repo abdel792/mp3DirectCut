@@ -1,4 +1,4 @@
 ## Changes for 20231229.0.1
 
-* Added support for the speak on demand feature introduced with NVDA-2024.1;
-* Fixed some bugs that appeared when consulting the start and end of the selection as well as the actual, remaining and total duration.
+* Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.
+* Corrected the download links as well as the add-on home page to no longer refer to the legacy url https://addons.nvda-project.org/.

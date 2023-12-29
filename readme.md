@@ -136,6 +136,10 @@ This addon offers the following commands:
 
 * This add-on is compatible with the versions of NVDA ranging from 2019.3 and beyond.
 
+## Changes for 20231229.0.0 ##
+
+* Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.
+
 ## Changes for 20231007.0.0 ##
 
 * After placing the cutting points and after opening the cutting properties window, with "Ctrl+N", adding accessibility to the title of this window by indicating the part index.
@@ -228,6 +232,6 @@ This addon offers the following commands:
 
 * Initial version.
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+[1]: https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29/mp3DirectCut-20231229.0.0.nvda-addon
 
-[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+[2]: https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29-beta/mp3DirectCut-20231229.0.1.nvda-addon

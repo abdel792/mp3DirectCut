@@ -25,11 +25,11 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description": _("""some commands to use mp3directcut with NVDA"""),
 	# version
-	"addon_version": "20231021.0.0",
+	"addon_version": "20231229.0.0",
 	# Author(s)
 	"addon_author": "Abdel, Rèmy Ruiz, Abdellah Zineddine, Jean-François Colas",
 	# URL for the add-on documentation support
-	"addon_url": "https://addons.nvda-project.org/addons/mp3DirectCut.en.html",
+	"addon_url": "https://github.com/abdel792/mp3DirectCut",
 	# URL for the add-on repository where the source code can be found
 	"addon_sourceURL": "https://github.com/abdel792/mp3DirectCut",
 	# Documentation file name

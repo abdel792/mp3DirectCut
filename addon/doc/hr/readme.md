@@ -1,6 +1,6 @@
 # mp3DirectCut #
 
-* Autori: Abdel, Rémy, Abdellah Zineddine, Jean-François COLAS
+* Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
 
@@ -158,6 +158,11 @@ Ovaj dodatak nudi sljedeće naredbe:
 
 * Ovaj je dodatak kompatibilan s NVDA verzijom 2019.3 i novijim verzijama.
 
+## Changes for 20231229.0.0 ##
+
+* Added a backward compatible implementation to support speak on demand
+  mode, which will soon be available with nvda-2024.1.
+
 ## Promjene u 20231007.0.0 ##
 
 * After placing the cutting points and after opening the cutting properties
@@ -177,8 +182,8 @@ Ovaj dodatak nudi sljedeće naredbe:
 
 ## Promjene u 20230508.0.0 i novijim verzijama ##
 
-* • Promijenjen je broj verzije, minimalna NVDA verzija i poveznica za
-  preuzimanje prema konvencijama/zahtjevima trgovine.
+* Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## Promjene u verziji 20.12 ##
 
@@ -271,7 +276,8 @@ Ovaj dodatak nudi sljedeće naredbe:
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+[1]:
+https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29/mp3DirectCut-20231229.0.0.nvda-addon
 
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+[2]:
+https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29-beta/mp3DirectCut-20231229.0.1.nvda-addon

@@ -1,6 +1,6 @@
 # mp3DirectCut #
 
-* Автори: Abdel, Rémy, Abdellah Zineddine, Jean-François COLAS
+* Автор(и) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
 * Изтегляне на [стабилна версия][1]
 * Изтегляне на [тестова версия][2]
 
@@ -170,6 +170,11 @@ NVDA.
 * Тази добавка е съвместима с версиите на NVDA в диапазона от 2019.3 и
   по-нови.
 
+## Промени във версия 20231229.0.0 ##
+
+* Добавена е обратно съвместима имплементация за поддръжка на режим на реч
+  при поискване, което скоро ще бъде налично в NVDA 2024.1.
+
 ## Промени във версия 20231007.0.0 ##
 
 * След поставяне на точките на изрязване и след отваряне на прозореца със
@@ -295,7 +300,8 @@ NVDA.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+[1]:
+https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29/mp3DirectCut-20231229.0.0.nvda-addon
 
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+[2]:
+https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29-beta/mp3DirectCut-20231229.0.1.nvda-addon

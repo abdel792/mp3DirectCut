@@ -1,6 +1,6 @@
 # Mp3DirectCut #
 
-* Autoren: Abdel, Rémy, Abdellah zineddine, Jean-François Colas
+* Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
 
@@ -165,6 +165,11 @@ Diese Erweiterung bietet folgende Tastaturbefehle:
 
 * Diese NVDA-Erweiterung ist kompatibel ab NVDA-Version 2019.3.
 
+## Changes for 20231229.0.0 ##
+
+* Added a backward compatible implementation to support speak on demand
+  mode, which will soon be available with nvda-2024.1.
+
 ## Änderungen in 20231007.0.0 ##
 
 * Nach dem Platzieren der Schnittpunkte und dem Öffnen des Fensters
@@ -184,8 +189,8 @@ Diese Erweiterung bietet folgende Tastaturbefehle:
 
 ## Änderungen in 20230508.0.0 und neuer ##
 
-* • Die Versionsnummer, die minimale NVDA-Version und der Download-Link
-  wurden entsprechend den Konventionen/Anforderungen geändert.
+* Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
 ## Änderung für Version 20.12 ##
 
@@ -286,7 +291,8 @@ Diese Erweiterung bietet folgende Tastaturbefehle:
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+[1]:
+https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29/mp3DirectCut-20231229.0.0.nvda-addon
 
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+[2]:
+https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29-beta/mp3DirectCut-20231229.0.1.nvda-addon

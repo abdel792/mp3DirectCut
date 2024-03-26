@@ -170,6 +170,11 @@ Cette extension offre les commandes suivantes :
 * Cette extension est compatible avec les versions de NVDA allant de 2019.3
   et au-delà.
 
+## Changements pour la version 20231229.0.0 ##
+
+* Ajout d'une implémentation rétrocompatible pour prendre en charge le mode
+  Parler à la demande, qui sera bientôt disponible avec nvda-2024.1.
+
 ## Changements pour la version 20231007.0.0 ##
 
 * Après avoir placé les points de coupe et après avoir ouvert la fenêtre des
@@ -190,13 +195,13 @@ Cette extension offre les commandes suivantes :
 
 ## Changements pour la version 20230508.0.0 et au-delà ##
 
-*   Numéro de version modifiée, version minimale NVDA et lien de
+* Numéro de version modifiée, version minimale NVDA et lien de
   téléchargement en fonction des conventions / exigences de la store.
 
 ## Changements pour la version 20.12 ##
 
 * Arrête la parole pendant l'enregistrement et la lecture dans la dernière
-  version de MP3DirectCut
+  version de MP3DirectCut ;
 * Correction de la lecture du temps restants pour les nouvelles versions de
   NVDA utilisant Python 3.
 
@@ -291,11 +296,12 @@ Cette extension offre les commandes suivantes :
 
 ## Changements pour la version 1.0 ##
 
-* Première version
+* Première version.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+[1]:
+https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29/mp3DirectCut-20231229.0.0.nvda-addon
 
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+[2]:
+https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29-beta/mp3DirectCut-20231229.0.1.nvda-addon

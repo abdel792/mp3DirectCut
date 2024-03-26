@@ -15,7 +15,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: name of the option in the menu.
@@ -72,13 +72,12 @@ msgid "End of the file."
 msgstr "Fim do ficheiro."
 
 #. Translators: Message to inform the user that not file is loaded.
-#, fuzzy
 msgid ""
 "Not file is loaded. Please check that you are in a file, open one with "
 "Control O,\tor R to start recording."
 msgstr ""
-"Não há nenhum ficheiro aberto. Verifique se está num ficheiro, abra um com "
-"\"CTRL+O ou pressione \"R\" para gravar."
+"Nenhum ficheiro foi carregado. Verifique se está num ficheiro, abra um com "
+"Control+O ou R para iniciar a gravação."
 
 #. Translators: Message to inform the user that the current command is not available in a recording mode.
 msgid ""
@@ -129,7 +128,6 @@ msgid "Please chek that you are not in a recording mode."
 msgstr "Verifique que não está em modo de gravação."
 
 #. Translators: Message to inform the user that the recording is ready.
-#, fuzzy
 msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
 "recording.\tThis same spacebar  will stop the recording !"
@@ -150,15 +148,15 @@ msgid "The recording is not ready !"
 msgstr "A gravação não está preparada!"
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "The vu-meter is not available. Please verify if a recording is in progress,"
 "\tand that the checkbox enable the margin button is checked in the options "
 "of {0}."
 msgstr ""
-"O medidor de volume não está disponível. Verifique se uma gravação está em "
-"andamento e se a caixa de selecção habilitar o botão de margem está marcada "
-"nas opções de {0}."
+"O vu-meter não está disponível. Verifique se há uma gravação em andamento e "
+"se a caixa de seleção que habilita o botão de margem está marcada nas opções "
+"de {0}."
 
 #. Translators: Message to confirm that the level of the vu-meter has been reset.
 msgid "The level of the vu-meter has been reset !"
@@ -190,13 +188,12 @@ msgstr "Não há mais tempo!"
 msgid "Elapsed time: "
 msgstr "Tempo passado "
 
-#, fuzzy
 msgid ""
 "Gives the duration from the beginning of the file to the current position of "
 "the playback cursor.\t\t\tIf pressed twice, gives the total duration."
 msgstr ""
-"Dá a duração decorrida desde o início do ficheiro até à posição actual do "
-"cursor de reprodução. Se pressionar duas vezes, dá o tempo total."
+"Fornece a duração desde o início do arquivo até a posição atual do cursor de "
+"reprodução. Se pressionado duas vezes, fornece a duração total."
 
 #. Translators: Message to indicate the remaining time.
 msgid "Remaining time: "
@@ -216,23 +213,20 @@ msgstr ""
 "Permite indicar o valor actual do nível do medidor de volume. Se for "
 "pressionado duas vezes, reinicia esse valor."
 
-#, fuzzy
 msgid ""
 "Used to indicate the position of the marker of the beginning of selection B."
 "\t\t\tDouble pressure lets give you the duration of the selection."
 msgstr ""
-"Permite indicar a posição da etiqueta de início de selecção B. Pressionando "
-"duas vezes, dá a duração da selecção."
+"Usado para indicar a posição do marcador do início da seleção B. A pressão "
+"dupla permite que você saiba a duração da seleção."
 
-#, fuzzy
 msgid ""
-"Used to indicate the position of the marker of the end of selection N.\t\t"
-"\tDouble pressure gives recapitulatif positions B and N, and the duration of "
-"the selection."
+"Used to indicate the position of the marker of the end of selection N."
+"\t\t\tDouble pressure gives recapitulatif positions B and N, and the "
+"duration of the selection."
 msgstr ""
-"Permite indicar a posição da etiqueta de final de selecção N. Pressionando "
-"duas vezes, dá uma recapitulação da posição das etiquetas B e N, bem como a "
-"duração total da selecção."
+"Usado para indicar a posição do marcador do final da seleção N. A pressão "
+"dupla fornece as posições recapitulativas B e N e a duração da seleção."
 
 msgid ""
 "Give the reference of the actual part and the total number of parts in the "

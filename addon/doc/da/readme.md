@@ -1,6 +1,6 @@
 # mp3DirectCut #
 
-* Forfattere: Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
+* Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
 * download [stabil version][1]
 * Download [udviklingsversion][2]
 
@@ -161,6 +161,11 @@ gå til menuen Indstillinger / Input-bevægelser og lede efter kategorien
 * This add-on is compatible with the versions of NVDA ranging from 2019.3
   and beyond.
 
+## Changes for 20231229.0.0 ##
+
+* Added a backward compatible implementation to support speak on demand
+  mode, which will soon be available with nvda-2024.1.
+
 ## Changes for 20231007.0.0 ##
 
 * After placing the cutting points and after opening the cutting properties
@@ -180,7 +185,7 @@ gå til menuen Indstillinger / Input-bevægelser og lede efter kategorien
 
 ## Changes for 20230508.0.0 and beyond ##
 
-* • Changed version number, minimum NVDA version and download link according
+* Changed version number, minimum NVDA version and download link according
   to store conventions/requirements.
 
 ## Ændringer for version 20.12 ##
@@ -279,7 +284,8 @@ gå til menuen Indstillinger / Input-bevægelser og lede efter kategorien
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+[1]:
+https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29/mp3DirectCut-20231229.0.0.nvda-addon
 
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+[2]:
+https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29-beta/mp3DirectCut-20231229.0.1.nvda-addon

@@ -1,6 +1,6 @@
 # mp3DirectCut #
 
-* Yazarlar: Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
+* Yazarlar: Abdel, Rémy, Abdellah Zinedine, Jean-François COLAS
 * [kararlı  sürüm][1] indir
 * [geliştirme sürümü][2] indir
 
@@ -159,6 +159,12 @@ Bu eklenti aşağıdaki komutları sunar:
 
 * Bu eklenti, NVDA'nın 2019.3 ve sonrası sürümleriyle uyumludur.
 
+## 20231229.0.0 için değişiklikler ##
+
+* İsteğe bağlı konuşma modunu desteklemek için geriye dönük olarak uyumlu
+  bir uygulama eklendi ve bu uygulama yakında nvda-2024.1 ile kullanıma
+  sunulacak.
+
 ## 20231007.0.0 için değişiklikler ##
 
 * Kesim noktaları yerleştirildikten ve kesim özellikleri penceresi
@@ -178,7 +184,7 @@ Bu eklenti aşağıdaki komutları sunar:
 
 ## 20230508.0.0 ve sonrası için değişiklikler ##
 
-* • Mağaza kurallarına/gereksinimlerine göre sürüm numarası, minimum NVDA
+* Mağaza kurallarına/gereksinimlerine göre sürüm numarası, minimum NVDA
   sürümü ve indirme bağlantısı değiştirildi.
 
 ## 20.12 sürümü için değişiklik ##
@@ -273,7 +279,8 @@ Bu eklenti aşağıdaki komutları sunar:
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+[1]:
+https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29/mp3DirectCut-20231229.0.0.nvda-addon
 
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+[2]:
+https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29-beta/mp3DirectCut-20231229.0.1.nvda-addon

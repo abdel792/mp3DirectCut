@@ -1,4 +1,4 @@
-## Changes for 20231229.0.0
+## Changes for 20240326.0.0
 
-* Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.
-* Corrected the download links as well as the add-on home page to no longer refer to the legacy url https://addons.nvda-project.org/.
+* Updated compatibility for nvda-2024.1.;
+* Deleted download link from readme, the download link for future updates will now only be available from the add-on store.

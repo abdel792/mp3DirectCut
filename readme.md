@@ -1,8 +1,6 @@
 ﻿# mp3DirectCut
 
-* Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
-* Download [stable version][1]
-* Download [development version][2]
+* Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
 
 # Presentation #
 
@@ -136,6 +134,11 @@ This addon offers the following commands:
 
 * This add-on is compatible with the versions of NVDA ranging from 2019.3 and beyond.
 
+## Changes for 20240326.0.0
+
+* Updated compatibility for nvda-2024.1.;
+* Deleted download link from readme, the download link for future updates will now only be available from the add-on store.
+
 ## Changes for 20231229.0.0 ##
 
 * Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.
@@ -231,7 +234,3 @@ This addon offers the following commands:
 ## Change for version 1.0 ##
 
 * Initial version.
-
-[1]: https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29/mp3DirectCut-20231229.0.0.nvda-addon
-
-[2]: https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29-beta/mp3DirectCut-20231229.0.1.nvda-addon

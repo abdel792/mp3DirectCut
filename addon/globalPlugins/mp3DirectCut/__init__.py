@@ -60,10 +60,11 @@ class GlobalPlugin   (globalPluginHandler.GlobalPlugin):
 		super(GlobalPlugin, self).terminate()
 		if hasattr(gui, "NVDASettingsDialog"):
 			gui.NVDASettingsDialog.categoryClasses.remove(Mp3DirectCutPanel)
-		if wx.version().startswith("4"):
-			self.preferencesMenu.Remove(self.mp3DirectCut)
-		else:
-			self.preferencesMenu.RemoveItem(self.mp3DirectCut)
+		if hasattr(self, "preferencesMenu"):
+			if wx.version().startswith("4"):
+				self.preferencesMenu.Remove(self.mp3DirectCut)
+			else:
+				self.preferencesMenu.RemoveItem(self.mp3DirectCut)
 
 	def onMp3DirectCutDialog(self, evt):
 		gui.mainFrame._popupSettingsDialog(Mp3DirectCutDialog)

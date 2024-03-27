@@ -134,6 +134,10 @@ This addon offers the following commands:
 
 * This add-on is compatible with the versions of NVDA ranging from 2019.3 and beyond.
 
+## Changes for 20240327.0.0
+
+* Fixed a bug that caused a log error when reloading plugins, thanks to Rob, from nvda-addons mailing list;
+
 ## Changes for 20240326.0.0
 
 * Updated compatibility for nvda-2024.1.;

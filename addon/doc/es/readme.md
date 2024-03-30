@@ -1,8 +1,6 @@
 # mp3DirectCut #
 
-* Autor(es) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
-* Descargar  [versión estable][1]
-* Descargar [versión de desarrollo][2]
+* Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
 
 # Presentación #
 
@@ -160,6 +158,17 @@ Este complemento ofrece las siguientes órdenes:
 * Este complemento es compatible con las versiones de NVDA que van desde la
   2019.3 en adelante.
 
+## Changes for 20240327.0.0
+
+* Fixed a bug that caused a log error when reloading plugins, thanks to Rob,
+  from nvda-addons mailing list;
+
+## Changes for 20240326.0.0
+
+* Updated compatibility for nvda-2024.1.;
+* Deleted download link from readme, the download link for future updates
+  will now only be available from the add-on store.
+
 ## Cambios para 20231229.0.0 ##
 
 * Se ha añadido una implementación retrocompatible para soportar el modo de
@@ -285,9 +294,3 @@ Este complemento ofrece las siguientes órdenes:
 * Primera versión.
 
 [[!tag dev stable]]
-
-[1]:
-https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29/mp3DirectCut-20231229.0.0.nvda-addon
-
-[2]:
-https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29-beta/mp3DirectCut-20231229.0.1.nvda-addon

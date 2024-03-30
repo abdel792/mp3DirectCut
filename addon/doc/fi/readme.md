@@ -1,8 +1,6 @@
 # mp3DirectCut #
 
-* Tekijät: Abdel, Rémy, Abdellah zineddine JA Jean-François Colas
-* Lataa [vakaa versio][1]
-* Lataa [kehitysversio][2]
+* Tekijät: Abdel, Rémy, Abdellah zineddine ja Jean-François COLAS
 
 # Esittely #
 
@@ -156,6 +154,17 @@ Tämä lisäosa tarjoaa seuraavat komennot:
 * Tämä lisäosa on yhteensopiva NVDA 2019.3:n ja sitä uudempien versioiden
   kanssa.
 
+## Muutokset versiossa 20240327.0.0
+
+* Korjattu bugi, joka aiheutti lokivirheen liitännäisiä
+  uudelleenladattaessa. (kiitos Robille NVDA:n lisäosien postituslistalta).
+
+## Muutokset versiossa 20240326.0.0
+
+* Päivitetty yhteensopivuus NVDA 2024.1:lle.
+* Latauslinkki poistettu dokumentaatiosta. Tulevien versioiden latauslinkit
+  löytyvät jatkossa vain lisäosakaupasta.
+
 ## Muutokset versiossa 20231229.0.0 ##
 
 * Lisätty taaksepäin yhteensopiva toteutus pyydettäessä-puhetilalle, joka on
@@ -275,9 +284,3 @@ Tämä lisäosa tarjoaa seuraavat komennot:
 * Ensimmäinen versio.
 
 [[!tag dev stable]]
-
-[1]:
-https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29/mp3DirectCut-20231229.0.0.nvda-addon
-
-[2]:
-https://github.com/abdel792/mp3DirectCut/releases/download/v23.12.29-beta/mp3DirectCut-20231229.0.1.nvda-addon

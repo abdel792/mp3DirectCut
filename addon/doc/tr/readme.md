@@ -157,10 +157,10 @@ Bu eklenti aşağıdaki komutları sunar:
 
 * Bu eklenti, NVDA'nın 2019.3 ve sonrası sürümleriyle uyumludur.
 
-## Changes for 20240327.0.0
+## 20240327.0.0 için değişiklikler
 
-* Fixed a bug that caused a log error when reloading plugins, thanks to Rob,
-  from nvda-addons mailing list;
+* Eklentiler yeniden yüklenirken günlük hatasına neden olan bir hata
+  düzeltildi, nvda-addons posta listesinden Rob'a teşekkürler;
 
 ## 20240326.0.0 için değişiklikler
 

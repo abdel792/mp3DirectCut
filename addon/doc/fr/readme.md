@@ -1,6 +1,6 @@
 # mp3DirectCut #
 
-* Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
+* Auteur(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
 
 # Présentation #
 
@@ -168,16 +168,18 @@ Cette extension offre les commandes suivantes :
 * Cette extension est compatible avec les versions de NVDA allant de 2019.3
   et au-delà.
 
-## Changes for 20240327.0.0
+## Changements pour la version 20240327.0.0
 
-* Fixed a bug that caused a log error when reloading plugins, thanks to Rob,
-  from nvda-addons mailing list;
+* Correction d'un bug qui provoquait une erreur dans le journal lors du
+  rechargement des plugins, grâce à Rob, depuis la liste de diffusion
+  nvda-addons ;
 
-## Changes for 20240326.0.0
+## Changements pour la version 20240326.0.0
 
-* Updated compatibility for nvda-2024.1.;
-* Deleted download link from readme, the download link for future updates
-  will now only be available from the add-on store.
+* Compatibilité mise à jour pour NVDA-2024.1. ;
+* Lien de téléchargement supprimé du fichier readme, le lien de
+  téléchargement pour les futures mises à jour ne sera désormais disponible
+  que dans l'add-on store.
 
 ## Changements pour la version 20231229.0.0 ##
 

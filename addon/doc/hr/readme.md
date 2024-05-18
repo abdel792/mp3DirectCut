@@ -1,6 +1,6 @@
 # mp3DirectCut #
 
-* Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
+* Autori: Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
 
 # Objašnjenje #
 
@@ -156,18 +156,18 @@ Ovaj dodatak nudi sljedeće naredbe:
 
 * Ovaj je dodatak kompatibilan s NVDA verzijom 2019.3 i novijim verzijama.
 
-## Changes for 20240327.0.0
+## Promjene u 20240327.0.0
 
 * Fixed a bug that caused a log error when reloading plugins, thanks to Rob,
   from nvda-addons mailing list;
 
-## Changes for 20240326.0.0
+## Promjene u 20240326.0.0
 
 * Updated compatibility for nvda-2024.1.;
 * Deleted download link from readme, the download link for future updates
   will now only be available from the add-on store.
 
-## Changes for 20231229.0.0 ##
+## Promjene u 20231229.0.0 ##
 
 * Added a backward compatible implementation to support speak on demand
   mode, which will soon be available with nvda-2024.1.
@@ -191,8 +191,8 @@ Ovaj dodatak nudi sljedeće naredbe:
 
 ## Promjene u 20230508.0.0 i novijim verzijama ##
 
-* Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+* Promijenjen je broj verzije, minimalna NVDA verzija i poveznica za
+  preuzimanje, u skladu s konvencijama/zahtjevima trgovine.
 
 ## Promjene u verziji 20.12 ##
 

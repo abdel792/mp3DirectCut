@@ -1,6 +1,6 @@
 # mp3DirectCut #
 
-* Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
+* Автор(и): Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
 
 # Представяне #
 
@@ -168,16 +168,18 @@ NVDA.
 * Тази добавка е съвместима с версиите на NVDA в диапазона от 2019.3 и
   по-нови.
 
-## Changes for 20240327.0.0
+## Промени във версия 20240327.0.0
 
-* Fixed a bug that caused a log error when reloading plugins, thanks to Rob,
-  from nvda-addons mailing list;
+* Поправена е грешка, която причинява грешка в протоколния файл при
+  презареждане на добавките, благодарение на Rob, от пощенския списък за
+  добавки на NVDA;
 
-## Changes for 20240326.0.0
+## Промени във версия 20240326.0.0
 
-* Updated compatibility for nvda-2024.1.;
-* Deleted download link from readme, the download link for future updates
-  will now only be available from the add-on store.
+* Обновена съвместимост за NVDA 2024.1;
+* Изтрита е препратката за изтегляне от документацията. Препратката за
+  изтегляне за бъдещи обновления вече ще бъде налична само от магазина за
+  добавки.
 
 ## Промени във версия 20231229.0.0 ##
 

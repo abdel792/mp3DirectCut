@@ -4,21 +4,22 @@
 # Ângelo Abrantes <ampa4374@gmail.com>, 2017.
 # Rui Fontes <rui.fontes@tiflotecnia.com>, 2017.
 # Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>, 2020.
+# Josevan Barbosa Fernandes <josevanfernandes@yahoo.com.br>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mp3DirectCut add-on\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2020-01-03 13:00+1000\n"
-"PO-Revision-Date: 2020-05-15 19:40-0300\n"
-"Last-Translator: Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>\n"
+"PO-Revision-Date: 2024-12-27 15:31-0300\n"
+"Last-Translator: Josevan Fernandes <josevanfernandes@yahoo.com.br>\n"
 "Language-Team: NVDA Brazilian Portuguese translation team (Equipe de "
 "tradução do NVDA para Português Brasileiro) <clever97@gmail.com>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.11\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: name of the option in the menu.
@@ -74,13 +75,12 @@ msgid "End of the file."
 msgstr "Fim do arquivo."
 
 #. Translators: Message to inform the user that not file is loaded.
-#, fuzzy
 msgid ""
 "Not file is loaded. Please check that you are in a file, open one with "
 "Control O,\tor R to start recording."
 msgstr ""
 "Nenhum arquivo está carregado. Verifique se você está em um arquivo, abra um "
-"com Control O, ou R para iniciar a gravação."
+"com Control O ou R para iniciar a gravação."
 
 #. Translators: Message to inform the user that the current command is not available in a recording mode.
 msgid ""
@@ -131,13 +131,12 @@ msgid "Please chek that you are not in a recording mode."
 msgstr "Por favor, verifique que não está em modo de gravação."
 
 #. Translators: Message to inform the user that the recording is ready.
-#, fuzzy
 msgid ""
 "The recording is ready ! It remains only to press spacebar for begin the "
 "recording.\tThis same spacebar  will stop the recording !"
 msgstr ""
 "A gravação está pronta! Resta apenas pressionar a barra de espaço para "
-"iniciar a gravação. Essa mesma barra de espaço irá parar a gravação!"
+"iniciar a gravação.\tEssa mesma barra de espaço interromperá a gravação!"
 
 #. Translators: Message to inform the user that a recording is in progress.
 msgid ""
@@ -152,15 +151,15 @@ msgid "The recording is not ready !"
 msgstr "A gravação não está pronta!"
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "The vu-meter is not available. Please verify if a recording is in progress,"
 "\tand that the checkbox enable the margin button is checked in the options "
 "of {0}."
 msgstr ""
-"O medidor de volume não está disponível. Verifique se uma gravação está em "
-"andamento e se a caixa de seleção habilitar o botão de margem está marcada "
-"nas opções do {0}."
+"O medidor de volume não está disponível. Verifique se há uma gravação em "
+"andamento e se a caixa de seleção que habilita o botão de margem está "
+"marcada nas opções de {0}."
 
 #. Translators: Message to confirm that the level of the vu-meter has been reset.
 msgid "The level of the vu-meter has been reset !"
@@ -192,13 +191,12 @@ msgstr "Não há tempo restante!"
 msgid "Elapsed time: "
 msgstr "Tempo decorrido: "
 
-#, fuzzy
 msgid ""
 "Gives the duration from the beginning of the file to the current position of "
 "the playback cursor.\t\t\tIf pressed twice, gives the total duration."
 msgstr ""
-"Dá a duração desde o início do arquivo até a posição atual do cursor de "
-"reprodução. Se pressionado duas vezes, fornece a duração total."
+"Fornece a duração desde o início do arquivo até a posição atual do cursor de "
+"reprodução.\t\t\tSe pressionado duas vezes, fornece a duração total."
 
 #. Translators: Message to indicate the remaining time.
 msgid "Remaining time: "
@@ -218,22 +216,20 @@ msgstr ""
 "Usado para determinar o nível atual do medidor de volume, durante a "
 "gravação, pressionado duas vezes redefine-o."
 
-#, fuzzy
 msgid ""
 "Used to indicate the position of the marker of the beginning of selection B."
 "\t\t\tDouble pressure lets give you the duration of the selection."
 msgstr ""
-"Usado para indicar a posição do marcador do início da seleção B. Pressionado "
-"duas vezes permite fornecer a duração da seleção."
+"Usado para indicar a posição do marcador do início da seleção B. A pressão "
+"dupla permite que você saiba a duração da seleção."
 
-#, fuzzy
 msgid ""
-"Used to indicate the position of the marker of the end of selection N.\t\t"
-"\tDouble pressure gives recapitulatif positions B and N, and the duration of "
-"the selection."
+"Used to indicate the position of the marker of the end of selection N."
+"\t\t\tDouble pressure gives recapitulatif positions B and N, and the "
+"duration of the selection."
 msgstr ""
-"Usado  para indicar a posição do marcador do final da seleção N. Pressionado "
-"duas vezes recapitula dizendo as posições B e N, e a duração da seleção."
+"Usado para indicar a posição do marcador do final da seleção N. A pressão "
+"dupla fornece as posições recapitulativas B e N e a duração da seleção."
 
 msgid ""
 "Give the reference of the actual part and the total number of parts in the "

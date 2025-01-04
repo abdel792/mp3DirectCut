@@ -1,6 +1,6 @@
 # mp3DirectCut #
 
-* Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
+* Autor(es): Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
 
 # Apresentação #
 
@@ -155,46 +155,47 @@ Este complemento oferece os seguintes comandos:
 
 ## Compativilidade ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2019.3
-  and beyond.
+* Esse complemento é compatível com as versões do NVDA a partir da versão
+  2019.3.
 
-## Changes for 20240327.0.0
+## Alterações para a versão 20240327.0.0
 
-* Fixed a bug that caused a log error when reloading plugins, thanks to Rob,
-  from nvda-addons mailing list;
+* Corrigido um bug que causava um erro de registro ao recarregar plug-ins,
+  graças a Rob, da lista de discussão nvda-addons;
 
-## Changes for 20240326.0.0
+## Alterações para 20240326.0.0
 
-* Updated compatibility for nvda-2024.1.;
-* Deleted download link from readme, the download link for future updates
-  will now only be available from the add-on store.
+* Compatibilidade atualizada para nvda-2024.1;
+* Excluído o link de download do readme, o link de download para futuras
+  atualizações agora só estará disponível na loja de complementos.
 
-## Changes for 20231229.0.0 ##
+## Alterações para 20231229.0.0 ##
 
-* Added a backward compatible implementation to support speak on demand
-  mode, which will soon be available with nvda-2024.1.
+* Adicionada uma implementação compatível com versões anteriores para
+  oferecer suporte ao modo falar sob demanda, que em breve estará disponível
+  com o nvda-2024.1.
 
-## Changes for 20231007.0.0 ##
+## Alterações para 20231007.0.0 ##
 
-* After placing the cutting points and after opening the cutting properties
-  window, with "Ctrl+N", adding accessibility to the title of this window by
-  indicating the part index.
-* In reading mode, after moving the start or end markers of selections with
-  keys 1 to 6 of the alphanumeric pad, addition of automatic start of
-  reading from the new position;
-* Fixed a bug that occurred when consulting the remaining time with
-  "control+shift+r" from the beginning of the track.
+* Após colocar os pontos de corte e abrir a janela de propriedades de corte,
+  com “Ctrl+N”, adicione acessibilidade ao título dessa janela indicando o
+  índice da peça.
+* No modo de leitura, depois de mover os marcadores de início ou de fim das
+  seleções com as teclas 1 a 6 do teclado alfanumérico, a adição do início
+  automático da leitura a partir da nova posição;
+* Foi corrigido um erro que ocorria ao consultar o tempo restante com
+  “control+shift+r” desde o início da faixa.
 
-## Changes for 20230728.0.0 ##
+## Alterações para 20230728.0.0 ##
 
-* Applied the flake8 and mypy rules to the code;
-* Changed the minimum supported NVDA version to 2019.3 to support
-  annotations introduced in Python 3.
+* Aplicou as regras flake8 e mypy ao código;
+* Alterada a versão mínima suportada do NVDA para 2019.3 para suportar
+  anotações introduzidas no Python 3.
 
-## Changes for 20230508.0.0 and beyond ##
+## Alterações para 20230508.0.0 e posteriores ##
 
-* Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+* O número da versão, a versão mínima do NVDA e o link de download foram
+  alterados de acordo com as convenções/requisitos da loja.
 
 ## Alterações para a versão 20.12 ##
 

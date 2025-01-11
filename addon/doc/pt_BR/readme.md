@@ -1,6 +1,6 @@
 # mp3DirectCut #
 
-* Autor(es): Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
+* Autor(es): Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
 
 # Apresentação #
 
@@ -153,7 +153,7 @@ Este complemento oferece os seguintes comandos:
 
     * Permite abrir a ajuda do complemento atual.
 
-## Compativilidade ##
+## Compatibilidade ##
 
 * Esse complemento é compatível com as versões do NVDA a partir da versão
   2019.3.

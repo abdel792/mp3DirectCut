@@ -20,7 +20,7 @@ else:
 from datetime import datetime
 from keyboardHandler import KeyboardInputGesture as kig
 import os
-import versionInfo
+import buildVersion
 import api
 from scriptHandler import getLastScriptRepeatCount, script
 from winUser import (
@@ -44,7 +44,7 @@ ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
 hr, min, sec, hun, th = _('hours'), _('minutes'), _('seconds'), _('hundredths'), _('thousandths')
 
 # For support of speak on demand feature.
-speakOnDemand = {"speakOnDemand": True} if versionInfo.version_year > 2023 else {}
+speakOnDemand = {"speakOnDemand": True} if buildVersion.version_year > 2023 else {}
 
 announce = (
 	# Translators: Message to inform that no selection has been realized.

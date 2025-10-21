@@ -10,7 +10,7 @@ import globalPluginHandler
 import globalVars
 from scriptHandler import script
 import addonHandler
-import versionInfo
+import buildVersion
 from .mp3DirectCutDialog import Mp3DirectCutDialog, Mp3DirectCutPanel
 from typing import Callable
 import gui
@@ -22,7 +22,7 @@ _: Callable[[str], str]
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
 
 # For support of speak on demand feature.
-speakOnDemand = {"speakOnDemand": True} if versionInfo.version_year > 2023 else {}
+speakOnDemand = {"speakOnDemand": True} if buildVersion.version_year > 2023 else {}
 
 confSpec = {
 	'space': 'boolean(default = True)',

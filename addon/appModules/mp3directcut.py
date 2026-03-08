@@ -718,8 +718,10 @@ class AppModule   (appModuleHandler.AppModule):
 		nextHandler()
 
 	def event_NVDAObject_init(self, obj):
-		if obj and obj.firstChild and obj.firstChild.windowControlID == 641:
-			obj.name = obj.firstChild.name
+		isCustomLabel = next((x for x in addonHandler.getRunningAddons() if x.name == "CustomLabels"), None)
+		if not isCustomLabel:
+			if obj and obj.firstChild and obj.firstChild.windowControlID == 641:
+				obj.name = obj.firstChild.name
 		if self.productVersion < '2.2.1':
 			if "#" in obj.displayText:
 				match = re.search(r"(^.+?#[0-9]+)", obj.displayText)

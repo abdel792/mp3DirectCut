@@ -1,246 +1,233 @@
-# mp3DirectCut-NVDA支持插件 #
+# mp3DirectCut 无障碍增强插件
 
-* Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
+* 作者：Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
+* 下载 [稳定版][1]
+* 下载 [开发版][2]
 
-# 插件介绍 #
+# 功能概述 #
 
-此插件改进了mp3DirectCut的无障碍支持。
+此插件显著提升 NVDA 屏幕阅读器在 mp3DirectCut 软件中的无障碍访问体验。
 
-插件已经过mp3DirectCut版本的测试，范围从212到223。
+已测试兼容 mp3DirectCut 212 至 233 版本。
 
 ## 键盘快捷键 ##
 
 此插件提供以下快捷键：
 
-* B
+* B 键
 
     * 确认标记区间B的开头。
 
 * Ctrl+Shift+B
 
     * 标记区间B的开头。
-    * 按两次选择时长。
+    * 双击读出选择区段总时长。
 
 * Ctrl+Shift+D
 
-    * 给出从文件开头到当前位置的时间。
-    * 按两次朗读总时长。
+    * 读出从文件开始到播放光标的时长。
+    * 双击读出文件总时长。
 
-* Ctrl + R
+* Ctrl+R
 
     * 确认所选内容已被取消。
 
 * Ctrl+Shift+R
 
-    * 读出当前位置到文件末尾的剩余时间。
+    * 读出从播放光标到文件末尾的剩余时间。
 
 * Ctrl+Shift+E
 
     * 标记区间N的结束位置。
-    * 按两次读出区间B和N的位置和时长。
+    * 双击读出区间B和N的位置和时长。
 
 * Ctrl+Shift+P
 
-    * 给出当前文件中实际零件和零件总数的参考。
+    * 读出当前文件的分段编号与总段数。
 
-* Ctrl + Shift + 空格
+* Ctrl+Shift+空格
 
-    * 用于在录制过程中确定流量计的当前级别。
-    * 按两次重置。
+    * 录音时检测音量表实时电平。
+    * 双击重置电平检测。
 
-* 下箭头
+* 下光标键
 
-    * 让您看到播放头的当前位置。
-    * 此命令还将光标定位在选择 N 结束的标记的位置, 同时在进行选择时给出此标记的位置。
-    * 在音量对话框中, 说出通常可以用向下箭头到达的下一个值。
-    * 这个数值默认不朗读。
+    * 读出播放头当前位置。
+    * 若存在选择区段，将光标定位至选择结束标记点 N 并读出其位置。
+    * 在音量对话框中读出下光标键可调整的数值。
+    * 此数值默认不读出。
 
-* 动作按钮: 结束
+* End 键
 
-    * 将播放光标移动到当前文件的末尾, 并给出总时间。
+    * 将播放光标移至文件末尾并读出总时长。
 
-* 动作按钮: 第一张
+* Home 键
 
-    * 将播放光标移动到当前文件的开头。
+    * 将播放光标移至文件开头。
 
-* 左箭头
+* 左光标键
 
-    * 让我们在播放过程中短暂返回一秒, 同时给出当前持续时间。
-    * 此持续时间可在 mp3directcut 选项中进行配置。
+    * 播放时后退 1 秒并读出当前时长。
+    * 读出当前时长可在 mp3directcut 选项配置。
 
-* N
+* N 键
 
-    * 用于确认选择 N 的末尾标记的正确位置。
+    * 确认选择结束标记点 N 已正确放置。
 
-* 下翻页
+* Page Down 键
 
-    * 让我们在播放过程中进行10秒的飞跃, 同时给出当前持续时间。
-    * 此持续时间可在 mp3directcut 选项中进行配置。
+    * 播放时前进 10 秒并读出当前时长。
+    * 读出当前时长可在 mp3directcut 选项配置。
 
-* 上翻页
+* Page Up 键
 
-    * 让我们在播放过程中返回 10秒, 同时给出当前持续时间。
-    * 此持续时间可在 mp3directcut 选项中进行配置。
+    * 播放时后退 10 秒并读出当前时长。
+    * 读出当前时长可在 mp3directcut 选项配置。
 
-* R
+* R 键
 
-    * 允许准备记录以及是否可以按空格键启动。
+    * 准备录音并提示可按空格键开始。
 
-* 右箭头
+* 右光标键
 
-    * 让我们在播放过程中做一秒钟的短暂转发, 同时给出当前的持续时间。
-    * 此持续时间可在 mp3directcut 选项中进行配置。
+    * 播放时前进 1 秒并读出当前时长。
+    * 读出当前时长可在 mp3directcut 选项配置。
 
-* Ctrl + 右箭头
+* Ctrl+右光标键
 
-    * 移动到下一个拆分点, 同时给出当前持续时间。
+    * 跳至下一分割点并读出当前时长。
 
-* Ctrl + 左箭头
+* Ctrl+左光标键
 
-    * 移动到上一个拆分点, 同时给出当前持续时间。
+    * 跳至上一分割点并读出当前时长。
 
-* Shift+右箭头
+* Shift+右光标键
 
-    * 让我们在播放过程中做一个四百分之一秒的简短转发, 同时给出当前的持续时间。
+    * 播放时前进 0.04 秒并读出当前时长。
 
-* Shift+左箭头
+* Shift+左光标键
 
-    * 让我们在播放过程中做一个简短的向后四百分之一秒, 同时给出当前的持续时间。
+    * 播放时后退 0.04 秒并读出当前时长。
 
-* S
+* S 键
 
-    * 用于停止读取并给出当前持续时间。
+    * 停止播放并读出当前时长。
 
-* 空格
+* 空格键
 
-    * 如果录制已准备就绪, 请启动此录制。
-    * 如果录制正在进行中, 请通过将光标定位在开始处来停止录制。
-    * 如果加载了文件, 则开始朗读。
-    * 如果读取正在进行中, 则允许通过给出当前持续时间来进行暂停。
-    * 如果暂停读取, 则允许从当前位置重新启动读取。
+    * 录音准备就绪时：开始录音。
+    * 录音过程中：停止录音并将光标置于开头。
+    * 文件加载后：开始播放。
+    * 播放过程中：暂停播放并读出当前时长。
+    * 暂停状态时：从当前位置继续播放。
 
-* 上箭头
+* 上光标键
 
-    * 让您看到播放头的当前位置。
-    * 此命令还将光标定位在选择 B 开头的标记位置, 同时在进行选择时给出此标记的位置。
-    * 在音量对话框中, 将通常可以用 upArrow 到达的上一个值发声。
-    * 这个数值默认不朗读。
+    * 读出播放头当前位置。
+    * 若存在选择区段，将光标定位至选择起始标记点 B 并读出其位置。
+    * 在音量对话框中读出上光标键可调整的数值。
+    * 此数值默认不读出。
 
 * NVDA+H
 
-    * 添加快捷键使用'NVDA + H'打开当前插件的帮助;。
+    * 打开插件帮助文档。
 
 ## 兼容性 ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2019.3
-  and beyond.
+* 此插件兼容 NVDA 2019.3 及更高版本。
 
-## Changes for 20240327.0.0
+## 20231007.0.0 版本变更 ##
 
-* Fixed a bug that caused a log error when reloading plugins, thanks to Rob,
-  from nvda-addons mailing list;
+* 设置分割点后按 Ctrl+N 打开分割属性窗口时，增加窗口标题的无障碍提示（包含分段索引）
+* 阅读模式下通过小键盘数字键 1-6 移动选择起止标记后，自动从新位置开始播放；
+* 修复从音轨开头按 Ctrl+Shift+R 查询剩余时间时的错误。
 
-## Changes for 20240326.0.0
+## 20230728.0.0 版本变更 ##
 
-* Updated compatibility for nvda-2024.1.;
-* Deleted download link from readme, the download link for future updates
-  will now only be available from the add-on store.
+* 对代码应用 flake8 和 mypy 规范；
+* 将 NVDA 版本最低要求改为 2019.3 以支持 Python 3 类型注解。
 
-## Changes for 20231229.0.0 ##
+## 20230607.0.0 版本变更 ##
 
-* Added a backward compatible implementation to support speak on demand
-  mode, which will soon be available with nvda-2024.1.
+* 新增以下工作流：
+ * auto-update-translations：自动从 NVDA 翻译系统更新翻译。
+ * release-on-tag.yaml：推送新标签时自动构建发布插件；
+ * manual-release.yaml：手动构建发布新版本插件。
+* 更新翻译。
 
-## Changes for 20231007.0.0 ##
+## 20230508.0.0 及后续版本变更 ##
 
-* After placing the cutting points and after opening the cutting properties
-  window, with "Ctrl+N", adding accessibility to the title of this window by
-  indicating the part index.
-* In reading mode, after moving the start or end markers of selections with
-  keys 1 to 6 of the alphanumeric pad, addition of automatic start of
-  reading from the new position;
-* Fixed a bug that occurred when consulting the remaining time with
-  "control+shift+r" from the beginning of the track.
+* 根据商店规范调整版本号、NVDA 版本最低要求及下载链接。
 
-## Changes for 20230728.0.0 ##
+## 20.12 版本变更 ##
 
-* Applied the flake8 and mypy rules to the code;
-* Changed the minimum supported NVDA version to 2019.3 to support
-  annotations introduced in Python 3.
+* 适配最新版 mp3directcut：录音和播放期间停止语音输出；
+* 修复 Python 3 版 NVDA 的剩余时间读取功能。
 
-## Changes for 20230508.0.0 and beyond ##
+## 19.02 版本变更 ##
 
-* Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+* 在 NVDA 2018.2 及以上版本的设置面板中添加插件配置；
+* 采用 YY.MM 格式版本编号（2位年份+小数点+2位月份）
+* 适配 NVDA 2019.1 启用的新插件版本格式。
 
-## 20.12 更新日志 ##
+## 4.0 版本变更 ##
 
-* 在录制和阅读最新版本的 mp3 直接切割时停止语音;
-* 修复了使用Python 3读取NVDA新版本的剩余时间的问题。
+* 同时支持 Python 2.7 和 3；
+* 修复插件路径包含非 ASCII 字符时的错误。
 
-## 19.02版的更改 ##
+## 3.0 版本变更 ##
 
-* 在 nvda 2018.2新增的设置面板中添加了插件的配置;
-* 现在使用YY.MM形式的版本号（年份为2位数，后跟一个点，后跟月份为2位数）;
-* 兼容nvda 2019.1的插件新版本格式。
+* 使用 gui.guiHelper 模块确保插件配置对话框正确显示；
+* 使用 format 方法替代 %s 进行字符串格式化；
+* 遵循开发指南规范。
 
-## 版本4.0 ##
+## 2.3 版本变更 ##
 
-* 添加了Python 2.7和3的插件的兼容性;
-* 修复了包含非ASCII字符的附加路径的错误。
+* 为插件添加 GPL 许可证；
+* 将选择结束标记查询快捷键从 Ctrl+Shift+N 改为 Ctrl+Shift+E（因新版 mp3DirectCut 中原快捷键失效）
+* 添加 Ctrl+R 快捷键确认选择已取消；
+* 优化 appModule/mp3directcut.py 代码。
 
-## 版本3.0 ##
+## 2.2 版本变更 ##
 
-* 使用gui.guiHelper模块确保插件配置对话框的正确外观;
-* 格式化字符串使用格式而不是 %s;
-* 使用遵守实施准则。
+* 修正选择标记位置查询脚本。
 
-## 版本2.3 ##
+## 2.1.1 版本变更 ##
 
-* 给插件添加了GPL许可证;
-* 将选择结束的脚本快捷方式从Ctrl + Shift + N更改为Ctrl + Shift + E，因为Ctrl + Shift +
-  N不能与最新版本的mp3DirectCut一起使用;
-* 添加了一个脚本，以确认已使用“Ctrl + r”取消选择;
-* 在appModule'mp3directcut.py'的代码中做了一些更正。
+* 移除总时长专用脚本，将其整合至已用时间查询脚本；
+* 在配置选项中单独设置空格键相关播报的启用/禁用；
+* 在配置选项中单独设置选择标记放置提示的启用/禁用；
+* 跳转分割点时增加读出当前分段编号；
+* 修正垂直方向键相关播报；
+* 添加 NVDA+H 打开插件帮助功能；
+* 将插件配置菜单从"工具"菜单移至"选项"菜单。
 
-## 版本2.2 ##
+## 2.1 版本变更 ##
 
-* 更正给出选择标记位置的脚本。
+* 添加 Ctrl+右光标键跳至下一分割点并读出；
+* 添加 Ctrl+左光标键跳至上一分割点并读出；
+* 添加 Shift+右光标键前进 0.04 秒并读出；
+* 添加 Shift+左光标键后退 0.04 秒并读出；
+* 将插件摘要从"for mp3DirectCut"改为"mp3DirectCut"。
 
-## 版本2.1.1 ##
+## 2.0 版本变更 ##
 
-* 删除脚本，给出总时间并将此信息添加到脚本中，给出经过的时间;
-* 添加了与其他公告分开启用或禁用模块配置选项中与空格键相关的通知的功能;
-* 添加了在模块的配置选项中启用或禁用选择范围放置的通知的功能;
-* 在切割点移动时添加当前零件的通知;
-* 更正与垂直键相关的公告;
-* 添加脚本以使用'NVDA + H'打开当前加载项的帮助;
-* 将插件的配置菜单从“工具”菜单移动到NVDA的“首选项”菜单。
+* 添加 Ctrl+Shift+R 查询剩余时间；
+* 修复包含小时的时长读取问题；
+* 增加毫秒与百分秒的区分能力。
 
-## 版本2.1 ##
+## 1.1 版本变更 ##
 
-* 使用Control + Right Arrow添加脚本以发声移动到下一个分割点;
-* 使用Control +左光标添加脚本以发声移动到上一个分割点;
-* 使用Shift +右光标添加一个脚本，用于向前方播放百分之四秒的位移;
-* 使用Shift +左光标添加一个脚本来发出第二百分之二秒位移的位移;
-* 将“for mp3DirectCut”中的插件摘要更正为“mp3DirectCut”。
+* 在输入手势设置中增加 mp3DirectCut 分类。；
 
-## 版本2.0 ##
+    * 该分类仅在使用该软件时可见。
 
-* 添加一个快捷键, 朗读剩余的时间与 "Ctrl+Shift+R";
-* 固定阅读时间，包括小时;
-* 增加了区分千分之一秒或百分之一秒的功能。
+* 在 NVDA 工具菜单中添加"mp3DirectCut 配置"项，可启用/禁用自动消息；
 
-## 版本1.1 ##
+## 1.0 版本变更 ##
 
-* 可以在输入手势中mp3DirectCut这个分类里修改快捷键;
+* 初始版本。
 
-    * 它们将仅在使用 mp3DirectCut 软件时可见。
+[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
 
-* 添加了在NVDA配置选项中启用或禁用朗读选择范围的功能;
-
-## 版本1.0 ##
-
-* 发布初始版本。
-
-[[!tag dev stable]]
+[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut

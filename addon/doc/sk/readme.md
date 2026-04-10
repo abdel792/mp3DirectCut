@@ -1,258 +1,240 @@
-# mp3DirectCut #
+﻿# mp3DirectCut
 
 * Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
 
-# Popis #
+# Presentation #
 
-Doplnok upravuje prístupnosť aplikácie mp3DirectCut s NVDA.
+This add-on improves the accessibility of the software mp3DirectCut with NVDA.
 
-Je testovaný s mp3DirectCut od verzie 212 do 223.
+It has been tested with versions of mp3DirectCut ranging from 212 up to 233.
 
-## Klávesové skratky ##
+## Keyboard shortcuts ##
 
-Dostupné sú tieto klávesové skratky:
+This addon offers the following commands:
 
 * B
 
-    * Umiestni počiatočnú značku.
+    * Used to confirm correct placement of the marker of the beginning of the selection B.
 
 * Ctrl+Shift+B
 
-    * Oznámi pozíciu počiatočnej značky.
-    * Stlačené dvakrát rýchlo za sebou oznámi celkový čas označeného úseku.
+    * Used to indicate the position of the marker of the beginning of selection B.
+    * Double pressure lets give you the duration of the selection.
 
 * Ctrl+Shift+D
 
-    * Oznámi čas od začiatku súboru po kurzor.
-    * Stlačené dvakrát rýchlo za sebou oznámi celkové trvanie súboru.
+    * Gives the duration from the beginning of the file to the current position of the playback cursor.
+    * Double pressure lets give you the total duration.
 
 * Ctrl+R
 
-    * Zruší výber.
+    * Confirms that the selection has been canceled.
 
 * Ctrl+Shift+R
 
-    * Oznámi zostávajúci čas od kurzora do konca súboru.
+    * Gives the time remaining from the current position of the playback cursor to the end of the file.
 
 * Ctrl+Shift+E
 
-    * Oznámi pozíciu koncovej značky.
-    * Stlačené dvakrát rýchlo za sebou oznámi pozíciu počiatočnej, koncovej
-      značky a celkový čas vybratého úseku.
+    * Used to indicate the position of the marker of the end of selection N.
+    * Double pressure gives recapitulatif positions B and N, and the duration of the selection.
 
 * Ctrl+Shift+P
 
-    * Oznámi číslo časti a počet častí v aktuálnom súbore.
+    * Give the reference of the actual part and the total number of parts in the current file.
 
-* Ctrl+Shift+medzera
+* Ctrl+Shift+Space
 
-    * Prečíta maximálnu nameranú úroveň hlasitosti počas nahrávania.
-    * Stlačené dvakrát rýchlo za sebou vynuluje meranie.
+    * Used to determine the current level of the vu-meter, during recording.
+    * Double pressure reset it.
 
-* šípka dole
+* Down Arrow
 
-    * Oznámi pozíciu prehrávacieho kurzora.
-    * Takisto presunie kurzor na koncovú značku a oznámi pozíciu, ak bolo
-      niečo vybraté.
-    * V dialógu s nastavením hlasitosti povie nasledujúcu hodnotu.
-    * Predvolene táto hodnota nie je oznamovaná.
+    * Lets you see the current position of the playhead.
+    * This command also position the cursor at the location of the marker of the end of selection N, while giving the location of this marker if a selection has been made.
+    * In the volume dialog box, vocalise the next value that can be reached generally with downArrow.
+    * This value is not vocalized default.
 
 * End
 
-    * Presunie kurzor na koniec súboru a oznámi celkové trvanie nahrávky.
+    * Moves the playback cursor at the end of the current file and give the total time.
 
 * Home
 
-    * Presunie kurzor na začiatok súboru.
+    * Moves the playback cursor at the beginning of the current file.
 
-* ľavá šípka
+* Left Arrow
 
-    * vráti sa o sekundu späť a oznámi pozíciu kurzora.
-    * Oznamovanie sa dá vypnúť a zapnúť v nastaveniach doplnku.
+    * Lets make a brief return back of one second during playback, while giving the current duration.
+    * This duration is configurable in the options of mp3directcut.
 
 * N
 
-    * Umiestni koncovú značku.
+    * Used to confirm correct placement of the marker of the end of the selection N.
 
 * Page Down
 
-    * Prejde o 10 sekúnd dopredu a oznámi pozíciu kurzora.
-    * Oznamovanie sa dá vypnúť a zapnúť v nastaveniach doplnku.
+    * Lets make a leap forward of 10 seconds during playback, while giving the current duration.
+    * This duration is configurable in the options of mp3directcut.
 
 * Page Up
 
-    * Vráti sa o 10 sekúnd a oznámi pozíciu kurzora.
-    * Oznamovanie sa dá vypnúť a zapnúť v nastaveniach doplnku.
+    * Lets make a return back of 10 seconds during playback, while giving the current duration.
+    * This duration is configurable in the options of mp3directcut.
 
 * R
 
-    * Prepne do režimu nahrávania, kde je možné samotné nahrávanie spustiť
-      medzerou.
+    * Allows to prepare a record and whether you can press spacebar to start.
 
-* šípka doprava
+* Right Arrow
 
-    * Presunie kurzor o sekundu dopredu a oznámi pozíciu kurzora.
-    * Oznamovanie sa dá vypnúť a zapnúť v nastaveniach doplnku.
+    * Lets do a brief forward of one second during playback, while giving the current duration.
+    * This duration is configurable in the options of mp3directcut.
 
-* Ctrl+pravá šípka
+* Ctrl+Right Arrow
 
-    * Prejde na rozdelenie a oznámi čas.
+    * Moves to the next splitting point, while giving the current duration.
 
-* Ctrl+ľavá šípka
+* Ctrl+Left Arrow
 
-    * Prejde na predchádzajúce rozdelenie a oznámi pozíciu kurzora.
+    * Moves to the previous splitting point, while giving the current duration.
 
-* Shift+pravá šípka
+* Shift+Right Arrow
 
-    * Preskočí o 4 stotiny sekundy dopredu a oznámi pozíciu kurzora.
+    * Lets do a brief forward of four hundredths of seconds during playback, while giving the current duration.
 
-* Shift+ľavá šípka
+* Shift+Left Arrow
 
-    * Prejde o 4 stotiny sekundy dozadu a oznámi pozíciu kurzora.
+    * Lets do a brief backwards of four hundredths of seconds during playback, while giving the current duration.
 
 * S
 
-    * Zastaví prehrávanie a povie pozíciu kurzora.
+    * Used to stop the reading and give the current duration.
 
-* Medzera
+* Space
 
-    * V režime nahrávania spustí nahrávanie.
-    * Ak je už nahrávanie spustené, zastaví ho a presunie kurzor na začiatok
-      nahrávky.
-    * Ak je načítaný súbor, spustí prehrávanie.
-    * Ak je spustené prehrávanie, pozastaví ho a povie aktuálnu pozíciu
-      kurzora.
-    * Ak je prehrávanie pozastavené, spustí prehrávanie od pozície kurzora.
+    * If the recording is ready, start this recording.
+    * If a recording is in progress, stop it by positioning the cursor at the beginning.
+    * If a file is loaded, start the reading.
+    * If a read is in progress, allows to do a pause by giving current duration.
+    * If read is paused, allows to restart the reading from the current location.
 
-* Šípka hore
+* Up Arrow
 
-    * Oznámi pozíciu prehrávacieho kurzora.
-    * Presunie kurzor na počiatočnú značku a povie jej pozíciu.
-    * V dialógu s nastavením hlasitosti prečíta predchádzajúcu dostupnú
-      hodnotu.
-    * Predvolene táto hodnota nie je oznamovaná.
+    * Lets you see the current position of the playhead.
+    * This command also position the cursor at the location of the marker of the beginning of selection B, while giving the location of this marker if a selection has been made.
+    * In the volume dialog box, vocalise the previous value that can be reached generally with upArrow.
+    * This value is not vocalized default.
 
 * NVDA+H
 
-    * Otvorí pomocníka pre doplnok.
+    * Lets open the help of the current add-on.
 
-## Kompatibilita ##
+## Compatibility ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2019.3
-  and beyond.
+* This add-on is compatible with the versions of NVDA ranging from 2019.3 and beyond.
 
 ## Changes for 20240327.0.0
 
-* Fixed a bug that caused a log error when reloading plugins, thanks to Rob,
-  from nvda-addons mailing list;
+* Fixed a bug that caused a log error when reloading plugins, thanks to Rob, from nvda-addons mailing list;
 
 ## Changes for 20240326.0.0
 
 * Updated compatibility for nvda-2024.1.;
-* Deleted download link from readme, the download link for future updates
-  will now only be available from the add-on store.
+* Deleted download link from readme, the download link for future updates will now only be available from the add-on store.
 
 ## Changes for 20231229.0.0 ##
 
-* Added a backward compatible implementation to support speak on demand
-  mode, which will soon be available with nvda-2024.1.
+* Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.
 
 ## Changes for 20231007.0.0 ##
 
-* After placing the cutting points and after opening the cutting properties
-  window, with "Ctrl+N", adding accessibility to the title of this window by
-  indicating the part index.
-* In reading mode, after moving the start or end markers of selections with
-  keys 1 to 6 of the alphanumeric pad, addition of automatic start of
-  reading from the new position;
-* Fixed a bug that occurred when consulting the remaining time with
-  "control+shift+r" from the beginning of the track.
+* After placing the cutting points and after opening the cutting properties window, with "Ctrl+N", adding accessibility to the title of this window by indicating the part index.
+* In reading mode, after moving the start or end markers of selections with keys 1 to 6 of the alphanumeric pad, addition of automatic start of reading from the new position;
+* Fixed a bug that occurred when consulting the remaining time with "control+shift+r" from the beginning of the track.
 
 ## Changes for 20230728.0.0 ##
 
 * Applied the flake8 and mypy rules to the code;
-* Changed the minimum supported NVDA version to 2019.3 to support
-  annotations introduced in Python 3.
+* Changed the minimum supported NVDA version to 2019.3 to support annotations introduced in Python 3.
 
-## Changes for 20230508.0.0 and beyond ##
+## Changes for 20230607.0.0 ##
 
-* Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+* Added the following workflows:
+ * auto-update-translations - to automatically update translations from NVDA's translation system.
+ * release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
+ * manual-release.yaml: to build and release new versions of the add-on manually.
+* Updated translations.
+
+## Changes for version 20230508.0.0 and beyond ##
+
+* • Changed version number, minimum NVDA version and download link according to store conventions/requirements.
 
 ## Change for version 20.12 ##
 
-* Stop speech during recording and reading for the latest versions of
-  mp3directcut;
+* Stop speech during recording and reading for the latest versions of mp3directcut;
 * Fixed reading remaining time for new versions of NVDA using Python 3.
 
-## Verzia 19.2 ##
+## Change for version 19.02 ##
 
-* Nastavenie doplnku presunuté do stromu s nastaveniami NVDA;
-* Verzie sú číslované v tvare yy.mm (dve číslice pre rok, dve číslice pre
-  mesiac);
-* Pridaná podpora pre nové čísla verzii uvedené v NVDA 2č019.1.
+* Added the add-on's configuration in the settings panel available since nvda 2018.2;
+* Changed version numbering using YY.MM (The year in 2 digits, followed by a dot, followed by the month in 2 digits);
+* Added compatibility with the new versioning format of add-on, appeared since nvda 2019.1.
 
-## Verzia 4.0 ##
+## Change for version 4.0 ##
 
-* Pridaná kompatibilita s prostredím Python 2.7 a 3;
-* Opravené problémy, ktoré nastávali, ak boli v názvoch ciest znaky mimo
-  ASCII rozsahu.
+* Added the Compatibility of the add-on with both Python 2.7 and 3;
+* Fixed a bug with add-on paths that contain non-ASCII characters.
 
-## Verzia 3.0 ##
+## Change for version 3.0 ##
 
-* Používame nový modul gui.guiHelper na správne zobrazenie dialógu s
-  nastavením;
-* V prekladoch sa namiesto %s používa presnejšie pomenovanie premenných.
-* Upravené podľa zásad a pravidiel doplnkov.
+* Used the gui.guiHelper module to ensure the correct appearance of the addon's configuration dialog;
+* Used format instead of %s for formatted strings;
+* Used compliance with guidelines for implementation.
 
-## Verzia 2.3 ##
+## Change for version 2.3 ##
 
-* Pridaná GPL licencia;
-* Skratka na zistenie koncovej značky zmenená z ctrl+shift+n na ctrl+shift+e
-  lebo ctrl+shift+n nefunguje v posledných verziách mp3DirectCut;
-* Pridaná skratka ctrl+r, ktorá oznámi zrušenie výberu;
-* Drobné úpravy v aplikačnom module.
+* Added the GPL license to the addon;
+* Changed the shortcut of the script giving the end of selection from Ctrl + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work with the latest versions of mp3DirectCut;
+* Added a script to confirm that the selection has been canceled with 'Ctrl+r';
+* Made some corrections in the code of the appModule 'mp3directcut.py'.
 
-## Verzia 2.2 ##
+## Change for version 2.2 ##
 
-* Opravené funkcie na zistenie pozície počiatočnej a koncovej značky.
+* Correction of the scripts giving the selection markers' locations.
 
-## Verzia 2.1.1 ##
+## Change for version 2.1.1 ##
 
-* Odstránená funkcia na oznámenie celkového času. Celkový čas teraz oznamuje
-  funkcia na oznámenie uplynutého času.
-* Pridaná možnosť výrečnosti pri stlačení medzerníka;
-* Pridaná možnosť vypnúť a zapnúť oznamovanie umiestnenia značiek;
-* Pridaná možnosť zapnúť a vypnúť oznamovanie čísla časti pri prechode cez
-  rozdelenie;
-* Opravené oznamovanie pri použití šípky hore a dole;
-* Pridaný pomocník doplnku pod skratku nvda+h.
-* Nastavenie doplnku presunuté z menu nástroje do menu nastavenia.
+* Removing the script giving the total time and adding this information to the script giving the elapsed time;
+* Added the ability to enable or disable the announcements related to the space key in the module's configuration options, separately from other announcements;
+* Added the ability to enable or disable the announcement of placement of the selection marqueures in the module's configuration options;
+* Adding the announcement of the current part when moving through the cutting points;
+* Correction of announcements related to vertical keys;
+* Adding a script to open the help of the current add-on with 'NVDA+H';
+* Displacement of the add-on's configuration menu from the Tools menu to the Preferences menu of NVDA.
 
-## Verzia 2.1 ##
+## Change for version 2.1 ##
 
-* Pridané oznamovanie pri prechode na rozdelenie skratkou ctrl+pravá šípka;
-* Pridané oznamovanie pri prechode na rozdelenie skratkou ctrl+ľavá šípka;
-* Pridané oznamovanie pri pohybe skratkou shift+pravá šípka;
-* Pridané oznamovanie pri pohybe skratkou shift+ľavá šípka;
-* Opravený preklep v informácii o doplnku.
+* Adding a script to vocalize moving to the next splitting point with Control+Right Arrow;
+* Adding a script to vocalize moving to the previous splitting point with Control+Left Arrow;
+* Adding a script to vocalize the displacement of 4 hundredths of second ahead, with Shift+Right Arrow;
+* Adding a script to vocalize the displacement of 4 hundredths of second back, with Shift+Left Arrow;
+* Correction of the addon's summary from 'for mp3DirectCut' to 'mp3DirectCut'.
 
-## Verzia 2.0 ##
+## Change for version 2.0 ##
 
-* Skratka ctrl+shift+r oznamuje zostávajúci čas;
-* Opravené čítanie času, teraz číta aj hodiny;
-* Rozlišuje stotiny a tisíciny sekundy;
+* Adding a script to know the remaining time with 'Control Shift R';
+* Fixed reading durations including hours;
+* Added ability to differentiate thousandths or hundredths of seconds.
 
-## Verzia 1.1 ##
+## Change for version 1.1 ##
 
-* Pridaná kategória mp3DirectCut do dialógu klávesové skratky;
+* Added the ability to include the mp3DirectCut category into the Input Gestures;
 
-    * Zobrazí sa, len ak dialóg otvoríte z okna mp3DirectCut.
+    * They will be visible only during use of the mp3DirectCut software.
 
-* Pridaná možnosť nastaviť výrečnosť;
+* Added the ability to enable or disable automatic messages, in the tools menu of NVDA, item 'mp3DirectCut configuration';
 
-## Verzia 1.0 ##
+## Change for version 1.0 ##
 
-* Prvé vydanie.
-
-[[!tag dev stable]]
+* Initial version.

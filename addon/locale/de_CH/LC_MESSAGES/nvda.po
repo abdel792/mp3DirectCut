@@ -1,255 +1,260 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the mp3DirectCut package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: mp3DirectCut 2.2\n"
-"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2017-06-20 15:57+1000\n"
-"PO-Revision-Date: 2018-11-01 14:10+0100\n"
-"Last-Translator: Robert Hänggi <aarjay.robert@gmail.com>\n"
-"Language-Team: \n"
+"Project-Id-Version: nvdaaddons\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2026-04-06 03:56+0000\n"
+"PO-Revision-Date: 2026-04-06 14:22\n"
+"Last-Translator: \n"
+"Language-Team: German, Switzerland\n"
 "Language: de_CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: nvdaaddons\n"
+"X-Crowdin-Project-ID: 780748\n"
+"X-Crowdin-Language: de-CH\n"
+"X-Crowdin-File: mp3DirectCut.pot\n"
+"X-Crowdin-File-ID: 404\n"
+
+#. Translators: The label of the checkbox to enable or disable the spacebar announcements.
+#: addon\globalPlugins\mp3DirectCut\mp3DirectCutDialog.py:32
+#: addon\globalPlugins\mp3DirectCut\mp3DirectCutDialog.py:62
+msgid "Enable announcements of the space key"
+msgstr ""
+
+#: addon\globalPlugins\mp3DirectCut\mp3DirectCutDialog.py:39
+#: addon\globalPlugins\mp3DirectCut\mp3DirectCutDialog.py:69
+msgid "Announce the placement of the selection markers"
+msgstr ""
+
+#. Translators: The label of the checkbox to enable or disable the other announcements.
+#: addon\globalPlugins\mp3DirectCut\mp3DirectCutDialog.py:44
+#: addon\globalPlugins\mp3DirectCut\mp3DirectCutDialog.py:74
+msgid "Enable the other announces"
+msgstr ""
+
+#. Translators: The title of the add-on configuration dialog box.
+#: addon\globalPlugins\mp3DirectCut\mp3DirectCutDialog.py:57
+#, python-brace-format
+msgid "Configuration of the addon {0}"
+msgstr ""
 
 #. Translators: name of the option in the menu.
+#: addon\globalPlugins\mp3DirectCut\__init__.py:55
 #, python-brace-format
 msgid "{0} addon configuration"
-msgstr "{0} Konfiguration der Erweiterung"
+msgstr ""
 
+#. Translators: Message presented in input help mode.
+#: addon\globalPlugins\mp3DirectCut\__init__.py:74
 #, python-brace-format
 msgid "Allows you display the configuration dialog of {0} addon."
 msgstr ""
-"Ermöglicht es, den Konfigurationsdialog für die Erweiterung {0} zu öffnen."
 
-#. Translators: The label of the checkbox to enable or disable the spacebar announcements.
-msgid "Enable announcements of the space key"
-msgstr "Ansage der Leertaste aktivieren"
-
-msgid "Announce the placement of the selection markers"
-msgstr "gibt Die Platzierung der Markierungspunkte aus."
-
-#. Translators: The label of the checkbox to enable or disable the other announcements.
-msgid "Enable the other announces"
-msgstr "Andere Ansagen aktivieren"
-
-#. Translators: The title of the add-on configuration dialog box.
-#, python-brace-format
-msgid "Configuration of the addon {0}"
-msgstr "Konfiguration der Erweiterung {0}"
-
+#: addon\appModules\mp3directcut.py:44
 msgid "hours"
-msgstr "Stunden"
+msgstr ""
 
+#: addon\appModules\mp3directcut.py:44
 msgid "minutes"
-msgstr "Minuten"
+msgstr ""
 
+#: addon\appModules\mp3directcut.py:44
 msgid "seconds"
-msgstr "Sekunden"
+msgstr ""
 
+#: addon\appModules\mp3directcut.py:44
 msgid "hundredths"
-msgstr "Hundertstel"
+msgstr ""
 
+#: addon\appModules\mp3directcut.py:44
 msgid "thousandths"
-msgstr "Tausendstel"
+msgstr ""
 
 #. Translators: Message to inform that no selection has been realized.
+#: addon\appModules\mp3directcut.py:51
 msgid "No selection"
-msgstr "Keine Auswahl"
+msgstr ""
 
 #. Translators: Message to inform the user that the playback cursor is at the top of the file.
+#: addon\appModules\mp3directcut.py:53
 msgid "Beginning of the file."
-msgstr "Dateianfang."
+msgstr ""
 
 #. Translators: Message to inform the user that the playback cursor is at the end of the file.
+#: addon\appModules\mp3directcut.py:55
 msgid "End of the file."
-msgstr "Dateiende."
+msgstr ""
 
 #. Translators: Message to inform the user that not file is loaded.
-#, fuzzy
-msgid ""
-"Not file is loaded. Please check that you are in a file, open one with "
-"Control O,\tor R to start recording."
+#: addon\appModules\mp3directcut.py:57
+msgid "Not file is loaded. Please check that you are in a file, open one with Control O,\tor R to start recording."
 msgstr ""
-"Es ist keine Datei geladen. Bitte überprüfen Sie, ob Sie sich in einer Datei "
-"befinden. Sie können mittels STRG+O eine Datei öffnen oder mittels R mit der "
-"Aufzeichnung beginnen."
 
 #. Translators: Message to inform the user that the current command is not available in a recording mode.
-msgid ""
-"This command is not available in a recording mode, it is available only in a "
-"reading mode !"
+#: addon\appModules\mp3directcut.py:60
+msgid "This command is not available in a recording mode, it is available only in a reading mode !"
 msgstr ""
-"Dieser Befehl ist im Aufnahmemodus nicht verfügbar . Er ist nur im Lesemodus "
-"verfügbar!"
 
 #. Translators: Message to indicate the position of the selection start marker.
+#: addon\appModules\mp3directcut.py:62
 msgid "The marker of the beginning of selection B is at"
-msgstr "Der Marker für den Markierungsanfang der Auswahl B ist bei"
+msgstr ""
 
 #. Translators: Message to indicate the position of the selection end marker.
+#: addon\appModules\mp3directcut.py:64
 msgid "The marker of the End of selection N is at"
-msgstr "Der Marker für das Markierungsende der Auswahl N ist bei"
+msgstr ""
 
 #. Translators: Message to indicate the level of the vu-meter.
+#: addon\appModules\mp3directcut.py:66
 msgid "The level of the vu-meter is at"
-msgstr "Der Vu-Meter liegt bei"
+msgstr ""
 
 #. Translators: Message to indicate the total duration of the current file.
+#: addon\appModules\mp3directcut.py:68
 msgid "Total time: "
-msgstr "Gesamtzeit"
+msgstr ""
 
 #. Translators: Message to indicate the duration of the selection.
+#: addon\appModules\mp3directcut.py:70
 msgid "Duration of selection"
-msgstr "Dauer der Markierung"
+msgstr ""
 
 #. Translators: Message to indicate the actual part.
+#: addon\appModules\mp3directcut.py:72
 msgid "Actual part"
-msgstr "Derzeitiger Abschnitt"
+msgstr ""
 
 #. Translators: Message to inform that no selection was found.
+#: addon\appModules\mp3directcut.py:74
 msgid "Selection not found."
-msgstr "Auswahl nicht gefunden."
+msgstr ""
 
 #. Translators: Message to indicate that the information of the current part is not available.
+#: addon\appModules\mp3directcut.py:76
 msgid "Information specific to the actual part is not available."
-msgstr "Spezifische Informationen zum aktuellen Teil sind nicht verfügbar."
+msgstr ""
 
 #. Translators: Message to prompt the user to verify that no selection has been made.
+#: addon\appModules\mp3directcut.py:78
 msgid "Please check that no selection has been made."
-msgstr "Bitte überprüfen Sie, dass keine Auswahl getroffen wurde."
+msgstr ""
 
 #. Translators: Message to prompt the user to verify that it is not in recording mode.
+#: addon\appModules\mp3directcut.py:80
 msgid "Please chek that you are not in a recording mode."
 msgstr ""
-"Bitte stellen Sie sicher, dass sie sich nicht im Aufnahmemodus befinden."
 
 #. Translators: Message to inform the user that the recording is ready.
-#, fuzzy
-msgid ""
-"The recording is ready ! It remains only to press spacebar for begin the "
-"recording.\tThis same spacebar  will stop the recording !"
+#: addon\appModules\mp3directcut.py:82
+msgid "The recording is ready ! It remains only to press spacebar for begin the recording.\tThis same spacebar  will stop the recording !"
 msgstr ""
-"Die Aufnahme ist bereit ! Drücken Sie die Leertaste, um mit der Aufnahme zu "
-"beginnen. Die Leertaste kann auch für das Anhalten der Aufnahme gedrückt "
-"werden !"
 
 #. Translators: Message to inform the user that a recording is in progress.
-msgid ""
-"A recording is in progress, please press spacebar for stop it and start a "
-"new one."
+#: addon\appModules\mp3directcut.py:85
+msgid "A recording is in progress, please press spacebar for stop it and start a new one."
 msgstr ""
-"Eine Aufnahme wird gerade ausgeführt. Bitte drücken Sie die Leertaste um "
-"diese zu stoppen und starten Sie anschliessend eine neue Aufnahme."
 
 #. Translators: Message to inform the user that the recording is not ready.
+#: addon\appModules\mp3directcut.py:87
 msgid "The recording is not ready !"
-msgstr "Die Aufnahme ist noch nicht fertig"
+msgstr ""
 
 #. Translators: Message to indicate that the vu-meter is not available.
-#, fuzzy, python-brace-format
-msgid ""
-"The vu-meter is not available. Please verify if a recording is in progress,"
-"\tand that the checkbox enable the margin button is checked in the options "
-"of {0}."
+#: addon\appModules\mp3directcut.py:89
+#, python-brace-format
+msgid "The vu-meter is not available. Please verify if a recording is in progress,\tand that the checkbox enable the margin button is checked in the options of {0}."
 msgstr ""
-"Das vu-meter ist nicht verfügbar. Bitte überprüfen Sie, ob eine Aufzeichnung "
-"läuft und ob das Kontrollkästchen\"Schalter für Begrenzung aktivieren\" in "
-"den Optionen von {0} aktiviert ist."
 
 #. Translators: Message to confirm that the level of the vu-meter has been reset.
+#: addon\appModules\mp3directcut.py:92
 msgid "The level of the vu-meter has been reset !"
-msgstr "Der Wert des Vu-Meters wurde zurückgesetzt !"
+msgstr ""
 
 #. Translators: Message to confirm the placement of the selection start marker.
+#: addon\appModules\mp3directcut.py:94
 msgid "Start selection marker set."
-msgstr "Markierungsanfang Marker gesetzt."
+msgstr ""
 
 #. Translators: Message to confirm the placement of the selection end marker.
+#: addon\appModules\mp3directcut.py:96
 msgid "End selection marker set."
-msgstr "Markierungsende Marker gesetzt."
+msgstr ""
 
 #. Translators: Message to confirm that the selection has been canceled.
+#: addon\appModules\mp3directcut.py:98
 msgid "Selection canceled."
-msgstr "Auswahl abgebrochen."
+msgstr ""
 
+#: addon\appModules\mp3directcut.py:244
 msgid "of"
-msgstr "von"
+msgstr ""
 
+#: addon\appModules\mp3directcut.py:245
 msgid "Part"
-msgstr "Abschnitt"
+msgstr ""
 
 #. Translators: Message to inform the user that there is no remaining time.
+#: addon\appModules\mp3directcut.py:327
 msgid "No time remaining !"
-msgstr "Keine verbleibende Zeit!"
+msgstr ""
 
 #. Translators: Message to indicate the elapsed time.
+#: addon\appModules\mp3directcut.py:499 addon\appModules\mp3directcut.py:533
+#: addon\appModules\mp3directcut.py:555 addon\appModules\mp3directcut.py:558
 msgid "Elapsed time: "
-msgstr "Abgelaufene Zeit:"
-
-#, fuzzy
-msgid ""
-"Gives the duration from the beginning of the file to the current position of "
-"the playback cursor.\t\t\tIf pressed twice, gives the total duration."
 msgstr ""
-"Gibt die Dauer vom Anfang der Datei bis zur aktuellen Position des "
-"Wiedergabe-Cursors an. Bei zweimal Drücken wird die Gesamtdauer "
-"ausgesprochen."
+
+#. Translators, Message presented in input help mode.
+#: addon\appModules\mp3directcut.py:539
+msgid "Gives the duration from the beginning of the file to the current position of the playback cursor.\t\t\tIf pressed twice, gives the total duration."
+msgstr ""
+
+#. Translators: Message presented in input help mode.
+#: addon\appModules\mp3directcut.py:568
+msgid "Gives the time remaining from the current position of the playback cursor to the end of the file."
+msgstr ""
 
 #. Translators: Message to indicate the remaining time.
+#: addon\appModules\mp3directcut.py:581
 msgid "Remaining time: "
-msgstr "Verbleibende Zeit:"
-
-msgid ""
-"Gives the time remaining from the current position of the playback cursor to "
-"the end of the file."
 msgstr ""
-"Gibt die Restzeit von der aktuellen Wiedergabeposition bis zum Ende der "
-"Datei aus."
 
-msgid ""
-"Used to determine the current level of the vu-meter, during recording, "
-"double pressure reset it."
+#. Translators: Message presented in input help mode.
+#: addon\appModules\mp3directcut.py:586
+msgid "Used to determine the current level of the vu-meter, during recording, double pressure reset it."
 msgstr ""
-"Dient zur Bestimmung des aktuellen Niveaus des Vu-Meters während der "
-"Aufzeichnung. Doppelter Druck setzt ihn zurück."
 
-#, fuzzy
-msgid ""
-"Used to indicate the position of the marker of the beginning of selection B."
-"\t\t\tDouble pressure lets give you the duration of the selection."
+#. Translators: Message presented in input help mode.
+#: addon\appModules\mp3directcut.py:636
+msgid "Used to indicate the position of the marker of the beginning of selection B.\t\t\tDouble pressure lets give you the duration of the selection."
 msgstr ""
-"Kann verwendet werden, um die Position des Markers für den Beginn der "
-"Auswahl B anzuzeigen. Mit dem Doppeldruck können Sie die Dauer der Auswahl "
-"bestimmen."
 
-#, fuzzy
-msgid ""
-"Used to indicate the position of the marker of the end of selection N.\t\t"
-"\tDouble pressure gives recapitulatif positions B and N, and the duration of "
-"the selection."
+#. Translators: Message presented in input help mode.
+#: addon\appModules\mp3directcut.py:657
+msgid "Used to indicate the position of the marker of the end of selection N.\t\t\tDouble pressure gives recapitulatif positions B and N, and the duration of the selection."
 msgstr ""
-"Dient zur Anzeige der Position des Markers für das Ende der Auswahl N. Der "
-"doppelte Druck gibt eine Zusammenfassung der Positionen B und N und die "
-"Dauer der Auswahl."
 
-msgid ""
-"Give the reference of the actual part and the total number of parts in the "
-"current file."
+#. Translators: Message presented in input help mode.
+#: addon\appModules\mp3directcut.py:681
+msgid "Give the reference of the actual part and the total number of parts in the current file."
 msgstr ""
-"Gibt die Referenz des aktuellen Bereichs und die Gesamtzahl der Bereiche in "
-"der aktuellen Datei an."
 
-#. Translators: message presented in input mode.
+#: addon\appModules\mp3directcut.py:735
 msgid "Lets open the help of the current add-on."
-msgstr "Zeigt Hilfe zur aktuellen Erweiterung an."
+msgstr ""
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
+#: buildVars.py:24
 msgid "some commands to use mp3directcut with NVDA"
-msgstr "einige Befehle um mp3directcut mit NVDA zu nutzen"
+msgstr ""
+
+#. Brief changelog for this version
+#. Translators: what's new content for the add-on version to be shown in the add-on store
+#: buildVars.py:29
+msgid "Used the latest version of addonTemplate.\n"
+msgstr ""
+

@@ -1,240 +1,290 @@
-﻿# mp3DirectCut
+# mp3DirectCut #
 
 * Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
 
-# Presentation #
+# Презентація #
 
-This add-on improves the accessibility of the software mp3DirectCut with NVDA.
+Цей додаток покращує доступність програми mp3DirectCut з NVDA.
 
-It has been tested with versions of mp3DirectCut ranging from 212 up to 233.
+Цей додаток перевірявся з версіями mp3DirectCut від 212 до 223.
 
-## Keyboard shortcuts ##
+## Гарячі клавіші ##
 
-This addon offers the following commands:
+Цей додаток пропонує такі комади:
 
 * B
 
-    * Used to confirm correct placement of the marker of the beginning of the selection B.
+    * Використовується для підтвердження правильного розміщення маркера
+      початку виділення B.
 
 * Ctrl+Shift+B
 
-    * Used to indicate the position of the marker of the beginning of selection B.
-    * Double pressure lets give you the duration of the selection.
+    * Використовується, щоб вказати позицію маркера початку виділення B.
+    * Подвійне натискання дозволяє вказати тривалість виДІЛЕного елементА.
 
 * Ctrl+Shift+D
 
-    * Gives the duration from the beginning of the file to the current position of the playback cursor.
-    * Double pressure lets give you the total duration.
+    * Вказує тривалість від початку файлу до поточного положення курсора
+      відтворення.
+    * Подвійне натискання дозволяє визначити загальну тривалість.
 
 * Ctrl+R
 
-    * Confirms that the selection has been canceled.
+    * Підтверджує, що виДІЛЕННЯ було скасовано.
 
 * Ctrl+Shift+R
 
-    * Gives the time remaining from the current position of the playback cursor to the end of the file.
+    * Вказує час, що залишився від поточного положення курсора відтворення
+      до кінця файлу.
 
 * Ctrl+Shift+E
 
-    * Used to indicate the position of the marker of the end of selection N.
-    * Double pressure gives recapitulatif positions B and N, and the duration of the selection.
+    * Використовується, щоб вказати позицію маркера кінця виділення N.
+    * Подвійне натискання надає повторення позицій B і N, а також тривалість
+      виДІЛЕного елемента.
 
 * Ctrl+Shift+P
 
-    * Give the reference of the actual part and the total number of parts in the current file.
+    * Вказує на певну частину файлу і загальну кількість частин цього файлу.
 
-* Ctrl+Shift+Space
+* Ctrl+Shift+пробіл
 
-    * Used to determine the current level of the vu-meter, during recording.
-    * Double pressure reset it.
+    * Використовується для визначення поточного рівня vu-meter під час
+      запису.
+    * Подвійне натискання скидає його.
 
-* Down Arrow
+* Стрілка вниз
 
-    * Lets you see the current position of the playhead.
-    * This command also position the cursor at the location of the marker of the end of selection N, while giving the location of this marker if a selection has been made.
-    * In the volume dialog box, vocalise the next value that can be reached generally with downArrow.
-    * This value is not vocalized default.
+    * Дозволяє побачити поточне положення заголовка відтворення.
+    * Ця команда також поміщає курсор в положення маркера кінця виділення N,
+      вказуючи при цьому місце розташування цього маркера, якщо виділення
+      було зроблено.
+    * В діалозі гучності озвучується наступне значення, яке може бути
+      виконане за допомогою стрілки вниз.
+    * Це значення початково не озвучується.
 
-* End
+* В кінець
 
-    * Moves the playback cursor at the end of the current file and give the total time.
+    * Переміщує курсор відтворення в кінець поточного файлу і вказує
+      загальну тривалість.
 
-* Home
+* На початок
 
-    * Moves the playback cursor at the beginning of the current file.
+    * Переміщує курсор відтворення на початок поточного файлу.
 
-* Left Arrow
+* Стрілка вліво
 
-    * Lets make a brief return back of one second during playback, while giving the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Дозволяє зробити коротке перемотування назад на 1 секунду під час
+      відтворення, вказавши поточну тривалість.
+    * Ця тривалість налаштовується в налаштуваннях mp3DirectCut.
 
 * N
 
-    * Used to confirm correct placement of the marker of the end of the selection N.
+    * Використовується для підтвердження правильного розміщення маркера
+      кінця виділення N.
 
-* Page Down
+* Сторінка вниз
 
-    * Lets make a leap forward of 10 seconds during playback, while giving the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Дозволяє промотати вперед на 10 секунд під час відтворення, вказавши
+      поточну тривалість.
+    * Ця тривалість налаштовується в налаштуваннях mp3DirectCut.
 
-* Page Up
+* Сторінка вгору
 
-    * Lets make a return back of 10 seconds during playback, while giving the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Дозволяє промотати назад на 10 секунд під час відтворення, вказавши
+      поточну тривалість.
+    * Ця тривалість налаштовується в налаштуваннях mp3DirectCut.
 
 * R
 
-    * Allows to prepare a record and whether you can press spacebar to start.
+    * Дозволяє підготувати запис і визначити, чи можна натискати пробіл щоб
+      почати.
 
-* Right Arrow
+* Стрілка вправо
 
-    * Lets do a brief forward of one second during playback, while giving the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Дозволяє зробити коротке перемотування на 1 секунду вперед під час
+      відтворення, вказавши поточну тривалість.
+    * Ця тривалість налаштовується в налаштуваннях mp3DirectCut.
 
-* Ctrl+Right Arrow
+* Ctrl+стрілка вправо
 
-    * Moves to the next splitting point, while giving the current duration.
+    * Переходить до наступної точки поділу, вказавши поточну тривалість.
 
-* Ctrl+Left Arrow
+* Ctrl+стрілка вліво
 
-    * Moves to the previous splitting point, while giving the current duration.
+    * Переходить до попередньої точки поділу, вказавши поточну тривалість.
 
-* Shift+Right Arrow
+* Shift+стрілка вправо
 
-    * Lets do a brief forward of four hundredths of seconds during playback, while giving the current duration.
+    * Дозволяє зробити коротке перемотування вперед на чотири сотих секунди
+      під час відтворення, вказавши поточну тривалість.
 
-* Shift+Left Arrow
+* Shift+стрілка вліво
 
-    * Lets do a brief backwards of four hundredths of seconds during playback, while giving the current duration.
+    * Дозволяє зробити коротке перемотування назад на чотири сотих секунди
+      під час відтворення, вказавши поточну тривалість.
 
 * S
 
-    * Used to stop the reading and give the current duration.
+    * Використовується для зупинки зчитування і вказування поточної
+      тривалості.
 
-* Space
+* Пробіл
 
-    * If the recording is ready, start this recording.
-    * If a recording is in progress, stop it by positioning the cursor at the beginning.
-    * If a file is loaded, start the reading.
-    * If a read is in progress, allows to do a pause by giving current duration.
-    * If read is paused, allows to restart the reading from the current location.
+    * Якщо запис готовий, запустити цей запис.
+    * Якщо запис триває, зупиніть його, встановивши курсор на початок.
+    * Якщо файл завантажено, почніть зчитування.
+    * Якщо зчитування триває, дозволяється поставити паузу, вказавши поточну
+      тривалість.
+    * Якщо зчитування призупинено, дозволяється перезапустити зчитування з
+      поточного місця.
 
-* Up Arrow
+* Стрілка вгору
 
-    * Lets you see the current position of the playhead.
-    * This command also position the cursor at the location of the marker of the beginning of selection B, while giving the location of this marker if a selection has been made.
-    * In the volume dialog box, vocalise the previous value that can be reached generally with upArrow.
-    * This value is not vocalized default.
+    * Дозволяє побачити поточне положення заголовка відтворення.
+    * Ця команда також поміщає курсор в місце розташування маркера початку
+      виділення B, при цьому вказується місце розташування цього маркера,
+      якщо виділення було зроблено.
+    * В діалозі гучності озвучується наступне значення, яке може бути
+      виконане за допомогою стрілки вгору.
+    * Це значення початково не озвучується.
 
 * NVDA+H
 
-    * Lets open the help of the current add-on.
+    * Дозволяє відкрити довідку поточного додатка.
 
-## Compatibility ##
+## Сумісність ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2019.3 and beyond.
+* This add-on is compatible with the versions of NVDA ranging from 2019.3
+  and beyond.
 
 ## Changes for 20240327.0.0
 
-* Fixed a bug that caused a log error when reloading plugins, thanks to Rob, from nvda-addons mailing list;
+* Fixed a bug that caused a log error when reloading plugins, thanks to Rob,
+  from nvda-addons mailing list;
 
 ## Changes for 20240326.0.0
 
 * Updated compatibility for nvda-2024.1.;
-* Deleted download link from readme, the download link for future updates will now only be available from the add-on store.
+* Deleted download link from readme, the download link for future updates
+  will now only be available from the add-on store.
 
 ## Changes for 20231229.0.0 ##
 
-* Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.
+* Added a backward compatible implementation to support speak on demand
+  mode, which will soon be available with nvda-2024.1.
 
 ## Changes for 20231007.0.0 ##
 
-* After placing the cutting points and after opening the cutting properties window, with "Ctrl+N", adding accessibility to the title of this window by indicating the part index.
-* In reading mode, after moving the start or end markers of selections with keys 1 to 6 of the alphanumeric pad, addition of automatic start of reading from the new position;
-* Fixed a bug that occurred when consulting the remaining time with "control+shift+r" from the beginning of the track.
+* After placing the cutting points and after opening the cutting properties
+  window, with "Ctrl+N", adding accessibility to the title of this window by
+  indicating the part index.
+* In reading mode, after moving the start or end markers of selections with
+  keys 1 to 6 of the alphanumeric pad, addition of automatic start of
+  reading from the new position;
+* Fixed a bug that occurred when consulting the remaining time with
+  "control+shift+r" from the beginning of the track.
 
 ## Changes for 20230728.0.0 ##
 
 * Applied the flake8 and mypy rules to the code;
-* Changed the minimum supported NVDA version to 2019.3 to support annotations introduced in Python 3.
+* Changed the minimum supported NVDA version to 2019.3 to support
+  annotations introduced in Python 3.
 
-## Changes for 20230607.0.0 ##
+## Changes for 20230508.0.0 and beyond ##
 
-* Added the following workflows:
- * auto-update-translations - to automatically update translations from NVDA's translation system.
- * release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
- * manual-release.yaml: to build and release new versions of the add-on manually.
-* Updated translations.
+* Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
-## Changes for version 20230508.0.0 and beyond ##
+## Зміни у версії 20.12 ##
 
-* • Changed version number, minimum NVDA version and download link according to store conventions/requirements.
+* Зупинено мовлення під час запису та зчитування в новіших версіях
+  mp3DirectCut;
+* Виправлено час зчитування часу, що залишився, для нових версій NVDA на
+  Python 3.
 
-## Change for version 20.12 ##
+## Зміни у версії 19.02 ##
 
-* Stop speech during recording and reading for the latest versions of mp3directcut;
-* Fixed reading remaining time for new versions of NVDA using Python 3.
+* Додано конфігурацію додатка в панель налаштувань, яка  доступна, починаючи
+  з NVDA 2018.2;
+* Змінено нумерацію версій з використанням РР.ММ (рік з 2 цифр, потім ., а
+  потім місяць з 2 цифр);
+* Додано сумісність з форматом нового версіювання додатка, який доступний в
+  NVDA 2019.1.
 
-## Change for version 19.02 ##
+## Зміни у версії 4.0 ##
 
-* Added the add-on's configuration in the settings panel available since nvda 2018.2;
-* Changed version numbering using YY.MM (The year in 2 digits, followed by a dot, followed by the month in 2 digits);
-* Added compatibility with the new versioning format of add-on, appeared since nvda 2019.1.
+* Додано сумісність додатка з Python 2.7  і 3;
+* Виправлено помилку з додатковими шляхами, які містять символи, відмінні
+  від ASCII.
 
-## Change for version 4.0 ##
+## Зміни у версії 3.0 ##
 
-* Added the Compatibility of the add-on with both Python 2.7 and 3;
-* Fixed a bug with add-on paths that contain non-ASCII characters.
+* Використовується модуль gui.guiHelper  для забезпечення правильного
+  відображення діалогу конфігурації додатка;
+* Використовується формат замість %s для форматованих рядків;
+* Використовується дотримання керівних принципів з реалізації.
 
-## Change for version 3.0 ##
+## Зміни у версії 2.3 ##
 
-* Used the gui.guiHelper module to ensure the correct appearance of the addon's configuration dialog;
-* Used format instead of %s for formatted strings;
-* Used compliance with guidelines for implementation.
+* Додано ліцензію GPL для додатка;
+* Змінено комбінацію клавіш скрипта, який вказує кінець виділення, з Ctrl +
+  Shift + N на Ctrl + Shift + E , оскільки комбінація клавіш Ctrl + Shift +
+  N  не працює з новішими версіями mp3DirectCut;
+* Додано сценарій для підтвердження скасування виділення за допомогою
+  'Ctrl+r';
+* Внесено деякі виправлення в код app модуля програми 'mp3directcut.py'.
 
-## Change for version 2.3 ##
+## Зміни у версії 2.2 ##
 
-* Added the GPL license to the addon;
-* Changed the shortcut of the script giving the end of selection from Ctrl + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work with the latest versions of mp3DirectCut;
-* Added a script to confirm that the selection has been canceled with 'Ctrl+r';
-* Made some corrections in the code of the appModule 'mp3directcut.py'.
+* Виправлено скрипти, які вказують розташування маркерів виділення.
 
-## Change for version 2.2 ##
+## Зміни у версії 2.1.1 ##
 
-* Correction of the scripts giving the selection markers' locations.
+* Видаленно скрипт із зазначенням загального часу і додано цю інформацію до
+  скрипта, який вказує час, що залишився;
+* Додано можливість вмикати або вимикати оголошення, пов'язані з клавішею
+  пробіл в параметрах конфігурації модуля окремо від інших оголошень;
+* Додано можливість вмикати або вимикати оголошення про розміщення маркерів
+  вибору в параметрах конфігурації модуля;
+* Додавання оголошення поточної частини під час переміщення по точках
+  різання;
+* Виправлення оголошень, пов’язаних з вертикальними клавішами;
+* Додано скрипт для відкриття довідки поточного додатка за допомогою
+  комбінації клавіш 'NVDA+H';
+* Переміщення меню конфігурації додатка з меню інструментів до меню
+  налаштувань NVDA.
 
-## Change for version 2.1.1 ##
+## Зміни у версії 2.1 ##
 
-* Removing the script giving the total time and adding this information to the script giving the elapsed time;
-* Added the ability to enable or disable the announcements related to the space key in the module's configuration options, separately from other announcements;
-* Added the ability to enable or disable the announcement of placement of the selection marqueures in the module's configuration options;
-* Adding the announcement of the current part when moving through the cutting points;
-* Correction of announcements related to vertical keys;
-* Adding a script to open the help of the current add-on with 'NVDA+H';
-* Displacement of the add-on's configuration menu from the Tools menu to the Preferences menu of NVDA.
+* Додано скрипт для озвучення переміщення до наступної точки поділу за
+  допомогою Control+стрілка вправо;
+* Додано скрипт для озвучення переміщення до попередньої точки поділу за
+  допомогою Control+стрілка вліво;
+* Додано опис для озвучування перемотування на 4 сотих секунди вперед за
+  допомогою Shift+стрілка вправо;
+* Додано опис для озвучування перемотування на 4 сотих секунди назад за
+  допомогою Shift+стрілка вліво;
+* Виправлено назву додатка з 'for mp3DirectCut'  на 'mp3DirectCut'.
 
-## Change for version 2.1 ##
+## Зміни у версії 2.0 ##
 
-* Adding a script to vocalize moving to the next splitting point with Control+Right Arrow;
-* Adding a script to vocalize moving to the previous splitting point with Control+Left Arrow;
-* Adding a script to vocalize the displacement of 4 hundredths of second ahead, with Shift+Right Arrow;
-* Adding a script to vocalize the displacement of 4 hundredths of second back, with Shift+Left Arrow;
-* Correction of the addon's summary from 'for mp3DirectCut' to 'mp3DirectCut'.
+* Додано скрипт для визначення часу що залишився за допомогою 'Control Shift
+  R';
+* Виправлено зчитування тривалості, включаючи години;
+* Додано можливість розрізняти тисячні або соті частки секунди.
 
-## Change for version 2.0 ##
+## Зміни у версії 1.1 ##
 
-* Adding a script to know the remaining time with 'Control Shift R';
-* Fixed reading durations including hours;
-* Added ability to differentiate thousandths or hundredths of seconds.
+* Додано можливість включення категорії mp3DirectCut в жести вводу;
 
-## Change for version 1.1 ##
+    * Вона буде доступною лише під час використання програми mp3DirectCut.
 
-* Added the ability to include the mp3DirectCut category into the Input Gestures;
+* Додано можливість вмикати або вимикати автоматичні повідомлення в меню
+  інструментів NVDA, розділ 'mp3DirectCut configuration';
 
-    * They will be visible only during use of the mp3DirectCut software.
+## Зміни у версії 1.0 ##
 
-* Added the ability to enable or disable automatic messages, in the tools menu of NVDA, item 'mp3DirectCut configuration';
+* Перша версія.
 
-## Change for version 1.0 ##
-
-* Initial version.
+[[!tag dev stable]]

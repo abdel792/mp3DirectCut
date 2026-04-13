@@ -1,240 +1,286 @@
-﻿# mp3DirectCut
+# mp3DirectCut #
 
-* Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
+* Tekijät: Abdel, Rémy, Abdellah zineddine ja Jean-François COLAS
 
-# Presentation #
+# Esittely #
 
-This add-on improves the accessibility of the software mp3DirectCut with NVDA.
+Tämä lisäosa parantaa mp3DirectCut-ohjelman esteettömyyttä NVDA:n kanssa.
 
-It has been tested with versions of mp3DirectCut ranging from 212 up to 233.
+Toimivuus on testattu mp3DirectCutin versioilla 2.12 - 2.23.
 
-## Keyboard shortcuts ##
+## Pikanäppäimet ##
 
-This addon offers the following commands:
+Tämä lisäosa tarjoaa seuraavat komennot:
 
 * B
 
-    * Used to confirm correct placement of the marker of the beginning of the selection B.
+    * Asettaa valinnan aloitusmerkin.
 
-* Ctrl+Shift+B
+* Ctrl+Vaihto+B
 
-    * Used to indicate the position of the marker of the beginning of selection B.
-    * Double pressure lets give you the duration of the selection.
+    * Ilmoittaa valinnan aloitusmerkin sijainnin.
+    * Kahdesti painettaessa ilmoitetaan valinnan kesto.
 
-* Ctrl+Shift+D
+* Ctrl+Vaihto+D
 
-    * Gives the duration from the beginning of the file to the current position of the playback cursor.
-    * Double pressure lets give you the total duration.
+    * Ilmoittaa keston tiedoston alusta toistokohdistimen nykyiseen
+      sijaintiin saakka.
+    * Kahdesti painettaessa ilmoitetaan kokonaiskesto.
 
 * Ctrl+R
 
-    * Confirms that the selection has been canceled.
+    * Vahvistaa, että valinta on peruttu.
 
-* Ctrl+Shift+R
+* Ctrl+Vaihto+R
 
-    * Gives the time remaining from the current position of the playback cursor to the end of the file.
+    * Ilmoittaa jäljellä olevan ajan toistokohdistimen nykyisestä
+      sijainnista tiedoston loppuun saakka.
 
-* Ctrl+Shift+E
+* Ctrl+Vaihto+E
 
-    * Used to indicate the position of the marker of the end of selection N.
-    * Double pressure gives recapitulatif positions B and N, and the duration of the selection.
+    * Ilmoittaa valinnan lopetusmerkin sijainnin.
+    * Kahdesti painettaessa annetaan yhteenveto valinnan aloitus- ja
+      lopetusmerkkien sijainneista sekä valinnan kestosta.
 
-* Ctrl+Shift+P
+* Ctrl+Vaihto+P
 
-    * Give the reference of the actual part and the total number of parts in the current file.
+    * Ilmoittaa nykyisen osan sekä tiedostossa olevien osien kokonaismäärän.
 
-* Ctrl+Shift+Space
+* Ctrl+Vaihto+Väli
 
-    * Used to determine the current level of the vu-meter, during recording.
-    * Double pressure reset it.
+    * Ilmoittaa VU-mittarin nykyisen tason äänityksen aikana.
+    * Kahdesti painaminen nollaa tason.
 
-* Down Arrow
+* Nuoli alas
 
-    * Lets you see the current position of the playhead.
-    * This command also position the cursor at the location of the marker of the end of selection N, while giving the location of this marker if a selection has been made.
-    * In the volume dialog box, vocalise the next value that can be reached generally with downArrow.
-    * This value is not vocalized default.
+    * Ilmoittaa toistokohdistimen nykyisen sijainnin.
+    * Lisäksi, mikäli valinta on tehty, tämä komento siirtää kohdistimen
+      valinnan lopetusmerkin kohdalle ja ilmoittaa sen sijainnin.
+    * Ilmoittaa äänenvoimakkuusvalintaikkunassa seuraavan arvon.
+    * Oletuksena arvoa ei ilmoiteta.
 
 * End
 
-    * Moves the playback cursor at the end of the current file and give the total time.
+    * Siirtää toistokohdistimen tiedoston loppuun ja ilmoittaa
+      kokonaiskeston.
 
 * Home
 
-    * Moves the playback cursor at the beginning of the current file.
+    * Siirtää toistokohdistimen tiedoston alkuun.
 
-* Left Arrow
+* Nuoli vasemmalle
 
-    * Lets make a brief return back of one second during playback, while giving the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Siirtää toistettaessa sekunnin taaksepäin ja ilmoittaa nykyisen
+      sijainnin.
+    * Mp3DirectCutin asetuksista on mahdollista määrittää, paljonko tämä
+      komento siirtää.
 
 * N
 
-    * Used to confirm correct placement of the marker of the end of the selection N.
+    * Asettaa valinnan lopetusmerkin.
 
-* Page Down
+* Page down
 
-    * Lets make a leap forward of 10 seconds during playback, while giving the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Siirtää toistettaessa kymmenen sekuntia eteenpäin ja ilmoittaa
+      nykyisen sijainnin.
+    * Mp3DirectCutin asetuksista on mahdollista määrittää, paljonko tämä
+      komento siirtää.
 
-* Page Up
+* Page up
 
-    * Lets make a return back of 10 seconds during playback, while giving the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Siirtää toistettaessa 10 sekuntia taaksepäin ja ilmoittaa nykyisen
+      sijainnin.
+    * Mp3DirectCutin asetuksista on mahdollista määrittää, paljonko tämä
+      komento siirtää.
 
 * R
 
-    * Allows to prepare a record and whether you can press spacebar to start.
+    * Valmistelee sovelluksen äänitystä varten. Äänitys aloitetaan
+      painamalla Väli-näppäintä.
 
-* Right Arrow
+* Nuoli oikealle
 
-    * Lets do a brief forward of one second during playback, while giving the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Siirtää toistettaessa sekunnin eteenpäin ja ilmoittaa nykyisen
+      sijainnin.
+    * Mp3DirectCutin asetuksista on mahdollista määrittää, paljonko tämä
+      komento siirtää.
 
-* Ctrl+Right Arrow
+* Ctrl+Nuoli oikealle
 
-    * Moves to the next splitting point, while giving the current duration.
+    * Siirtää seuraavaan leikkauskohtaan ja ilmoittaa sen sijainnin.
 
-* Ctrl+Left Arrow
+* Ctrl+Nuoli vasemmalle
 
-    * Moves to the previous splitting point, while giving the current duration.
+    * Siirtää edelliseen leikkauskohtaan ja ilmoittaa sen sijainnin.
 
-* Shift+Right Arrow
+* Vaihto+Nuoli oikealle
 
-    * Lets do a brief forward of four hundredths of seconds during playback, while giving the current duration.
+    * Siirtää toistettaessa neljä sekunnin sadasosaa eteenpäin ja ilmoittaa
+      nykyisen sijainnin.
 
-* Shift+Left Arrow
+* Vaihto+Nuoli vasemmalle
 
-    * Lets do a brief backwards of four hundredths of seconds during playback, while giving the current duration.
+    * Siirtää toistettaessa neljä sekunnin sadasosaa taaksepäin ja ilmoittaa
+      nykyisen sijainnin.
 
 * S
 
-    * Used to stop the reading and give the current duration.
+    * Keskeyttää toiston ja ilmoittaa nykyisen sijainnin.
 
-* Space
+* Väli
 
-    * If the recording is ready, start this recording.
-    * If a recording is in progress, stop it by positioning the cursor at the beginning.
-    * If a file is loaded, start the reading.
-    * If a read is in progress, allows to do a pause by giving current duration.
-    * If read is paused, allows to restart the reading from the current location.
+    * Aloittaa äänityksen, jos se on valmiina aloitettavaksi.
+    * Keskeyttää äänityksen, mikäli se on käynnissä, ja siirtää tiedoston
+      alkuun.
+    * Aloittaa toiston, mikäli tiedosto on avoinna.
+    * Pysäyttää toiston, mikäli se on käynnissä, ja ilmoittaa nykyisen
+      sijainnin.
+    * Jatkaa toistoa nykyisestä sijainnista, mikäli se on pysäytetty.
 
-* Up Arrow
+* Nuoli ylös
 
-    * Lets you see the current position of the playhead.
-    * This command also position the cursor at the location of the marker of the beginning of selection B, while giving the location of this marker if a selection has been made.
-    * In the volume dialog box, vocalise the previous value that can be reached generally with upArrow.
-    * This value is not vocalized default.
+    * Ilmoittaa toistokohdistimen nykyisen sijainnin.
+    * Mikäli valinta on tehty, siirtää toistokohdistimen valinnan
+      aloitusmerkin kohdalle ja ilmoittaa sen sijainnin.
+    * Ilmoittaa äänenvoimakkuusvalintaikkunassa edellisen arvon.
+    * Oletuksena arvoa ei ilmoiteta.
 
 * NVDA+H
 
-    * Lets open the help of the current add-on.
+    * Avaa lisäosan ohjeen.
 
-## Compatibility ##
+## Yhteensopivuus ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2019.3 and beyond.
+* Tämä lisäosa on yhteensopiva NVDA 2019.3:n ja sitä uudempien versioiden
+  kanssa.
 
-## Changes for 20240327.0.0
+## Muutokset versiossa 20240327.0.0
 
-* Fixed a bug that caused a log error when reloading plugins, thanks to Rob, from nvda-addons mailing list;
+* Korjattu bugi, joka aiheutti lokivirheen liitännäisiä
+  uudelleenladattaessa. (kiitos Robille NVDA:n lisäosien postituslistalta).
 
-## Changes for 20240326.0.0
+## Muutokset versiossa 20240326.0.0
 
-* Updated compatibility for nvda-2024.1.;
-* Deleted download link from readme, the download link for future updates will now only be available from the add-on store.
+* Päivitetty yhteensopivuus NVDA 2024.1:lle.
+* Latauslinkki poistettu dokumentaatiosta. Tulevien versioiden latauslinkit
+  löytyvät jatkossa vain lisäosakaupasta.
 
-## Changes for 20231229.0.0 ##
+## Muutokset versiossa 20231229.0.0 ##
 
-* Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.
+* Lisätty taaksepäin yhteensopiva toteutus pyydettäessä-puhetilalle, joka on
+  pian saatavilla NVDA 2024.1:ssä.
 
-## Changes for 20231007.0.0 ##
+## Muutokset versiossa 20231007.0.0 ##
 
-* After placing the cutting points and after opening the cutting properties window, with "Ctrl+N", adding accessibility to the title of this window by indicating the part index.
-* In reading mode, after moving the start or end markers of selections with keys 1 to 6 of the alphanumeric pad, addition of automatic start of reading from the new position;
-* Fixed a bug that occurred when consulting the remaining time with "control+shift+r" from the beginning of the track.
+* Leikkauskohtien asettamisen ja leikkausominaisuuksien ikkunan avaamisen
+  jälkeen voit lisätä saavutettavuuden ikkunan otsikolle osan indeksillä
+  Ctrl+N-näppäinkomentoa käyttäen.
+* Lisätty automaattinen lukemisen aloitus uudesta sijainnista, kun
+  lukutilassa valinnan aloitus- tai lopetuskohtia siirretään
+  numeronäppäimillä 1-6.
+* Korjattu bugi, joka ilmeni puhuttaessa jäljellä olevaa aikaa tiedoston
+  alussa Ctrl+Vaihto+R-näppäinkomennolla.
 
-## Changes for 20230728.0.0 ##
+## Muutokset versiossa 20230728.0.0 ##
 
-* Applied the flake8 and mypy rules to the code;
-* Changed the minimum supported NVDA version to 2019.3 to support annotations introduced in Python 3.
+* Sovellettu koodiin flake8- ja mypy-sääntöjä.
+* Muutettu NVDA:n tuetuksi vähimmäisversioksi 2019.3 Python 3:ssa
+  esiteltyjen merkintöjen tukemiseksi.
 
-## Changes for 20230607.0.0 ##
+## Muutokset versiossa 20230508.0.0 ja sitä uudemmissa ##
 
-* Added the following workflows:
- * auto-update-translations - to automatically update translations from NVDA's translation system.
- * release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
- * manual-release.yaml: to build and release new versions of the add-on manually.
-* Updated translations.
+* Versionumero, NVDA-version vähimmäisvaatimus ja latauslinkki muutettu
+  lisäosakaupan käytäntöjen/vaatimusten mukaisiksi.
 
-## Changes for version 20230508.0.0 and beyond ##
+## Muutokset versiossa 20.12 ##
 
-* • Changed version number, minimum NVDA version and download link according to store conventions/requirements.
+* Keskeytä puhe nauhoituksen ja mp3directcutin viimeisimmän version
+  tarkistuksen aikana;
+* Korjattu jäljellä olevan ajan lukeminen uusilla Python 3:a käyttävillä
+  NVDA-versioilla.
 
-## Change for version 20.12 ##
+## Muutokset versiossa 19.02 ##
 
-* Stop speech during recording and reading for the latest versions of mp3directcut;
-* Fixed reading remaining time for new versions of NVDA using Python 3.
+* Lisäosan asetukset lisätty asetuspaneeliin, joka on ollut käytössä NVDA
+  2018.2:sta lähtien;
+* Versionumerointi muutettu muotoon vv.kk (vuosi kahdella numerolla, piste
+  ja kuukausi kahdella numerolla);
+* Lisätty yhteensopivuus lisäosien uudelle versionumeroinnille, joka
+  otettiin käyttöön NVDA 2019.1:ssä.
 
-## Change for version 19.02 ##
+## Muutokset versiossa 4.0 ##
 
-* Added the add-on's configuration in the settings panel available since nvda 2018.2;
-* Changed version numbering using YY.MM (The year in 2 digits, followed by a dot, followed by the month in 2 digits);
-* Added compatibility with the new versioning format of add-on, appeared since nvda 2019.1.
+* Lisäosa on nyt yhteensopiva sekä Python 2.7:n että 3:n kanssa;
+* Korjattu bugi lisäosan hakemistopolkujen nimissä, jotka sisältävät muita
+  kuin ASCII-merkkejä.
 
-## Change for version 4.0 ##
+## Muutokset versiossa 3.0 ##
 
-* Added the Compatibility of the add-on with both Python 2.7 and 3;
-* Fixed a bug with add-on paths that contain non-ASCII characters.
+* Käytetään gui.guiHelper-moduulia lisäosan asetusvalintaikkunan
+  asianmukaisen ulkoasun varmistamiseen;
+* Käytetään muotoa %s:n asemesta muotoilluille merkkijonoille;
+* Noudatetaan toteutusohjeita.
 
-## Change for version 3.0 ##
+## Muutokset versiossa 2.3 ##
 
-* Used the gui.guiHelper module to ensure the correct appearance of the addon's configuration dialog;
-* Used format instead of %s for formatted strings;
-* Used compliance with guidelines for implementation.
+* Lisätty GPL-lisenssi;
+* Muutettu valinnan lopetuskohdan ilmoittavan komennon pikanäppäin
+  Ctrl+Shift+N:stä Ctrl+Shift+E:ksi, koska ensin mainittu ei toimi
+  mp3DirectCutin uusimmissa versioissa;
+* Lisätty skripti, joka varmistaa näppäinkomennolla Ctrl+R, että valinta on
+  peruttu;
+* Tehty joitakin korjauksia mp3directcut.py-sovellusmoduulin koodiin.
 
-## Change for version 2.3 ##
+## Muutokset versiossa 2.2 ##
 
-* Added the GPL license to the addon;
-* Changed the shortcut of the script giving the end of selection from Ctrl + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work with the latest versions of mp3DirectCut;
-* Added a script to confirm that the selection has been canceled with 'Ctrl+r';
-* Made some corrections in the code of the appModule 'mp3directcut.py'.
+* Valitun alueen  merkkien sijainnit ilmoittavat skriptit korjattu.
 
-## Change for version 2.2 ##
+## Muutokset versiossa 2.1.1 ##
 
-* Correction of the scripts giving the selection markers' locations.
+* Kokonaisajan ilmoittava skripti poistettu ja lisätty sen antamat tiedot
+  jäljellä olevan ajan ilmoitukseen;
+* Lisäosan asetuksiin lisätty mahdollisuus muista ilmoituksista erillisten
+  välilyöntinäppäimeen liittyvien ilmoitusten käyttöön ottamiseen tai
+  käytöstä poistamiseen;
+* Lisäosan asetuksiin lisätty mahdollisuus valintamerkkien
+  sijainti-ilmoituksen käyttöön ottamiseen tai käytöstä poistamiseen;
+* Lisätty mahdollisuus nykyisen sijainnin ilmoittamiseen leikkauskohtien
+  välillä liikuttaessa;
+* Korjattu nuoli ylös- ja nuoli alas -näppäimiin liittyvät ilmoitukset;
+* Lisätty skripti lisäosaohjeen avaamiseen näppäinkomennolla NVDA+H;
+* Siirretty lisäosan asetusvalintaikkuna Työkalut-valikosta
+  Asetukset-valikkoon.
 
-## Change for version 2.1.1 ##
+## Muutokset versiossa 2.1 ##
 
-* Removing the script giving the total time and adding this information to the script giving the elapsed time;
-* Added the ability to enable or disable the announcements related to the space key in the module's configuration options, separately from other announcements;
-* Added the ability to enable or disable the announcement of placement of the selection marqueures in the module's configuration options;
-* Adding the announcement of the current part when moving through the cutting points;
-* Correction of announcements related to vertical keys;
-* Adding a script to open the help of the current add-on with 'NVDA+H';
-* Displacement of the add-on's configuration menu from the Tools menu to the Preferences menu of NVDA.
+* Lisätty skripti, joka puhuu seuraavan leikkauskohdan siirryttäessä siihen
+  näppäinkomennolla Control+Nuoli oikealle;
+* Lisätty skripti, joka puhuu edellisen leikkauskohdan siirryttäessä siihen
+  näppäinkomennolla Control+Nuoli vasemmalle;
+* Lisätty skripti, joka puhuu siirryttäessä neljä sekunnin sadasosaa
+  eteenpäin näppäinkomennolla Shift+Nuoli oikealle;
+* Lisätty skripti, joka puhuu siirryttäessä neljä sekunnin sadasosaa
+  taaksepäin näppäinkomennolla Shift+Nuoli vasemmalle;
+* Korjattu lisäosan yhteenvedoksi "mp3DirectCut".
 
-## Change for version 2.1 ##
+## Muutokset versiossa 2.0 ##
 
-* Adding a script to vocalize moving to the next splitting point with Control+Right Arrow;
-* Adding a script to vocalize moving to the previous splitting point with Control+Left Arrow;
-* Adding a script to vocalize the displacement of 4 hundredths of second ahead, with Shift+Right Arrow;
-* Adding a script to vocalize the displacement of 4 hundredths of second back, with Shift+Left Arrow;
-* Correction of the addon's summary from 'for mp3DirectCut' to 'mp3DirectCut'.
+* Lisätty jäljellä olevan ajan ilmoittava komento Control+Shift+R;
+* Korjattu keston, tunnit mukaan lukien, lukeminen;
+* Lisätty mahdollisuus sekunnin tuhannes- ja sadasosien erottamiseen
+  toisistaan.
 
-## Change for version 2.0 ##
+## Muutokset versiossa 1.1 ##
 
-* Adding a script to know the remaining time with 'Control Shift R';
-* Fixed reading durations including hours;
-* Added ability to differentiate thousandths or hundredths of seconds.
+* Lisätty Mp3DirectCut-kategoria Näppäinkomennot-valintaikkunaan;
 
-## Change for version 1.1 ##
+    * Se on näkyvissä vain sovellusta käytettäessä.
 
-* Added the ability to include the mp3DirectCut category into the Input Gestures;
+* Lisäosan asetuksiin lisätty mahdollisuus automaattisten ilmoitusten
+  käyttöön ottamiseen tai käytöstä poistamiseen;
 
-    * They will be visible only during use of the mp3DirectCut software.
+## Muutokset versiossa 1.0 ##
 
-* Added the ability to enable or disable automatic messages, in the tools menu of NVDA, item 'mp3DirectCut configuration';
+* Ensimmäinen versio.
 
-## Change for version 1.0 ##
-
-* Initial version.
+[[!tag dev stable]]

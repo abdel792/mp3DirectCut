@@ -1,240 +1,294 @@
-﻿# mp3DirectCut
+# mp3DirectCut #
 
 * Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
 
-# Presentation #
+# Præsentation #
 
-This add-on improves the accessibility of the software mp3DirectCut with NVDA.
+Denne tilføjelse forbedrer tilgængeligheden af softwaren mp3DirectCut med
+NVDA.
 
-It has been tested with versions of mp3DirectCut ranging from 212 up to 233.
+Det er blevet testet med versioner af mp3DirectCut fra 212 op til 222.
 
-## Keyboard shortcuts ##
+## Genvejstaster ##
 
-This addon offers the following commands:
+Denne tilføjelsespakke tilbyder følgende kommandoer, som du kan ændre ved at
+gå til menuen Indstillinger / Input-bevægelser og lede efter kategorien
+"mp3DirectCut":
 
 * B
 
-    * Used to confirm correct placement of the marker of the beginning of the selection B.
+    * Bruges til at bekræfte korrekt placering af markøren for begyndelsen
+      af markering B.
 
 * Ctrl+Shift+B
 
-    * Used to indicate the position of the marker of the beginning of selection B.
-    * Double pressure lets give you the duration of the selection.
+    * Bruges til at angive positionen af markøren for begyndelsen af
+      markering B.
+    * Dobbelttryk giver dig varigheden af markeringen.
 
 * Ctrl+Shift+D
 
-    * Gives the duration from the beginning of the file to the current position of the playback cursor.
-    * Double pressure lets give you the total duration.
+    * Angiver varigheden fra begyndelsen af filen til den aktuelle position
+      for afspilningsmarkøren.
+    * Dobbelttryk giver dig den samlede varighed.
 
 * Ctrl+R
 
-    * Confirms that the selection has been canceled.
+    * Bekræfter, at valget er blevet annulleret.
 
 * Ctrl+Shift+R
 
-    * Gives the time remaining from the current position of the playback cursor to the end of the file.
+    * Angiver den resterende tid fra den aktuelle position af
+      afspilningsmarkøren til slutningen af filen.
 
 * Ctrl+Shift+E
 
-    * Used to indicate the position of the marker of the end of selection N.
-    * Double pressure gives recapitulatif positions B and N, and the duration of the selection.
+    * Bruges til at angive positionen af markøren for slutningen af
+      markering N.
+    * Dobbelttryk angiver opsummerede positioner for B og N, og varigheden
+      af markeringen.
 
 * Ctrl+Shift+P
 
-    * Give the reference of the actual part and the total number of parts in the current file.
+    * Angiver den del af filen, som du aktuelt arbejder med, samt det
+      samlede antal dele i den aktuelle fil.
 
-* Ctrl+Shift+Space
+* Ctrl+Shift+mellemrum
 
-    * Used to determine the current level of the vu-meter, during recording.
-    * Double pressure reset it.
+    * Bruges til at bestemme vu-meterets aktuelle niveau under optagelse
+      (lydstyrken).
+    * Dobbelttryk nulstiller.
 
-* Down Arrow
+* Pil ned
 
-    * Lets you see the current position of the playhead.
-    * This command also position the cursor at the location of the marker of the end of selection N, while giving the location of this marker if a selection has been made.
-    * In the volume dialog box, vocalise the next value that can be reached generally with downArrow.
-    * This value is not vocalized default.
+    * Lader dig se den aktuelle position for afspilningshovedet.
+    * Denne kommando placerer også markøren ved slutningen af markering N,
+      og angiver positionen for markeringen, hvis en markering er lavet.
+    * I lydstyrkedialogboksen vil du få næste værdi oplyst, som generelt kan
+      nås med pil ned.
+    * Denne værdi er ikke oplyst som standard.
 
-* End
+* Slut
 
-    * Moves the playback cursor at the end of the current file and give the total time.
+    * Flytter afspilningsmarkøren til slutningen af den aktuelle fil og
+      oplyser den samlede tid.
 
-* Home
+* Hjem
 
-    * Moves the playback cursor at the beginning of the current file.
+    * Flytter afspilningsmarkøren til begyndelsen af den aktuelle fil.
 
-* Left Arrow
+* Venstre pil
 
-    * Lets make a brief return back of one second during playback, while giving the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Spoler ét sekund tilbage under afspilning og opkyser den samlede tid.
+    * Denne varighed kan konfigureres i mulighederne for mp3directcut.
 
-* N
+* Slut
 
-    * Used to confirm correct placement of the marker of the end of the selection N.
+    * Bruges til at bekræfte korrekt placering af markøren for slutningen af
+      markeringen N.
 
-* Page Down
+* Side ned
 
-    * Lets make a leap forward of 10 seconds during playback, while giving the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Spoler hurtigt 10 sekunder fremad og oplyser den samlede tid.
+    * Denne varighed kan konfigureres i mulighederne for mp3directcut.
 
-* Page Up
+* Side op
 
-    * Lets make a return back of 10 seconds during playback, while giving the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Spoler hurtigt 10 sekunder tilbage og oplyser den samlede tid.
+    * Denne varighed kan konfigureres i mulighederne for mp3directcut.
 
 * R
 
-    * Allows to prepare a record and whether you can press spacebar to start.
+    * Gør klar til optagelse, således du kan trykke mellemrum for at
+      begynde.
 
-* Right Arrow
+* Højre pil
 
-    * Lets do a brief forward of one second during playback, while giving the current duration.
-    * This duration is configurable in the options of mp3directcut.
+    * Spoler ét sekund fremad under afspilning og opkyser den samlede tid.
+    * Denne varighed kan konfigureres i mulighederne for mp3directcut.
 
-* Ctrl+Right Arrow
+* Ctrl+højre pil
 
-    * Moves to the next splitting point, while giving the current duration.
+    * Flytter til næste splitpunkt, mens den aktuelle varighed oplys.
 
-* Ctrl+Left Arrow
+* Ctrl+venstre pil
 
-    * Moves to the previous splitting point, while giving the current duration.
+    * Flytter til det forrige splitpunkt, mens den aktuelle varighed
+      oplyses.
 
-* Shift+Right Arrow
+* Skift+højre pil
 
-    * Lets do a brief forward of four hundredths of seconds during playback, while giving the current duration.
+    * Spoler fire hundrededele fremad af ét sekund under afspilning og
+      opkyser den samlede tid.
 
-* Shift+Left Arrow
+* Skift+venstre pil
 
-    * Lets do a brief backwards of four hundredths of seconds during playback, while giving the current duration.
+    * Spoler fire hundrededele tilbage af ét sekund under afspilning og
+      opkyser den samlede tid.
 
 * S
 
-    * Used to stop the reading and give the current duration.
+    * Bruges til at stoppe aflytningen og oplyse den aktuelle varighed.
 
-* Space
+* Mellemrum
 
-    * If the recording is ready, start this recording.
-    * If a recording is in progress, stop it by positioning the cursor at the beginning.
-    * If a file is loaded, start the reading.
-    * If a read is in progress, allows to do a pause by giving current duration.
-    * If read is paused, allows to restart the reading from the current location.
+    * Hvis optagelsen er klar, start denne optagelse.
+    * Hvis en optagelse er i gang, stoppes denne og markøren placeres i
+      begyndelsen.
+    * Hvis en fil er indlæst, start afspilning.
+    * Hvis en afspilning er undervejs, vil dette sætte afspilningen på pause
+      og oplyse den aktuelle position.
+    * Hvis afspilningen er stoppet, vil dette genoptage afspilningen fra den
+      aktuelle position.
 
-* Up Arrow
+* Pil op
 
-    * Lets you see the current position of the playhead.
-    * This command also position the cursor at the location of the marker of the beginning of selection B, while giving the location of this marker if a selection has been made.
-    * In the volume dialog box, vocalise the previous value that can be reached generally with upArrow.
-    * This value is not vocalized default.
+    * Lader dig se den aktuelle position for afspilningshovedet.
+    * Dette placerer markøren ved begyndelsen af markering B og oplyse
+      varrigheden, hvis du har foretaget en fuldstændig markering.
+    * I dialog for lydstyrke, oplys forrig værdi. Dette gøres typisk med pil
+      op.
+    * Denne værdi er ikke oplyst som standard.
 
-* NVDA+H
+* NVDA+h
 
-    * Lets open the help of the current add-on.
+    * Lader os åbne hjælpen for den nuværende tilføjelse.
 
-## Compatibility ##
+## Kompatibilitet ##
 
-* This add-on is compatible with the versions of NVDA ranging from 2019.3 and beyond.
+* This add-on is compatible with the versions of NVDA ranging from 2019.3
+  and beyond.
 
 ## Changes for 20240327.0.0
 
-* Fixed a bug that caused a log error when reloading plugins, thanks to Rob, from nvda-addons mailing list;
+* Fixed a bug that caused a log error when reloading plugins, thanks to Rob,
+  from nvda-addons mailing list;
 
 ## Changes for 20240326.0.0
 
 * Updated compatibility for nvda-2024.1.;
-* Deleted download link from readme, the download link for future updates will now only be available from the add-on store.
+* Deleted download link from readme, the download link for future updates
+  will now only be available from the add-on store.
 
 ## Changes for 20231229.0.0 ##
 
-* Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.
+* Added a backward compatible implementation to support speak on demand
+  mode, which will soon be available with nvda-2024.1.
 
 ## Changes for 20231007.0.0 ##
 
-* After placing the cutting points and after opening the cutting properties window, with "Ctrl+N", adding accessibility to the title of this window by indicating the part index.
-* In reading mode, after moving the start or end markers of selections with keys 1 to 6 of the alphanumeric pad, addition of automatic start of reading from the new position;
-* Fixed a bug that occurred when consulting the remaining time with "control+shift+r" from the beginning of the track.
+* After placing the cutting points and after opening the cutting properties
+  window, with "Ctrl+N", adding accessibility to the title of this window by
+  indicating the part index.
+* In reading mode, after moving the start or end markers of selections with
+  keys 1 to 6 of the alphanumeric pad, addition of automatic start of
+  reading from the new position;
+* Fixed a bug that occurred when consulting the remaining time with
+  "control+shift+r" from the beginning of the track.
 
 ## Changes for 20230728.0.0 ##
 
 * Applied the flake8 and mypy rules to the code;
-* Changed the minimum supported NVDA version to 2019.3 to support annotations introduced in Python 3.
+* Changed the minimum supported NVDA version to 2019.3 to support
+  annotations introduced in Python 3.
 
-## Changes for 20230607.0.0 ##
+## Changes for 20230508.0.0 and beyond ##
 
-* Added the following workflows:
- * auto-update-translations - to automatically update translations from NVDA's translation system.
- * release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
- * manual-release.yaml: to build and release new versions of the add-on manually.
-* Updated translations.
+* Changed version number, minimum NVDA version and download link according
+  to store conventions/requirements.
 
-## Changes for version 20230508.0.0 and beyond ##
+## Ændringer for version 20.12 ##
 
-* • Changed version number, minimum NVDA version and download link according to store conventions/requirements.
+* Afbryder tale under optagelse og afspilning i seneste version af
+  mp3directcut;
+* Fast læsning af resterende tid for nye versioner af NVDA, der bruger
+  Python 3.
 
-## Change for version 20.12 ##
+## Ændringer for version 19.02 ##
 
-* Stop speech during recording and reading for the latest versions of mp3directcut;
-* Fixed reading remaining time for new versions of NVDA using Python 3.
+* Tilføjet konfigurationen af tilføjelsen til NVDAs indstillingspanel, der
+  har været tilgængeligt siden NVDA 2018.2.
+* Ændret versionsnummerering til åå.MM (År i 2 cifre efterfulgt af et
+  punktum, efterfulgt af måneden på 2 cifre);
+* Tilføjede kompatibilitet med det nye versionsformat der benyttes i
+  tilføjelser, der blev aktuelt siden NVDA 2019.1.
 
-## Change for version 19.02 ##
+## Ændringer til version 4.0 ##
 
-* Added the add-on's configuration in the settings panel available since nvda 2018.2;
-* Changed version numbering using YY.MM (The year in 2 digits, followed by a dot, followed by the month in 2 digits);
-* Added compatibility with the new versioning format of add-on, appeared since nvda 2019.1.
+* Tilføjet kompatibilitet med Python 2.7 og 3;
+* Rettede en fejl med stier tilhørende tilføjelsespakken der indholder
+  non-ASCII-tegn.
 
-## Change for version 4.0 ##
+## Ændringer for version 3.0 ##
 
-* Added the Compatibility of the add-on with both Python 2.7 and 3;
-* Fixed a bug with add-on paths that contain non-ASCII characters.
+* Brugte gui.guiHelper modulet til at sikre korrekt udseende af
+  tilføjelsespakkens konfigurationsdialog;
+* Brugt format i stedet for%s for formaterede strenge;
+* Brugte overholdelse af retningslinjer for implementering.
 
-## Change for version 3.0 ##
+## Ændringer for version 2.3 ##
 
-* Used the gui.guiHelper module to ensure the correct appearance of the addon's configuration dialog;
-* Used format instead of %s for formatted strings;
-* Used compliance with guidelines for implementation.
+* Tilføjet GPL-licensen til tilføjelsen;
+* Ændret genvejen af scriptet, der giver slutningen af markeringen fra
+  CTRL+Skift+N til CTRL+Skift+E, fordi Ctrl+Skift+N ikke virker med de
+  nyeste versioner af mp3DirectCut;
+* Tilføjet et script for at bekræfte, at udvælgelsen er blevet annulleret
+  med 'CTRL+R';
+* Lavede nogle rettelser til modulet mp3directcut.py.
 
-## Change for version 2.3 ##
+## Ændringer for version 2.2 ##
 
-* Added the GPL license to the addon;
-* Changed the shortcut of the script giving the end of selection from Ctrl + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work with the latest versions of mp3DirectCut;
-* Added a script to confirm that the selection has been canceled with 'Ctrl+r';
-* Made some corrections in the code of the appModule 'mp3directcut.py'.
+* rettelse af de scripts til at angive udvælgelsesmarkørens position.
 
-## Change for version 2.2 ##
+## Ændringer for version 2.1.1 ##
 
-* Correction of the scripts giving the selection markers' locations.
+* Fjernede det script der angav tid i alt, og tilføjede denne funktion til
+  scriptet der bearbejdede resterende tid.
+* Tilføjet muligheden for at aktivere eller deaktivere meddelelser relateret
+  til mellemrumstasten i modulets konfiguration, adskilt fra andre
+  meddelelser;
+* Tilføjet muligheden for at aktivere eller deaktivere annonceringen af
+  placeringen af udvælgelsesmarkørernei til modulets konfiguration;
+* Tilføje annonceringen af den aktuelle del, når du flytter gennem de
+  skærende punkter;
+* Korrektion af annonceringer relateret til lodret taster;
+* Tilføje et script for at åbne hjælp fra det aktuelle tilføjelsesprogram
+  med 'NVDA + H';
+* Menuen tilknytted tilføjelsespakken befinder sig nu i NVDAs menu under
+  indstillinger;
 
-## Change for version 2.1.1 ##
+## Ændringer for version 2.1 ##
 
-* Removing the script giving the total time and adding this information to the script giving the elapsed time;
-* Added the ability to enable or disable the announcements related to the space key in the module's configuration options, separately from other announcements;
-* Added the ability to enable or disable the announcement of placement of the selection marqueures in the module's configuration options;
-* Adding the announcement of the current part when moving through the cutting points;
-* Correction of announcements related to vertical keys;
-* Adding a script to open the help of the current add-on with 'NVDA+H';
-* Displacement of the add-on's configuration menu from the Tools menu to the Preferences menu of NVDA.
+* Tilføjede et script til at annoncéreflytte næste opsplitningspunkt med
+  CTRL+højrepil;
+* Tilføjede et script til at annoncerer når der flyttes til det forrige
+  opsplitningspunkt med CTRL+Venstre pil;
+* Tilføjede et script til at annoncerer 4 hundrededele af et sekund forude,
+  med Shift+højre pil;
+* Tilføjede et script til at annoncerer 4 hundrededele af et sekund bagude,
+  med Shift+venstre pil;
+* Rettelse af tilføjelsespakkens opsummering 'for mp3DirectCut' til
+  'mp3DirectCut'.
 
-## Change for version 2.1 ##
+## Ændringer for version 2.0 ##
 
-* Adding a script to vocalize moving to the next splitting point with Control+Right Arrow;
-* Adding a script to vocalize moving to the previous splitting point with Control+Left Arrow;
-* Adding a script to vocalize the displacement of 4 hundredths of second ahead, with Shift+Right Arrow;
-* Adding a script to vocalize the displacement of 4 hundredths of second back, with Shift+Left Arrow;
-* Correction of the addon's summary from 'for mp3DirectCut' to 'mp3DirectCut'.
+* Tilføjede et script for at kende den resterende tid med CTRL+Skift+R;
+* Rettede et problem med at læse varigheden, herunder timer;
+* Tilføjet mulighed for at differentiere tusindedele eller hundrededele af
+  sekunder;
 
-## Change for version 2.0 ##
+## Ænderinger for version 1.1 ##
 
-* Adding a script to know the remaining time with 'Control Shift R';
-* Fixed reading durations including hours;
-* Added ability to differentiate thousandths or hundredths of seconds.
+* Tilføjet muligheden for at inkludere mp3DirectCut-kategorien i dialogen
+  "Håndter kommandoer";
 
-## Change for version 1.1 ##
+    * De vil kun være synlige under brug af mp3DirectCut-softwaren.
 
-* Added the ability to include the mp3DirectCut category into the Input Gestures;
+* Tilføjet muligheden for at aktivere eller deaktivere automatiske beskeder,
+  i værktøjsmenuen i NVDA, punkt 'mp3DirectCut-konfiguration';
 
-    * They will be visible only during use of the mp3DirectCut software.
+## Ændringer for version 1.0 ##
 
-* Added the ability to enable or disable automatic messages, in the tools menu of NVDA, item 'mp3DirectCut configuration';
+* Oprindelige version.
 
-## Change for version 1.0 ##
-
-* Initial version.
+[[!tag dev stable]]

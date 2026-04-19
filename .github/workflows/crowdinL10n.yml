@@ -105,7 +105,7 @@ jobs:
 
                   Write-Host "Local PO exists → uploading to Crowdin"
 
-                  $tempFile = "$env:TEMP/$addonId-$langCode.po"
+                  $tempFile = "$env:TEMP/$addonId.po"
                   Copy-Item $localPoPath $tempFile -Force
 
                   ./l10nUtil.exe uploadTranslationFile $langCode $tempFile -c addon

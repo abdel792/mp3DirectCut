@@ -3,7 +3,6 @@ name: Crowdin l10n
 on:
   workflow_dispatch:
   schedule:
-    # Every Monday at 00:00 UTC
     - cron: '0 0 * * 1'
 
 concurrency:
@@ -140,20 +139,19 @@ jobs:
             # DECISION ENGINE
             # ----------------------------
 
-            # CASE: XLIFF VALID
             if ($xliffValid) {
               Write-Host "Entering XLIFF-driven logic"
 
               if ($remoteExists -and $localExists) {
                 Write-Host "3-way comparison (xliff, remote, local)"
 
-                $scoreX = (uv run python .github/scripts/checkTranslation.py "$tempMd" $langShort | Select-String "md_score=").ToString().Split("=")[1]
-                $scoreR = (uv run python .github/scripts/checkTranslation.py "$remoteMd" $langShort | Select-String "md_score=").ToString().Split("=")[1]
-                $scoreL = (uv run python .github/scripts/checkTranslation.py "$localMd" $langShort | Select-String "md_score=").ToString().Split("=")[1]
+                $outX = uv run python .github/scripts/checkTranslation.py "$tempMd" $langShort
+                $outR = uv run python .github/scripts/checkTranslation.py "$remoteMd" $langShort
+                $outL = uv run python .github/scripts/checkTranslation.py "$localMd" $langShort
 
-                $scoreX = [double]$scoreX
-                $scoreR = [double]$scoreR
-                $scoreL = [double]$scoreL
+                $scoreX = [double](if ($outX -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
+                $scoreR = [double](if ($outR -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
+                $scoreL = [double](if ($outL -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
 
                 Write-Host "Scores → XLIFF:$scoreX Remote:$scoreR Local:$scoreL"
 
@@ -173,11 +171,11 @@ jobs:
               } elseif ($remoteExists -and -not $localExists) {
                 Write-Host "Comparing XLIFF vs Remote"
 
-                $scoreX = (uv run python .github/scripts/checkTranslation.py "$tempMd" $langShort | Select-String "md_score=").ToString().Split("=")[1]
-                $scoreR = (uv run python .github/scripts/checkTranslation.py "$remoteMd" $langShort | Select-String "md_score=").ToString().Split("=")[1]
+                $outX = uv run python .github/scripts/checkTranslation.py "$tempMd" $langShort
+                $outR = uv run python .github/scripts/checkTranslation.py "$remoteMd" $langShort
 
-                $scoreX = [double]$scoreX
-                $scoreR = [double]$scoreR
+                $scoreX = [double](if ($outX -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
+                $scoreR = [double](if ($outR -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
 
                 if ($scoreX -ge $scoreR) {
                   Write-Host "Winner: XLIFF → creating local"
@@ -190,11 +188,11 @@ jobs:
               } elseif (-not $remoteExists -and $localExists) {
                 Write-Host "Comparing XLIFF vs Local"
 
-                $scoreX = (uv run python .github/scripts/checkTranslation.py "$tempMd" $langShort | Select-String "md_score=").ToString().Split("=")[1]
-                $scoreL = (uv run python .github/scripts/checkTranslation.py "$localMd" $langShort | Select-String "md_score=").ToString().Split("=")[1]
+                $outX = uv run python .github/scripts/checkTranslation.py "$tempMd" $langShort
+                $outL = uv run python .github/scripts/checkTranslation.py "$localMd" $langShort
 
-                $scoreX = [double]$scoreX
-                $scoreL = [double]$scoreL
+                $scoreX = [double](if ($outX -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
+                $scoreL = [double](if ($outL -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
 
                 if ($scoreX -gt $scoreL) {
                   Write-Host "Winner: XLIFF → overwrite local"
@@ -215,11 +213,11 @@ jobs:
               if ($remoteExists -and $localExists) {
                 Write-Host "Comparing Remote vs Local"
 
-                $scoreR = (uv run python .github/scripts/checkTranslation.py "$remoteMd" $langShort | Select-String "md_score=").ToString().Split("=")[1]
-                $scoreL = (uv run python .github/scripts/checkTranslation.py "$localMd" $langShort | Select-String "md_score=").ToString().Split("=")[1]
+                $outR = uv run python .github/scripts/checkTranslation.py "$remoteMd" $langShort
+                $outL = uv run python .github/scripts/checkTranslation.py "$localMd" $langShort
 
-                $scoreR = [double]$scoreR
-                $scoreL = [double]$scoreL
+                $scoreR = [double](if ($outR -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
+                $scoreL = [double](if ($outL -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
 
                 if ($scoreR -gt $scoreL) {
                   Write-Host "Winner: Remote → overwrite local"
@@ -232,8 +230,8 @@ jobs:
               } elseif ($remoteExists -and -not $localExists) {
                 Write-Host "Remote only → checking quality"
 
-                $scoreR = (uv run python .github/scripts/checkTranslation.py "$remoteMd" $langShort | Select-String "md_score=").ToString().Split("=")[1]
-                $scoreR = [double]$scoreR
+                $outR = uv run python .github/scripts/checkTranslation.py "$remoteMd" $langShort
+                $scoreR = [double](if ($outR -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
 
                 if ($scoreR -gt 0.5) {
                   Write-Host "Remote is valid → importing"

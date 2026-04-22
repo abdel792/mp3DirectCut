@@ -149,9 +149,9 @@ jobs:
                 $outR = uv run python .github/scripts/checkTranslation.py "$remoteMd" $langShort
                 $outL = uv run python .github/scripts/checkTranslation.py "$localMd" $langShort
 
-                $scoreX = [double](if ($outX -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
-                $scoreR = [double](if ($outR -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
-                $scoreL = [double](if ($outL -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
+                $scoreX = if ($outX -match "md_score=([\d\.]+)") { [double]$matches[1] } else { [double]0 }
+                $scoreR = if ($outR -match "md_score=([\d\.]+)") { [double]$matches[1] } else { [double]0 }
+                $scoreL = if ($outL -match "md_score=([\d\.]+)") { [double]$matches[1] } else { [double]0 }
 
                 Write-Host "Scores → XLIFF:$scoreX Remote:$scoreR Local:$scoreL"
 
@@ -174,8 +174,8 @@ jobs:
                 $outX = uv run python .github/scripts/checkTranslation.py "$tempMd" $langShort
                 $outR = uv run python .github/scripts/checkTranslation.py "$remoteMd" $langShort
 
-                $scoreX = [double](if ($outX -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
-                $scoreR = [double](if ($outR -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
+                $scoreX = if ($outX -match "md_score=([\d\.]+)") { [double]$matches[1] } else { [double]0 }
+                $scoreR = if ($outR -match "md_score=([\d\.]+)") { [double]$matches[1] } else { [double]0 }
 
                 if ($scoreX -ge $scoreR) {
                   Write-Host "Winner: XLIFF → creating local"
@@ -191,8 +191,8 @@ jobs:
                 $outX = uv run python .github/scripts/checkTranslation.py "$tempMd" $langShort
                 $outL = uv run python .github/scripts/checkTranslation.py "$localMd" $langShort
 
-                $scoreX = [double](if ($outX -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
-                $scoreL = [double](if ($outL -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
+                $scoreX = if ($outX -match "md_score=([\d\.]+)") { [double]$matches[1] } else { [double]0 }
+                $scoreL = if ($outL -match "md_score=([\d\.]+)") { [double]$matches[1] } else { [double]0 }
 
                 if ($scoreX -gt $scoreL) {
                   Write-Host "Winner: XLIFF → overwrite local"
@@ -216,8 +216,8 @@ jobs:
                 $outR = uv run python .github/scripts/checkTranslation.py "$remoteMd" $langShort
                 $outL = uv run python .github/scripts/checkTranslation.py "$localMd" $langShort
 
-                $scoreR = [double](if ($outR -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
-                $scoreL = [double](if ($outL -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
+                $scoreR = if ($outR -match "md_score=([\d\.]+)") { [double]$matches[1] } else { [double]0 }
+                $scoreL = if ($outL -match "md_score=([\d\.]+)") { [double]$matches[1] } else { [double]0 }
 
                 if ($scoreR -gt $scoreL) {
                   Write-Host "Winner: Remote → overwrite local"
@@ -231,7 +231,7 @@ jobs:
                 Write-Host "Remote only → checking quality"
 
                 $outR = uv run python .github/scripts/checkTranslation.py "$remoteMd" $langShort
-                $scoreR = [double](if ($outR -match "md_score=([\d\.]+)") { $matches[1] } else { 0 })
+                $scoreR = if ($outR -match "md_score=([\d\.]+)") { [double]$matches[1] } else { [double]0 }
 
                 if ($scoreR -gt 0.5) {
                   Write-Host "Remote is valid → importing"

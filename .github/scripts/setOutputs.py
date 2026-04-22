@@ -14,7 +14,7 @@ def main():
 	name = "addonId"
 	value = addonId
 	with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-		f.write(f"{name}={value}\n")
+		_ = f.write(f"{name}={value}\n")
 
 
 if __name__ == "__main__":

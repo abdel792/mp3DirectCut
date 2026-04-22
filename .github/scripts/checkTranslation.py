@@ -2,105 +2,198 @@ import sys
 import os
 import xml.etree.ElementTree as ET
 import polib
+import langid
 
-
-def normalize(s: str) -> str:
-    # Normalize strings for reliable comparison (trim, lowercase, collapse spaces)
-    return " ".join((s or "").strip().lower().split())
-
+def normalize(s: str | None) -> str:
+return " ".join((s or "").strip().lower().split())
 
 # -----------------------------
-# PO FILE CHECK
+
+# PO CHECK
+
 # -----------------------------
+
 def checkPo(path: str) -> float:
-    # Parse PO file using polib
-    po = polib.pofile(path)
+po = polib.pofile(path)
 
-    translated = 0
-    total = 0
+```
+translated = 0
+total = 0
 
-    for entry in po:
-        # Skip empty msgid entries
-        if not entry.msgid.strip():
-            continue
+for entry in po:
+	if not entry.msgid.strip():
+		continue
 
-        total += 1
+	total += 1
 
-        # Consider entry translated only if msgstr differs from msgid
-        if entry.msgstr and normalize(entry.msgstr) != normalize(entry.msgid):
-            translated += 1
+	if entry.msgstr and normalize(entry.msgstr) != normalize(entry.msgid):
+		translated += 1
 
-    return translated / total if total else 0.0
-
+return translated / total if total else 0.0
+```
 
 # -----------------------------
-# XLIFF CHECK (skeleton-safe generic parsing)
+
+# XLIFF CHECK
+
 # -----------------------------
+
 def checkXliff(path: str) -> float:
-    # Parse XML XLIFF file
-    tree = ET.parse(path)
-    root = tree.getroot()
+tree = ET.parse(path)
+root = tree.getroot()
 
-    translated = 0
-    total = 0
+```
+translated = 0
+total = 0
+source = None
 
-    source = None
+for elem in root.iter():
+	if elem.tag.endswith("source"):
+		source = normalize(elem.text)
 
-    for elem in root.iter():
+	elif elem.tag.endswith("target"):
+		target = normalize(elem.text)
 
-        # Capture source segments
-        if elem.tag.endswith("source"):
-            source = normalize(elem.text)
+		if source:
+			total += 1
+			if target and target != source:
+				translated += 1
 
-        # Compare with target segments
-        elif elem.tag.endswith("target"):
-            target = normalize(elem.text)
-
-            if source:
-                total += 1
-
-                # Count as translated only if target differs from source
-                if target and target != source:
-                    translated += 1
-
-    return translated / total if total else 0.0
-
+return translated / total if total else 0.0
+```
 
 # -----------------------------
-# MAIN ENTRY POINT
+
+# MD LANGUAGE SCORE (langid)
+
 # -----------------------------
+
+def scoreMd(path: str, expected_lang: str) -> float:
+try:
+with open(path, "r", encoding="utf-8") as f:
+text = f.read()
+except Exception:
+return 0.0
+
+```
+if not text.strip():
+	return 0.0
+
+lang, score = langid.classify(text)
+
+# Normalize score into positive confidence
+confidence = 1 / (1 + abs(score))
+
+if lang == expected_lang:
+	return confidence
+else:
+	return 0.0
+```
+
+# -----------------------------
+
+# COMPARE MULTIPLE MD FILES
+
+# -----------------------------
+
+def compareMd(files: list[str], lang: str):
+results = []
+
+```
+for f in files:
+	if not os.path.exists(f):
+		continue
+
+	score = scoreMd(f, lang)
+	results.append((f, score))
+
+if not results:
+	print("winner=None")
+	sys.exit(1)
+
+results.sort(key=lambda x: x[1], reverse=True)
+
+winner = results[0]
+
+print("comparison_results:")
+for f, s in results:
+	print(f"{f}={s}")
+
+print(f"winner={winner[0]}")
+print(f"winner_score={winner[1]}")
+
+sys.exit(0)
+```
+
+# -----------------------------
+
+# MAIN
+
+# -----------------------------
+
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: checkTranslation.py <file>")
-        sys.exit(2)
+if len(sys.argv) < 2:
+print("Usage:")
+print("  checkTranslation.py <file>")
+print("  checkTranslation.py <file> <lang>")
+print("  checkTranslation.py <file1> <file2> [...] <lang>")
+sys.exit(2)
 
-    path = sys.argv[1]
+```
+args = sys.argv[1:]
 
-    if not os.path.exists(path):
-        print(f"File not found: {path}")
-        sys.exit(2)
+# -------------------------
+# MULTI FILE MODE
+# -------------------------
+if len(args) >= 3:
+	*files, lang = args
+	compareMd(files, lang)
+	return
 
-    ext = os.path.splitext(path)[1].lower()
+path = args[0]
 
-    # Dispatch based on file type
-    if ext == ".po":
-        ratio = checkPo(path)
+if not os.path.exists(path):
+	print(f"File not found: {path}")
+	sys.exit(2)
 
-    elif ext in [".xliff", ".xlf"]:
-        ratio = checkXliff(path)
+ext = os.path.splitext(path)[1].lower()
 
-    else:
-        print(f"Unsupported file type: {ext}")
-        sys.exit(2)
+# -------------------------
+# PO
+# -------------------------
+if ext == ".po":
+	ratio = checkPo(path)
+	print(f"translation_ratio={ratio}")
+	sys.exit(0 if ratio > 0.05 else 1)
 
-    print(f"translation_ratio={ratio}")
+# -------------------------
+# XLIFF
+# -------------------------
+elif ext in [".xliff", ".xlf"]:
+	ratio = checkXliff(path)
+	print(f"translation_ratio={ratio}")
+	sys.exit(0 if ratio > 0.05 else 1)
 
-    # Threshold: consider file translated if above 5%
-    if ratio > 0.05:
-        sys.exit(0)  # translated
-    else:
-        sys.exit(1)  # not translated
+# -------------------------
+# MD (LANG SCORE)
+# -------------------------
+elif ext == ".md":
 
+	if len(args) < 2:
+		print("Missing language argument for MD scoring")
+		sys.exit(2)
 
-if __name__ == "__main__":
-    main()
+	lang = args[1]
+	score = scoreMd(path, lang)
+
+	print(f"md_score={score}")
+
+	sys.exit(0)
+
+else:
+	print(f"Unsupported file type: {ext}")
+	sys.exit(2)
+```
+
+if **name** == "**main**":
+main()

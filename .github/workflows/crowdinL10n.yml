@@ -125,7 +125,7 @@ jobs:
               if ($xliffValid) {
                 Write-Host "Converting XLIFF → MD"
                 $tempMd = "$env:TEMP\readme_$langCode.md"
-                uv run l10nUtil.exe xliff2md $xliffFile $tempMd
+                ./l10nUtil.exe xliff2md $xliffFile $tempMd
               }
             }
 
@@ -261,7 +261,7 @@ jobs:
 
           git diff --staged --quiet
           if ($LASTEXITCODE -ne 0) {
-            git commit -m "Update translations from Crowdin"
+            git commit -m "Update translations for $addonId from Crowdin"
 
             git switch ${{ env.downloadTranslationsBranch }} 2>$null
             if ($LASTEXITCODE -ne 0) {

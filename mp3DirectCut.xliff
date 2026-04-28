@@ -1,0 +1,1540 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
+<file id="readme.md" original="https://raw.githubusercontent.com/abdel792/mp3DirectCut/62c9d9e277d6808d4f4f6e5ef7201ad1adf64d8b/readme.md">
+<skeleton>
+$(ID:15cc7ab7-30a6-488d-bdbc-7022256a7573)
+
+* $(ID:6bb1e0f7-1830-4b4d-b627-2b96e189b9ed)
+
+# $(ID:7fe450b3-aef0-4239-a842-98020d8e9d42)
+
+$(ID:9ce1b91c-df34-49a9-9eb2-ad1a69c19d19)
+
+$(ID:9aafc51d-520d-4342-a134-5e6d87d64ee3)
+
+## $(ID:c7c41bb6-65c7-4051-aae5-ec20e956d271)
+
+$(ID:57b5ada1-0a8a-4dcb-b11e-02a314573ad1)
+
+* $(ID:784d1047-e603-4ae1-a45c-1bc70404877f)
+
+    * $(ID:31d51de0-1b7f-44cc-8931-938fad4225b8)
+
+* $(ID:6d740b88-1d4b-4452-8345-be94fb4766fb)
+
+    * $(ID:77a8851c-23d7-4348-af99-87490cd0cfc5)
+    * $(ID:15d5d527-2129-46ca-87d1-dc00832a9eb4)
+
+* $(ID:0d344c04-6cdc-48a1-bee5-5583ed5cfa89)
+
+    * $(ID:7ac6a745-4519-421f-a022-a79e2926e241)
+    * $(ID:85d69d3e-3f7d-4424-ad1e-c1221209a574)
+
+* $(ID:3eb47558-7419-4432-84e9-7531d9a8f077)
+
+    * $(ID:c8f34d55-2a7c-4679-9c7e-24018ff81ac0)
+
+* $(ID:41251e66-93b8-4cb4-b834-6882c8dee1ea)
+
+    * $(ID:2af33010-1b7a-431b-9294-44c99bd807a6)
+
+* $(ID:ab4d924a-0731-4ae9-9547-327803433db6)
+
+    * $(ID:65fc61a2-5cd9-47c4-bea3-aeb24c4a3da7)
+    * $(ID:066fe64d-51fe-4d6d-b4c4-aaaf9a5ec429)
+
+* $(ID:40285bb2-3f77-46f9-9df5-bed836f993bb)
+
+    * $(ID:0853888c-1458-4340-89b8-232d6cf493e0)
+
+* $(ID:561340d8-2b6e-4aeb-bd7a-cadfad7d06b7)
+
+    * $(ID:04c813d2-00d2-4f78-8b59-3c9d3ed289f1)
+    * $(ID:ff48f8e5-cc58-4560-b58c-c8ebb9f30976)
+
+* $(ID:bf819f1c-81f8-4a99-af19-df0915c50874)
+
+    * $(ID:869d8dc1-2c5a-48f1-92f0-f70c94d68fa4)
+    * $(ID:ca5dbdf7-79da-43ef-9178-46e5c66f26ab)
+    * $(ID:fb48ef47-9d8a-4002-8039-5041e2badaa5)
+    * $(ID:374146e0-e5f6-4707-93cf-5312c3ad3e3f)
+
+* $(ID:21204286-1d1a-40e0-b08b-947f207bec5b)
+
+    * $(ID:a4a4890b-8bc7-46e8-b9f8-f6d1cedff681)
+
+* $(ID:d046aed0-379f-4a66-a324-dd7c43a4d823)
+
+    * $(ID:d924ec63-bd63-4db8-ba8f-c6b9f894fc69)
+
+* $(ID:be5964c1-bc15-4e08-9e67-59732d0f9f23)
+
+    * $(ID:e0dddad0-4745-4d13-9b8a-25019ac99eb5)
+    * $(ID:4d12081b-31df-4180-b8f6-b72455a014e4)
+
+* $(ID:0eb8a4f4-cbcf-4e41-a3d6-ffc726da50d6)
+
+    * $(ID:6fd76d03-faab-4e85-b109-b6504f104879)
+
+* $(ID:e9c28d21-7f75-432c-87c6-de026acc54cd)
+
+    * $(ID:3d62b71c-f5a4-4ff8-b86d-2ec131f370d9)
+    * $(ID:e5cb7b7a-2600-46b3-8407-95d229638d18)
+
+* $(ID:1f72492f-83fd-41a9-a2bd-94dd167bd572)
+
+    * $(ID:256a3243-38e9-4c81-8855-dd98de6b5dc3)
+    * $(ID:885f6056-2203-4e59-b773-2f2b00077313)
+
+* $(ID:6952939c-84fb-4a5c-b092-4573d3e7e73d)
+
+    * $(ID:cce34cf6-d56f-4d89-a5ad-c36ece5f6fd1)
+
+* $(ID:91c17148-80c0-4f48-82f4-1f629a7d30e6)
+
+    * $(ID:a66fb2c0-425d-4c5e-bb23-660101913bf6)
+    * $(ID:81d26f77-73b5-4089-9cd0-193d47ca9f8f)
+
+* $(ID:09c6fa64-137f-43a0-92e2-1ca2dc11588d)
+
+    * $(ID:f646022d-d6a2-4f7e-80bc-15910e96a992)
+
+* $(ID:e05d123b-d273-45e5-a397-5a888929c6b9)
+
+    * $(ID:39c19f59-b3ce-450f-b4e8-bfcd9971027f)
+
+* $(ID:26727fd7-a9a0-4127-998b-5a2bfa9afdb8)
+
+    * $(ID:a4ea4b94-649e-4bb5-b75b-a626a38ec985)
+
+* $(ID:d25d50a7-ee1a-4db9-8907-f47184473ca6)
+
+    * $(ID:0ae0ca79-b9d0-4b7b-b776-5edb74aa00f3)
+
+* $(ID:774b59c1-16d0-4325-82ad-e015b15a1d07)
+
+    * $(ID:60e97ee5-87d1-42c8-804c-cae44321f2b7)
+
+* $(ID:5d770696-b224-49e0-a155-424881d41b50)
+
+    * $(ID:6ebf7dcb-c7f6-4e96-b643-97862dde168a)
+    * $(ID:95e299c3-774f-49ed-be1a-f015d8687e68)
+    * $(ID:1360f3a1-e2a2-4604-8910-307dabeb0c4b)
+    * $(ID:3450ccda-1a6a-4f1d-bfea-2a41e8a18979)
+    * $(ID:a6229a09-1280-4024-a194-00a0d6b9f094)
+
+* $(ID:5c1188ef-bf27-49a9-8aa7-a8ab1eeb5050)
+
+    * $(ID:2ccb60cc-deb4-4759-b5d1-8569c17c4ac3)
+    * $(ID:8587aa60-72fa-45e1-85b3-bef47af45536)
+    * $(ID:3b60c040-0666-4852-9919-a7ca3e8e9547)
+    * $(ID:1930cf54-8269-4766-88a3-fd0c34ea979f)
+
+* $(ID:1ae6c9dc-3b75-4fdb-87b0-509643273cf2)
+
+    * $(ID:f72906d0-903f-4643-a840-b50f1e2fb11b)
+
+## $(ID:f9012e3b-bdb8-4ea8-8e4f-5e6299201b98)
+
+* $(ID:a7a9723a-969c-4096-8738-5e5238cab364)
+
+## $(ID:535bb5a3-f4bf-44a1-b316-19b52a8a4fbf)
+
+* $(ID:dca7b40c-c7d6-4c07-80fc-d1ffe3a613da)
+
+## $(ID:a6cd643e-e863-4e71-8336-422818e540c3)
+
+* $(ID:a7143ffb-df9a-4b29-98ee-ad964f856529)
+* $(ID:367c3319-0b4c-48cf-97db-9601ec7e297e)
+
+## $(ID:fb11100f-af79-4b1e-9f91-c3e8b4dde50e)
+
+* $(ID:8d2a481b-d856-4e1b-9487-cb7bdb7f575b)
+
+## $(ID:e8c3613c-76bc-47f2-a109-905c8d80cd68)
+
+* $(ID:0547d854-afa5-4506-afe3-6502ca19e14f)
+* $(ID:ba637e04-378b-4124-a4fa-71bab1525a17)
+* $(ID:c5c62c63-0b24-4eba-9d13-32a8d3da5460)
+
+## $(ID:83bef9b5-1d3a-46f2-a3ab-03982c6468cb)
+
+* $(ID:fbb5ed8e-4427-49fd-a5d6-bf28c190a627)
+* $(ID:570346fe-adb6-4882-bb04-41a43c4c092f)
+
+## $(ID:8d4c8c27-e3f4-4100-9cc9-826b00060908)
+
+* $(ID:e8ba4749-c53d-4e41-8c0d-50451b173fe8)
+ * $(ID:86673b46-6f5b-43a9-9039-f84f7d29be8e)
+ * $(ID:e5e8e4e2-8e2c-4415-9334-1df71a3e1e06)
+ * $(ID:3fb3755d-dbc9-472c-9b64-9ff6dbaa780d)
+* $(ID:7d97be7c-536c-400b-8ccf-b204db994ce1)
+
+## $(ID:ad3f8142-fe30-478a-a8c8-aeafdd06998f)
+
+* $(ID:d3b7925d-fb1c-49e7-b4a8-1227f3db3049)
+
+## $(ID:d9097ac2-cb6e-4e4f-ba2e-64fe24ffa9cd)
+
+* $(ID:440ccc06-78e5-4e3a-8ac8-8ef37166503a)
+* $(ID:f3cba72e-0e21-4d7c-a19c-052a2260b5ee)
+
+## $(ID:5a38b213-2e92-48af-b07f-21f487768369)
+
+* $(ID:b61da808-117d-41cc-bc09-e399226fa8c2)
+* $(ID:b082a9fa-786a-4ddd-af1d-2f1ce19be204)
+* $(ID:2259785f-110b-43f1-8a5a-b45f6e4cf2c3)
+
+## $(ID:78004108-5e77-4a9b-bfeb-4f44db669f79)
+
+* $(ID:555b17c6-0554-4f77-bd41-763c2255c79b)
+* $(ID:17fba8c8-be11-4e89-9d4c-a6b3a00116c8)
+
+## $(ID:bfa2beb5-3886-4d1f-a08e-a4b51c6bbb09)
+
+* $(ID:049e69e4-cb7b-4ff9-a68e-71f93bbaa588)
+* $(ID:5ea81326-7124-4de6-9ed3-8c471a2bc530)
+* $(ID:ebc9e777-f514-403e-8492-df853eeb0135)
+
+## $(ID:fb15792e-375a-4a52-a964-91dfe099885a)
+
+* $(ID:bb694f90-fb0e-43f5-86df-6f992f468dcb)
+* $(ID:13377e56-0297-463d-954b-9c2c6013407b)
+* $(ID:8af1f182-54e9-4a85-a051-06aca43e97e5)
+* $(ID:ec3534ce-a5ea-492d-9910-f15fad2c2b25)
+
+## $(ID:3d0c1129-471c-4d30-89fa-5157afa8826e)
+
+* $(ID:4c8f3649-86c3-4be8-b8e3-8bf910db74c3)
+
+## $(ID:ff80c7a4-c3a2-4d8e-acdd-bad6d34dbe91)
+
+* $(ID:3994a96d-e5b5-482a-90e5-44a0f26e523e)
+* $(ID:0723139d-297c-4104-9ff9-cf7e1cec54ec)
+* $(ID:822ae60e-e135-4832-b5e9-8b4f7bae0f8e)
+* $(ID:32c63e6f-8198-4598-b2ff-bfcb47f55c2a)
+* $(ID:0b9efe32-2f7a-42a4-8e7d-8cfd4c458b2c)
+* $(ID:6b841444-4564-4d46-9b0f-b2c98eabdb55)
+* $(ID:d1223c53-24c4-4aee-aef1-d577fe3558ff)
+
+## $(ID:2f24720c-581d-4c2e-9c63-8a50f2f33d31)
+
+* $(ID:f50ad6ad-f924-45a1-b8b4-cf8b115beea0)
+* $(ID:381a677c-465a-42a8-9da8-02fc8fc48cdb)
+* $(ID:7e87bae5-51e4-4ae4-84d7-ad025e19925c)
+* $(ID:bace97ef-93cd-4be6-9852-4cdfc410f757)
+* $(ID:17cdde9a-7093-49b8-b15b-4096f619bce3)
+
+## $(ID:eb1a9451-bc68-4776-96f5-6696e0aadf92)
+
+* $(ID:6f4b1496-9d5c-4136-85bf-6496ae1f57fa)
+* $(ID:43b3f68d-fae1-4c98-b358-265b3325d4d5)
+* $(ID:dca4453d-ed14-4b56-8d69-8eef77403ead)
+
+## $(ID:37f76c8f-2142-4149-89f9-64fe45b70564)
+
+* $(ID:b745dcfc-a9f6-4147-8c18-46eaec33d5ae)
+
+    * $(ID:f3b1d27b-b43f-4336-9ed1-5a4957ac041b)
+
+* $(ID:6614c1b5-c8d9-469e-bb42-1bda56e4e902)
+
+## $(ID:7e9091ba-bc2b-4b53-9696-6820736cc37f)
+
+* $(ID:7f153327-12f0-4dcf-8526-10a537cf5daa)
+
+</skeleton>
+<unit id="15cc7ab7-30a6-488d-bdbc-7022256a7573">
+<notes>
+<note appliesTo="source">line: 2</note>
+</notes>
+<segment>
+<source>﻿# mp3DirectCut</source>
+</segment>
+</unit>
+<unit id="6bb1e0f7-1830-4b4d-b627-2b96e189b9ed">
+<notes>
+<note appliesTo="source">line: 4</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.</source>
+</segment>
+</unit>
+<unit id="7fe450b3-aef0-4239-a842-98020d8e9d42">
+<notes>
+<note appliesTo="source">line: 6</note>
+<note appliesTo="source">prefix: # </note>
+</notes>
+<segment>
+<source>Presentation #</source>
+</segment>
+</unit>
+<unit id="9ce1b91c-df34-49a9-9eb2-ad1a69c19d19">
+<notes>
+<note appliesTo="source">line: 8</note>
+</notes>
+<segment>
+<source>This add-on improves the accessibility of the software mp3DirectCut with NVDA.</source>
+</segment>
+</unit>
+<unit id="9aafc51d-520d-4342-a134-5e6d87d64ee3">
+<notes>
+<note appliesTo="source">line: 10</note>
+</notes>
+<segment>
+<source>It has been tested with versions of mp3DirectCut ranging from 212 up to 233.</source>
+</segment>
+</unit>
+<unit id="c7c41bb6-65c7-4051-aae5-ec20e956d271">
+<notes>
+<note appliesTo="source">line: 12</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Keyboard shortcuts ##</source>
+</segment>
+</unit>
+<unit id="57b5ada1-0a8a-4dcb-b11e-02a314573ad1">
+<notes>
+<note appliesTo="source">line: 14</note>
+</notes>
+<segment>
+<source>This addon offers the following commands:</source>
+</segment>
+</unit>
+<unit id="784d1047-e603-4ae1-a45c-1bc70404877f">
+<notes>
+<note appliesTo="source">line: 16</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>B</source>
+</segment>
+</unit>
+<unit id="31d51de0-1b7f-44cc-8931-938fad4225b8">
+<notes>
+<note appliesTo="source">line: 18</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Used to confirm correct placement of the marker of the beginning of the selection B.</source>
+</segment>
+</unit>
+<unit id="6d740b88-1d4b-4452-8345-be94fb4766fb">
+<notes>
+<note appliesTo="source">line: 20</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Ctrl+Shift+B</source>
+</segment>
+</unit>
+<unit id="77a8851c-23d7-4348-af99-87490cd0cfc5">
+<notes>
+<note appliesTo="source">line: 22</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Used to indicate the position of the marker of the beginning of selection B.</source>
+</segment>
+</unit>
+<unit id="15d5d527-2129-46ca-87d1-dc00832a9eb4">
+<notes>
+<note appliesTo="source">line: 23</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Double pressure lets give you the duration of the selection.</source>
+</segment>
+</unit>
+<unit id="0d344c04-6cdc-48a1-bee5-5583ed5cfa89">
+<notes>
+<note appliesTo="source">line: 25</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Ctrl+Shift+D</source>
+</segment>
+</unit>
+<unit id="7ac6a745-4519-421f-a022-a79e2926e241">
+<notes>
+<note appliesTo="source">line: 27</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Gives the duration from the beginning of the file to the current position of the playback cursor.</source>
+</segment>
+</unit>
+<unit id="85d69d3e-3f7d-4424-ad1e-c1221209a574">
+<notes>
+<note appliesTo="source">line: 28</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Double pressure lets give you the total duration.</source>
+</segment>
+</unit>
+<unit id="3eb47558-7419-4432-84e9-7531d9a8f077">
+<notes>
+<note appliesTo="source">line: 30</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Ctrl+R</source>
+</segment>
+</unit>
+<unit id="c8f34d55-2a7c-4679-9c7e-24018ff81ac0">
+<notes>
+<note appliesTo="source">line: 32</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Confirms that the selection has been canceled.</source>
+</segment>
+</unit>
+<unit id="41251e66-93b8-4cb4-b834-6882c8dee1ea">
+<notes>
+<note appliesTo="source">line: 34</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Ctrl+Shift+R</source>
+</segment>
+</unit>
+<unit id="2af33010-1b7a-431b-9294-44c99bd807a6">
+<notes>
+<note appliesTo="source">line: 36</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Gives the time remaining from the current position of the playback cursor to the end of the file.</source>
+</segment>
+</unit>
+<unit id="ab4d924a-0731-4ae9-9547-327803433db6">
+<notes>
+<note appliesTo="source">line: 38</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Ctrl+Shift+E</source>
+</segment>
+</unit>
+<unit id="65fc61a2-5cd9-47c4-bea3-aeb24c4a3da7">
+<notes>
+<note appliesTo="source">line: 40</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Used to indicate the position of the marker of the end of selection N.</source>
+</segment>
+</unit>
+<unit id="066fe64d-51fe-4d6d-b4c4-aaaf9a5ec429">
+<notes>
+<note appliesTo="source">line: 41</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Double pressure gives recapitulatif positions B and N, and the duration of the selection.</source>
+</segment>
+</unit>
+<unit id="40285bb2-3f77-46f9-9df5-bed836f993bb">
+<notes>
+<note appliesTo="source">line: 43</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Ctrl+Shift+P</source>
+</segment>
+</unit>
+<unit id="0853888c-1458-4340-89b8-232d6cf493e0">
+<notes>
+<note appliesTo="source">line: 45</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Give the reference of the actual part and the total number of parts in the current file.</source>
+</segment>
+</unit>
+<unit id="561340d8-2b6e-4aeb-bd7a-cadfad7d06b7">
+<notes>
+<note appliesTo="source">line: 47</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Ctrl+Shift+Space</source>
+</segment>
+</unit>
+<unit id="04c813d2-00d2-4f78-8b59-3c9d3ed289f1">
+<notes>
+<note appliesTo="source">line: 49</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Used to determine the current level of the vu-meter, during recording.</source>
+</segment>
+</unit>
+<unit id="ff48f8e5-cc58-4560-b58c-c8ebb9f30976">
+<notes>
+<note appliesTo="source">line: 50</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Double pressure reset it.</source>
+</segment>
+</unit>
+<unit id="bf819f1c-81f8-4a99-af19-df0915c50874">
+<notes>
+<note appliesTo="source">line: 52</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Down Arrow</source>
+</segment>
+</unit>
+<unit id="869d8dc1-2c5a-48f1-92f0-f70c94d68fa4">
+<notes>
+<note appliesTo="source">line: 54</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Lets you see the current position of the playhead.</source>
+</segment>
+</unit>
+<unit id="ca5dbdf7-79da-43ef-9178-46e5c66f26ab">
+<notes>
+<note appliesTo="source">line: 55</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>This command also position the cursor at the location of the marker of the end of selection N, while giving the location of this marker if a selection has been made.</source>
+</segment>
+</unit>
+<unit id="fb48ef47-9d8a-4002-8039-5041e2badaa5">
+<notes>
+<note appliesTo="source">line: 56</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>In the volume dialog box, vocalise the next value that can be reached generally with downArrow.</source>
+</segment>
+</unit>
+<unit id="374146e0-e5f6-4707-93cf-5312c3ad3e3f">
+<notes>
+<note appliesTo="source">line: 57</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>This value is not vocalized default.</source>
+</segment>
+</unit>
+<unit id="21204286-1d1a-40e0-b08b-947f207bec5b">
+<notes>
+<note appliesTo="source">line: 59</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>End</source>
+</segment>
+</unit>
+<unit id="a4a4890b-8bc7-46e8-b9f8-f6d1cedff681">
+<notes>
+<note appliesTo="source">line: 61</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Moves the playback cursor at the end of the current file and give the total time.</source>
+</segment>
+</unit>
+<unit id="d046aed0-379f-4a66-a324-dd7c43a4d823">
+<notes>
+<note appliesTo="source">line: 63</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Home</source>
+</segment>
+</unit>
+<unit id="d924ec63-bd63-4db8-ba8f-c6b9f894fc69">
+<notes>
+<note appliesTo="source">line: 65</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Moves the playback cursor at the beginning of the current file.</source>
+</segment>
+</unit>
+<unit id="be5964c1-bc15-4e08-9e67-59732d0f9f23">
+<notes>
+<note appliesTo="source">line: 67</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Left Arrow</source>
+</segment>
+</unit>
+<unit id="e0dddad0-4745-4d13-9b8a-25019ac99eb5">
+<notes>
+<note appliesTo="source">line: 69</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Lets make a brief return back of one second during playback, while giving the current duration.</source>
+</segment>
+</unit>
+<unit id="4d12081b-31df-4180-b8f6-b72455a014e4">
+<notes>
+<note appliesTo="source">line: 70</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>This duration is configurable in the options of mp3directcut.</source>
+</segment>
+</unit>
+<unit id="0eb8a4f4-cbcf-4e41-a3d6-ffc726da50d6">
+<notes>
+<note appliesTo="source">line: 72</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>N</source>
+</segment>
+</unit>
+<unit id="6fd76d03-faab-4e85-b109-b6504f104879">
+<notes>
+<note appliesTo="source">line: 74</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Used to confirm correct placement of the marker of the end of the selection N.</source>
+</segment>
+</unit>
+<unit id="e9c28d21-7f75-432c-87c6-de026acc54cd">
+<notes>
+<note appliesTo="source">line: 76</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Page Down</source>
+</segment>
+</unit>
+<unit id="3d62b71c-f5a4-4ff8-b86d-2ec131f370d9">
+<notes>
+<note appliesTo="source">line: 78</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Lets make a leap forward of 10 seconds during playback, while giving the current duration.</source>
+</segment>
+</unit>
+<unit id="e5cb7b7a-2600-46b3-8407-95d229638d18">
+<notes>
+<note appliesTo="source">line: 79</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>This duration is configurable in the options of mp3directcut.</source>
+</segment>
+</unit>
+<unit id="1f72492f-83fd-41a9-a2bd-94dd167bd572">
+<notes>
+<note appliesTo="source">line: 81</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Page Up</source>
+</segment>
+</unit>
+<unit id="256a3243-38e9-4c81-8855-dd98de6b5dc3">
+<notes>
+<note appliesTo="source">line: 83</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Lets make a return back of 10 seconds during playback, while giving the current duration.</source>
+</segment>
+</unit>
+<unit id="885f6056-2203-4e59-b773-2f2b00077313">
+<notes>
+<note appliesTo="source">line: 84</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>This duration is configurable in the options of mp3directcut.</source>
+</segment>
+</unit>
+<unit id="6952939c-84fb-4a5c-b092-4573d3e7e73d">
+<notes>
+<note appliesTo="source">line: 86</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>R</source>
+</segment>
+</unit>
+<unit id="cce34cf6-d56f-4d89-a5ad-c36ece5f6fd1">
+<notes>
+<note appliesTo="source">line: 88</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Allows to prepare a record and whether you can press spacebar to start.</source>
+</segment>
+</unit>
+<unit id="91c17148-80c0-4f48-82f4-1f629a7d30e6">
+<notes>
+<note appliesTo="source">line: 90</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Right Arrow</source>
+</segment>
+</unit>
+<unit id="a66fb2c0-425d-4c5e-bb23-660101913bf6">
+<notes>
+<note appliesTo="source">line: 92</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Lets do a brief forward of one second during playback, while giving the current duration.</source>
+</segment>
+</unit>
+<unit id="81d26f77-73b5-4089-9cd0-193d47ca9f8f">
+<notes>
+<note appliesTo="source">line: 93</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>This duration is configurable in the options of mp3directcut.</source>
+</segment>
+</unit>
+<unit id="09c6fa64-137f-43a0-92e2-1ca2dc11588d">
+<notes>
+<note appliesTo="source">line: 95</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Ctrl+Right Arrow</source>
+</segment>
+</unit>
+<unit id="f646022d-d6a2-4f7e-80bc-15910e96a992">
+<notes>
+<note appliesTo="source">line: 97</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Moves to the next splitting point, while giving the current duration.</source>
+</segment>
+</unit>
+<unit id="e05d123b-d273-45e5-a397-5a888929c6b9">
+<notes>
+<note appliesTo="source">line: 99</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Ctrl+Left Arrow</source>
+</segment>
+</unit>
+<unit id="39c19f59-b3ce-450f-b4e8-bfcd9971027f">
+<notes>
+<note appliesTo="source">line: 101</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Moves to the previous splitting point, while giving the current duration.</source>
+</segment>
+</unit>
+<unit id="26727fd7-a9a0-4127-998b-5a2bfa9afdb8">
+<notes>
+<note appliesTo="source">line: 103</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Shift+Right Arrow</source>
+</segment>
+</unit>
+<unit id="a4ea4b94-649e-4bb5-b75b-a626a38ec985">
+<notes>
+<note appliesTo="source">line: 105</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Lets do a brief forward of four hundredths of seconds during playback, while giving the current duration.</source>
+</segment>
+</unit>
+<unit id="d25d50a7-ee1a-4db9-8907-f47184473ca6">
+<notes>
+<note appliesTo="source">line: 107</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Shift+Left Arrow</source>
+</segment>
+</unit>
+<unit id="0ae0ca79-b9d0-4b7b-b776-5edb74aa00f3">
+<notes>
+<note appliesTo="source">line: 109</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Lets do a brief backwards of four hundredths of seconds during playback, while giving the current duration.</source>
+</segment>
+</unit>
+<unit id="774b59c1-16d0-4325-82ad-e015b15a1d07">
+<notes>
+<note appliesTo="source">line: 111</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>S</source>
+</segment>
+</unit>
+<unit id="60e97ee5-87d1-42c8-804c-cae44321f2b7">
+<notes>
+<note appliesTo="source">line: 113</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Used to stop the reading and give the current duration.</source>
+</segment>
+</unit>
+<unit id="5d770696-b224-49e0-a155-424881d41b50">
+<notes>
+<note appliesTo="source">line: 115</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Space</source>
+</segment>
+</unit>
+<unit id="6ebf7dcb-c7f6-4e96-b643-97862dde168a">
+<notes>
+<note appliesTo="source">line: 117</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>If the recording is ready, start this recording.</source>
+</segment>
+</unit>
+<unit id="95e299c3-774f-49ed-be1a-f015d8687e68">
+<notes>
+<note appliesTo="source">line: 118</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>If a recording is in progress, stop it by positioning the cursor at the beginning.</source>
+</segment>
+</unit>
+<unit id="1360f3a1-e2a2-4604-8910-307dabeb0c4b">
+<notes>
+<note appliesTo="source">line: 119</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>If a file is loaded, start the reading.</source>
+</segment>
+</unit>
+<unit id="3450ccda-1a6a-4f1d-bfea-2a41e8a18979">
+<notes>
+<note appliesTo="source">line: 120</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>If a read is in progress, allows to do a pause by giving current duration.</source>
+</segment>
+</unit>
+<unit id="a6229a09-1280-4024-a194-00a0d6b9f094">
+<notes>
+<note appliesTo="source">line: 121</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>If read is paused, allows to restart the reading from the current location.</source>
+</segment>
+</unit>
+<unit id="5c1188ef-bf27-49a9-8aa7-a8ab1eeb5050">
+<notes>
+<note appliesTo="source">line: 123</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Up Arrow</source>
+</segment>
+</unit>
+<unit id="2ccb60cc-deb4-4759-b5d1-8569c17c4ac3">
+<notes>
+<note appliesTo="source">line: 125</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Lets you see the current position of the playhead.</source>
+</segment>
+</unit>
+<unit id="8587aa60-72fa-45e1-85b3-bef47af45536">
+<notes>
+<note appliesTo="source">line: 126</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>This command also position the cursor at the location of the marker of the beginning of selection B, while giving the location of this marker if a selection has been made.</source>
+</segment>
+</unit>
+<unit id="3b60c040-0666-4852-9919-a7ca3e8e9547">
+<notes>
+<note appliesTo="source">line: 127</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>In the volume dialog box, vocalise the previous value that can be reached generally with upArrow.</source>
+</segment>
+</unit>
+<unit id="1930cf54-8269-4766-88a3-fd0c34ea979f">
+<notes>
+<note appliesTo="source">line: 128</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>This value is not vocalized default.</source>
+</segment>
+</unit>
+<unit id="1ae6c9dc-3b75-4fdb-87b0-509643273cf2">
+<notes>
+<note appliesTo="source">line: 130</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>NVDA+H</source>
+</segment>
+</unit>
+<unit id="f72906d0-903f-4643-a840-b50f1e2fb11b">
+<notes>
+<note appliesTo="source">line: 132</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>Lets open the help of the current add-on.</source>
+</segment>
+</unit>
+<unit id="f9012e3b-bdb8-4ea8-8e4f-5e6299201b98">
+<notes>
+<note appliesTo="source">line: 134</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Compatibility ##</source>
+</segment>
+</unit>
+<unit id="a7a9723a-969c-4096-8738-5e5238cab364">
+<notes>
+<note appliesTo="source">line: 136</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>This add-on is compatible with the versions of NVDA ranging from 2019.3 and beyond.</source>
+</segment>
+</unit>
+<unit id="535bb5a3-f4bf-44a1-b316-19b52a8a4fbf">
+<notes>
+<note appliesTo="source">line: 138</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 20240327.0.0</source>
+</segment>
+</unit>
+<unit id="dca7b40c-c7d6-4c07-80fc-d1ffe3a613da">
+<notes>
+<note appliesTo="source">line: 140</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Fixed a bug that caused a log error when reloading plugins, thanks to Rob, from nvda-addons mailing list;</source>
+</segment>
+</unit>
+<unit id="a6cd643e-e863-4e71-8336-422818e540c3">
+<notes>
+<note appliesTo="source">line: 142</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 20240326.0.0</source>
+</segment>
+</unit>
+<unit id="a7143ffb-df9a-4b29-98ee-ad964f856529">
+<notes>
+<note appliesTo="source">line: 144</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Updated compatibility for nvda-2024.1.;</source>
+</segment>
+</unit>
+<unit id="367c3319-0b4c-48cf-97db-9601ec7e297e">
+<notes>
+<note appliesTo="source">line: 145</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Deleted download link from readme, the download link for future updates will now only be available from the add-on store.</source>
+</segment>
+</unit>
+<unit id="fb11100f-af79-4b1e-9f91-c3e8b4dde50e">
+<notes>
+<note appliesTo="source">line: 147</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 20231229.0.0 ##</source>
+</segment>
+</unit>
+<unit id="8d2a481b-d856-4e1b-9487-cb7bdb7f575b">
+<notes>
+<note appliesTo="source">line: 149</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.</source>
+</segment>
+</unit>
+<unit id="e8c3613c-76bc-47f2-a109-905c8d80cd68">
+<notes>
+<note appliesTo="source">line: 151</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 20231007.0.0 ##</source>
+</segment>
+</unit>
+<unit id="0547d854-afa5-4506-afe3-6502ca19e14f">
+<notes>
+<note appliesTo="source">line: 153</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>After placing the cutting points and after opening the cutting properties window, with "Ctrl+N", adding accessibility to the title of this window by indicating the part index.</source>
+</segment>
+</unit>
+<unit id="ba637e04-378b-4124-a4fa-71bab1525a17">
+<notes>
+<note appliesTo="source">line: 154</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>In reading mode, after moving the start or end markers of selections with keys 1 to 6 of the alphanumeric pad, addition of automatic start of reading from the new position;</source>
+</segment>
+</unit>
+<unit id="c5c62c63-0b24-4eba-9d13-32a8d3da5460">
+<notes>
+<note appliesTo="source">line: 155</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Fixed a bug that occurred when consulting the remaining time with "control+shift+r" from the beginning of the track.</source>
+</segment>
+</unit>
+<unit id="83bef9b5-1d3a-46f2-a3ab-03982c6468cb">
+<notes>
+<note appliesTo="source">line: 157</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 20230728.0.0 ##</source>
+</segment>
+</unit>
+<unit id="fbb5ed8e-4427-49fd-a5d6-bf28c190a627">
+<notes>
+<note appliesTo="source">line: 159</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Applied the flake8 and mypy rules to the code;</source>
+</segment>
+</unit>
+<unit id="570346fe-adb6-4882-bb04-41a43c4c092f">
+<notes>
+<note appliesTo="source">line: 160</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Changed the minimum supported NVDA version to 2019.3 to support annotations introduced in Python 3.</source>
+</segment>
+</unit>
+<unit id="8d4c8c27-e3f4-4100-9cc9-826b00060908">
+<notes>
+<note appliesTo="source">line: 162</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 20230607.0.0 ##</source>
+</segment>
+</unit>
+<unit id="e8ba4749-c53d-4e41-8c0d-50451b173fe8">
+<notes>
+<note appliesTo="source">line: 164</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added the following workflows:</source>
+</segment>
+</unit>
+<unit id="86673b46-6f5b-43a9-9039-f84f7d29be8e">
+<notes>
+<note appliesTo="source">line: 165</note>
+<note appliesTo="source">prefix:  * </note>
+</notes>
+<segment>
+<source>auto-update-translations - to automatically update translations from NVDA's translation system.</source>
+</segment>
+</unit>
+<unit id="e5e8e4e2-8e2c-4415-9334-1df71a3e1e06">
+<notes>
+<note appliesTo="source">line: 166</note>
+<note appliesTo="source">prefix:  * </note>
+</notes>
+<segment>
+<source>release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;</source>
+</segment>
+</unit>
+<unit id="3fb3755d-dbc9-472c-9b64-9ff6dbaa780d">
+<notes>
+<note appliesTo="source">line: 167</note>
+<note appliesTo="source">prefix:  * </note>
+</notes>
+<segment>
+<source>manual-release.yaml: to build and release new versions of the add-on manually.</source>
+</segment>
+</unit>
+<unit id="7d97be7c-536c-400b-8ccf-b204db994ce1">
+<notes>
+<note appliesTo="source">line: 168</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Updated translations.</source>
+</segment>
+</unit>
+<unit id="ad3f8142-fe30-478a-a8c8-aeafdd06998f">
+<notes>
+<note appliesTo="source">line: 170</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for version 20230508.0.0 and beyond ##</source>
+</segment>
+</unit>
+<unit id="d3b7925d-fb1c-49e7-b4a8-1227f3db3049">
+<notes>
+<note appliesTo="source">line: 172</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>• Changed version number, minimum NVDA version and download link according to store conventions/requirements.</source>
+</segment>
+</unit>
+<unit id="d9097ac2-cb6e-4e4f-ba2e-64fe24ffa9cd">
+<notes>
+<note appliesTo="source">line: 174</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Change for version 20.12 ##</source>
+</segment>
+</unit>
+<unit id="440ccc06-78e5-4e3a-8ac8-8ef37166503a">
+<notes>
+<note appliesTo="source">line: 176</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Stop speech during recording and reading for the latest versions of mp3directcut;</source>
+</segment>
+</unit>
+<unit id="f3cba72e-0e21-4d7c-a19c-052a2260b5ee">
+<notes>
+<note appliesTo="source">line: 177</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Fixed reading remaining time for new versions of NVDA using Python 3.</source>
+</segment>
+</unit>
+<unit id="5a38b213-2e92-48af-b07f-21f487768369">
+<notes>
+<note appliesTo="source">line: 179</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Change for version 19.02 ##</source>
+</segment>
+</unit>
+<unit id="b61da808-117d-41cc-bc09-e399226fa8c2">
+<notes>
+<note appliesTo="source">line: 181</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added the add-on's configuration in the settings panel available since nvda 2018.2;</source>
+</segment>
+</unit>
+<unit id="b082a9fa-786a-4ddd-af1d-2f1ce19be204">
+<notes>
+<note appliesTo="source">line: 182</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Changed version numbering using YY.MM (The year in 2 digits, followed by a dot, followed by the month in 2 digits);</source>
+</segment>
+</unit>
+<unit id="2259785f-110b-43f1-8a5a-b45f6e4cf2c3">
+<notes>
+<note appliesTo="source">line: 183</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added compatibility with the new versioning format of add-on, appeared since nvda 2019.1.</source>
+</segment>
+</unit>
+<unit id="78004108-5e77-4a9b-bfeb-4f44db669f79">
+<notes>
+<note appliesTo="source">line: 185</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Change for version 4.0 ##</source>
+</segment>
+</unit>
+<unit id="555b17c6-0554-4f77-bd41-763c2255c79b">
+<notes>
+<note appliesTo="source">line: 187</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added the Compatibility of the add-on with both Python 2.7 and 3;</source>
+</segment>
+</unit>
+<unit id="17fba8c8-be11-4e89-9d4c-a6b3a00116c8">
+<notes>
+<note appliesTo="source">line: 188</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Fixed a bug with add-on paths that contain non-ASCII characters.</source>
+</segment>
+</unit>
+<unit id="bfa2beb5-3886-4d1f-a08e-a4b51c6bbb09">
+<notes>
+<note appliesTo="source">line: 190</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Change for version 3.0 ##</source>
+</segment>
+</unit>
+<unit id="049e69e4-cb7b-4ff9-a68e-71f93bbaa588">
+<notes>
+<note appliesTo="source">line: 192</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Used the gui.guiHelper module to ensure the correct appearance of the addon's configuration dialog;</source>
+</segment>
+</unit>
+<unit id="5ea81326-7124-4de6-9ed3-8c471a2bc530">
+<notes>
+<note appliesTo="source">line: 193</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Used format instead of %s for formatted strings;</source>
+</segment>
+</unit>
+<unit id="ebc9e777-f514-403e-8492-df853eeb0135">
+<notes>
+<note appliesTo="source">line: 194</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Used compliance with guidelines for implementation.</source>
+</segment>
+</unit>
+<unit id="fb15792e-375a-4a52-a964-91dfe099885a">
+<notes>
+<note appliesTo="source">line: 196</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Change for version 2.3 ##</source>
+</segment>
+</unit>
+<unit id="bb694f90-fb0e-43f5-86df-6f992f468dcb">
+<notes>
+<note appliesTo="source">line: 198</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added the GPL license to the addon;</source>
+</segment>
+</unit>
+<unit id="13377e56-0297-463d-954b-9c2c6013407b">
+<notes>
+<note appliesTo="source">line: 199</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Changed the shortcut of the script giving the end of selection from Ctrl + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work with the latest versions of mp3DirectCut;</source>
+</segment>
+</unit>
+<unit id="8af1f182-54e9-4a85-a051-06aca43e97e5">
+<notes>
+<note appliesTo="source">line: 200</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added a script to confirm that the selection has been canceled with 'Ctrl+r';</source>
+</segment>
+</unit>
+<unit id="ec3534ce-a5ea-492d-9910-f15fad2c2b25">
+<notes>
+<note appliesTo="source">line: 201</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Made some corrections in the code of the appModule 'mp3directcut.py'.</source>
+</segment>
+</unit>
+<unit id="3d0c1129-471c-4d30-89fa-5157afa8826e">
+<notes>
+<note appliesTo="source">line: 203</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Change for version 2.2 ##</source>
+</segment>
+</unit>
+<unit id="4c8f3649-86c3-4be8-b8e3-8bf910db74c3">
+<notes>
+<note appliesTo="source">line: 205</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Correction of the scripts giving the selection markers' locations.</source>
+</segment>
+</unit>
+<unit id="ff80c7a4-c3a2-4d8e-acdd-bad6d34dbe91">
+<notes>
+<note appliesTo="source">line: 207</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Change for version 2.1.1 ##</source>
+</segment>
+</unit>
+<unit id="3994a96d-e5b5-482a-90e5-44a0f26e523e">
+<notes>
+<note appliesTo="source">line: 209</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Removing the script giving the total time and adding this information to the script giving the elapsed time;</source>
+</segment>
+</unit>
+<unit id="0723139d-297c-4104-9ff9-cf7e1cec54ec">
+<notes>
+<note appliesTo="source">line: 210</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added the ability to enable or disable the announcements related to the space key in the module's configuration options, separately from other announcements;</source>
+</segment>
+</unit>
+<unit id="822ae60e-e135-4832-b5e9-8b4f7bae0f8e">
+<notes>
+<note appliesTo="source">line: 211</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added the ability to enable or disable the announcement of placement of the selection marqueures in the module's configuration options;</source>
+</segment>
+</unit>
+<unit id="32c63e6f-8198-4598-b2ff-bfcb47f55c2a">
+<notes>
+<note appliesTo="source">line: 212</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Adding the announcement of the current part when moving through the cutting points;</source>
+</segment>
+</unit>
+<unit id="0b9efe32-2f7a-42a4-8e7d-8cfd4c458b2c">
+<notes>
+<note appliesTo="source">line: 213</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Correction of announcements related to vertical keys;</source>
+</segment>
+</unit>
+<unit id="6b841444-4564-4d46-9b0f-b2c98eabdb55">
+<notes>
+<note appliesTo="source">line: 214</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Adding a script to open the help of the current add-on with 'NVDA+H';</source>
+</segment>
+</unit>
+<unit id="d1223c53-24c4-4aee-aef1-d577fe3558ff">
+<notes>
+<note appliesTo="source">line: 215</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Displacement of the add-on's configuration menu from the Tools menu to the Preferences menu of NVDA.</source>
+</segment>
+</unit>
+<unit id="2f24720c-581d-4c2e-9c63-8a50f2f33d31">
+<notes>
+<note appliesTo="source">line: 217</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Change for version 2.1 ##</source>
+</segment>
+</unit>
+<unit id="f50ad6ad-f924-45a1-b8b4-cf8b115beea0">
+<notes>
+<note appliesTo="source">line: 219</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Adding a script to vocalize moving to the next splitting point with Control+Right Arrow;</source>
+</segment>
+</unit>
+<unit id="381a677c-465a-42a8-9da8-02fc8fc48cdb">
+<notes>
+<note appliesTo="source">line: 220</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Adding a script to vocalize moving to the previous splitting point with Control+Left Arrow;</source>
+</segment>
+</unit>
+<unit id="7e87bae5-51e4-4ae4-84d7-ad025e19925c">
+<notes>
+<note appliesTo="source">line: 221</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Adding a script to vocalize the displacement of 4 hundredths of second ahead, with Shift+Right Arrow;</source>
+</segment>
+</unit>
+<unit id="bace97ef-93cd-4be6-9852-4cdfc410f757">
+<notes>
+<note appliesTo="source">line: 222</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Adding a script to vocalize the displacement of 4 hundredths of second back, with Shift+Left Arrow;</source>
+</segment>
+</unit>
+<unit id="17cdde9a-7093-49b8-b15b-4096f619bce3">
+<notes>
+<note appliesTo="source">line: 223</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Correction of the addon's summary from 'for mp3DirectCut' to 'mp3DirectCut'.</source>
+</segment>
+</unit>
+<unit id="eb1a9451-bc68-4776-96f5-6696e0aadf92">
+<notes>
+<note appliesTo="source">line: 225</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Change for version 2.0 ##</source>
+</segment>
+</unit>
+<unit id="6f4b1496-9d5c-4136-85bf-6496ae1f57fa">
+<notes>
+<note appliesTo="source">line: 227</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Adding a script to know the remaining time with 'Control Shift R';</source>
+</segment>
+</unit>
+<unit id="43b3f68d-fae1-4c98-b358-265b3325d4d5">
+<notes>
+<note appliesTo="source">line: 228</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Fixed reading durations including hours;</source>
+</segment>
+</unit>
+<unit id="dca4453d-ed14-4b56-8d69-8eef77403ead">
+<notes>
+<note appliesTo="source">line: 229</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added ability to differentiate thousandths or hundredths of seconds.</source>
+</segment>
+</unit>
+<unit id="37f76c8f-2142-4149-89f9-64fe45b70564">
+<notes>
+<note appliesTo="source">line: 231</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Change for version 1.1 ##</source>
+</segment>
+</unit>
+<unit id="b745dcfc-a9f6-4147-8c18-46eaec33d5ae">
+<notes>
+<note appliesTo="source">line: 233</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added the ability to include the mp3DirectCut category into the Input Gestures;</source>
+</segment>
+</unit>
+<unit id="f3b1d27b-b43f-4336-9ed1-5a4957ac041b">
+<notes>
+<note appliesTo="source">line: 235</note>
+<note appliesTo="source">prefix:     * </note>
+</notes>
+<segment>
+<source>They will be visible only during use of the mp3DirectCut software.</source>
+</segment>
+</unit>
+<unit id="6614c1b5-c8d9-469e-bb42-1bda56e4e902">
+<notes>
+<note appliesTo="source">line: 237</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added the ability to enable or disable automatic messages, in the tools menu of NVDA, item 'mp3DirectCut configuration';</source>
+</segment>
+</unit>
+<unit id="7e9091ba-bc2b-4b53-9696-6820736cc37f">
+<notes>
+<note appliesTo="source">line: 239</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Change for version 1.0 ##</source>
+</segment>
+</unit>
+<unit id="7f153327-12f0-4dcf-8526-10a537cf5daa">
+<notes>
+<note appliesTo="source">line: 241</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Initial version.</source>
+</segment>
+</unit>
+</file>
+</xliff>

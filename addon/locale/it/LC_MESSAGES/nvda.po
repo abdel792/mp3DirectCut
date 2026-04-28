@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-04-06 03:56+0000\n"
-"PO-Revision-Date: 2026-04-28 03:51\n"
+"POT-Creation-Date: 2026-04-28 08:02+0000\n"
+"PO-Revision-Date: 2026-04-28 08:05\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -248,13 +248,13 @@ msgstr "Apre la guida di questo add-on."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
-#: buildVars.py:24
+#: buildVars.py:23
 msgid "some commands to use mp3directcut with NVDA"
 msgstr "Alcuni comandi per usare mp3DirectCut con NVDA"
 
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
-#: buildVars.py:29
+#: buildVars.py:28
 msgid "Used the latest version of addonTemplate.\n"
 msgstr ""
 

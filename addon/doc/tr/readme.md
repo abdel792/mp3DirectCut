@@ -1,233 +1,240 @@
-﻿# mp3DirectCut
+# mp3DirectCut
 
-* Yazarlar: Abdel, Rémy, Abdellah Zinedine, Jean-François COLAS
-* [Kararlı Sürümü İndirin][1]
-* [Geliştirici sürümünü indirin][2]
+- Yazarlar: Abdel, Rémy, Abdellah Zinedine, Jean-François COLAS
 
-# Sunum #
+# Presentation
 
 Bu eklenti, NVDA ile mp3DirectCut yazılımının erişilebilirliğini iyileştirir.
 
 212'den 223'e kadar olan mp3DirectCut sürümleriyle test edilmiştir.
 
-## Klavye kısayolları ##
+## Klavye kısayolları
 
 Bu eklenti aşağıdaki komutları sunar:
 
-* B
+- B
 
-    * B seçiminin başlangıcındaki işaretçinin doğru yerleşimini onaylamak için kullanılır.
+  - B seçiminin başlangıcındaki işaretçinin doğru yerleşimini onaylamak için kullanılır.
 
-* Ctrl+Shift+B
+- Ctrl+Shift+B
 
-    * B seçiminin başlangıcındaki işaretçinin konumunu belirtmek için kullanılır.
-    * Çift basım, size seçim süresini vermeyi sağlar.
+  - B seçiminin başlangıcındaki işaretçinin konumunu belirtmek için kullanılır.
+  - Çift basım, size seçim süresini vermeyi sağlar.
 
-* Ctrl+Shift+D
+- Ctrl+Shift+D
 
-    * Dosyanın başlangıcından oynatma imlecinin geçerli konumuna kadar olan süreyi verir.
-    * İki kez basıldığında size toplam süreyi verir.
+  - Dosyanın başlangıcından oynatma imlecinin geçerli konumuna kadar olan süreyi verir.
+  - İki kez basıldığında size toplam süreyi verir.
 
-* Ctrl+R
+- Ctrl+R
 
-    * Seçimin iptal edildiğini onaylar.
+  - Seçimin iptal edildiğini onaylar.
 
-* Ctrl+Shift+R
+- Ctrl+Shift+R
 
-    * Oynatma imlecinin mevcut konumundan dosyanın sonuna kadar kalan süreyi verir.
+  - Oynatma imlecinin mevcut konumundan dosyanın sonuna kadar kalan süreyi verir.
 
-* Ctrl+Shift+E
+- Ctrl+Shift+E
 
-    * N seçiminin sonundaki işaretçinin konumunu belirtmek için kullanılır.
-    * İki kez basıldığında, özet B ve N konumlarını ve seçimin süresini verir.
+  - N seçiminin sonundaki işaretçinin konumunu belirtmek için kullanılır.
+  - İki kez basıldığında, özet B ve N konumlarını ve seçimin süresini verir.
 
-* Ctrl+Shift+P
+- Ctrl+Shift+P
 
-    * Mevcut dosyadaki gerçek parçanın pozisyonunu ve toplam parça sayısını verir.
+  - Mevcut dosyadaki gerçek parçanın pozisyonunu ve toplam parça sayısını verir.
 
-* Ctrl+Shift+boşluk çubuğu
+- Ctrl+Shift+boşluk çubuğu
 
-    * Kayıt sırasında vu-metrenin mevcut seviyesini belirlemek için kullanılır.
-    * İki kez basıldığında seviye sıfırlanır.
+  - Kayıt sırasında vu-metrenin mevcut seviyesini belirlemek için kullanılır.
+  - İki kez basıldığında seviye sıfırlanır.
 
-* Aşağı ok
+- Aşağı ok
 
-    * Oynatma üst bilgisinin geçerli konumunu görmenizi sağlar.
-    * Bu komut ayrıca, bir seçim yapılmışsa bu işaretçinin konumunu verirken, imleci N seçiminin sonundaki işaretçinin konumuna da konumlandırır.
-    * Ses seviyesi iletişim kutusunda, genellikle aşağı ok ile ulaşılabilen bir sonraki değeri seslendirir.
-    * Bu değer varsayılan olarak seslendirilmez.
+  - Lets you see the current position of the playhead.
+  - Bu komut ayrıca, bir seçim yapılmışsa bu işaretçinin konumunu verirken, imleci N seçiminin sonundaki işaretçinin konumuna da konumlandırır.
+  - Ses seviyesi iletişim kutusunda, genellikle aşağı ok ile ulaşılabilen bir sonraki değeri seslendirir.
+  - Bu değer varsayılan olarak seslendirilmez.
 
-* End
+- End
 
-    * Çalma imlecini geçerli dosyanın sonuna taşır ve toplam süreyi verir.
+  - Çalma imlecini geçerli dosyanın sonuna taşır ve toplam süreyi verir.
 
-* Home
+- Home
 
-    * Çalma imlecini geçerli dosyanın başına taşır.
+  - Moves the playback cursor at the beginning of the current file.
 
-* Sol ok
+- Left Arrow
 
-    * Oynatma sırasında mevcut süreyi verirken bir saniyelik kısa bir geri dönüş yapmanızı sağlar.
-    * Bu süre, Mp3DirectCut seçeneklerinde yapılandırılabilir.
+  - Oynatma sırasında mevcut süreyi verirken bir saniyelik kısa bir geri dönüş yapmanızı sağlar.
+  - Bu süre, Mp3DirectCut seçeneklerinde yapılandırılabilir.
 
-* N
+- N
 
-    * N seçiminin sonundaki işaretçinin doğru yerleşimini onaylamak için kullanılır.
+  - N seçiminin sonundaki işaretçinin doğru yerleşimini onaylamak için kullanılır.
 
-* Page Down
+- Page Down
 
-    * Oynatma sırasında mevcut süreyi verirken ileri doğru 10 saniyelik bir sıçrama yapar.
-    * Bu süre, Mp3DirectCut seçeneklerinde yapılandırılabilir.
+  - Oynatma sırasında mevcut süreyi verirken ileri doğru 10 saniyelik bir sıçrama yapar.
+  - Bu süre, Mp3DirectCut seçeneklerinde yapılandırılabilir.
 
-* Page Up
+- Page Up
 
-    * Oynatma sırasında mevcut süreyi verirken 10 saniye geriye doğru sıçrama yapar.
-    * Bu süre, Mp3DirectCut seçeneklerinde yapılandırılabilir.
+  - Oynatma sırasında mevcut süreyi verirken 10 saniye geriye doğru sıçrama yapar.
+  - Bu süre, Mp3DirectCut seçeneklerinde yapılandırılabilir.
 
-* R
+- R
 
-    * Boşluk çubuğuna basarak başlayabileceğiniz kayıt hazırlık penceresini açmanızı sağlar.
+  - Boşluk çubuğuna basarak başlayabileceğiniz kayıt hazırlık penceresini açmanızı sağlar.
 
-* Sağ ok
+- Sağ ok
 
-    * Oynatma sırasında mevcut süreyi verip parçayı bir saniye ileri sarar.
-    * Bu süre, Mp3DirectCut seçeneklerinde yapılandırılabilir.
+  - Oynatma sırasında mevcut süreyi verip parçayı bir saniye ileri sarar.
+  - Bu süre, Mp3DirectCut seçeneklerinde yapılandırılabilir.
 
-* Ctrl+sağ ok
+- Ctrl+sağ ok
 
-    * Geçerli süreyi verip bir sonraki bölme noktasına gider.
+  - Geçerli süreyi verip bir sonraki bölme noktasına gider.
 
-* Ctrl+Sol ok
+- Ctrl+Sol ok
 
-    * Geçerli süreyi verip önceki bölme noktasına gider.
+  - Geçerli süreyi verip önceki bölme noktasına gider.
 
-* Shift+sağ ok
+- Shift+sağ ok
 
-    * Mevcut süreyi verip, oynatma sırasında saniyenin yüzde dördü kadar ileri sarar.
+  - Mevcut süreyi verip, oynatma sırasında saniyenin yüzde dördü kadar ileri sarar.
 
-* Shift+Sol ok
+- Shift+Sol ok
 
-    * Oynatma sırasında mevcut süreyi verip saniyenin yüzde dördü kadar geri gider.
+  - Oynatma sırasında mevcut süreyi verip saniyenin yüzde dördü kadar geri gider.
 
-* S
+- S
 
-    * Okumayı durdurmak ve mevcut süreyi vermek için kullanılır.
+  - Okumayı durdurmak ve mevcut süreyi vermek için kullanılır.
 
-* Boşluk çubuğu
+- Space
 
-    * Kayıt hazırsa, bu kaydı başlatır.
-    * Bir kayıt devam ediyorsa, imleci başa getirerek kaydı durdurur.
-    * Bir dosya yüklenmişse, okumaya başlatır.
-    * Devam eden bir okuma varsa o anki süreyi vererek duraklama yapılmasını sağlar.
-    * Okuma duraklatılmışsa, okumanın geçerli konumdan yeniden başlatılmasını sağlar.
+  - Kayıt hazırsa, bu kaydı başlatır.
+  - If a recording is in progress, stop it by positioning the cursor at the beginning.
+  - Bir dosya yüklenmişse, okumaya başlatır.
+  - Devam eden bir okuma varsa o anki süreyi vererek duraklama yapılmasını sağlar.
+  - Okuma duraklatılmışsa, okumanın geçerli konumdan yeniden başlatılmasını sağlar.
 
-* Yukarı Ok
+- Yukarı Ok
 
-    * Oynatma üst bilgisinin geçerli konumunu görmenizi sağlar.
-    * Bu komut ayrıca, bir seçim yapılmışsa bu işaretçinin konumunu verirken, imleci B seçiminin başlangıcındaki işaretçinin konumunda konumlandırır.
-    * Ses seviyesi iletişim kutusunda, genellikle yukarı ok ile ulaşılabilen bir önceki değeri seslendirir.
-    * Bu değer varsayılan olarak seslendirilmez.
+  - Lets you see the current position of the playhead.
+  - Bu komut ayrıca, bir seçim yapılmışsa bu işaretçinin konumunu verirken, imleci B seçiminin başlangıcındaki işaretçinin konumunda konumlandırır.
+  - Ses seviyesi iletişim kutusunda, genellikle yukarı ok ile ulaşılabilen bir önceki değeri seslendirir.
+  - Bu değer varsayılan olarak seslendirilmez.
 
-* NVDA+H
+- NVDA+H
 
-    * Mevcut eklentinin yardımını açar.
+  - Lets open the help of the current add-on.
 
-## Uyumluluk ##
+## Compatibility
 
-* Bu eklenti, NVDA'nın 2019.3 ve sonrası sürümleriyle uyumludur.
+- Bu eklenti, NVDA'nın 2019.3 ve sonrası sürümleriyle uyumludur.
 
-## 20231007.0.0 için değişiklikler ##
+## 20231007.0.0 için değişiklikler
 
-* Kesim noktaları yerleştirildikten ve kesim özellikleri penceresi açıldıktan sonra "Ctrl+N" ile bu pencerenin başlığına parça indeksi belirtilerek erişilebilirlik eklenir.
-* Okuma modunda, seçimlerin başlangıç ​​veya bitiş işaretlerini alfanümerik tuş takımının 1'den 6'ya kadar olan tuşlarıyla hareket ettirdikten sonra, yeni konumdan otomatik okuma başlangıcının eklenmesi;
-* Parçanın başlangıcından itibaren "control+shift+r" ile kalan süreye bakılırken oluşan bir hata düzeltildi.
+- Fixed a bug that caused a log error when reloading plugins, thanks to Rob, from nvda-addons mailing list;
 
-## 20230728.0.0 için değişiklikler ##
+## 20230728.0.0 için değişiklikler
 
-* Flake8 ve mypy kuralları koda uygulandı;
-* Python 3'te tanıtılan ek açıklamaları desteklemek için desteklenen minimum NVDA sürümü 2019.3 olarak değiştirildi.
+- Updated compatibility for nvda-2024.1.;
+- Deleted download link from readme, the download link for future updates will now only be available from the add-on store.
 
-## 20230607.0.0 için değişiklikler ##
+## 20230607.0.0 için değişiklikler
 
-* Aşağıdaki iş akışları eklendi:
- * otomatik Güncelleme Çevirileri - NVDA'nın çeviri sisteminden çevirileri otomatik olarak güncellemek için.
- * release-on-tag..yaml: yeni bir etiket gönderilir gönderilmez eklentiyi oluşturmak ve yayınlamak;
- * manual-release.yaml: Eklentinin yeni sürümlerini manuel olarak oluşturmak ve yayınlamak.
-* Çeviriler güncellendi.
+- Added a backward compatible implementation to support speak on demand mode, which will soon be available with nvda-2024.1.
 
-## 20230508.0.0 ve sonrası sürümler için değişiklikler ##
+## 20230508.0.0 ve sonrası sürümler için değişiklikler
 
-* • Mağaza kurallarına/gereksinimlerine göre sürüm numarası, minimum NVDA sürümü ve indirme bağlantısı değiştirildi.
+- Kesim noktaları yerleştirildikten ve kesim özellikleri penceresi açıldıktan sonra "Ctrl+N" ile bu pencerenin başlığına parça indeksi belirtilerek erişilebilirlik eklenir.
+- Okuma modunda, seçimlerin başlangıç ​​veya bitiş işaretlerini alfanümerik tuş takımının 1'den 6'ya kadar olan tuşlarıyla hareket ettirdikten sonra, yeni konumdan otomatik okuma başlangıcının eklenmesi;
+- Parçanın başlangıcından itibaren "control+shift+r" ile kalan süreye bakılırken oluşan bir hata düzeltildi.
 
-## 20.12 sürümü için değişiklikler ##
+## 20.12 sürümü için değişiklikler
 
-* En son Mp3DirectCut sürümleri için kayıt ve okuma sırasında konuşmayı durdurur;
-* Python 3 kullanan yeni NVDA sürümleri için kalan okuma süresinin okunması sorunu düzeltildi.
+- Flake8 ve mypy kuralları koda uygulandı;
+- Python 3'te tanıtılan ek açıklamaları desteklemek için desteklenen minimum NVDA sürümü 2019.3 olarak değiştirildi.
 
-## 19.02 sürümü için değişiklikler ##
+## 19.02 sürümü için değişiklikler
 
-* Eklenti yapılandırması, nvda 2018.2'den itibaren mevcut olan ayarlar paneline eklendi;
-* Yıl.ay kullanılarak değiştirilen sürüm numaralandırması. (2 basamaklı yıl, ardından nokta, ardından 2 basamaklı ay);
-* Nvda 2019.1'den bu yana ortaya çıkan eklentinin yeni sürüm oluşturma biçimiyle uyumluluk eklendi.
+- Aşağıdaki iş akışları eklendi:
+- otomatik Güncelleme Çevirileri - NVDA'nın çeviri sisteminden çevirileri otomatik olarak güncellemek için.
+- release-on-tag..yaml: yeni bir etiket gönderilir gönderilmez eklentiyi oluşturmak ve yayınlamak;
+- manual-release.yaml: Eklentinin yeni sürümlerini manuel olarak oluşturmak ve yayınlamak.
+- Çeviriler güncellendi.
 
-## 4.0 sürümü için değişiklikler ##
+## Changes for version 20230508.0.0 and beyond
 
-* Eklenti hem Python 2.7 hem de 3 ile uyumlu hale getirildi;
-* ASCII olmayan karakterler içeren eklenti yollarıyla ilgili bir hata düzeltildi.
+- • Mağaza kurallarına/gereksinimlerine göre sürüm numarası, minimum NVDA sürümü ve indirme bağlantısı değiştirildi.
 
-## 3.0 sürümü için değişiklikler ##
+## Change for version 20.12
 
-* Eklentinin yapılandırma iletişim kutusunun doğru görünümünü sağlamak için gui.guiHelper modülünü kullandı;
-* Biçimlendirilmiş stringler için %s yerine format kullanıldı;
-* Uygulama yönergelerine uygunluk kullanıldı.
+- En son Mp3DirectCut sürümleri için kayıt ve okuma sırasında konuşmayı durdurur;
+- Python 3 kullanan yeni NVDA sürümleri için kalan okuma süresinin okunması sorunu düzeltildi.
 
-## 2.3 sürümü için değişiklikler ##
+## 2.3 sürümü için değişiklikler
 
-* Eklentiye GPL lisansı eklendi;
-* Ctrl + Shift + N, mp3DirectCut'un en son sürümleriyle çalışmadığından, sonuna dek seçmeyi sağlayan komut dosyasının kısayolu Ctrl + Shift + N'den Ctrl + Shift + E'ye değiştirildi;
-* Seçimin 'Ctrl+r' ile iptal edildiğini onaylamak için bir script eklendi;
-* AppModule 'mp3directcut.py' kodunda bazı düzeltmeler yapıldı.
+- Eklenti yapılandırması, nvda 2018.2'den itibaren mevcut olan ayarlar paneline eklendi;
+- Yıl.ay kullanılarak değiştirilen sürüm numaralandırması. (2 basamaklı yıl, ardından nokta, ardından 2 basamaklı ay);
+- Nvda 2019.1'den bu yana ortaya çıkan eklentinin yeni sürüm oluşturma biçimiyle uyumluluk eklendi.
 
-## 2.2 sürümü için değişiklikler ##
+## 2.2 sürümü için değişiklikler
 
-* Seçim işaretçilerinin konumlarını veren script dosyalarının düzeltilmesi.
+- Eklenti hem Python 2.7 hem de 3 ile uyumlu hale getirildi;
+- ASCII olmayan karakterler içeren eklenti yollarıyla ilgili bir hata düzeltildi.
 
-## 2.1.1 sürümü için değişiklikler ##
+## 2.1.1 sürümü için değişiklikler
 
-* Toplam süreyi veren script kaldırıldı ve bu bilgiler geçen süreyi veren scripte eklendi;
-* Modülün yapılandırma seçeneklerinde boşluk tuşu ile ilgili duyuruları diğer duyurulardan ayrı olarak etkinleştirme veya devre dışı bırakma özelliği eklendi;
-* Modülün yapılandırma seçeneklerinde seçim çerçevesinin yerleşim duyurusunu etkinleştirme veya devre dışı bırakma özelliği eklendi;
-* Kesişim sınırlarından geçerken mevcut parçanın duyrulması eklendi;
-* Dikey tuşlarla ilgili duyuruların düzeltilmesi;
-* 'NVDA+H' ile mevcut eklentinin yardımını açmak için bir komut eklendi;
-* Eklentinin yapılandırma menüsünün Araçlar menüsünden NVDA'nın Tercihler menüsüne kaydırılması.
+- Eklentinin yapılandırma iletişim kutusunun doğru görünümünü sağlamak için gui.guiHelper modülünü kullandı;
+- Biçimlendirilmiş stringler için %s yerine format kullanıldı;
+- Uygulama yönergelerine uygunluk kullanıldı.
 
-## 2.1 sürümü için değişiklikler ##
+## 2.1 sürümü için değişiklikler
 
-* Kontrol+Sağ Ok ile sonraki bölme noktasına geçişi seslendirmek için bir script eklendi;
-* Kontrol+Sol Ok ile önceki bölme noktasına geçişi seslendirmek için bir script eklendi;
-* Shift+Sağ Ok ile saniyenin yüzde 4'ü kadar ileri kaymayı seslendiren bir script eklendi;
-* Saniyenin yüzde dördü kadar geri kaymayı Shift+Sol Ok ile seslendiren bir komut eklendi;
-* Eklenti özetinin gösteriminin 'mp3DirectCut için'den 'mp3DirectCut'a düzeltildi.
+- Eklentiye GPL lisansı eklendi;
+- Ctrl + Shift + N, mp3DirectCut'un en son sürümleriyle çalışmadığından, sonuna dek seçmeyi sağlayan komut dosyasının kısayolu Ctrl + Shift + N'den Ctrl + Shift + E'ye değiştirildi;
+- Seçimin 'Ctrl+r' ile iptal edildiğini onaylamak için bir script eklendi;
+- AppModule 'mp3directcut.py' kodunda bazı düzeltmeler yapıldı.
 
-## 2.0 sürümü için değişiklikler ##
+## 2.0 sürümü için değişiklikler
 
-* 'Kontrol Shift R' ile kalan süreyi öğrenebilmek için bir komut eklendi;
-* Saatlerinde dahil edildiği okuma süreleri düzeltildi;
-* Saniyenin binde birini veya yüzde birini ayırt etme yeteneği eklendi.
+- Seçim işaretçilerinin konumlarını veren script dosyalarının düzeltilmesi.
 
-## 1.1 sürümü için değişiklikler ##
+## 1.1 sürümü için değişiklikler
 
-* Girdi Hareketlerine mp3DirectCut kategorisini dahil etme yeteneği eklendi;
+- Toplam süreyi veren script kaldırıldı ve bu bilgiler geçen süreyi veren scripte eklendi;
+- Modülün yapılandırma seçeneklerinde boşluk tuşu ile ilgili duyuruları diğer duyurulardan ayrı olarak etkinleştirme veya devre dışı bırakma özelliği eklendi;
+- Modülün yapılandırma seçeneklerinde seçim çerçevesinin yerleşim duyurusunu etkinleştirme veya devre dışı bırakma özelliği eklendi;
+- Kesişim sınırlarından geçerken mevcut parçanın duyrulması eklendi;
+- Dikey tuşlarla ilgili duyuruların düzeltilmesi;
+- 'NVDA+H' ile mevcut eklentinin yardımını açmak için bir komut eklendi;
+- Eklentinin yapılandırma menüsünün Araçlar menüsünden NVDA'nın Tercihler menüsüne kaydırılması.
 
-    * Yalnızca mp3DirectCut yazılımının kullanımı sırasında görünür olacaklardır.
+## 1.0 sürümü için değişiklikler
 
-* NVDA'nın araçlar menüsünde 'mp3DirectCut konfigürasyonu' öğesinde otomatik mesajları etkinleştirme veya devre dışı bırakma özelliği eklendi;
+- Kontrol+Sağ Ok ile sonraki bölme noktasına geçişi seslendirmek için bir script eklendi;
+- Kontrol+Sol Ok ile önceki bölme noktasına geçişi seslendirmek için bir script eklendi;
+- Shift+Sağ Ok ile saniyenin yüzde 4'ü kadar ileri kaymayı seslendiren bir script eklendi;
+- Saniyenin yüzde dördü kadar geri kaymayı Shift+Sol Ok ile seslendiren bir komut eklendi;
+- Eklenti özetinin gösteriminin 'mp3DirectCut için'den 'mp3DirectCut'a düzeltildi.
 
-## 1.0 sürümü için değişiklikler ##
+## [Geliştirici sürümünü indirin][2]
 
-* İlk sürüm.
+- 'Kontrol Shift R' ile kalan süreyi öğrenebilmek için bir komut eklendi;
+- Saatlerinde dahil edildiği okuma süreleri düzeltildi;
+- Added ability to differentiate thousandths or hundredths of seconds.
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+## 3.0 sürümü için değişiklikler
 
-[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
+- Girdi Hareketlerine mp3DirectCut kategorisini dahil etme yeteneği eklendi;
+
+  - Yalnızca mp3DirectCut yazılımının kullanımı sırasında görünür olacaklardır.
+
+- NVDA'nın araçlar menüsünde 'mp3DirectCut konfigürasyonu' öğesinde otomatik mesajları etkinleştirme veya devre dışı bırakma özelliği eklendi;
+
+## 4.0 sürümü için değişiklikler
+
+- İlk sürüm.

@@ -76,6 +76,7 @@ repos:
       args: [ --fix ]
     - id: ruff-format
       name: format with ruff
+
 - repo: local
   hooks:
 

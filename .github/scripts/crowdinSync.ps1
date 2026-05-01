@@ -5,11 +5,12 @@ $ErrorActionPreference = 'Stop'
 git config user.name "github-actions[bot]"
 git config user.email "github-actions[bot]@users.noreply.github.com"
 
-$addonId = $env:ADDON_ID.Trim()
-if (-not $addonId) {
+$rawAddonId = $env:ADDON_ID
+if ([string]::IsNullOrWhiteSpace($rawAddonId)) {
     Write-Error "Failed to get addon ID."
     exit 1
 }
+$addonId = $rawAddonId.Trim()
 
 # --- STEP 1: PREPARATION AND SOURCE UPDATE ---
 
@@ -19,9 +20,15 @@ $mdFile = "./readme.md"
 if (Test-Path $mdFile) {
     if (Test-Path $xliffFile) {
         $tempXliff = [System.IO.Path]::GetTempFileName()
-        Copy-Item "$addonId.xliff" $tempXliff -Force
-        Write-Host "DEBUG: Updating XLIFF source based on readme.md..."
-        uv run .github/scripts/markdownTranslate.py updateXliff -m $mdFile -x $tempXliff -o $xliffFile
+        try {
+            Copy-Item "$addonId.xliff" $tempXliff -Force
+            Write-Host "DEBUG: Updating XLIFF source based on readme.md..."
+            uv run .github/scripts/markdownTranslate.py updateXliff -m $mdFile -x $tempXliff -o $xliffFile
+        } finally {
+            if (Test-Path $tempXliff) {
+                Remove-Item $tempXliff -Force
+            }
+        }
     } else {
         Write-Host "DEBUG: XLIFF template not found. Creating new one from readme.md..."
         uv run .github/scripts/markdownTranslate.py generateXliff -m $mdFile -o $xliffFile
@@ -63,33 +70,40 @@ New-Item -ItemType Directory -Force -Path addon/doc | Out-Null
 $languageMappings = Get-Content -Raw ".github/scripts/languageMappings.json" | ConvertFrom-Json
 
 foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
-    $langCode = $dir.Name 
-    
+    $langCode = $dir.Name
+
     if ($langCode -eq "en") { continue }
 
-    # Identify codes
-    $crowdinLang = $languageMappings[$langCode]
-    if (-not $crowdinLang) { $crowdinLang = $langCode }
-    $langShort = $langCode.Split('-')[0].Split('_')[0]
+    # --- Identify codes
+    $crowdinLang = $null
 
-    # Map to local NVDA directory
-    $localLangDir = uv run python .github/scripts/langCodes.py $langCode
-    
-    Write-Host "`n--- Processing Language: $langCode (Mapped to local: $localLangDir) ---"
+    # Use the ."variable" syntax to correctly read the PSCustomObject from JSON
+    if ($languageMappings.PSObject.Properties.Name -contains $langCode) {
+        $crowdinLang = $languageMappings."$langCode"
+    }
+
+    # Fallback: If no mapping is found, replace underscores with dashes for Crowdin compatibility
+    if (-not $crowdinLang) {
+        $crowdinLang = $langCode.Replace('_', '-')
+    }
+
+    # The $langCode (folder name from Crowdin) represents the local repository language code.
+    # It matches the NVDA directory structure, so no extra mapping is needed.
+    Write-Host "--- Processing Language: $langCode (Crowdin: $crowdinLang) ---" -ForegroundColor Cyan
 
     # Paths
     $remoteMd = Join-Path $dir.FullName "$addonId.md"
     $remoteXliff = Join-Path $dir.FullName "$addonId.xliff"
     $remotePo = Join-Path $dir.FullName "$addonId.po"
-    $localMdDir = "addon/doc/$localLangDir"
+    $localMdDir = "addon/doc/$langCode"
     $localMd = "$localMdDir/readme.md"
-    $localPoPath = "addon/locale/$localLangDir/LC_MESSAGES/nvda.po"
+    $localPoPath = "addon/locale/$langCode/LC_MESSAGES/nvda.po"
 
     # --- 3.1 PO FILE PROCESSING ---
     $poImported = $false
     if (Test-Path $remotePo) {
-        Write-Host "DEBUG: Checking Remote PO progress for $langShort..."
-        uv run python .github/scripts/checkTranslation.py "$addonId.po" $langShort
+        Write-Host "DEBUG: Checking Remote PO progress for $crowdinLang..."
+        uv run python .github/scripts/checkTranslation.py "$addonId.po" $crowdinLang
         if ($LASTEXITCODE -eq 0) {
             Write-Host "SUCCESS: Remote PO is valid. Importing to $localPoPath"
             New-Item -ItemType Directory -Force -Path (Split-Path $localPoPath) | Out-Null
@@ -111,7 +125,7 @@ foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
 
     if (Test-Path $remoteMd) {
         Write-Host "DEBUG: Evaluating Remote Markdown score..."
-        $res = uv run python .github/scripts/checkTranslation.py "$addonId.md" $langShort
+        $res = uv run python .github/scripts/checkTranslation.py "$addonId.md" $crowdinLang
         $scoreMd = [double]($res | Select-String "mdScore=").ToString().Split("=")[1]
     } else {
         Write-Host "DEBUG: No remote Markdown file found for this language."
@@ -119,8 +133,8 @@ foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
 
     if (Test-Path $remoteXliff) {
         Write-Host "DEBUG: Evaluating Remote XLIFF score..."
-        $res = uv run python .github/scripts/checkTranslation.py "$addonId.xliff" $langShort
-        $scoreXliff = [double]($res | Select-String "translationRatio=").ToString().Split("=")[1]
+        $res = uv run python .github/scripts/checkTranslation.py "$addonId.xliff" $crowdinLang
+        $scoreXliff = [double]($res | Select-String "xliffScore=").ToString().Split("=")[1]
     } else {
         Write-Host "DEBUG: No remote XLIFF file found for this language."
     }
@@ -134,11 +148,11 @@ foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
         if (!(Test-Path $localMdDir)) { New-Item -ItemType Directory -Force -Path $localMdDir | Out-Null }
 
         if ($scoreXliff -ge $scoreMd) {
-            Write-Host "SUCCESS: XLIFF is better or equal. Converting XLIFF to local MD ($localLangDir)..."
+            Write-Host "SUCCESS: XLIFF is better or equal. Converting XLIFF to local MD ($langCode)..."
             ./l10nUtil.exe xliff2md $remoteXliff $localMd
             $docImported = $true
         } else {
-            Write-Host "SUCCESS: Markdown is better. Importing Remote MD to local ($localLangDir)..."
+            Write-Host "SUCCESS: Markdown is better. Importing Remote MD to local ($langCode)..."
             Move-Item $remoteMd $localMd -Force
             $docImported = $true
         }

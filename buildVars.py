@@ -25,8 +25,8 @@ addon_info = AddonInfo(
 	addon_version="20260222.0.0",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""Used the latest version of addonTemplate.
-"""),
+	addon_changelog=_("""* Updated translations from Crowdin
+* Added support for NVDA 2026 API"""),
 	# Author(s)
 	addon_author="Abdel <abdelkrim.bensaid@gmail.com>, Noelia <nrm1977@gmail.com>",
 	# URL for the add-on documentation support

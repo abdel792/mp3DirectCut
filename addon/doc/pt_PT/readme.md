@@ -83,7 +83,7 @@ Este extra oferece os seguintes comandos:
 
 * Página para baixo
 
-    * Dá um avanço de dez segundos na reprodução, dizendo a duração. 
+    * Dá um avanço de dez segundos na reprodução, dizendo a duração.
     * Esta duração é configurável nas opções do programa.
 
 * Página para cima

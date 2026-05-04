@@ -16,6 +16,7 @@ from typing import Callable
 import gui
 import wx
 import config
+
 addonHandler.initTranslation()
 _: Callable[[str], str]
 # Constants
@@ -25,15 +26,14 @@ ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
 speakOnDemand = {"speakOnDemand": True} if buildVersion.version_year > 2023 else {}
 
 confSpec = {
-	'space': 'boolean(default = True)',
-	'marker': 'boolean(default = True)',
-	'other': 'boolean(default = True)'
+	"space": "boolean(default = True)",
+	"marker": "boolean(default = True)",
+	"other": "boolean(default = True)",
 }
-config.conf.spec['mp3DCReport'] = confSpec
+config.conf.spec["mp3DCReport"] = confSpec
 
 
-class GlobalPlugin   (globalPluginHandler.GlobalPlugin):
-
+class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = ADDON_SUMMARY
 
 	def __init__(self, *args, **kwargs):
@@ -43,6 +43,7 @@ class GlobalPlugin   (globalPluginHandler.GlobalPlugin):
 		# This block ensures compatibility with NVDA versions prior to 2018.2 which includes the settings panel.
 		if hasattr(gui, "NVDASettingsDialog"):
 			from gui import NVDASettingsDialog
+
 			NVDASettingsDialog.categoryClasses.append(Mp3DirectCutPanel)
 		else:
 			self.createSubMenu()
@@ -52,7 +53,8 @@ class GlobalPlugin   (globalPluginHandler.GlobalPlugin):
 		self.mp3DirectCut = self.preferencesMenu.Append(
 			wx.ID_ANY,
 			# Translators: name of the option in the menu.
-			_("{0} addon configuration").format("mp3DirectCut"), ""
+			_("{0} addon configuration").format("mp3DirectCut"),
+			"",
 		)
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onMp3DirectCutDialog, self.mp3DirectCut)
 
@@ -77,14 +79,19 @@ class GlobalPlugin   (globalPluginHandler.GlobalPlugin):
 	def script_activateMP3DirectCutConfigurationDialog(self, gesture):
 		if not hasattr(
 			gui.settingsDialogs,
-			"SettingsPanel"
+			"SettingsPanel",
 		) and not hasattr(
 			gui,
-			"SettingsPanel"
+			"SettingsPanel",
 		):
 			wx.CallAfter(self.onMP3DirectCutDialog, None)
 			return
 		wx.CallAfter(
-			(gui.mainFrame.popupSettingsDialog if hasattr(gui.mainFrame, "popupSettingsDialog")
-			 else gui.mainFrame._popupSettingsDialog),
-			gui.settingsDialogs.NVDASettingsDialog, Mp3DirectCutPanel)
+			(
+				gui.mainFrame.popupSettingsDialog
+				if hasattr(gui.mainFrame, "popupSettingsDialog")
+				else gui.mainFrame._popupSettingsDialog
+			),
+			gui.settingsDialogs.NVDASettingsDialog,
+			Mp3DirectCutPanel,
+		)

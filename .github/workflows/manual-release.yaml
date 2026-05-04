@@ -109,7 +109,7 @@ jobs:
           checkYear=match.group(1)
           text=re.sub(r"\"addon_version\": .*?,", f"\"addon_version\": \"{version}\",", text)
           if checkYear<year:
-            text=re.sub(r"\"addon_lastTestedNVDAVersion\": .*?,", f"\"addon_lastTestedNVDAVersion\": \"{year}.1.0\",", text)
+            text=re.sub(r"\"?addon_lastTestedNVDAVersion\"?[:=] ?.*?,", f"\"?addon_lastTestedNVDAVersion\"?[:=] ?\"{year}.1.0\",", text)
           f.seek(0)
           f.write(text)
           f.truncate()

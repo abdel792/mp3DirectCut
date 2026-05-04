@@ -1,3 +1,4 @@
-## Changes for 20260222.0.0
+## Changes for 20260325.0.0
 
-* Used the latest version of addonTemplate.
+* Updated translations from Crowdin
+* Added support for NVDA 2026 API

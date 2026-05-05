@@ -43,12 +43,12 @@ $potFile = "$addonId.pot"
 
 if (Test-Path $potFile) {
     Write-Host "DEBUG: Uploading updated POT source to Crowdin..."
-    ./l10nUtil.exe uploadSourceFile "$potFile" -c addon
+    ./l10nUtil.exe uploadSourceFile "$potFile" -c $env:L10N_UTIL_CONFIG
 }
 
 if (Test-Path $xliffFile) {
     Write-Host "DEBUG: Uploading updated XLIFF source to Crowdin..."
-    ./l10nUtil.exe uploadSourceFile "$xliffFile" -c addon
+    ./l10nUtil.exe uploadSourceFile "$xliffFile" -c $env:L10N_UTIL_CONFIG
     git add "$xliffFile"
     git diff --staged --quiet
     if ($LASTEXITCODE -ne 0) {
@@ -60,7 +60,7 @@ if (Test-Path $xliffFile) {
 # --- STEP 3: EXPORT AND PROCESS TRANSLATIONS ---
 
 Write-Host "DEBUG: Exporting translations from Crowdin..."
-./l10nUtil.exe exportTranslations -o _addonL10n -c addon
+./l10nUtil.exe exportTranslations -o _addonL10n -c $env:L10N_UTIL_CONFIG
 
 # Ensure base directories exist
 New-Item -ItemType Directory -Force -Path addon/locale | Out-Null
@@ -116,7 +116,7 @@ foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
 
     if (-not $poImported -and (Test-Path $localPoPath)) {
         Write-Host "ACTION: Uploading local legacy PO to Crowdin ($crowdinLang) as fallback."
-        ./l10nUtil.exe uploadTranslationFile $crowdinLang "$addonId.po" $localPoPath -c addon
+        ./l10nUtil.exe uploadTranslationFile $crowdinLang "$addonId.po" $localPoPath -c $env:L10N_UTIL_CONFIG
     }
 
     # --- 3.2 DOCUMENTATION PROCESSING (MD & XLIFF) ---
@@ -162,7 +162,7 @@ foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
 
     if (-not $docImported -and (Test-Path $localMd)) {
         Write-Host "ACTION: Documentation quality too low. Uploading local MD to Crowdin ($crowdinLang) as fallback."
-        ./l10nUtil.exe uploadTranslationFile $crowdinLang "$addonId.md" $localMd -c addon
+        ./l10nUtil.exe uploadTranslationFile $crowdinLang "$addonId.md" $localMd -c $env:L10N_UTIL_CONFIG
     }
 }
 

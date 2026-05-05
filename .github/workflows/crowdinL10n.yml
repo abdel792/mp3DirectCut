@@ -14,7 +14,8 @@ env:
   crowdinAuthToken: ${{ secrets.CROWDIN_TOKEN }}
   downloadTranslationsBranch: l10n
   GH_TOKEN: ${{ github.token }}
-  CROWDIN_PROJECT_ID: 780748
+  CROWDIN_PROJECT_ID: ${{ vars.CROWDIN_PROJECT_ID || 780748 }}
+  L10N_UTIL_CONFIG: ${{ vars.L10N_UTIL_CONFIG || 'addon' }}
 
 jobs:
   crowdinSync:
@@ -23,6 +24,13 @@ jobs:
       contents: write
 
     steps:
+      - name: Random startup delay (0-5 minutes)
+        if: github.event_name == 'schedule'
+        shell: pwsh
+        run: |
+          $delaySeconds = Get-Random -Minimum 0 -Maximum 301
+          Write-Host "Sleeping for $delaySeconds seconds..."
+          Start-Sleep -Seconds $delaySeconds
       - name: Checkout add-on
         uses: actions/checkout@v6
         with:

@@ -101,11 +101,10 @@ exclude = [
 	"__pycache__",
 	".venv",
 	"site_scons",
+	".github/scripts",
 	# When excluding concrete paths relative to a directory,
 	# not matching multiple folders by name e.g. `__pycache__`,
 	# paths are relative to the configuration file.
-	".github/scripts/markdownTranslate.py",
-	".github/scripts/checkTranslation.py",
 ]
 
 # Tell pyright where to load python code from

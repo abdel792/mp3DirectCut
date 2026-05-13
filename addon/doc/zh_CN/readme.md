@@ -1,8 +1,6 @@
 # mp3DirectCut 无障碍增强插件
 
 * 作者：Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
-* 下载 [稳定版][1]
-* 下载 [开发版][2]
 
 # 功能概述 #
 
@@ -136,6 +134,19 @@
 
 * 此插件兼容 NVDA 2019.3 及更高版本。
 
+## 20240327.0.0 版本变更
+
+* 修复了重新加载插件时导致日志错误的问题，感谢来自 NVDA 插件邮件列表的 Rob；
+
+## 20240326.0.0 版本变更
+
+* 兼容 NVDA 2024.1；
+* 从 readme 文件中删除了下载链接，未来更新的下载链接只能从插件商店获取。
+
+## 20231229.0.0 版本变更 ##
+
+* 添加了一个向后兼容的实现来支持手动朗读模式，该模式很快将在 NVDA 2024.1 中提供。
+
 ## 20231007.0.0 版本变更 ##
 
 * 设置分割点后按 Ctrl+N 打开分割属性窗口时，增加窗口标题的无障碍提示（包含分段索引）
@@ -227,7 +238,3 @@
 ## 1.0 版本变更 ##
 
 * 初始版本。
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=mp3DirectCut

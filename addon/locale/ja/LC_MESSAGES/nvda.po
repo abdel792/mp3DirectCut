@@ -1,0 +1,237 @@
+# Japanese translation for mp3DirectCut NVDA add-on.
+# Copyright (C) 2024 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the mp3DirectCut package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mp3DirectCut 20250703.0.0\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2017-06-20 15:57+1000\n"
+"PO-Revision-Date: 2026-01-21 00:00+0900\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Translators: name of the option in the menu.
+#, python-brace-format
+msgid "{0} addon configuration"
+msgstr "{0} アドオン設定"
+
+#, python-brace-format
+msgid "Allows you display the configuration dialog of {0} addon."
+msgstr "{0} アドオンの設定ダイアログを表示します。"
+
+#. Translators: The label of the checkbox to enable or disable the spacebar announcements.
+msgid "Enable announcements of the space key"
+msgstr "スペースキーの読み上げを有効にする"
+
+msgid "Announce the placement of the selection markers"
+msgstr "選択マーカーの配置を読み上げる"
+
+#. Translators: The label of the checkbox to enable or disable the other announcements.
+msgid "Enable the other announces"
+msgstr "その他の読み上げを有効にする"
+
+#. Translators: The title of the add-on configuration dialog box.
+#, python-brace-format
+msgid "Configuration of the addon {0}"
+msgstr "アドオン {0} の設定"
+
+msgid "hours"
+msgstr "時間"
+
+msgid "minutes"
+msgstr "分"
+
+msgid "seconds"
+msgstr "秒"
+
+msgid "hundredths"
+msgstr "100分の1秒"
+
+msgid "thousandths"
+msgstr "1000分の1秒"
+
+#. Translators: Message to inform that no selection has been realized.
+msgid "No selection"
+msgstr "選択なし"
+
+#. Translators: Message to inform the user that the playback cursor is at the top of the file.
+msgid "Beginning of the file."
+msgstr "ファイルの先頭です。"
+
+#. Translators: Message to inform the user that the playback cursor is at the end of the file.
+msgid "End of the file."
+msgstr "ファイルの末尾です。"
+
+#. Translators: Message to inform the user that not file is loaded.
+msgid ""
+"Not file is loaded. Please check that you are in a file, open one with "
+"Control O,\tor R to start recording."
+msgstr ""
+"ファイルが読み込まれていません。ファイルを開いているか確認してください。"
+"Ctrl+Oでファイルを開くか、Rを押して録音を開始してください。"
+
+#. Translators: Message to inform the user that the current command is not available in a recording mode.
+msgid ""
+"This command is not available in a recording mode, it is available only in a "
+"reading mode !"
+msgstr ""
+"このコマンドは録音モードでは使用できません。再生モードでのみ使用できます！"
+
+#. Translators: Message to indicate the position of the selection start marker.
+msgid "The marker of the beginning of selection B is at"
+msgstr "選択開始マーカーBの位置は"
+
+#. Translators: Message to indicate the position of the selection end marker.
+msgid "The marker of the End of selection N is at"
+msgstr "選択終了マーカーNの位置は"
+
+#. Translators: Message to indicate the level of the vu-meter.
+msgid "The level of the vu-meter is at"
+msgstr "VUメーターのレベルは"
+
+#. Translators: Message to indicate the total duration of the current file.
+msgid "Total time: "
+msgstr "総時間: "
+
+#. Translators: Message to indicate the duration of the selection.
+msgid "Duration of selection"
+msgstr "選択範囲の長さ"
+
+#. Translators: Message to indicate the actual part.
+msgid "Actual part"
+msgstr "現在のパート"
+
+#. Translators: Message to inform that no selection was found.
+msgid "Selection not found."
+msgstr "選択範囲が見つかりません。"
+
+#. Translators: Message to indicate that the information of the current part is not available.
+msgid "Information specific to the actual part is not available."
+msgstr "現在のパートの情報は利用できません。"
+
+#. Translators: Message to prompt the user to verify that no selection has been made.
+msgid "Please check that no selection has been made."
+msgstr "選択が行われていないことを確認してください。"
+
+#. Translators: Message to prompt the user to verify that it is not in recording mode.
+msgid "Please chek that you are not in a recording mode."
+msgstr "録音モードではないことを確認してください。"
+
+#. Translators: Message to inform the user that the recording is ready.
+msgid ""
+"The recording is ready ! It remains only to press spacebar for begin the "
+"recording.\tThis same spacebar  will stop the recording !"
+msgstr ""
+"録音の準備ができました！スペースキーを押すと録音を開始します。"
+"同じスペースキーで録音を停止します！"
+
+#. Translators: Message to inform the user that a recording is in progress.
+msgid ""
+"A recording is in progress, please press spacebar for stop it and start a "
+"new one."
+msgstr ""
+"録音中です。スペースキーを押して停止し、新しい録音を開始してください。"
+
+#. Translators: Message to inform the user that the recording is not ready.
+msgid "The recording is not ready !"
+msgstr "録音の準備ができていません！"
+
+#. Translators: Message to indicate that the vu-meter is not available.
+#, python-brace-format
+msgid ""
+"The vu-meter is not available. Please verify if a recording is in progress,"
+"\tand that the checkbox enable the margin button is checked in the options "
+"of {0}."
+msgstr ""
+"VUメーターは利用できません。録音中かどうかを確認し、"
+"{0}のオプションで「マージンボタンを有効にする」チェックボックスが"
+"オンになっていることを確認してください。"
+
+#. Translators: Message to confirm that the level of the vu-meter has been reset.
+msgid "The level of the vu-meter has been reset !"
+msgstr "VUメーターのレベルがリセットされました！"
+
+#. Translators: Message to confirm the placement of the selection start marker.
+msgid "Start selection marker set."
+msgstr "選択開始マーカーを設定しました。"
+
+#. Translators: Message to confirm the placement of the selection end marker.
+msgid "End selection marker set."
+msgstr "選択終了マーカーを設定しました。"
+
+#. Translators: Message to confirm that the selection has been canceled.
+msgid "Selection canceled."
+msgstr "選択をキャンセルしました。"
+
+msgid "of"
+msgstr "/"
+
+msgid "Part"
+msgstr "パート"
+
+#. Translators: Message to inform the user that there is no remaining time.
+msgid "No time remaining !"
+msgstr "残り時間がありません！"
+
+#. Translators: Message to indicate the elapsed time.
+msgid "Elapsed time: "
+msgstr "経過時間: "
+
+msgid ""
+"Gives the duration from the beginning of the file to the current position of "
+"the playback cursor.\t\t\tIf pressed twice, gives the total duration."
+msgstr ""
+"ファイルの先頭から再生カーソルの現在位置までの時間を読み上げます。"
+"2回押すと総時間を読み上げます。"
+
+#. Translators: Message to indicate the remaining time.
+msgid "Remaining time: "
+msgstr "残り時間: "
+
+msgid ""
+"Gives the time remaining from the current position of the playback cursor to "
+"the end of the file."
+msgstr ""
+"再生カーソルの現在位置からファイルの末尾までの残り時間を読み上げます。"
+
+msgid ""
+"Used to determine the current level of the vu-meter, during recording, "
+"double pressure reset it."
+msgstr ""
+"録音中にVUメーターの現在のレベルを確認します。"
+"2回押すとリセットします。"
+
+msgid ""
+"Used to indicate the position of the marker of the beginning of selection B."
+"\t\t\tDouble pressure lets give you the duration of the selection."
+msgstr ""
+"選択開始マーカーBの位置を読み上げます。"
+"2回押すと選択範囲の長さを読み上げます。"
+
+msgid ""
+"Used to indicate the position of the marker of the end of selection N.\t\t"
+"\tDouble pressure gives recapitulatif positions B and N, and the duration of "
+"the selection."
+msgstr ""
+"選択終了マーカーNの位置を読み上げます。"
+"2回押すとマーカーBとNの位置および選択範囲の長さを読み上げます。"
+
+msgid ""
+"Give the reference of the actual part and the total number of parts in the "
+"current file."
+msgstr ""
+"現在のパート番号とファイル内の総パート数を読み上げます。"
+
+#. Translators: message presented in input mode.
+msgid "Lets open the help of the current add-on."
+msgstr "現在のアドオンのヘルプを開きます。"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid "some commands to use mp3directcut with NVDA"
+msgstr "NVDAでmp3DirectCutを使用するためのコマンド"

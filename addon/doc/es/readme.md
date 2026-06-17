@@ -1,301 +1,240 @@
 # mp3DirectCut
 
-- Autor(es) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
+* Autor(es) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
 
 # Presentación
 
-Este complemento permite mejorar la accesibilidad del software mp3DirectCut
-con NVDA.
+Este complemento mejora la accesibilidad del software mp3DirectCut con NVDA.
 
-Se ha probado con las versiones de mp3DirectCut que van desde la 212 hasta
-la 223.
+Ha sido probado con versiones de mp3DirectCut comprendidas entre la 212 y la 233.
 
-## Órdenes de teclado
+## Atajos de teclado
 
-Este complemento ofrece las siguientes órdenes:
+Este complemento ofrece los siguientes comandos:
 
-- B
+* B
 
-  - Se usa para confirmar la situación correcta del marcador de inicio de
-    la selección B.
+    * Se utiliza para confirmar la colocación correcta del marcador del inicio de la selección B.
 
-- Ctrl+Shift+B
+* Ctrl+Shift+B
 
-  - Se usa para indicar la posición del marcador de inicio de la selección
-    B.
-  - Con una doble pulsación devuelve la duración de la selección.
+    * Se utiliza para indicar la posición del marcador del inicio de la selección B.
+    * Una doble pulsación permite obtener la duración de la selección.
 
-- Ctrl+Shift+D
+* Ctrl+Shift+D
 
-  - Da la posición desde el comienzo del archivo hasta la posición actual
-    del cursor de reproducción.
-  - Con una doble pulsación indica la duración total.
+    * Proporciona la duración desde el inicio del archivo hasta la posición actual del cursor de reproducción.
+    * Una doble pulsación permite obtener la duración total.
 
-- Ctrl+R
+* Ctrl+R
 
-  - Confirma que se ha cancelado la selección.
+    * Confirma que la selección ha sido cancelada.
 
-- Ctrl+Shift+R
+* Ctrl+Shift+R
 
-  - Devuelve el tiempo restante desde la posición actual del cursor de
-    reproducción hasta el final del archivo.
+    * Proporciona el tiempo restante desde la posición actual del cursor de reproducción hasta el final del archivo.
 
-- Ctrl+Shift+E
+* Ctrl+Shift+E
 
-  - Se usa para indicar la posición del marcador del fin de la selección
-    N.
-  - Si se pulsa dos veces devuelve las posiciones B y N, y la duración de
-    la selección.
+    * Se utiliza para indicar la posición del marcador del final de la selección N.
+    * Una doble pulsación proporciona un resumen de las posiciones B y N, y la duración de la selección.
 
-- Ctrl+Shift+P
+* Ctrl+Shift+P
 
-  - Da la referencia de la parte actual y la cantidad total de partes del
-    archivo.
+    * Proporciona la referencia de la parte actual y el número total de partes en el archivo actual.
 
-- Ctrl+Shift+Espacio
+* Ctrl+Shift+Space
 
-  - Se usa para determinar el nivel actual del volumen del micrófono
-    durante la grabación.
-  - Una doble pulsación lo restablece.
+    * Se utiliza para determinar el nivel actual del vúmetro durante la grabación.
+    * Una doble pulsación lo restablece.
 
-- Flecha abajo
+* Flecha abajo
 
-  - Lets you see the current position of the playhead.
-  - Esta orden también sitúa el cursor en la posición del marcador del
-    final de la selección N, mientras da la ubicación de este marcador si
-    se ha hecho una selección.
-  - En el cuadro de diálogo de volumen, verbaliza el siguiente valor que
-    generalmente puede alcanzarse pulsando flecha abajo.
-  - Este valor no se verbaliza por defecto.
+    * Permite conocer la posición actual del cabezal de reproducción.
+    * Este comando también posiciona el cursor en la ubicación del marcador del final de la selección N, indicando la ubicación de este marcador si se ha realizado una selección.
+    * En el cuadro de diálogo de volumen, vocaliza el siguiente valor que normalmente puede alcanzarse con Flecha abajo.
+    * Este valor no se vocaliza de forma predeterminada.
 
-- Fin
+* Fin
 
-  - Mueve el cursor de reproducción al final del archivo actual e indica
-    la duración total.
+    * Mueve el cursor de reproducción al final del archivo actual y proporciona el tiempo total.
 
-- Inicio
+* Inicio
 
-  - Mueve el cursor de reproducción al comienzo del archivo actual.
+    * Mueve el cursor de reproducción al inicio del archivo actual.
 
-- Flecha izquierda
+* Flecha izquierda
 
-  - Retrocede un segundo durante la reproducción e indica la duración
-    actual.
-  - Esta duración es configurable en las opciones de MP3DirectCut.
+    * Permite retroceder brevemente un segundo durante la reproducción, indicando la duración actual.
+    * Esta duración es configurable en las opciones de mp3directcut.
 
-- N
+* N
 
-  - Se usa para confirmar la situación correcta del marcador de fin de
-    selección N.
+    * Se utiliza para confirmar la colocación correcta del marcador del final de la selección N.
 
-- Avance página
+* Av Pág
 
-  - Adelanta 10 segundos la reproducción e indica la duración actual.
-  - Esta duración es configurable en las opciones de MP3DirectCut.
+    * Permite avanzar 10 segundos durante la reproducción, indicando la duración actual.
+    * Esta duración es configurable en las opciones de mp3directcut.
 
-- Retroceso página
+* Re Pág
 
-  - Retrocede 10 segundos en la reproducción e indica la duración actual.
-  - Esta duración es configurable en las opciones de MP3DirectCut.
+    * Permite retroceder 10 segundos durante la reproducción, indicando la duración actual.
+    * Esta duración es configurable en las opciones de mp3directcut.
 
-- R
+* R
 
-  - Prepara una grabación, que se puede iniciar pulsando Espacio.
+    * Permite preparar una grabación e indica que puede pulsar la barra espaciadora para comenzar.
 
-- Flecha derecha
+* Flecha derecha
 
-  - Adelanta un segundo la reproducción e indica la duración actual.
-  - Esta duración es configurable en las opciones de MP3DirectCut.
+    * Permite avanzar brevemente un segundo durante la reproducción, indicando la duración actual.
+    * Esta duración es configurable en las opciones de mp3directcut.
 
-- CTRL+Flecha derecha
+* Ctrl+Flecha derecha
 
-  - Se mueve al siguiente punto de división e indica la duración actual.
+    * Se desplaza al siguiente punto de división, indicando la duración actual.
 
-- CTRL+flecha izquierda
+* Ctrl+Flecha izquierda
 
-  - Se mueve al punto de división anterior e indica la duración actual.
+    * Se desplaza al punto de división anterior, indicando la duración actual.
 
-- Shift+flecha derecha
+* Shift+Flecha derecha
 
-  - Adelanta cuatro centésimas de segundo en la reproducción e indica la
-    duración actual.
+    * Permite avanzar brevemente cuatro centésimas de segundo durante la reproducción, indicando la duración actual.
 
-- Shift+flecha izquierda
+* Shift+Flecha izquierda
 
-  - Retrocede cuatro centésimas de segundo en la reproducción e indica la
-    duración actual.
+    * Permite retroceder brevemente cuatro centésimas de segundo durante la reproducción, indicando la duración actual.
 
-- S
+* S
 
-  - Used to stop the reading and give the current duration.
+    * Se utiliza para detener la reproducción e indicar la duración actual.
 
-- Espacio
+* Espacio
 
-  - Si la grabación está preparada, la inicia.
-  - Si hay una grabación en progreso, la detiene y sitúa el cursor al
-    principio.
-  - Si hay un archivo cargado, comienza la reproducción.
-  - If a read is in progress, allows to do a pause by giving current duration.
-  - Si la reproducción está en pausa, la reanuda desde la posición actual.
+    * Si la grabación está preparada, inicia dicha grabación.
+    * Si hay una grabación en curso, la detiene posicionando el cursor al inicio.
+    * Si hay un archivo cargado, inicia la reproducción.
+    * Si una reproducción está en curso, permite hacer una pausa indicando la duración actual.
+    * Si la reproducción está en pausa, permite reanudarla desde la posición actual.
 
-- Flecha arriba
+* Flecha arriba
 
-  - Lets you see the current position of the playhead.
-  - Esta orden también sitúa el cursor en la ubicación del marcador del
-    principio de la selección B, e indica la posición de este marcador si
-    se ha hecho una selección.
-  - En el cuadro de diálogo de volumen, verbaliza el valor anterior que se
-    puede alcanzar pulsando flecha arriba.
-  - Este valor no se verbaliza por defecto.
+    * Permite conocer la posición actual del cabezal de reproducción.
+    * Este comando también posiciona el cursor en la ubicación del marcador del inicio de la selección B, indicando la ubicación de este marcador si se ha realizado una selección.
+    * En el cuadro de diálogo de volumen, vocaliza el valor anterior que normalmente puede alcanzarse con Flecha arriba.
+    * Este valor no se vocaliza de forma predeterminada.
 
-- NVDA+H
+* NVDA+H
 
-  - Te permite abrir la ayuda del complemento actual.
+    * Permite abrir la ayuda del complemento actual.
 
 ## Compatibilidad
 
-- Este complemento es compatible con las versiones de NVDA que van desde la
-  2019.3 en adelante.
+* Este complemento es compatible con las versiones de NVDA desde la 2019.3 en adelante.
 
 ## Cambios para 20240327.0.0
 
-- Se corrige un fallo que causaba un error en el registro al recargar los
-  plugins. Gracias a Rob, de la lista de correo de complementos de NVDA;
+* Corregido un error que provocaba un mensaje de error en el registro al recargar los complementos, gracias a Rob, de la lista de correo nvda-addons;
 
 ## Cambios para 20240326.0.0
 
-- Se actualiza la compatibilidad para NVDA 2024.1.;
-- Se elimina el enlace de descarga de la documentación, el enlace de
-  descarga de futuras actualizaciones ahora sólo estará disponible desde la
-  tienda de complementos.
+* Actualizada la compatibilidad para nvda-2024.1.;
+* Eliminado el enlace de descarga del readme; el enlace de descarga para futuras actualizaciones estará disponible únicamente desde la tienda de complementos.
 
 ## Cambios para 20231229.0.0
 
-- Se ha añadido una implementación retrocompatible para soportar el modo de
-  voz a petición, que pronto estará disponible con NVDA 2024.1.
+* Añadida una implementación retrocompatible para soportar el modo de habla bajo demanda, que pronto estará disponible con nvda-2024.1.
 
 ## Cambios para 20231007.0.0
 
-- Tras situar los puntos de corte y abrir la ventana de propiedades de corte
-  con "control+n", se añade accesibilidad al título de esta ventana
-  indicando el índice de la parte.
-- En el modo lectura, tras desplazar los marcadores de inicio o fin de las
-  selecciones con las teclas 1 a 6 del teclado alfanumérico, se añade el
-  inicio automático de la lectura desde la nueva posición;
-- Se corrige un fallo que se producía al consultar el tiempo restante con
-  "control+shift+r" desde el principio de la pista.
+* Después de colocar los puntos de corte y tras abrir la ventana de propiedades de corte con "Ctrl+N", se añadió accesibilidad al título de esta ventana indicando el índice de la parte.
+* En modo de lectura, después de mover los marcadores de inicio o fin de selección con las teclas 1 a 6 del teclado numérico, se añadió el inicio automático de la lectura desde la nueva posición;
+* Corregido un error que ocurría al consultar el tiempo restante con "control+shift+r" desde el inicio de la pista.
 
 ## Cambios para 20230728.0.0
 
-- Aplicadas las reglas de Flake8 y Mipy al código;
-- Cambiada la versión mínima soportada de NVDA a la 2019.3 para soportar las
-  anotaciones de tipos introducidas en Python 3.
+* Aplicadas las reglas flake8 y mypy al código;
+* Cambiada la versión mínima compatible de NVDA a 2019.3 para admitir las anotaciones introducidas en Python 3.
 
-## Cambios para 20230508.0.0 y posteriores
+## Cambios para 20230607.0.0
 
-- Added the following workflows:
-- auto-update-translations - to automatically update translations from NVDA's translation system.
-- release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
-- manual-release.yaml: to build and release new versions of the add-on manually.
-- Updated translations.
+* Añadidos los siguientes flujos de trabajo:
+ * auto-update-translations - para actualizar automáticamente las traducciones desde el sistema de traducción de NVDA.
+ * release-on-tag..yaml: para compilar y publicar el complemento tan pronto como se envíe una nueva etiqueta;
+ * manual-release.yaml: para compilar y publicar manualmente nuevas versiones del complemento.
+* Traducciones actualizadas.
 
-## Cambios para la versión 20.12
+## Cambios para la versión 20230508.0.0 y posteriores
 
-- Cambiado número de versión, versión mínima de NVDA y enlace de descarga
-  según las convenciones y los requisitos de la tienda.
+* • Cambiado el número de versión, la versión mínima de NVDA y el enlace de descarga de acuerdo con las convenciones y requisitos de la tienda.
 
-## Cambios para la versión 19.02
+## Cambio para la versión 20.12
 
-- La voz se detiene durante la grabación y lectura en las versiones más
-  recientes de mp3directcut;
-- Corregida la lectura del tiempo restante en las nuevas versiones de NVDA
-  que utilizan Python 3.
+* Detención de la voz durante la grabación y la lectura para las versiones más recientes de mp3directcut;
+* Corregida la lectura del tiempo restante para las nuevas versiones de NVDA que utilizan Python 3.
 
-## Change for version 19.02
+## Cambio para la versión 19.02
 
-- Se ha añadido la configuración del complemento al diálogo de opciones
-  disponible desde NVDA 2018.2;
-- Se ha cambiado el número de versión siguiendo el esquema AA.MM (dos
-  dígitos para el año, seguidos de un punto y dos dígitos para el mes);
-- Se ha añadido compatibilidad con el nuevo formato de versiones de
-  complementos, disponible en NVDA 2019.1.
+* Añadida la configuración del complemento en el panel de ajustes disponible desde nvda 2018.2;
+* Modificada la numeración de versiones utilizando YY.MM (el año en 2 dígitos, seguido de un punto y del mes en 2 dígitos);
+* Añadida compatibilidad con el nuevo formato de versionado de complementos aparecido desde nvda 2019.1.
 
-## Cambios para la versión 3.0
+## Cambio para la versión 4.0
 
-- Añadido la compatibilidad del complemento con Python 2.7 y 3;
-- Arreglado un error con rutas de complementos que no contienen caracteres
-  ASCII.
+* Añadida la compatibilidad del complemento con Python 2.7 y 3;
+* Corregido un error con las rutas del complemento que contenían caracteres no ASCII.
 
-## Cambios para la versión 2.3
+## Cambio para la versión 3.0
 
-- Se utiliza el módulo gui.guiHelper para asegurarse de la correcta
-  apariencia del diálogo de configuración del complemento;
-- Se utiliza formato en lugar de %s para cadenas formateadas;
-- Used compliance with guidelines for implementation.
+* Utilizado el módulo gui.guiHelper para garantizar la correcta apariencia del cuadro de diálogo de configuración del complemento;
+* Utilizado format en lugar de %s para las cadenas formateadas;
+* Aplicadas las directrices de conformidad para la implementación.
 
-## Cambios para la versión 2.2
+## Cambio para la versión 2.3
 
-- Se añade la licencia GPL al complemento;
-- Shift + N a Ctrl + Shift + E porque Ctrl + Shift + N no funciona con
-  las últimas versiones de mp3DirectCut;
-- Se añadió un script para confirmar que la selección se ha cancelado con
-  'Control+r';
-- Se hicieron algunas correcciones en el código del appModule
-  'mp3directcut.py'.
+* Añadida la licencia GPL al complemento;
+* Modificado el atajo del script que proporciona el final de la selección de Ctrl + Shift + N a Ctrl + Shift + E porque Ctrl + Shift + N no funciona con las versiones más recientes de mp3DirectCut;
+* Añadido un script para confirmar que la selección ha sido cancelada con 'Ctrl+r';
+* Realizadas algunas correcciones en el código del appModule 'mp3directcut.py'.
 
-## Cambios para la versión 2.1.1
+## Cambio para la versión 2.2
 
-- Corrección de los scripts que dan la localización de la selección de las
-  marcas.
+* Corrección de los scripts que proporcionan la ubicación de los marcadores de selección.
 
-## Cambios para la versión 2.1
+## Cambio para la versión 2.1.1
 
-- Supresión del script dando la duración total y añadida esta información
-  para el script que da el tiempo transcurrido;
-- Añadida la posibilidad de activar o desactivar los anuncios relacionados
-  con la tecla de espacio en las opciones de configuración del complemento,
-  por separado de los otros anuncios;
-- Añadida la posibilidad para activar o desactivar el anuncio para la buena
-  colocación de marcas de selección en las opciones de configuración del
-  complemento;
-- Añadido el anuncio de la parte actual cuando se mueve entre los puntos de
-  corte;
-- Corrección de los anuncios relacionados con las teclas verticales;
-- Añadido un Script para abrir la ayuda del actual complemento accesible
-  gracias a la orden de teclado "NVDA+H";
-- Desplazamiento del menú de configuración del complemento del menú
-  Herramientas al menú Preferencias de NVDA.
+* Eliminado el script que proporciona el tiempo total y añadida esta información al script que proporciona el tiempo transcurrido;
+* Añadida la posibilidad de activar o desactivar los anuncios relacionados con la tecla espacio en las opciones de configuración del módulo, de forma independiente a otros anuncios;
+* Añadida la posibilidad de activar o desactivar el anuncio de colocación de los marcadores de selección en las opciones de configuración del módulo;
+* Añadido el anuncio de la parte actual al desplazarse entre los puntos de corte;
+* Corrección de los anuncios relacionados con las teclas verticales;
+* Añadido un script para abrir la ayuda del complemento actual con 'NVDA+H';
+* Trasladado el menú de configuración del complemento desde el menú Herramientas al menú Preferencias de NVDA.
 
-## Cambios para la versión 2.0
+## Cambio para la versión 2.1
 
-- Añadido un Script para vocalizar el siguiente punto de corte con
-  Control+Flecha Derecha;
-- Añadido un Script para vocalizar el punto de corte anterior con
-  Control+Flecha Izquierda;
-- Añadido un Script para vocalizar el desplazamiento de 4 centésimas de
-  segundo hacia adelante con Shift+Flecha Derecha;
-- Añadido un Script para vocalizar el desplazamiento de 4 centésimas de
-  segundo hacia atrás con Shift+Flecha Izquierda;
-- Corrección del summary del complemento de "para mp3DirectCut" a
-  "mp3DirectCut".
+* Añadido un script para vocalizar el desplazamiento al siguiente punto de división con Control+Flecha derecha;
+* Añadido un script para vocalizar el desplazamiento al punto de división anterior con Control+Flecha izquierda;
+* Añadido un script para vocalizar el desplazamiento de 4 centésimas de segundo hacia adelante con Shift+Flecha derecha;
+* Añadido un script para vocalizar el desplazamiento de 4 centésimas de segundo hacia atrás con Shift+Flecha izquierda;
+* Corregido el resumen del complemento de 'for mp3DirectCut' a 'mp3DirectCut'.
 
-## Cambios para la versión 1.1
+## Cambio para la versión 2.0
 
-- Añadido un Script para saber el tiempo restante con "Control+Shift+R";
-- Corrección de la lectura de las duraciones incluyendo las horas;
-- Añadida la posibilidad de diferenciar milésimas o centésimas de segundos.
+* Añadido un script para conocer el tiempo restante con 'Control Shift R';
+* Corregida la lectura de duraciones que incluyen horas;
+* Añadida la capacidad de diferenciar milésimas o centésimas de segundo.
 
-## Cambios para la versión 1.0
+## Cambio para la versión 1.1
 
-- Se ha añadido la capacidad de incluir la categoría MP3DirectCut en el
-  diálogo Gestos de entrada;
+* Añadida la posibilidad de incluir la categoría mp3DirectCut en Gestos de entrada;
 
-  - Sólo serán visibles durante el uso del software MP3DirectCut.
+    * Solo será visible durante el uso del software mp3DirectCut.
 
-- Añadida la posibilidad de activar o desactivar los mensajes automáticos
-  desde el menú Herramientas de NVDA, elemento 'Configuración de
-  MP3DirectCut';
+* Añadida la posibilidad de activar o desactivar los mensajes automáticos en el menú Herramientas de NVDA, elemento 'Configuración de mp3DirectCut';
 
-## Cambios para la versión 4.0
+## Cambio para la versión 1.0
 
-- Primera versión.
+* Versión inicial.

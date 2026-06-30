@@ -1,4 +1,4 @@
-﻿# mp3DirectCut
+# mp3DirectCut
 
 * Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
 

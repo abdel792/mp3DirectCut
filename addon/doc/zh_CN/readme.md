@@ -1,4 +1,4 @@
-# mp3DirectCut 无障碍增强插件
+# mp3DirectCut
 
 * 作者：Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
 

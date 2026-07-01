@@ -1,307 +1,240 @@
 # mp3DirectCut
 
-- Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
+* Autore/i: Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
 
-# Presentazione
+# Presentazione #
 
-Questo add-on migliora l'accessibilità del programma mp3DirectCut con NVDA.
+Questo componente aggiuntivo migliora l'accessibilità del software mp3DirectCut con NVDA.
 
-E' stato testato con le versioni di mp3DirectCut dalla 212 alla 223.
+È stato testato con versioni di mp3DirectCut che vanno dalla 212 fino alla 233.
 
-## Comandi da tastiera
+## Scorciatoie da tastiera ##
 
-Questo add-on offre i seguenti comandi:
+Questo componente aggiuntivo offre i seguenti comandi:
 
-- B
+* B
 
-  - Utilizzato per confermare il corretto posizionamento del marcatore di
-    inizio della selezione B.
+    * Utilizzato per confermare il corretto posizionamento del marcatore dell'inizio della selezione B.
 
-- Ctrl+Shift+B
+* Ctrl+Shift+B
 
-  - Utilizzato per indicare la posizione del marcatore di inizio della
-    selezione B.
-  - Una doppia pressione del tasto consente di conoscere la durata della
-    selezione.
+    * Utilizzato per indicare la posizione del marcatore dell'inizio della selezione B.
+    * Una doppia pressione consente di ottenere la durata della selezione.
 
-- Ctrl+Shift+D
+* Ctrl+Shift+D
 
-  - Fornisce la durata dell'area tra l'inizio del file e la posizione
-    corrente del cursore di riproduzione.
-  - Se premuto due volte, legge la durata totale.
+    * Fornisce la durata dall'inizio del file fino alla posizione attuale del cursore di riproduzione.
+    * Una doppia pressione consente di ottenere la durata totale.
 
-- Ctrl+R
+* Ctrl+R
 
-  - Conferma che la selezione è stata annullata.
+    * Conferma che la selezione è stata annullata.
 
-- Ctrl+Shift+R
+* Ctrl+Shift+R
 
-  - Fornisce il tempo rimanente dalla posizione corrente del cursore di
-    riproduzione fino alla fine del file.
+    * Fornisce il tempo rimanente dalla posizione attuale del cursore di riproduzione fino alla fine del file.
 
-- Ctrl+Shift+E
+* Ctrl+Shift+E
 
-  - Utilizzato per indicare la posizione del marcatore di fine selezione
-    N.
-  - La doppia pressione fornisce un riepilogo delle posizioni B e N e la
-    durata della selezione.
+    * Utilizzato per indicare la posizione del marcatore della fine della selezione N.
+    * Una doppia pressione fornisce un riepilogo delle posizioni B e N, e la durata della selezione.
 
-- Ctrl+Shift+P
+* Ctrl+Shift+P
 
-  - Dà un riscontro sulla parte attuale e sul numero di parti nel file in
-    uso.
+    * Fornisce il riferimento della parte corrente e il numero totale di parti nel file corrente.
 
-- Ctrl+Shift+Spazio
+* Ctrl+Shift+Space
 
-  - Utilizzato per determinare il livello attuale del vu-meter, durante la
-    registrazione.
-  - La doppia pressione lo resetta.
+    * Utilizzato per determinare il livello attuale del vu-meter, durante la registrazione.
+    * Una doppia pressione lo azzera.
 
-- Freccia giù
+* Freccia Giù
 
-  - Mostra la posizione attuale della testina di riproduzione.
-  - Se è stata fatta una selezione, inoltre, questo comando sposta il
-    cursore sul marcatore di fine della selezione N, fornendone la
-    posizione.
-  - Nella finestra di dialogo Volume, vocalizza il valore successivo che
-    può essere raggiunto generalmente con freccia giù.
-  - Questo valore non è vocalizzato per default.
+    * Consente di visualizzare la posizione attuale del cursore di riproduzione.
+    * Questo comando posiziona anche il cursore nella posizione del marcatore della fine della selezione N, fornendo la posizione di questo marcatore se è stata effettuata una selezione.
+    * Nella finestra di dialogo del volume, vocalizza il valore successivo che può essere raggiunto generalmente con frecciaGiù.
+    * Questo valore non viene vocalizzato per impostazione predefinita.
 
-- End
+* End
 
-  - Sposta il cursore di riproduzione alla fine del file corrente e ne
-    fornisce la durata totale.
+    * Sposta il cursore di riproduzione alla fine del file corrente e fornisce il tempo totale.
 
-- Home
+* Home
 
-  - Sposta il cursore di riproduzione all'inizio del file corrente.
+    * Sposta il cursore di riproduzione all'inizio del file corrente.
 
-- Freccia sinistra
+* Freccia Sinistra
 
-  - Torna indietro di un secondo durante l'ascolto, fornendo il nuovo
-    tempo di riproduzione.
-  - Tale tempo è configurabile nelle opzioni di mp3directcut.
+    * Consente di effettuare un breve ritorno indietro di un secondo durante la riproduzione, fornendo la durata corrente.
+    * Questa durata è configurabile nelle opzioni di mp3DirectCut.
 
-- N
+* N
 
-  - Utilizzato per confermare il corretto posizionamento del marcatore di
-    fine della selezione N.
+    * Utilizzato per confermare il corretto posizionamento del marcatore della fine della selezione N.
 
-- Pagina giù
+* Page Down
 
-  - Va avanti di 10 secondi durante l'ascolto, fornendo il nuovo tempo di
-    riproduzione.
-  - Tale tempo è configurabile nelle opzioni di mp3directcut.
+    * Consente di fare un salto in avanti di 10 secondi durante la riproduzione, fornendo la durata corrente.
+    * Questa durata è configurabile nelle opzioni di mp3DirectCut.
 
-- Pagina su
+* Page Up
 
-  - Va indietro di 10 secondi durante l'ascolto, fornendo il nuovo tempo
-    di riproduzione.
-  - Tale tempo è configurabile nelle opzioni di mp3directcut.
+    * Consente di fare un ritorno indietro di 10 secondi durante la riproduzione, fornendo la durata corrente.
+    * Questa durata è configurabile nelle opzioni di mp3DirectCut.
 
-- R
+* R
 
-  - Consente di preparare una registrazione; premete spazio per avviarla.
+    * Consente di preparare una registrazione e di sapere se è possibile premere la barra spaziatrice per iniziare.
 
-- Freccia destra
+* Freccia Destra
 
-  - Va avanti di un secondo durante l'ascolto, fornendo il nuovo tempo di
-    riproduzione.
-  - Tale tempo è configurabile nelle opzioni di mp3directcut.
+    * Consente di effettuare un breve avanzamento di un secondo durante la riproduzione, fornendo la durata corrente.
+    * Questa durata è configurabile nelle opzioni di mp3DirectCut.
 
-- Ctrl+Freccia destra
+* Ctrl+Freccia Destra
 
-  - Sposta al punto di taglio successivo, fornendone il tempo di
-    riproduzione.
+    * Sposta al punto di divisione successivo, fornendo la durata corrente.
 
-- Ctrl+Freccia sinistra
+* Ctrl+Freccia Sinistra
 
-  - Sposta al punto di taglio precedente, fornendone il tempo di
-    riproduzione.
+    * Sposta al punto di divisione precedente, fornendo la durata corrente.
 
-- Shift+Freccia destra
+* Shift+Freccia Destra
 
-  - Va avanti di 4 centesimi di secondo durante l'ascolto, fornendo il
-    nuovo tempo di riproduzione.
+    * Consente di effettuare un breve avanzamento di quattro centesimi di secondo durante la riproduzione, fornendo la durata corrente.
 
-- Shift+Freccia sinistra
+* Shift+Freccia Sinistra
 
-  - Va indietro di 4 centesimi di secondo durante l'ascolto, fornendo il
-    nuovo tempo di riproduzione.
+    * Consente di effettuare un breve ritorno indietro di quattro centesimi di secondo durante la riproduzione, fornendo la durata corrente.
 
-- S
+* S
 
-  - Utilizzato per interrompere l'ascolto e fornire il tempo di
-    riproduzione attuale.
+    * Utilizzato per interrompere la riproduzione e fornire la durata corrente.
 
-- Spazio
+* Space
 
-  - Se la registrazione è pronta, la fa partire.
-  - Se la registrazione è in corso, la interrompe e posiziona il cursore
-    all'inizio.
-  - Se è stato caricato un file, inizia la riproduzione.
-  - Se è in corso una riproduzione, consente di metterla in pausa fornendo
-    il tempo di riproduzione attuale.
-  - Se una riproduzione è in pausa, consente di riprenderla dalla
-    posizione attuale.
+    * Se la registrazione è pronta, avvia questa registrazione.
+    * Se una registrazione è in corso, la interrompe posizionando il cursore all'inizio.
+    * Se un file è caricato, avvia la riproduzione.
+    * Se una riproduzione è in corso, consente di mettere in pausa fornendo la durata corrente.
+    * Se la riproduzione è in pausa, consente di riavviare la riproduzione dalla posizione corrente.
 
-- Freccia su
+* Freccia Su
 
-  - Mostra la posizione attuale della testina di riproduzione.
-  - Se è stata effettuata una selezione, sposta il cursore sul marcatore
-    di inizio della selezione B, fornendone la posizione.
-  - Nella finestra di dialogo Volume, vocalizza il valore precedente che
-    può essere raggiunto generalmente con freccia su.
-  - Questo valore non è vocalizzato per default.
+    * Consente di visualizzare la posizione attuale del cursore di riproduzione.
+    * Questo comando posiziona anche il cursore nella posizione del marcatore dell'inizio della selezione B, fornendo la posizione di questo marcatore se è stata effettuata una selezione.
+    * Nella finestra di dialogo del volume, vocalizza il valore precedente che può essere raggiunto generalmente con frecciaSu.
+    * Questo valore non viene vocalizzato per impostazione predefinita.
 
-- NVDA+H
+* NVDA+H
 
-  - Apre la guida di questo add-on.
+    * Consente di aprire la guida del componente aggiuntivo corrente.
 
-## Compatibilità
+## Compatibilità ##
 
-- This add-on is compatible with the versions of NVDA ranging from 2019.3
-  and beyond.
+* Questo componente aggiuntivo è compatibile con le versioni di NVDA a partire dalla 2019.3 e successive.
 
-## Changes for 20240327.0.0
+## Modifiche per 20240327.0.0
 
-- Fixed a bug that caused a log error when reloading plugins, thanks to Rob,
-  from nvda-addons mailing list;
+* Corretto un bug che causava un errore di registro durante il ricaricamento dei plugin, grazie a Rob, dalla mailing list nvda-addons;
 
-## Changes for 20240326.0.0
+## Modifiche per 20240326.0.0
 
-- Updated compatibility for nvda-2024.1.;
-- Deleted download link from readme, the download link for future updates
-  will now only be available from the add-on store.
+* Aggiornata la compatibilità per nvda-2024.1.;
+* Eliminato il link per il download dal file readme, il link per il download dei futuri aggiornamenti sarà ora disponibile solo dall'add-on store.
 
-## Changes for 20231229.0.0
+## Modifiche per 20231229.0.0 ##
 
-- Added a backward compatible implementation to support speak on demand
-  mode, which will soon be available with nvda-2024.1.
+* Aggiunta un'implementazione retrocompatibile per supportare la modalità di sintesi vocale su richiesta, che sarà presto disponibile con nvda-2024.1.
 
-## Changes for 20231007.0.0
+## Modifiche per 20231007.0.0 ##
 
-- After placing the cutting points and after opening the cutting properties
-  window, with "Ctrl+N", adding accessibility to the title of this window by
-  indicating the part index.
-- In reading mode, after moving the start or end markers of selections with
-  keys 1 to 6 of the alphanumeric pad, addition of automatic start of
-  reading from the new position;
-- Fixed a bug that occurred when consulting the remaining time with
-  "control+shift+r" from the beginning of the track.
+* Dopo aver posizionato i punti di taglio e dopo aver aperto la finestra delle proprietà di taglio con "Ctrl+N", è stata aggiunta l'accessibilità al titolo di questa finestra indicando l'indice della parte.
+* In modalità lettura, dopo aver spostato i marcatori di inizio o fine selezione con i tasti da 1 a 6 del tastierino alfanumerico, è stato aggiunto l'avvio automatico della lettura dalla nuova posizione;
+* Corretto un bug che si verificava quando si consultava il tempo rimanente con "control+shift+r" dall'inizio della traccia.
 
-## Changes for 20230728.0.0
+## Modifiche per 20230728.0.0 ##
 
-- Applied the flake8 and mypy rules to the code;
-- Changed the minimum supported NVDA version to 2019.3 to support
-  annotations introduced in Python 3.
+* Applicate le regole flake8 e mypy al codice;
+* Modificata la versione minima di NVDA supportata alla 2019.3 per supportare le annotazioni introdotte in Python 3.
 
-## Changes for 20230508.0.0 and beyond
+## Modifiche per 20230607.0.0 ##
 
-- Added the following workflows:
-- auto-update-translations - to automatically update translations from NVDA's translation system.
-- release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
-- manual-release.yaml: to build and release new versions of the add-on manually.
-- Updated translations.
+* Aggiunti i seguenti flussi di lavoro:
+ * auto-update-translations - per aggiornare automaticamente le traduzioni dal sistema di traduzione di NVDA.
+ * release-on-tag..yaml: per compilare e pubblicare l'add-on non appena viene inviato un nuovo tag;
+ * manual-release.yaml: per compilare e rilasciare manualmente nuove versioni del componente aggiuntivo.
+* Traduzioni aggiornate.
 
-## Changes for version 20230508.0.0 and beyond
+## Modifiche per la versione 20230508.0.0 e successive ##
 
-- Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+* Modificati il numero di versione, la versione minima di NVDA e il link per il download in base alle convenzioni/requisiti dello store.
 
-## Novità nella versione 20.12
+## Modifiche per la versione 20.12 ##
 
-- Disattivazione della sintesi durante la registrazione o la riproduzione
-  nelle versioni più recenti di mp3directcut;
-- Corretta la vocalizzazione del tempo di riproduzione rimanente per le
-  nuove versioni di NVDA, utilizzando Python 3.
+* Interruzione della sintesi vocale durante la registrazione e la lettura per le ultime versioni di mp3DirectCut;
+* Corretta la lettura del tempo rimanente per le nuove versioni di NVDA che utilizzano Python 3.
 
-## Novità nella versione 19.02
+## Modifiche per la versione 19.02 ##
 
-- Aggiunta la possibilità di configurare l'add-on nella finestra
-  Impostazioni, disponibile a partire da NVDA 2018.2;
-- Modificato il sistema di numerazione delle versioni, che ora è del tipo
-  YY.MM (due cifre per l'anno, seguite da un punto, seguito da due cifre per
-  il mese);
-- Aggiunta la compatibilità con il nuovo formato per il numero di versione
-  degli add-on, presente a partire da NVDA 2019.1.
+* Aggiunta la configurazione del componente aggiuntivo nel pannello delle impostazioni disponibile da nvda 2018.2;
+* Modificata la numerazione delle versioni utilizzando AA.MM (l'anno in 2 cifre, seguito da un punto, seguito dal mese in 2 cifre);
+* Aggiunta la compatibilità con il nuovo formato di numerazione delle versioni dei componenti aggiuntivi, apparso a partire da nvda 2019.1.
 
-## Novità nella versione 4.0
+## Modifiche per la versione 4.0 ##
 
-- Aggiunta la compatibilità dell'add-on con Python 2.7 e Python 3;
-- Risolto un problema con i percorsi dell'add-on che non contengono
-  caratteri non ASCII .
+* Aggiunta la compatibilità del componente aggiuntivo sia con Python 2.7 che con 3;
+* Corretto un bug con i percorsi dei componenti aggiuntivi che contengono caratteri non ASCII.
 
-## Novità nella versione 2.3
+## Modifiche per la versione 3.0 ##
 
-- Si utilizza il modulo gui.guiHelper per assicurare il corretto layout
-  della finestra di configurazione dell'add-on;
-- Per le stringhe formattate, si utilizza format invece di %s;
-- Si utilizza la compatibilità con le linee guida per l'implementazione.
+* Utilizzato il modulo gui.guiHelper per garantire il corretto aspetto della finestra di dialogo di configurazione dell'add-on;
+* Utilizzato format invece di %s per le stringhe formattate;
+* Utilizzata la conformità alle linee guida per l'implementazione.
 
-## Novità nella versione 2.2
+## Modifiche per la versione 2.3 ##
 
-- Aggiunta all'add-on la licenza GPL;
-- Modificato il comando associato allo script che indica la posizione del
-  marcatore di fine selezione da Ctrl + Shift + N a Ctrl + Shift + E, perché
-  Ctrl + Shift + N non funziona con le ultime versioni di mp3DirectCut;
-- Aggiunto uno script per confermare che la selezione è stata annullata con
-  'Ctrl+r';
-- Effettuata qualche correzione nel codice del modulo 'mp3directcut.py'.
+* Aggiunta la licenza GPL al componente aggiuntivo;
+* Modificata la scorciatoia dello script che fornisce la fine della selezione da Ctrl + Shift + N a Ctrl + Shift + E perché Ctrl + Shift + N non funziona con le ultime versioni di mp3DirectCut;
+* Aggiunto uno script per confermare che la selezione è stata annullata con 'Ctrl+r';
+* Apportate alcune correzioni nel codice dell'appModule 'mp3directcut.py'.
 
-## Novità nella versione 2.1.1
+## Modifiche per la versione 2.2 ##
 
-- Correzione degli script che forniscono la posizione dei marcatori di
-  selezione.
+* Correzione degli script che forniscono le posizioni dei marcatori di selezione.
 
-## Novità nella versione 2.1
+## Modifiche per la versione 2.1.1 ##
 
-- Rimosso lo script che fornisce la durata totale e aggiunta
-  quest'informazione nello script che fornisce il tempo di riproduzione
-  corrente;
-- Aggiunta la possibilità di attivare o disattivare le vocalizzazioni
-  relative al tasto spazio nella configurazione dell'add-on, separatamente
-  rispetto ad altre vocalizzazioni;
-- Aggiunta la possibilità di attivare o disattivare le vocalizzazioni
-  relative alla posizione dei marcatori di selezione nella configurazione
-  dell'add-on;
-- Aggiunta la vocalizzazione della parte attuale quando ci si sposta tra i
-  punti di taglio;
-- Correzione delle vocalizzazioni relative ai tasti verticali;
-- Aggiunto uno script per aprire la guida di questo add-on con 'NVDA+H';
-- Spostamento del menù di configurazione dell'add-on dal menù Strumenti al
-  menù Preferenze di NVDA.
+* Rimozione dello script che fornisce il tempo totale e aggiunta di questa informazione allo script che fornisce il tempo trascorso;
+* Aggiunta la possibilità di abilitare o disabilitare gli annunci relativi al tasto spazio nelle opzioni di configurazione del modulo, separatamente dagli altri annunci;
+* Aggiunta la possibilità di abilitare o disabilitare l'annuncio del posizionamento dei marcatori di selezione nelle opzioni di configurazione del modulo;
+* Aggiunta dell'annuncio della parte corrente quando ci si sposta attraverso i punti di taglio;
+* Correzione degli annunci relativi ai tasti verticali;
+* Aggiunta di uno script per aprire la guida del componente aggiuntivo corrente con 'NVDA+H';
+* Spostamento del menu di configurazione del componente aggiuntivo dal menu Strumenti al menu Preferenze di NVDA.
 
-## Novità nella versione 2.0
+## Modifiche per la versione 2.1 ##
 
-- Aggiunto uno script per vocalizzare lo spostamento al punto di taglio
-  successivo con Control+Freccia destra;
-- Aggiunto uno script per vocalizzare lo spostamento al punto di taglio
-  precedente con Control+Freccia sinistra;
-- Aggiunto uno script per vocalizzare lo spostamento in avanti di 4
-  centesimi di secondo con Shift+Freccia destra;
-- Aggiunto uno script per vocalizzare lo spostamento all'indietro di 4
-  centesimi di secondo con Shift+Freccia sinistra;
-- Correzione del titolo dell'add-on da 'per mp3DirectCut' a 'mp3DirectCut'.
+* Aggiunta di uno script per vocalizzare lo spostamento al punto di divisione successivo con Control+Freccia Destra;
+* Aggiunta di uno script per vocalizzare lo spostamento al punto di divisione precedente con Control+Freccia Sinistra;
+* Aggiunta di uno script per vocalizzare lo spostamento di 4 centesimi di secondo in avanti, con Shift+Freccia Destra;
+* Aggiunta di uno script per vocalizzare lo spostamento di 4 centesimi di secondo indietro, con Shift+Freccia Sinistra;
+* Correzione del riepilogo del componente aggiuntivo da 'for mp3DirectCut' a 'mp3DirectCut'.
 
-## Change for version 2.0
+## Modifiche per la versione 2.0 ##
 
-- Aggiunto uno script per conoscere il tempo rimanente con 'Control Shift
-  R';
-- Sistemata la durata della riproduzione, che ora comprende anche le ore;
-- Aggiunta la capacità di differenziare i millesimi e i centesimi di
-  secondo.
+* Aggiunta di uno script per conoscere il tempo rimanente con 'Control Shift R';
+* Corretta la lettura delle durate che includono le ore;
+* Aggiunta la capacità di differenziare i millesimi o i centesimi di secondo.
 
-## Novità nella versione 1.0
+## Modifiche per la versione 1.1 ##
 
-- Aggiunta la capacità di includere la categoria mp3DirectCut nella finestra
-  gesti e tasti di immissione;
+* Aggiunta la possibilità di includere la categoria mp3DirectCut nei Gesti di Input;
 
-  - They will be visible only during use of the mp3DirectCut software.
+    * Saranno visibili solo durante l'uso del software mp3DirectCut.
 
-- Aggiunta la possibilità di attivare o disattivare i messaggi automatici,
-  nel menù strumenti di NVDA, elemento 'configurazione di mp3DirectCut';
+* Aggiunta la possibilità di abilitare o disabilitare i messaggi automatici, nel menu degli strumenti di NVDA, voce 'Configurazione di mp3DirectCut';
 
-## Novità nella versione 1.1
+## Modifiche per la versione 1.0 ##
 
-- Versione iniziale.
+* Versione iniziale.

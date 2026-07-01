@@ -1,297 +1,240 @@
 # mp3DirectCut
 
-- Author(s) : Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
+* Autor(zy): Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
 
-# Prezentacja
+# Prezentacja #
 
-Ten dodatek ulepsza dostępność programu mp3DirectCut z NVDA.
+Ten dodatek poprawia dostępność programu mp3DirectCut w połączeniu z czytnikiem ekranu NVDA.
 
-Został przetestowany z wersjami mp3DirectCut od 212 do 223.
+Został przetestowany z wersjami programu mp3DirectCut od 212 do 233.
 
-## Skróty klawiszowe
+## Skróty klawiszowe ##
 
 Ten dodatek oferuje następujące polecenia:
 
-- B
+* B
 
-  - Służy do potwierdzenia prawidłowego umieszczenia znacznika początku
-    zaznaczenia B.
+    * Służy do potwierdzenia prawidłowego umieszczenia znacznika początku zaznaczenia B.
 
-- Ctrl+Shift+B
+* Ctrl+Shift+B
 
-  - Służy do wskazania położenia znacznika początku zaznaczenia B.
-  - Podwójne naciśnięcie pozwala podać czas trwania wyboru.
+    * Służy do wskazania pozycji znacznika początku zaznaczenia B.
+    * Dwukrotne naciśnięcie pozwala sprawdzić czas trwania zaznaczenia.
 
-- Ctrl+Shift+D
+* Ctrl+Shift+D
 
-  - Podaje czas trwania od początku pliku do bieżącej pozycji kursora
-    odtwarzania.
-  - Podwójne naciśnięcie pozwala uzyskać całkowity czas trwania.
+    * Podaje czas trwania od początku pliku do bieżącej pozycji kursora odtwarzania.
+    * Dwukrotne naciśnięcie pozwala sprawdzić całkowity czas trwania.
 
-- Ctrl+R
+* Ctrl+R
 
-  - Potwierdza, że wybór został anulowany.
+    * Potwierdza, że zaznaczenie zostało anulowane.
 
-- Ctrl+Shift+R
+* Ctrl+Shift+R
 
-  - Podaje czas pozostały od bieżącej pozycji kursora odtwarzania do końca
-    pliku.
+    * Podaje czas pozostały od bieżącej pozycji kursora odtwarzania do końca pliku.
 
-- Ctrl+Shift+E
+* Ctrl+Shift+E
 
-  - Służy do wskazania położenia znacznika końca zaznaczenia N.
-  - Podwójne ciśnienie daje pozycje recapitulatif B i N oraz czas trwania
-    zaznaczenia.
+    * Służy do wskazania pozycji znacznika końca zaznaczenia N.
+    * Dwukrotne naciśnięcie wyświetla podsumowanie pozycji B i N oraz czas trwania zaznaczenia.
 
-- Ctrl+Shift+P
+* Ctrl+Shift+P
 
-  - Podaje odniesienie do rzeczywistej części i całkowitą liczbę części w
-    bieżącym pliku.
+    * Podaje numer bieżącej części oraz całkowitą liczbę części w otwartym pliku.
 
-- Ctrl+Shift+spacja
+* Ctrl+Shift+Space
 
-  - Służy do określania aktualnego poziomu vu-miernika, podczas
-    nagrywania.
-  - Podwójne naciśnięcie resetuje go.
+    * Służy do określenia bieżącego poziomu wskaźnika wysterowania (VU-metru) podczas nagrywania.
+    * Dwukrotne naciśnięcie resetuje wskaźnik.
 
-- Strzałka w dół
+* Strzałka w dół
 
-  - Umożliwia wyświetlenie bieżącej pozycji głowicy odtwarzania.
-  - To polecenie umieszcza również kursor w miejscu znacznika końca
-    zaznaczenia N, podając jednocześnie położenie tego znacznika, jeśli
-    dokonano wyboru.
-  - W oknie dialogowym głośności odczyta następną wartość, do której można
-    dotrzeć zazwyczaj za pomocą strzałki w dół.
-  - Ta wartość nie jest domyślnie wymawiana.
+    * Pozwala sprawdzić bieżącą pozycję głowicy odtwarzania.
+    * To polecenie ustawia również kursor w miejscu znacznika końca zaznaczenia N, podając jednocześnie pozycję tego znacznika, jeśli dokonano zaznaczenia.
+    * W oknie dialogowym głośności odczytuje kolejną wartość, którą ogólnie można osiągnąć za pomocą strzałki w dół.
+    * Ta wartość nie jest odczytywana domyślnie.
 
-- End
+* End
 
-  - Przesuwa kursor odtwarzania na końcu bieżącego pliku i podaje
-    całkowity czas.
+    * Przenosi kursor odtwarzania na koniec bieżącego pliku i podaje całkowity czas.
 
-- Home
+* Home
 
-  - Przesuwa kursor odtwarzania na początku bieżącego pliku.
+    * Przenosi kursor odtwarzania na początek bieżącego pliku.
 
-- Strzałka w lewo
+* Strzałka w lewo
 
-  - Zróbmy krótki powrót o jedną sekundę podczas odtwarzania, podając
-    bieżący czas trwania.
-  - Ten czas trwania jest konfigurowalny w opcjach mp3directcut.
+    * Pozwala na krótkie cofnięcie o jedną sekundę podczas odtwarzania, podając jednocześnie bieżący czas.
+    * Ten czas można skonfigurować w opcjama programu mp3DirectCut.
 
-- N
+* N
 
-  - Służy do potwierdzenia prawidłowego umieszczenia znacznika końca
-    zaznaczenia N.
+    * Służy do potwierdzenia prawidłowego umieszczenia znacznika końca zaznaczenia N.
 
-- Page Down
+* Page Down
 
-  - Zróbmy skok do przodu o 10 sekund podczas odtwarzania, podając bieżący
-    czas trwania.
-  - Ten czas trwania jest konfigurowalny w opcjach mp3directcut.
+    * Pozwala na skok do przodu o 10 sekund podczas odtwarzania, podając jednocześnie bieżący czas.
+    * Ten czas można skonfigurować w opcjach programu mp3DirectCut.
 
-- Page Up
+* Page Up
 
-  - Przywróćmy 10 sekund podczas odtwarzania, podając bieżący czas
-    trwania.
-  - Ten czas trwania jest konfigurowalny w opcjach mp3directcut.
+    * Pozwala na cofnięcie o 10 sekund podczas odtwarzania, podając jednocześnie bieżący czas.
+    * Ten czas można skonfigurować w opcjach programu mp3DirectCut.
 
-- R
+* R
 
-  - Umożliwia przygotowanie nagrywania i to, czy można nacisnąć spację,
-    aby rozpocząć.
+    * Pozwala przygotować nagrywanie i informuje, czy można nacisnąć spację, aby rozpocząć.
 
-- Strzałka w prawo
+* Strzałka w prawo
 
-  - Zróbmy krótki czas do przodu o jedną sekundę podczas odtwarzania,
-    podając bieżący czas trwania.
-  - Ten czas trwania jest konfigurowalny w opcjach mp3directcut.
+    * Pozwala na krótkie przewinięcie do przodu o jedną sekundę podczas odtwarzania, podając jednocześnie bieżący czas.
+    * Ten czas można skonfigurować w opcjach programu mp3DirectCut.
 
-- Ctrl+strzałka w prawo
+* Ctrl+Strzałka w prawo
 
-  - Przechodzi do następnego punktu podziału, podając bieżący czas
-    trwania.
+    * Przenosi do następnego punktu podziału, podając jednocześnie bieżący czas.
 
-- Ctrl+strzałka w lewo
+* Ctrl+Strzałka w lewo
 
-  - Przechodzi do poprzedniego punktu podziału, podając bieżący czas
-    trwania.
+    * Przenosi do poprzedniego punktu podziału, podając jednocześnie bieżący czas.
 
-- Shift+strzałka w prawo
+* Shift+Strzałka w prawo
 
-  - Zróbmy krótki czas do przodu o cztery setne sekundy podczas
-    odtwarzania, podając bieżący czas trwania.
+    * Pozwala na krótkie przewinięcie do przodu o cztery setne sekundy podczas odtwarzania, podając jednocześnie bieżący czas.
 
-- Shift+strzałka w lewo
+* Shift+Strzałka w lewo
 
-  - Zróbmy krótki czas do tyłu o cztery setne sekundy podczas odtwarzania,
-    podając bieżący czas trwania.
+    * Pozwala na krótkie cofnięcie o cztery setne sekundy podczas odtwarzania, podając jednocześnie bieżący czas.
 
-- S
+* S
 
-  - Służy do zatrzymania odczytu i podania bieżącego czasu trwania.
+    * Służy do zatrzymania odtwarzania i podania bieżącego czasu.
 
-- Spacja
+* Space
 
-  - Jeśli nagrywanie jest gotowe, rozpocznij nagrywanie.
-  - Jeśli nagrywanie jest w toku, zatrzymaj je, umieszczając kursor na
-    początku.
-  - Jeśli plik jest załadowany, rozpocznij odczyt.
-  - Jeśli odczyt jest w toku, pozwala na zrobienie przerwy, podając
-    bieżący czas trwania.
-  - Jeśli odczyt jest wstrzymany, umożliwia ponowne uruchomienie odczytu z
-    bieżącej lokalizacji.
+    * Jeśli nagrywanie jest gotowe, uruchamia proces nagrywania.
+    * Jeśli trwa nagrywanie, zatrzymuje je, ustawiając kursor na początku.
+    * Jeśli plik jest załadowany, uruchamia odtwarzanie.
+    * Jeśli trwa odtwarzanie, pozwala je wstrzymać (pauza), podając bieżący czas.
+    * Jeśli odtwarzanie jest wstrzymane, pozwala je wznowić od bieżącego miejsca.
 
-- Strzałka w górę
+* Strzałka w górę
 
-  - Umożliwia wyświetlenie bieżącej pozycji głowicy odtwarzania.
-  - To polecenie umieszcza również kursor w miejscu znacznika początku
-    zaznaczenia B, podając jednocześnie położenie tego znacznika, jeśli
-    dokonano wyboru.
-  - W oknie dialogowym głośności swokalizuj poprzednią wartość, do której
-    można dotrzeć zazwyczaj za pomocą upArrow.
-  - Ta wartość nie jest domyślnie wymawiana.
+    * Pozwala sprawdzić bieżącą pozycję głowicy odtwarzania.
+    * To polecenie ustawia również kursor w miejscu znacznika początku zaznaczenia B, podając jednocześnie pozycję tego znacznika, jeśli dokonano zaznaczenia.
+    * W oknie dialogowym głośności odczytuje poprzednią wartość, którą ogólnie można osiągnąć za pomocą strzałki w górę.
+    * Ta wartość nie jest odczytywana domyślnie.
 
-- NVDA+H
+* NVDA+H
 
-  - Otwórzmy pomoc bieżącego dodatku.
+    * Pozwala otworzyć pomoc bieżącego dodatku.
 
-## Zgodność
+## Kompatybilność ##
 
-- This add-on is compatible with the versions of NVDA ranging from 2019.3
-  and beyond.
+* Ten dodatek jest kompatybilny z wersjami NVDA od 2019.3 i nowszymi.
 
-## Changes for 20240327.0.0
+## Zmiany w 20240327.0.0
 
-- Fixed a bug that caused a log error when reloading plugins, thanks to Rob,
-  from nvda-addons mailing list;
+* Naprawiono błąd, który powodował błąd w logu podczas przeładowywania wtyczek, podziękowania dla Roba z listy dyskusyjnej nvda-addons;
 
-## Changes for 20240326.0.0
+## Zmiany w 20240326.0.0
 
-- Updated compatibility for nvda-2024.1.;
-- Deleted download link from readme, the download link for future updates
-  will now only be available from the add-on store.
+* Zaktualizowano kompatybilność dla nvda-2024.1.;
+* Usunięto link do pobrania z pliku readme, link do pobrania przyszłych aktualizacji będzie teraz dostępny wyłącznie w sklepie z dodatkami (add-on store).
 
-## Changes for 20231229.0.0
+## Zmiany w 20231229.0.0 ##
 
-- Added a backward compatible implementation to support speak on demand
-  mode, which will soon be available with nvda-2024.1.
+* Dodano kompatybilną wstecznie implementację obsługującą tryb mowy na żądanie, który wkrótce będzie dostępny w nvda-2024.1.
 
-## Changes for 20231007.0.0
+## Zmiany w 20231007.0.0 ##
 
-- After placing the cutting points and after opening the cutting properties
-  window, with "Ctrl+N", adding accessibility to the title of this window by
-  indicating the part index.
-- In reading mode, after moving the start or end markers of selections with
-  keys 1 to 6 of the alphanumeric pad, addition of automatic start of
-  reading from the new position;
-- Fixed a bug that occurred when consulting the remaining time with
-  "control+shift+r" from the beginning of the track.
+* Po umieszczeniu punktów cięcia i otwarciu okna właściwości cięcia za pomocą „Ctrl+N”, dodano dostępność do tytułu tego okna poprzez wskazywanie indeksu części.
+* W trybie odczytu, po przesunięciu znaczników początku lub końca zaznaczenia za pomocą klawiszy od 1 do 6 na klawiaturze alfanumerycznej, dodano automatyczne uruchamianie odtwarzania od nowej pozycji;
+* Naprawiono błąd występujący podczas sprawdzania pozostałego czasu za pomocą „control+shift+r” od początku utworu.
 
-## Changes for 20230728.0.0
+## Zmiany w 20230728.0.0 ##
 
-- Applied the flake8 and mypy rules to the code;
-- Changed the minimum supported NVDA version to 2019.3 to support
-  annotations introduced in Python 3.
+* Zastosowano reguły flake8 i mypy do kodu;
+* Zmieniono minimalną obsługiwaną wersję NVDA na 2019.3, aby zapewnić obsługę adnotacji wprowadzonych w Pythonie 3.
 
-## Changes for 20230508.0.0 and beyond
+## Zmiany w 20230607.0.0 ##
 
-- Added the following workflows:
-- auto-update-translations - to automatically update translations from NVDA's translation system.
-- release-on-tag..yaml: to build and publish the addon as soon as a new tag is pushed;
-- manual-release.yaml: to build and release new versions of the add-on manually.
-- Updated translations.
+* Dodano następujące przepływy pracy (workflows):
+ * auto-update-translations - do automatycznej aktualizacji tłumaczeń z systemu tłumaczeń NVDA.
+ * release-on-tag..yaml: do budowania i publikowania dodatku, gdy tylko zostanie wypchnięty nowy tag;
+ * manual-release.yaml: do ręcznego budowania i wydawania nowych wersji dodatku.
+* Zaktualizowano tłumaczenia.
 
-## Zmiana wersji 20.12
+## Zmiany w wersji 20230508.0.0 i nowszych ##
 
-- Changed version number, minimum NVDA version and download link according
-  to store conventions/requirements.
+* Zmieniono numer wersji, minimalną wersję NVDA oraz link do pobrania zgodnie z konwencjami/wymaganiami sklepu.
 
-## Zmiana wersji 19.02
+## Zmiany w wersji 20.12 ##
 
-- Zatrzymaj mowę podczas nagrywania i czytania dla najnowszych wersji
-  mp3directcut;
-- Naprawiono pozostały czas odczytu dla nowych wersji NVDA przy użyciu
-  Pythona 3.
+* Zatrzymanie mowy podczas nagrywania i odtwarzania w najnowszych wersjach mp3DirectCut;
+* Naprawiono odczyt pozostałego czasu dla nowych wersji NVDA korzystających z Pythona 3.
 
-## Zmiana w wersji 4.0
+## Zmiany w wersji 19.02 ##
 
-- Dodano konfigurację dodatku w panelu ustawień dostępnym od nvda 2018.2;
-- Zmieniono numerację wersji przy użyciu YY. MM (Rok w 2 cyfrach, po którym
-  następuje kropka, a następnie miesiąc w 2 cyfrach);
-- Dodano kompatybilność z nowym formatem wersjonowania dodatku, pojawił się
-  od nvda 2019.1.
+* Dodano konfigurację dodatku w panelu ustawień dostępnym od wersji nvda 2018.2;
+* Zmieniono numerację wersji na format RR.MM (rok zapisany za pomocą 2 cyfr, kropka, miesiąc zapisany za pomocą 2 cyfr);
+* Dodano kompatybilność z nowym formatem wersjonowania dodatków, który pojawił się od wersji nvda 2019.1.
 
-## Zmiana w wersji 3.0
+## Zmiany w wersji 4.0 ##
 
-- Dodano kompatybilność dodatku z Pythonem 2.7 i 3;
-- Poprawiono błąd dotyczący ścieżek dodatku, które zawierają znaki spoza
-  łacińskiego alfabetu.
+* Dodano kompatybilność dodatku zarówno z Pythonem 2.7, jak i 3;
+* Naprawiono błąd związany ze ścieżkami dodatku zawierającymi znaki spoza zestawu ASCII.
 
-## Zmiana wersji 2.3
+## Zmiany w wersji 3.0 ##
 
-- Użyto modułu gui.guiHelper, aby zapewnić poprawny wygląd okna dialogowego
-  konfiguracji dodatku;
-- Używany format zamiast %s dla sformatowanych ciągów;
-- Wykorzystano zgodność z wytycznymi dotyczącymi wdrażania.
+* Użyto modułu gui.guiHelper w celu zapewnienia prawidłowego wyglądu okna dialogowego konfiguracji dodatku;
+* Użyto metody format zamiast %s dla sformatowanych ciągów znaków;
+* Zastosowano zgodność z wytycznymi dotyczącymi implementacji.
 
-## Zmiana w wersji 2.2
+## Zmiany w wersji 2.3 ##
 
-- Dodano licencję GPL;
-- Zmieniono skrót skryptu podający koniec zaznaczenia z Ctrl + Shift + N na
-  Ctrl + Shift + E, ponieważ Ctrl + Shift + N nie działa z najnowszymi
-  wersjami mp3DirectCut;
-- Dodano skrypt potwierdzający, że wybór został anulowany za pomocą "Ctrl +
-  r";
-- Wprowadzono pewne poprawki w kodzie appModule "mp3directcut.py".
+* Dodano licencję GPL do dodatku;
+* Zmieniono skrót skryptu podającego koniec zaznaczenia z Ctrl + Shift + N na Ctrl + Shift + E, ponieważ Ctrl + Shift + N nie działa w najnowszych wersjach mp3DirectCut;
+* Dodano skrypt potwierdzający anulowanie zaznaczenia za pomocą 'Ctrl+r';
+* Wprowadzono kilka poprawek w kodzie appModule 'mp3directcut.py'.
 
-## Zmiana wersji 2.1.1
+## Zmiany w wersji 2.2 ##
 
-- Korekta skryptów z podaniem położenia znaczników wyboru.
+* Korekta skryptów podających lokalizacje znaczników zaznaczenia.
 
-## Zmiana w wersji 2.1
+## Zmiany w wersji 2.1.1 ##
 
-- Usunięcie skryptu podającego całkowity czas i dodanie tej informacji do
-  skryptu podającego czas, który upłynął;
-- Dodano możliwość włączania lub wyłączania ogłoszeń związanych z spacji w
-  opcjach konfiguracyjnych modułu, niezależnie od innych ogłoszeń;
-- Dodano możliwość włączenia lub wyłączenia zapowiedzi umieszczenia namiotów
-  zaznaczenia w opcjach konfiguracyjnych modułu;
-- Dodanie ogłoszenia bieżącej części podczas przechodzenia przez punkty
-  cięcia;
-- Korekta ogłoszeń związanych z pionowymi;
-- Dodanie skryptu do otwierania pomocy bieżącego dodatku z "NVDA + H";
-- Przesunięcie menu konfiguracyjnego dodatku z menu Narzędzia do menu
-  Preferencje NVDA.
+* Usunięto skrypt podający całkowity czas i dodano tę informację do skryptu podającego czas, który upłynął;
+* Dodano możliwość włączania lub wyłączania komunikatów związanych z klawiszem spacji w opcjach konfiguracji modułu, niezależnie od innych komunikatów;
+* Dodano możliwość włączania lub wyłączania komunikatów o umieszczeniu znaczników zaznaczenia w opcjach konfiguracji modułu;
+* Dodano komunikaty o bieżącej części podczas poruszania się po punktach podziału;
+* Korekta komunikatów związanych z klawiszami pionowymi;
+* Dodano skrypt do otwierania pomocy bieżącego dodatku za pomocą 'NVDA+H';
+* Przeniesiono menu konfiguracji dodatku z menu Narzędzia do menu Preferencje w NVDA.
 
-## Zmiana w wersji 2.0
+## Zmiany w wersji 2.1 ##
 
-- Dodanie skryptu do wokalizacji przechodzącej do następnego punktu podziału
-  za pomocą Control+strzałki w prawo;
-- Dodanie skryptu do wokalizacji przechodzącej do poprzedniego punktu
-  podziału za pomocą Control+strzałki w lewo;
-- Dodanie skryptu do wokalizacji przemieszczenia o 4 setne sekundy do
-  przodu, z Shift + strzałka w prawo;
-- Dodanie skryptu do wokalizacji przemieszczenia 4 setnych sekundy do tyłu,
-  z Shift + strzałka w lewo;
-- Korekta podsumowania dodatku z 'for mp3DirectCut' na 'mp3DirectCut'.
+* Dodano skrypt odczytujący przejście do następnego punktu podziału za pomocą Control+Strzałka w prawo;
+* Dodano skrypt odczytujący przejście do poprzedniego punktu podziału za pomocą Control+Strzałka w lewo;
+* Dodano skrypt odczytujący przesunięcie o 4 setne sekundy do przodu za pomocą Shift+Strzałka w prawo;
+* Dodano skrypt odczytujący przesunięcie o 4 setne sekundy do tyłu za pomocą Shift+Strzałka w lewo;
+* Skorygowano podsumowanie dodatku z 'for mp3DirectCut' na 'mp3DirectCut'.
 
-## Zmiana wersji 1.1
+## Zmiany w wersji 2.0 ##
 
-- Dodanie skryptu, aby poznać pozostały czas za pomocą "Control Shift R";
-- Stały czas czytania, w tym godziny;
-- Dodano możliwość różnicowania tysięcznych lub setnych części sekundy.
+* Dodano skrypt pozwalający poznać pozostały czas za pomocą 'Control Shift R';
+* Naprawiono odczyt czasów trwania zawierających godziny;
+* Dodano możliwość rozróżniania tysięcznych lub setnych części sekundy.
 
-## Zmiana w wersji 1.0
+## Zmiany w wersji 1.1 ##
 
-- Dodano możliwość włączenia kategorii mp3DirectCut do gestów wejściowych;
+* Dodano możliwość włączenia kategorii mp3DirectCut do zdarzeń wprowadzania (Input Gestures);
 
-  - Będą one widoczne tylko podczas korzystania z oprogramowania
-    mp3DirectCut.
+    * Będą one widoczne tylko podczas korzystania z programu mp3DirectCut.
 
-- Dodano możliwość włączania lub wyłączania automatycznych wiadomości, w
-  menu narzędzi NVDA, pozycja "konfiguracja mp3DirectCut";
+* Dodano możliwość włączania lub wyłączania automatycznych komunikatów w menu narzędzi NVDA, pozycja 'Konfiguracja mp3DirectCut';
 
-## Change for version 1.0
+## Zmiany w wersji 1.0 ##
 
-- Wstępne wydanie.
+* Wersja początkowa.

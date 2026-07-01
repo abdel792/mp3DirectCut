@@ -1,252 +1,240 @@
 # mp3DirectCut
 
-- Autori: Abdel, Rémy, Abdellah zineddine, Jean-François COLAS
+* Autor(i): Abdel, Rémy, Abdellah zineddine, Jean-François COLAS.
 
-# Prezentare
+# Prezentare #
 
-Acest supliment îmbunătățește accesibilitatea programului mp3DirectCut cu
-NVDA.
+Acest supliment îmbunătățește accesibilitatea software-ului mp3DirectCut cu NVDA.
 
-A fost testat cu versiuni ale mp3DirectCut de la 212 până la 223.
+A fost testat cu versiuni de mp3DirectCut de la 212 până la 233.
 
-## Scurtături
+## Scurtături de tastatură ##
 
 Acest supliment oferă următoarele comenzi:
 
-- B
+* B
 
-  - Folosită pentru a confirma plasarea corectă a reperului la începutul selecției B.
+    * Folosit pentru a confirma plasarea corectă a marcatorului de început al selecției B.
 
-- Ctrl+Shift+B
+* Ctrl+Shift+B
 
-  - Folosită pentru a indica poziția reperului a începutului selecției B.
-  - Dubla apăsare oferă durata selecției.
+    * Folosit pentru a indica poziția marcatorului de început al selecției B.
+    * O apăsare dublă vă permite să aflați durata selecției.
 
-- Ctrl+Shift+D
+* Ctrl+Shift+D
 
-  - Oferă durata de la începutul fișierului până la poziția curentă a cursorului de redare.
-  - Dubla apăsare oferă durata totală.
+    * Oferă durata de la începutul fișierului până la poziția curentă a cursorului de redare.
+    * O apăsare dublă vă permite să aflați durata totală.
 
-- Ctrl+R
+* Ctrl+R
 
-  - Confirmă că selecția a fost anulată..
+    * Confirmă că selecția a fost anulată.
 
-- Ctrl+Shift+R
+* Ctrl+Shift+R
 
-  - Oferă timpul rămas de la poziția curentă a cursorului de redare până la sfârșitul fișierului..
+    * Oferă timpul rămas de la poziția curentă a cursorului de redare până la sfârșitul fișierului.
 
-- Ctrl+Shift+E
+* Ctrl+Shift+E
 
-  - Folosită pentru indicarea poziției reperului sfârșitului de selecției N.
-  - Dubla apăsare oferă recapitularea pozițiilor B și N și durata selecției..
+    * Folosit pentru a indica poziția marcatorului de sfârșit al selecției N.
+    * O apăsare dublă oferă o recapitulare a pozițiilor B și N, precum și durata selecției.
 
-- Ctrl+Shift+P
+* Ctrl+Shift+P
 
-  - Oferă referința la partea prezentă și numărul total de părți în fișierul curent.
+    * Oferă referința părții curente și numărul total de părți din fișierul curent.
 
-- Ctrl+Shift+Space
+* Ctrl+Shift+Space
 
-  - Folosită pentru determinarea nivelului curent al vu-metrului, în timpul înregistrării.
-  - Dubla apăsare îl resetează.
+    * Folosit pentru a determina nivelul curent al indicatorului de volum (vu-metru) în timpul înregistrării.
+    * O apăsare dublă îl resetează.
 
-- Down Arrow
+* Săgeată în Jos
 
-  - Permite vederea poziției curente a capului de redare.
-  - Această comandă poziționează și cursorul la locația reperului sfârșitului selecției N, oferind locația acestui reper dacă a fost făcută o selecție.
-  - În caseta de dialog a volumului, pronunță următoarea valoare care poate fi atinsă în mod general cu săgeată jos.
-  - Această valoare nu este pronunțată implicit.
+    * Vă permite să vizualizați poziția curentă a cursorului de redare.
+    * Această comandă plasează, de asemenea, cursorul la locația marcatorului de sfârșit al selecției N, oferind în același timp locația acestui marcator dacă a fost făcută o selecție.
+    * În caseta de dialog pentru volum, vocalizează următoarea valoare care poate fi atinsă în general cu săgeată în jos.
+    * Această valoare nu este vocalizată în mod implicit.
 
-- End
+* End
 
-  - Mută cursorul de redare la sfârșitul fișierului curent și oferă timpul total.
+    * Mută cursorul de redare la sfârșitul fișierului curent și oferă timpul total.
 
-- Home
+* Home
 
-  - Mută cursorul de redare la începutul fișierului curent.
+    * Mută cursorul de redare la începutul fișierului curent.
 
-- Left Arrow
+* Săgeată Stânga
 
-  - Permite execuția unei întoarceri scurte de o secundă în timpul redării, oferind și durata curentă.
-  - Acest interval este configurabil din opțiunile mp3directcut.
+    * Permite efectuarea unei scurte întoarceri înapoi de o secundă în timpul redării, oferind în același timp durata curentă.
+    * Această durată este configurabilă în opțiunile mp3DirectCut.
 
-- N
+* N
 
-  - Folosită pentru a confirma poziționarea corectă a reperului sfârșitului selecției N.
+    * Folosit pentru a confirma plasarea corectă a marcatorului de sfârșit al selecției N.
 
-- Page Down
+* Page Down
 
-  - Permite un salt în avans cu 10 secunde în timpul redării, oferind și durata curentă.
-  - Acest interval este configurabil din opțiunile mp3directcut.
+    * Permite efectuarea unui salt înainte de 10 secunde în timpul redării, oferind în același timp durata curentă.
+    * Această durată este configurabilă în opțiunile mp3DirectCut.
 
-- Page Up
+* Page Up
 
-  - Permite un salt înapoi cu 10 secunde în timpul redării, oferind și durata curentă.
-  - Acest interval este configurabil din opțiunile mp3directcut.
+    * Permite efectuarea unei întoarceri înapoi de 10 secunde în timpul redării, oferind în același timp durata curentă.
+    * Această durată este configurabilă în opțiunile mp3DirectCut.
 
-- R
+* R
 
-  - Permite pregătirea unei înregistrări și dacă puteți apăsa tasta spațiu pentru a începe.
+    * Permite pregătirea unei înregistrări și aflarea dacă puteți apăsa bara de spațiu pentru a începe.
 
-- Right Arrow
+* Săgeată Dreapta
 
-  - Permite execuția unei salt scurt de o secundă în timpul redării, oferind și durata curentă.
-  - Acest interval este configurabil din opțiunile mp3directcut.
+    * Permite efectuarea unui scurt avans de o secundă în timpul redării, oferind în același timp durata curentă.
+    * Această durată este configurabilă în opțiunile mp3DirectCut.
 
-- Ctrl+Right Arrow
+* Ctrl+Săgeată Dreapta
 
-  - Mută la următorul punct de diviziune , oferind și durata curentă.
+    * Mută la următorul punct de divizare, oferind în același timp durata curentă.
 
-- Ctrl+Left Arrow
+* Ctrl+Săgeată Stânga
 
-  - Mută la anteriorul punct de diviziune , oferind și durata curentă.
+    * Mută la punctul de divizare anterior, oferind în același timp durata curentă.
 
-- Shift+Right Arrow
+* Shift+Săgeată Dreapta
 
-  - Permite execuția unei salt scurt înainte de patru sutimi de secundă în timpul redării, oferind și durata curentă.
+    * Permite efectuarea unui scurt avans de patru sutimi de secundă în timpul redării, oferind în același timp durata curentă.
 
-- Shift+Left Arrow
+* Shift+Săgeată Stânga
 
-  - Permite execuția unei salt scurt înapoi de patru sutimi de secundă în timpul redării, oferind și durata curentă.
+    * Permite efectuarea unei scurte întoarceri înapoi de patru sutimi de secundă în timpul redării, oferind în același timp durata curentă.
 
-- S
+* S
 
-  - Folosită pentru a opri citirea și a oferi durata curentă.
+    * Folosit pentru a opri redarea și a oferi durata curentă.
 
-- Space
+* Space
 
-  - Dacă înregistrarea este pregătită, începe această înregistrare.
-  - Dacă o înregistrare este în derulare, o oprește prin poziționarea cursorului la început.
-  - Dacă este încărcat un fișier, începeți citirea.
-  - Dacă o citire este în desfășurare, permite să faceți o pauză și oferă durata curentă.
-  - Dacă citirea e pe pauză, permite repornirea acesteia de la locația curentă.
+    * Dacă înregistrarea este gata, pornește această înregistrare.
+    * Dacă o înregistrare este în curs, o oprește plasând cursorul la început.
+    * Dacă un fișier este încărcat, pornește redarea.
+    * Dacă o redare este în curs, permite punerea în pauză oferind în același timp durata curentă.
+    * Dacă redarea este în pauză, permite repornirea redării de la locația curentă.
 
-- Up Arrow
+* Săgeată în Sus
 
-  - Permite vederea poziției curente a capului de redare.
-  - Acestă comandă, de asemenea, poziționează cursorul la locația reperului începutului slecției B, oferind și locația acestui reper, dacă a fost făcută o selecție.
-  - În caseta de dialog a volumului, pronunță valoarea anterioară care poate fi atinsă în mod general cu săgeată sus.
-  - Această valoare nu este pronunțată implicit.
+    * Vă permite să vizualizați poziția curentă a cursorului de redare.
+    * Această comandă plasează, de asemenea, cursorul la locația marcatorului de început al selecției B, oferind în același timp locația acestui marcator dacă a fost făcută o selecție.
+    * În caseta de dialog pentru volum, vocalizează valoarea anterioară care poate fi atinsă în general cu săgeată în sus.
+    * Această valoare nu este vocalizată în mod implicit.
 
-- NVDA+H
+* NVDA+H
 
-  - Permite deschiderea ajutorului pentru suplimentul curent.
+    * Permite deschiderea ajutorului pentru suplimentul curent.
 
-## Modificări pentru versiunea 4.0
+## Compatibilitate ##
 
-- Adăugat compatibilitate pentru supliment atât cu Python 2.7 cât și 3;
+* Acest supliment este compatibil cu versiunile de NVDA de la 2019.3 și ulterioare.
 
-## Modificări pentru versiunea 3.0
+## Modificări pentru 20240327.0.0
 
-- Folosit modulul gui.guiHelper pentru a asigura afișarea corectă a
-  dialogului de configurare pentru supliment;
+* S-a corectat o eroare care cauza o eroare de jurnal la reîncărcarea pluginurilor, datorită lui Rob de pe lista de discuții nvda-addons;
 
-## Modificări pentru versiunea 2.3
+## Modificări pentru 20240326.0.0
 
-- Adăugat licența GPL pentru supliment;
-- Schimbat scurtătura scriptului care dă sfârșitul selecției din
-  Ctrl+Shift+N în Ctrl+Shift+E, deoarece Ctrl+Shift+N nu funcționează cu
-  noile versiuni de mp3DirectCut;
+* S-a actualizat compatibilitatea pentru nvda-2024.1.;
+* S-a eliminat linkul de descărcare din readme, linkul de descărcare pentru viitoarele actualizări va fi acum disponibil doar din magazinul de suplimente (add-on store).
 
-## Modificări aduse în versiunea 2.2
+## Modificări pentru 20231229.0.0 ##
 
-- Corecția scripturilor care dau locația selectată a marcajelor.
+* S-a adăugat o implementare compatibilă cu versiunile anterioare pentru a susține modul de vorbire la cerere, care va fi disponibil în curând cu nvda-2024.1.
 
-## Modificări aduse în versiunea 2.1.1
+## Modificări pentru 20231007.0.0 ##
 
-- Eliminarea scriptului care dă timpul total și adaugă această informație
-  la scriptul care dă timpul scurs.
-- A fost adăugată abilitatea de a activa sau dezactiva anunțurile relatate
-  la tasta spațiu în opțiunile de configurare ale modulelor separat din
-  alte anunțuri;
-- A fost adăugată abilitatea de a activa sau dezactiva anunțul plasat
-  selecției marque în opțiunile de configurare ale modulelor;
+* După plasarea punctelor de tăiere și după deschiderea ferestrei cu proprietățile de tăiere prin „Ctrl+N”, s-a adăugat accesibilitate la titlul acestei ferestre prin indicarea indexului părții.
+* În modul de citire, după mutarea marcatorilor de început sau de sfârșit ai selecțiilor cu tastele de la 1 la 6 ale blocului alfanumeric, s-a adăugat pornirea automată a redării de la noua poziție;
+* S-a corectat o eroare care apărea la consultarea timpului rămas cu „control+shift+r” de la începutul piesei.
 
-## Modificări aduse în versiunea 2.1
+## Modificări pentru 20230728.0.0 ##
 
-- Adăugarea unui script pentru a cânta se deplasează la următorul punct
-  divizat cu control+săgeată dreapta;
-- Adăugarea unui script pentru a cânta se deplasează la punctul anterior
-  divizat cu control+săgeată stânga;
+* S-au aplicat regulile flake8 și mypy asupra codului;
+* S-a schimbat versiunea minimă de NVDA suportată la 2019.3 pentru a susține adnotările introduse în Python 3.
 
-## Modificări în versiunea 1.0
+## Modificări pentru 20230607.0.0 ##
 
-- A fost adăugat un script pentru cunoașterea timpului rămas cu 'Control
-  Shift R';
-- A fost reparată durata orelor;
-- A fost adăugată abilitatea de diferențiere între mi și sute de secunde;
-- manual-release.yaml: to build and release new versions of the add-on manually.
-- Updated translations.
+* S-au adăugat următoarele fluxuri de lucru (workflows):
+ * auto-update-translations - pentru actualizarea automată a traducerilor din sistemul de traducere al NVDA.
+ * release-on-tag..yaml: pentru construirea și publicarea suplimentului imediat ce este trimis un nou tag;
+ * manual-release.yaml: pentru construirea și lansarea manuală a noilor versiuni ale suplimentului.
+* Traduceri actualizate.
 
-## Modificări aduse în versiunea 1.1
+## Modificări pentru versiunea 20230508.0.0 și ulterioare ##
 
-- Adăugat posibilitatea de a include categoria mp3DirectCut în gesturile de intrare;
-  \*	 Vor fi vizibile doar în timpul folosirii software-ului mp3DirectCut.
+* S-au modificat numărul versiunii, versiunea minimă de NVDA și linkul de descărcare conform convențiilor/cerințelor magazinului.
 
-## Modificări adyse în 1.0
+## Modificare pentru versiunea 20.12 ##
 
-- Versiunea inițială.
-- Fixed reading remaining time for new versions of NVDA using Python 3.
+* Oprirea vorbirii în timpul înregistrării și redării pentru cele mai recente versiuni de mp3DirectCut;
+* S-a corectat citirea timpului rămas pentru noile versiuni de NVDA care utilizează Python 3.
 
-## Change for version 19.02
+## Modificare pentru versiunea 19.02 ##
 
-- Added the add-on's configuration in the settings panel available since nvda 2018.2;
-- Changed version numbering using YY.MM (The year in 2 digits, followed by a dot, followed by the month in 2 digits);
-- Added compatibility with the new versioning format of add-on, appeared since nvda 2019.1.
+* S-a adăugat configurația suplimentului în panoul de setări disponibil începând cu nvda 2018.2;
+* S-a modificat numerotarea versiunilor utilizând AA.MM (anul din 2 cifre, urmat de punct, urmat de luna din 2 cifre);
+* S-a adăugat compatibilitatea cu noul format de versiune pentru suplimente, apărut începând cu nvda 2019.1.
 
-## Change for version 4.0
+## Modificare pentru versiunea 4.0 ##
 
-- Added the Compatibility of the add-on with both Python 2.7 and 3;
-- Fixed a bug with add-on paths that contain non-ASCII characters.
+* S-a adăugat compatibilitatea suplimentului atât cu Python 2.7, cât și cu 3;
+* S-a corectat o eroare cu căile suplimentului care conțin caractere non-ASCII.
 
-## Change for version 3.0
+## Modificare pentru versiunea 3.0 ##
 
-- Used the gui.guiHelper module to ensure the correct appearance of the addon's configuration dialog;
-- Used format instead of %s for formatted strings;
-- Used compliance with guidelines for implementation.
+* S-a utilizat modulul gui.guiHelper pentru a asigura aspectul corect al ferestrei de dialog pentru configurarea suplimentului;
+* S-a utilizat format în loc de %s pentru șirurile formatate;
+* S-a aplicat conformitatea cu ghidurile de implementare.
 
-## Change for version 2.3
+## Modificare pentru versiunea 2.3 ##
 
-- Added the GPL license to the addon;
-- Changed the shortcut of the script giving the end of selection from Ctrl + Shift + N to Ctrl + Shift + E because Ctrl + Shift + N doesn't work with the latest versions of mp3DirectCut;
-- Added a script to confirm that the selection has been canceled with 'Ctrl+r';
-- Made some corrections in the code of the appModule 'mp3directcut.py'.
+* S-a adăugat licența GPL la supliment;
+* S-a modificat scurtătura scriptului care oferă sfârșitul selecției de la Ctrl + Shift + N la Ctrl + Shift + E deoarece Ctrl + Shift + N nu funcționează cu cele mai recente versiuni de mp3DirectCut;
+* S-a adăugat un script pentru a confirma că selecția a fost anulată cu „Ctrl+r”;
+* S-au efectuat câteva corecții în codul appModule „mp3directcut.py”.
 
-## Change for version 2.2
+## Modificare pentru versiunea 2.2 ##
 
-- Correction of the scripts giving the selection markers' locations.
+* Corectarea scripturilor care oferă locațiile marcatorilor de selecție.
 
-## Change for version 2.1.1
+## Modificare pentru versiunea 2.1.1 ##
 
-- Removing the script giving the total time and adding this information to the script giving the elapsed time;
-- Added the ability to enable or disable the announcements related to the space key in the module's configuration options, separately from other announcements;
-- Added the ability to enable or disable the announcement of placement of the selection marqueures in the module's configuration options;
-- Adding the announcement of the current part when moving through the cutting points;
-- Correction of announcements related to vertical keys;
-- Adding a script to open the help of the current add-on with 'NVDA+H';
-- Displacement of the add-on's configuration menu from the Tools menu to the Preferences menu of NVDA.
+* Eliminarea scriptului care oferă timpul total și adăugarea acestei informații la scriptul care oferă timpul scurs;
+* S-a adăugat posibilitatea de a activa sau dezactiva anunțurile legate de tasta spațiu în opțiunile de configurare ale modulului, separat de alte anunțuri;
+* S-a adăugat posibilitatea de a activa sau dezactiva anunțul de plasare a marcatorilor de selecție în opțiunile de configurare ale modulului;
+* Adăugarea anunțului piesei curente la deplasarea prin punctele de tăiere;
+* Corectarea anunțurilor legate de tastele verticale;
+* Adăugarea unui script pentru a deschide ajutorul suplimentului curent cu „NVDA+H”;
+* Deplasarea meniului de configurare al suplimentului din meniul Instrumente în meniul Preferințe al NVDA.
 
-## Change for version 2.1
+## Modificare pentru versiunea 2.1 ##
 
-- Adding a script to vocalize moving to the next splitting point with Control+Right Arrow;
-- Adding a script to vocalize moving to the previous splitting point with Control+Left Arrow;
-- Adding a script to vocalize the displacement of 4 hundredths of second ahead, with Shift+Right Arrow;
-- Adding a script to vocalize the displacement of 4 hundredths of second back, with Shift+Left Arrow;
-- Correction of the addon's summary from 'for mp3DirectCut' to 'mp3DirectCut'.
+* Adăugarea unui script pentru a vocaliza deplasarea la următorul punct de divizare cu Control+Săgeată Dreapta;
+* Adăugarea unui script pentru a vocaliza deplasarea la punctul de divizare anterior cu Control+Săgeată Stânga;
+* Adăugarea unui script pentru a vocaliza deplasarea cu 4 sutimi de secundă înainte, cu Shift+Săgeată Dreapta;
+* Adăugarea unui script pentru a vocaliza deplasarea cu 4 sutimi de secundă înapoi, cu Shift+Săgeată Stânga;
+* Corectarea rezumatului suplimentului de la „for mp3DirectCut” la „mp3DirectCut”.
 
-## Change for version 2.0
+## Modificare pentru versiunea 2.0 ##
 
-- Adding a script to know the remaining time with 'Control Shift R';
-- Fixed reading durations including hours;
-- Added ability to differentiate thousandths or hundredths of seconds.
+* Adăugarea unui script pentru a afla timpul rămas cu „Control Shift R”;
+* S-a corectat citirea duratelor care includ ore;
+* S-a adăugat capacitatea de a diferenția miimile sau sutimile de secundă.
 
-## Change for version 1.1
+## Modificare pentru versiunea 1.1 ##
 
-- Added the ability to include the mp3DirectCut category into the Input Gestures;
+* S-a adăugat posibilitatea de a include categoria mp3DirectCut în Gesturile de Intrare;
 
-  - They will be visible only during use of the mp3DirectCut software.
+    * Acestea vor fi vizibile doar în timpul utilizării software-ului mp3DirectCut.
 
-- Added the ability to enable or disable automatic messages, in the tools menu of NVDA, item 'mp3DirectCut configuration';
+* S-a adăugat posibilitatea de a activa sau dezactiva mesajele automate, în meniul de instrumente al NVDA, elementul „Configurare mp3DirectCut”;
 
-## Change for version 1.0
+## Modificare pentru versiunea 1.0 ##
 
-- Initial version.
+* Versiune inițială.

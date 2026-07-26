@@ -15,7 +15,7 @@ on:
         default: false
 
       updateYear:
-        description: 'Update addon_lastTestedNVDAVersion in buildVars.py to current year (optional for stable, automatic for beta/dev)'
+        description: 'Update addon_lastTestedNVDAVersion in buildVars.py to current year'
         type: boolean
         required: false
         default: false
@@ -33,9 +33,10 @@ on:
 jobs:
   buildAndUpload:
     runs-on: ubuntu-latest
-    permissions: write-all
-    steps:
+    permissions:
+      contents: write
 
+    steps:
     - name: Date formatting
       uses: ajilraju/actions-date@master #release v0.1
       with:
@@ -89,36 +90,46 @@ jobs:
     - name: Set up Python 3.11
       uses: actions/setup-python@v5
       with:
-        python-version: 3.11
+        python-version: '3.11'
 
-    - name: Install dependencies
+    - name: Set up uv
+      uses: astral-sh/setup-uv@v5
+      with:
+        enable-cache: true
+
+    - name: Install dependencies with uv
       run: |
-        pip install -U pip scons markdown ruff mypy
+        uv sync --python 3.11
         sudo apt update
-        sudo apt install gettext
+        sudo apt install -y gettext
 
     - name: Lint with ruff
       run: |
-        python -m ruff check addon
+        uv run ruff check addon
 
-    - name: Lint with mypy
+    - name: Type check with pyright
       run: |
-        python -m mypy addon --install-types --non-interactive
+        uv run pyright addon
 
     - name: Add add-on version
+      env:
+        BUILD_VERSION: ${{ env.BUILD_VERSION }}
+        CUR_YEAR: ${{ env.CUR_YEAR }}
+        UPDATE_YEAR: ${{ inputs.updateYear }}
+        CHANNEL: ${{ inputs.channel }}
       run: |
+        import os
         import re
-        version='${{ env.BUILD_VERSION }}'
-        year='${{ env.CUR_YEAR }}'
-        updateYear='${{ inputs.updateYear }}' == 'true'
-        channel='${{ inputs.channel }}'
+
+        version = os.environ['BUILD_VERSION']
+        year = os.environ['CUR_YEAR']
+        updateYear = os.environ['UPDATE_YEAR'].lower() == 'true'
+        channel = os.environ['CHANNEL']
 
         with open("buildVars.py", "r", encoding="utf-8") as f:
           text = f.read()
 
-        shouldUpdateYear = channel in ("beta", "dev") or (channel == "stable" and updateYear)
-
-        if shouldUpdateYear:
+        if updateYear:
           match = re.search(
             r'addon_lastTestedNVDAVersion="(\d{4})\.\d+\.\d+",',
             text
@@ -146,13 +157,12 @@ jobs:
         with open("changelog.md", "r", encoding="utf-8") as f:
           text = f.read()
 
-        text = re.sub("Changes for [^\r\n]+", f"Changes for {version}", text)
+        text = re.sub("Changes for [^\r\n]+", f"Changes for {version}", text, count=1)
 
         with open("changelog.md", "w", encoding="utf-8") as f:
           f.write(text)
 
       shell: python
-
 
     - name: Check if there are any changes
       id: verify_diff
@@ -162,21 +172,23 @@ jobs:
     - name: Commit and push changes
       if: steps.verify_diff.outputs.changed == 'true'
       run: |
-        git config --local user.name 'github-actions'
-        git config --local user.email 'github-actions@github.com'
+        git config --local user.name 'github-actions[bot]'
+        git config --local user.email 'github-actions[bot]@users.noreply.github.com'
         git commit -a -m "Update buildVars and changelog"
         git tag ${{ env.TAG_NAME }}
         git push origin HEAD:${{ github.ref_name }}
         git push origin ${{ env.TAG_NAME }}:refs/tags/${{ env.TAG_NAME }}
 
     - name: Build add-on
-      run: scons version=${{ env.BUILD_VERSION }}
+      env:
+        BUILD_VERSION: ${{ env.BUILD_VERSION }}
+      run: uv run scons version="$BUILD_VERSION"
 
     - name: Calculate sha256
       run: sha256sum *.nvda-addon >> sha256.txt
 
     - name: Release
-      uses: softprops/action-gh-release@v3
+      uses: softprops/action-gh-release@v2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:

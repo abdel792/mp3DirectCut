@@ -15,7 +15,7 @@ on:
         default: false
 
       updateYear:
-        description: 'Update addon_lastTestedNVDAVersion in buildVars.py to current year (optional for stable, automatic for beta/dev)'
+        description: 'Update addon_lastTestedNVDAVersion in buildVars.py to current year'
         type: boolean
         required: false
         default: false
@@ -32,93 +32,102 @@ on:
 
 jobs:
   buildAndUpload:
-    runs-on: ubuntu-latest
-    permissions: write-all
+    # Use Windows runner to leverage pre-built wxPython wheels for Python 3.13 from PyPI,
+    # avoiding long source compilation times required on Linux.
+    runs-on: windows-latest
+    permissions:
+      contents: write
+
     steps:
-
-    - name: Date formatting
-      uses: ajilraju/actions-date@master #release v0.1
-      with:
-        args: date +%F
-
-    - name: Environment variable for current date
-      run: echo "CUR_DATE=$(date +%Y%m%d)" >> $GITHUB_ENV
-
-    - name: Environment variable for tag_name
-      run: echo "TAG_NAME="v"$(echo ${{ env.CUR_DATE }} | cut -c 3-4)"."$(echo ${{ env.CUR_DATE }} | cut -c 5-6)"."$(echo ${{ env.CUR_DATE }} | cut -c 7-8)" >> $GITHUB_ENV
+    - name: Set date environment variables
+      run: |
+        $curDate = Get-Date -Format "yyyyMMdd"
+        $curYear = Get-Date -Format "yyyy"
+        $tagName = "v" + (Get-Date -Format "yy.MM.dd")
+        
+        echo "CUR_DATE=$curDate" >> $env:GITHUB_ENV
+        echo "CUR_YEAR=$curYear" >> $env:GITHUB_ENV
+        echo "TAG_NAME=$tagName" >> $env:GITHUB_ENV
 
     - name: Environment variable for current year
-      run: echo "CUR_YEAR=$(echo ${{ env.CUR_DATE }} | cut -c 1-4)" >> $GITHUB_ENV
+      run: echo "CUR_YEAR=$($env:CUR_DATE.Substring(0,4))" >> $env:GITHUB_ENV
 
     - name: Environment variable for dev
       if: ${{ inputs.prerelease == true && inputs.channel == 'dev'}}
       run: |
-        echo 'MINOR_PATCH=1.0' >> $GITHUB_ENV
-        echo 'TAG_NAME=${{ env.TAG_NAME }}-dev' >> $GITHUB_ENV
+        echo "MINOR_PATCH=1.0" >> $env:GITHUB_ENV
+        echo "TAG_NAME=${env:TAG_NAME}-dev" >> $env:GITHUB_ENV
 
     - name: Environment variable for beta
       if: ${{ inputs.prerelease == true && inputs.channel == 'beta'}}
       run: |
-        echo 'MINOR_PATCH=0.1' >> $GITHUB_ENV
-        echo 'TAG_NAME=${{ env.TAG_NAME }}-beta' >> $GITHUB_ENV
+        echo "MINOR_PATCH=0.1" >> $env:GITHUB_ENV
+        echo "TAG_NAME=${env:TAG_NAME}-beta" >> $env:GITHUB_ENV
 
     - name: Environment variable for stable
       if: ${{ inputs.prerelease == false && inputs.channel == 'stable' }}
-      run: echo 'MINOR_PATCH=0.0' >> $GITHUB_ENV
+      run: echo "MINOR_PATCH=0.0" >> $env:GITHUB_ENV
 
     - name: Set build version when version is empty
       if: ${{ inputs.version == '' }}
-      run: echo 'BUILD_VERSION=${{ env.CUR_DATE }}.${{ env.MINOR_PATCH }}' >> $GITHUB_ENV
+      run: echo "BUILD_VERSION=${env:CUR_DATE}.${env:MINOR_PATCH}" >> $env:GITHUB_ENV
 
     - name: Set build version when version is not empty
       if: ${{ inputs.version != '' }}
-      run: echo 'BUILD_VERSION=${{ github.event.inputs.version }}' >> $GITHUB_ENV
+      run: echo "BUILD_VERSION=${{ github.event.inputs.version }}" >> $env:GITHUB_ENV
 
     - name: Check BUILD_VERSION environment variable
-      run: echo '${{ env.BUILD_VERSION }}'
+      run: echo "${env:BUILD_VERSION}"
 
     - name: Check TAG_NAME environment variable
-      run: echo '${{ env.TAG_NAME }}'
+      run: echo "${env:TAG_NAME}"
 
     - name: Check cur_year environment variable
-      run: echo '${{ env.CUR_YEAR }}'
+      run: echo "${env:CUR_YEAR}"
 
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
 
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v5
+    - name: Set up uv
+      uses: astral-sh/setup-uv@v7
       with:
-        python-version: 3.11
+        python-version: "3.13"
+        enable-cache: true
 
-    - name: Install dependencies
+    - name: Install system dependencies
       run: |
-        pip install -U pip scons markdown ruff mypy
-        sudo apt update
-        sudo apt install gettext
+        choco install gettext --no-progress -y
+        echo "C:\ProgramData\chocolatey\bin" >> $env:GITHUB_PATH
+        echo "C:\Program Files\gettext-iconv\bin" >> $env:GITHUB_PATH
+
+    - name: Install dependencies with uv
+      run: uv sync
 
     - name: Lint with ruff
-      run: |
-        python -m ruff check addon
+      run: uv run ruff check addon
 
-    - name: Lint with mypy
-      run: |
-        python -m mypy addon --install-types --non-interactive
+    - name: Type check with mypy
+      run: uv run --with mypy mypy addon
 
     - name: Add add-on version
+      env:
+        BUILD_VERSION: ${{ env.BUILD_VERSION }}
+        CUR_YEAR: ${{ env.CUR_YEAR }}
+        UPDATE_YEAR: ${{ inputs.updateYear }}
+        CHANNEL: ${{ inputs.channel }}
       run: |
+        import os
         import re
-        version='${{ env.BUILD_VERSION }}'
-        year='${{ env.CUR_YEAR }}'
-        updateYear='${{ inputs.updateYear }}' == 'true'
-        channel='${{ inputs.channel }}'
+
+        version = os.environ['BUILD_VERSION']
+        year = os.environ['CUR_YEAR']
+        updateYear = os.environ['UPDATE_YEAR'].lower() == 'true'
+        channel = os.environ['CHANNEL']
 
         with open("buildVars.py", "r", encoding="utf-8") as f:
           text = f.read()
 
-        shouldUpdateYear = channel in ("beta", "dev") or (channel == "stable" and updateYear)
-
-        if shouldUpdateYear:
+        if updateYear:
           match = re.search(
             r'addon_lastTestedNVDAVersion="(\d{4})\.\d+\.\d+",',
             text
@@ -146,34 +155,39 @@ jobs:
         with open("changelog.md", "r", encoding="utf-8") as f:
           text = f.read()
 
-        text = re.sub("Changes for [^\r\n]+", f"Changes for {version}", text)
+        text = re.sub("Changes for [^\r\n]+", f"Changes for {version}", text, count=1)
 
         with open("changelog.md", "w", encoding="utf-8") as f:
           f.write(text)
 
       shell: python
 
-
     - name: Check if there are any changes
       id: verify_diff
       run: |
-        git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
+        if (git status --porcelain) { echo "changed=true" >> $env:GITHUB_OUTPUT }
 
     - name: Commit and push changes
       if: steps.verify_diff.outputs.changed == 'true'
       run: |
-        git config --local user.name 'github-actions'
-        git config --local user.email 'github-actions@github.com'
+        git config --local user.name 'github-actions[bot]'
+        git config --local user.email 'github-actions[bot]@users.noreply.github.com'
         git commit -a -m "Update buildVars and changelog"
-        git tag ${{ env.TAG_NAME }}
+        git tag -f $env:TAG_NAME
         git push origin HEAD:${{ github.ref_name }}
-        git push origin ${{ env.TAG_NAME }}:refs/tags/${{ env.TAG_NAME }}
+        git push origin $env:TAG_NAME --force
 
     - name: Build add-on
-      run: scons version=${{ env.BUILD_VERSION }}
+      env:
+        BUILD_VERSION: ${{ env.BUILD_VERSION }}
+      run: uv run scons version="$env:BUILD_VERSION"
 
     - name: Calculate sha256
-      run: sha256sum *.nvda-addon >> sha256.txt
+      run: |
+        Get-ChildItem -Filter *.nvda-addon | ForEach-Object {
+            $hash = (Get-FileHash -Path $_.FullName -Algorithm SHA256).Hash.ToLower()
+            "$hash  $($_.Name)" | Out-File -FilePath sha256.txt -Encoding utf8
+        }
 
     - name: Release
       uses: softprops/action-gh-release@v3

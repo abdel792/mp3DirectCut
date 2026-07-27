@@ -125,41 +125,38 @@ jobs:
         channel = os.environ['CHANNEL']
 
         with open("buildVars.py", "r", encoding="utf-8") as f:
-          text = f.read()
+            text = f.read()
 
         if updateYear:
-          match = re.search(
-            r'addon_lastTestedNVDAVersion="(\d{4})\.\d+\.\d+",',
-            text
-          )
-
-          if match:
-            checkYear = match.group(1)
-
-            if checkYear < year:
-              text = re.sub(
-                r'addon_lastTestedNVDAVersion="\d+\.\d+\.\d+",',
-                f'addon_lastTestedNVDAVersion="{year}.1.0",',
+            match = re.search(
+                r'addon_lastTestedNVDAVersion=(?:"""|\'\'\'|"|\')(\d{4})\.\d+\.\d+(?:"""|\'\'\'|"|\'),',
                 text
-              )
+            )
+            if match:
+                checkYear = match.group(1)
+                if checkYear < year:
+                    text = re.sub(
+                        r'addon_lastTestedNVDAVersion=(?:"""|\'\'\'|"|\')\d+\.\d+\.\d+(?:"""|\'\'\'|"|\'),',
+                        f'addon_lastTestedNVDAVersion="{year}.1.0",',
+                        text
+                    )
 
         text = re.sub(
-          r'addon_version=".*?",',
-          f'addon_version="{version}",',
-          text
+            r'addon_version=(?:"""|\'\'\'|"|\').*?(?:"""|\'\'\'|"|\'),',
+            f'addon_version="{version}",',
+            text
         )
 
         with open("buildVars.py", "w", encoding="utf-8") as f:
-          f.write(text)
+            f.write(text)
 
         with open("changelog.md", "r", encoding="utf-8") as f:
-          text = f.read()
+            text = f.read()
 
         text = re.sub("Changes for [^\r\n]+", f"Changes for {version}", text, count=1)
 
         with open("changelog.md", "w", encoding="utf-8") as f:
-          f.write(text)
-
+            f.write(text)
       shell: python
 
     - name: Check if there are any changes

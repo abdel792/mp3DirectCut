@@ -22,7 +22,7 @@ addon_info = AddonInfo(
 	# Translators: Long description to be shown for this add-on on add-on information from add-on store
 	addon_description=_("""some commands to use mp3directcut with NVDA"""),
 	# version
-	addon_version="20260727.0.0",
+	addon_version="20260803.0.0",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
 	addon_changelog=_("""Ensure compatibility with columnsReview and CustomLabels"""),

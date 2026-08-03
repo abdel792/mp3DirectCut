@@ -7,36 +7,38 @@
 # See the file COPYING for more details.
 
 from __future__ import unicode_literals  # To ensure unicode compatibility with both python 2 and 3.
-import appModuleHandler
+
 import re
-import windowUtils
-from typing import Callable
+from collections.abc import Callable
+
+import appModuleHandler
 import controlTypes
+import windowUtils
 
 if hasattr(controlTypes, "ROLE_PANE"):
-	from controlTypes import ROLE_PANE, ROLE_EDITABLETEXT
+	from controlTypes import ROLE_EDITABLETEXT, ROLE_PANE
 else:
 	ROLE_PANE = controlTypes.Role.PANE
 	ROLE_EDITABLETEXT = controlTypes.Role.EDITABLETEXT
-from datetime import datetime
-from keyboardHandler import KeyboardInputGesture as kig
 import os
-import buildVersion
-import api
-from scriptHandler import getLastScriptRepeatCount, script
-from winUser import (
-	CHILDID_SELF,
-	OBJID_CLIENT,
-	setFocus,
-	mouse_event,
-	MOUSEEVENTF_LEFTDOWN,
-	MOUSEEVENTF_LEFTUP,
-)
-from ui import message
 import sys
-from NVDAObjects.IAccessible import IAccessible, getNVDAObjectFromEvent
+from datetime import datetime
 
 import addonHandler
+import api
+import buildVersion
+from keyboardHandler import KeyboardInputGesture as kig
+from NVDAObjects.IAccessible import IAccessible, getNVDAObjectFromEvent
+from scriptHandler import getLastScriptRepeatCount, script
+from ui import message
+from winUser import (
+	CHILDID_SELF,
+	MOUSEEVENTF_LEFTDOWN,
+	MOUSEEVENTF_LEFTUP,
+	OBJID_CLIENT,
+	mouse_event,
+	setFocus,
+)
 
 addonHandler.initTranslation()
 _: Callable[[str], str]
@@ -107,12 +109,12 @@ announce = (
 )
 
 
-def timeSplitter(time):  # noqa: C901
+def timeSplitter(time):
 	hours = minutes = seconds = hundredths = thousandths = ""
 	if ":" in time:
 		hrs = time.split(":")
 		if hrs[0] != "00" and hrs[0] != "0":
-			hours = "{0} {1}, ".format(hrs[0], hr)
+			hours = f"{hrs[0]} {hr}, "
 		if hrs[1].split("'")[0] != "00":
 			minutes = hrs[1].split("'")[0]
 	else:
@@ -123,7 +125,7 @@ def timeSplitter(time):  # noqa: C901
 		if len(minutes) > 1:
 			if minutes[0] == "0":
 				minutes = minutes[1]
-		minutes = "{0} {1}, ".format(minutes, min)
+		minutes = f"{minutes} {min}, "
 	try:
 		scnds = time.split("'")[1].split(".")[0]
 	except IndexError:
@@ -134,13 +136,13 @@ def timeSplitter(time):  # noqa: C901
 		if len(seconds) > 1:
 			if seconds[0] == "0":
 				seconds = seconds[1]
-		seconds = "{0} {1}, ".format(seconds, sec)
+		seconds = f"{seconds} {sec}, "
 	hd = time.split(".")[1].split()[0]
 	if hd != "00" and hd != "000":
 		if len(hd) == 3:
-			thousandths = "{0} {1}.".format(hd, th)
+			thousandths = f"{hd} {th}."
 		else:
-			hundredths = "{0} {1}.".format(hd, hun)
+			hundredths = f"{hd} {hun}."
 	timeSplitter = (
 		hours + minutes + seconds + hundredths if not thousandths else hours + minutes + seconds + thousandths
 	)
@@ -253,7 +255,7 @@ def part(flag=None):
 	text = text.split(")")
 	text = text[0]
 	text = text.replace("/", " {0} ".format(_("of")))
-	return "{0} {1}".format(announce[10], text) if not flag else "{0} {1}".format(_("Part"), text)
+	return f"{announce[10]} {text}" if not flag else "{0} {1}".format(_("Part"), text)
 
 
 def selectionDuration():
@@ -339,9 +341,9 @@ def timeRemaining():
 	hORm = len(total.split(".")[1])
 	fmt = "%H:%M'%S.%f"
 	if ":" not in actual:
-		actual = "0:{0}".format(actual)
+		actual = f"0:{actual}"
 	if ":" not in total:
-		total = "0:{0}".format(total)
+		total = f"0:{total}"
 	result = datetime.strptime(total, fmt) - datetime.strptime(actual, fmt)
 	result = str(result).decode("utf-8") if sys.version_info.major == 2 else str(result)
 	result = result.replace(":", "'")
@@ -510,15 +512,15 @@ class SoundManager(IAccessible):
 					if not actual:
 						actual = announce[1]
 					if actual == totalTime():
-						actual = "{0} {1}".format(actual, announce[2])
+						actual = f"{actual} {announce[2]}"
 					sayMessage(announce[5] + " : " + actual + " " + actualDurationPercentage())
 				else:
 					actual = actualDuration()
 					if not actual:
-						sayMessage("{0}, {1}".format(announce[0], announce[1]))
+						sayMessage(f"{announce[0]}, {announce[1]}")
 						return
 					if actual == totalTime():
-						actual = "{0} {1}".format(actual, announce[2])
+						actual = f"{actual} {announce[2]}"
 					# Translators: Message  to indicate the elapsed time.
 					sayMessage(
 						"{0}, {1} {2} {3}".format(
@@ -550,15 +552,15 @@ class SoundManager(IAccessible):
 					if not actual:
 						actual = announce[1]
 					if actual == totalTime():
-						actual = "{0} {1}".format(actual, announce[2])
+						actual = f"{actual} {announce[2]}"
 					sayMessage(announce[6] + " : " + actual + " " + actualDurationPercentage())
 				else:
 					actual = actualDuration()
 					if not actual:
-						sayMessage("{0}, {1}".format(announce[0], announce[1]))
+						sayMessage(f"{announce[0]}, {announce[1]}")
 						return
 					if actual == totalTime():
-						actual = "{0} {1}".format(actual, announce[2])
+						actual = f"{actual} {announce[2]}"
 					# Translators: Message  to indicate the elapsed time.
 					sayMessage(
 						"{0}, {1} {2} {3}".format(
@@ -603,7 +605,7 @@ class SoundManager(IAccessible):
 			if repeat == 0:
 				message(text)
 			elif repeat == 1:
-				message("{0} {1}".format(announce[8], totalTime()))
+				message(f"{announce[8]} {totalTime()}")
 
 	@script(
 		gesture="kb:control+shift+r",

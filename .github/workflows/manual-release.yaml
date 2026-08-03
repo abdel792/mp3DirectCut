@@ -49,9 +49,6 @@ jobs:
         echo "CUR_YEAR=$curYear" >> $env:GITHUB_ENV
         echo "TAG_NAME=$tagName" >> $env:GITHUB_ENV
 
-    - name: Environment variable for current year
-      run: echo "CUR_YEAR=$($env:CUR_DATE.Substring(0,4))" >> $env:GITHUB_ENV
-
     - name: Environment variable for dev
       if: ${{ inputs.prerelease == true && inputs.channel == 'dev'}}
       run: |
@@ -97,8 +94,9 @@ jobs:
     - name: Install system dependencies
       run: |
         choco install gettext --no-progress -y
-        echo "C:\ProgramData\chocolatey\bin" >> $env:GITHUB_PATH
-        echo "C:\Program Files\gettext-iconv\bin" >> $env:GITHUB_PATH
+        "C:\ProgramData\chocolatey\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+        "C:\Program Files\gettext-iconv\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+        "C:\ProgramData\chocolatey\lib\gettext\tools" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
 
     - name: Install dependencies with uv
       run: uv sync

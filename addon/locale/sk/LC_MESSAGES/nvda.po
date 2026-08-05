@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-07-29 15:36+0000\n"
-"PO-Revision-Date: 2026-07-29 15:38\n"
+"POT-Creation-Date: 2026-08-05 15:51+0000\n"
+"PO-Revision-Date: 2026-08-05 15:55\n"
 "Last-Translator: \n"
 "Language-Team: Slovak\n"
 "Language: sk_SK\n"
@@ -233,7 +233,7 @@ msgstr ""
 msgid "Give the reference of the actual part and the total number of parts in the current file."
 msgstr "Povie číslo aktuálnej časti a celkový počet častí aktuálneho súboru."
 
-#: addon\appModules\mp3directcut.py:787
+#: addon\appModules\mp3directcut.py:790
 msgid "Lets open the help of the current add-on."
 msgstr "Otvorí pomocníka pre doplnok."
 
@@ -246,6 +246,6 @@ msgstr "Poskytuje doplnkové príkazy na ovládanie aplikácie mp3directcut"
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:28
-msgid "* Updated translations from Crowdin"
+msgid "Ensure compatibility with columnsReview and CustomLabels"
 msgstr ""
 

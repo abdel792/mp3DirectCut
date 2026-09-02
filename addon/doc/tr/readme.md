@@ -72,12 +72,12 @@ Bu eklenti aşağıdaki komutları sunar:
 
     * N seçim sonu işaretçisinin doğru yerleştirildiğini onaylamak için kullanılır.
 
-* Page Down
+* Sayfa Aşağı
 
     * Oynatma sırasında mevcut süreyi bildirirken 10 saniyelik bir ileri atlama yapılmasını sağlar.
     * Bu süre mp3DirectCut seçeneklerinden yapılandırılabilir.
 
-* Page Up
+* Sayfa Yukarı
 
     * Oynatma sırasında mevcut süreyi bildirirken 10 saniyelik bir geri sarma yapılmasını sağlar.
     * Bu süre mp3DirectCut seçeneklerinden yapılandırılabilir.
@@ -111,7 +111,7 @@ Bu eklenti aşağıdaki komutları sunar:
 
     * Oynatmayı durdurmak ve mevcut süreyi bildirmek için kullanılır.
 
-* Space
+* Aralık
 
     * Kayıt hazırsa bu kaydı başlatır.
     * Bir kayıt devam ediyorsa imleci başa getirerek kaydı durdurur.

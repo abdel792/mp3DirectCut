@@ -3,17 +3,17 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-08-05 15:51+0000\n"
-"PO-Revision-Date: 2026-09-02 17:25\n"
+"PO-Revision-Date: 2026-08-28 06:29\n"
 "Last-Translator: \n"
-"Language-Team: Turkish\n"
-"Language: tr_TR\n"
+"Language-Team: Kurmanji (Kurdish)\n"
+"Language: kmr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: nvdaaddons\n"
 "X-Crowdin-Project-ID: 780748\n"
-"X-Crowdin-Language: tr\n"
+"X-Crowdin-Language: kmr\n"
 "X-Crowdin-File: mp3DirectCut.pot\n"
 "X-Crowdin-File-ID: 404\n"
 
@@ -21,231 +21,231 @@ msgstr ""
 #: addon\globalPlugins\mp3DirectCut\mp3DirectCutDialog.py:32
 #: addon\globalPlugins\mp3DirectCut\mp3DirectCutDialog.py:62
 msgid "Enable announcements of the space key"
-msgstr "Aralık tuşunun seslendirmesini etkinleştir"
+msgstr "Agahdariyên bişkoja fezayê çalak bike"
 
 #: addon\globalPlugins\mp3DirectCut\mp3DirectCutDialog.py:39
 #: addon\globalPlugins\mp3DirectCut\mp3DirectCutDialog.py:69
 msgid "Announce the placement of the selection markers"
-msgstr "Seçim işaretlerinin konumunu bildir"
+msgstr "Cihê nîşankerên hilbijartinê ragihîne"
 
 #. Translators: The label of the checkbox to enable or disable the other announcements.
 #: addon\globalPlugins\mp3DirectCut\mp3DirectCutDialog.py:45
 #: addon\globalPlugins\mp3DirectCut\mp3DirectCutDialog.py:75
 msgid "Enable the other announces"
-msgstr "Diğer bildirimleri etkinleştir"
+msgstr "Ragîhandinên din çalak bike"
 
 #. Translators: The title of the add-on configuration dialog box.
 #: addon\globalPlugins\mp3DirectCut\mp3DirectCutDialog.py:57
 #, python-brace-format
 msgid "Configuration of the addon {0}"
-msgstr "{0} eklenti ayarları"
+msgstr "Mîhengkirina pêveka {0}"
 
 #. Translators: name of the option in the menu.
 #: addon\globalPlugins\mp3DirectCut\__init__.py:56
 #, python-brace-format
 msgid "{0} addon configuration"
-msgstr "{0} eklenti ayarları"
+msgstr "{0} mîhengkirina pêvekê"
 
 #. Translators: Message presented in input help mode.
 #: addon\globalPlugins\mp3DirectCut\__init__.py:76
 #, python-brace-format
 msgid "Allows you display the configuration dialog of {0} addon."
-msgstr "{0} eklenti ayarlarıyla ilgili iletişim kutusunu açar."
+msgstr "Destûrê dide te ku diyaloga mîhengkirinê ya pêveka {0} nîşan bidî."
 
 #: addon\appModules\mp3directcut.py:46
 msgid "hours"
-msgstr "saat"
+msgstr "demjimêr"
 
 #: addon\appModules\mp3directcut.py:46
 msgid "minutes"
-msgstr "dakika"
+msgstr "deqîqe"
 
 #: addon\appModules\mp3directcut.py:46
 msgid "seconds"
-msgstr "saniye"
+msgstr "çirke"
 
 #: addon\appModules\mp3directcut.py:46
 msgid "hundredths"
-msgstr "salise"
+msgstr "sedî"
 
 #: addon\appModules\mp3directcut.py:46
 msgid "thousandths"
-msgstr "milisaniye"
+msgstr "hezarî"
 
 #. Translators: Message to inform that no selection has been realized.
 #: addon\appModules\mp3directcut.py:53
 msgid "No selection"
-msgstr "Seçim yok"
+msgstr "Ne hilbijartî"
 
 #. Translators: Message to inform the user that the playback cursor is at the top of the file.
 #: addon\appModules\mp3directcut.py:55
 msgid "Beginning of the file."
-msgstr "Dosya başı."
+msgstr "Destpêka dosyayê."
 
 #. Translators: Message to inform the user that the playback cursor is at the end of the file.
 #: addon\appModules\mp3directcut.py:57
 msgid "End of the file."
-msgstr "Dosya sonu."
+msgstr "Dawiya dosyayê."
 
 #: addon\appModules\mp3directcut.py:60
 msgid "Not file is loaded. Please check that you are in a file, open one with Control O,\tor R to start recording."
-msgstr "Hiçbir dosya yüklenmemiş. Bir dosya açtığınızdan emin olun, control+o ile bir dosya açın ya da r ile kayda başlayın."
+msgstr "Pel nehatiye barkirin. Ji kerema xwe kontrol bikin ku hûn di pelekê de ne, yekê bi Control O, an R vekin da ku dest bi tomarkirinê bikin."
 
 #. Translators: Message to inform the user that the current command is not available in a recording mode.
 #: addon\appModules\mp3directcut.py:64
 msgid "This command is not available in a recording mode, it is available only in a reading mode !"
-msgstr "Bu komut kayıt modunda geçerli değil. Yalnızca okuma modunda kullanılabilir!"
+msgstr "Ev ferman di moda tomarkirinê de peyda nabe, ew tenê di moda xwendinê de peyda dibe!"
 
 #. Translators: Message to indicate the position of the selection start marker.
 #: addon\appModules\mp3directcut.py:66
 msgid "The marker of the beginning of selection B is at"
-msgstr "B seçiminin başlangıç işaretinin konumu"
+msgstr "Nîşaneya destpêka hilbijartina B li wir e"
 
 #. Translators: Message to indicate the position of the selection end marker.
 #: addon\appModules\mp3directcut.py:68
 msgid "The marker of the End of selection N is at"
-msgstr "N seçiminin sonlanma işaretinin konumu"
+msgstr "Nîşaneya Dawîya Hilbijartinê N li wir e"
 
 #. Translators: Message to indicate the level of the vu-meter.
 #: addon\appModules\mp3directcut.py:70
 msgid "The level of the vu-meter is at"
-msgstr "Vu-metrenin seviyesi"
+msgstr "Asta vu-meterê li"
 
 #. Translators: Message to indicate the total duration of the current file.
 #: addon\appModules\mp3directcut.py:72
 msgid "Total time: "
-msgstr "Toplam süre: "
+msgstr "Demjimêra giştî: "
 
 #. Translators: Message to indicate the duration of the selection.
 #: addon\appModules\mp3directcut.py:74
 msgid "Duration of selection"
-msgstr "Seçim süresi"
+msgstr "Demjimêra hilbijartinê"
 
 #. Translators: Message to indicate the actual part.
 #: addon\appModules\mp3directcut.py:76
 msgid "Actual part"
-msgstr "Gerçek kısmı"
+msgstr "Beşa rastîn"
 
 #. Translators: Message to inform that no selection was found.
 #: addon\appModules\mp3directcut.py:78
 msgid "Selection not found."
-msgstr "Seçim bulunamadı."
+msgstr "Hilbijartin nehat dîtin."
 
 #. Translators: Message to indicate that the information of the current part is not available.
 #: addon\appModules\mp3directcut.py:80
 msgid "Information specific to the actual part is not available."
-msgstr "Gerçek kısma özel  bir bilgi mevcut değil."
+msgstr "Agahiyên taybetî yên li ser beşê rastîn ne berdest in."
 
 #. Translators: Message to prompt the user to verify that no selection has been made.
 #: addon\appModules\mp3directcut.py:82
 msgid "Please check that no selection has been made."
-msgstr "Seçim yapıldığından emin olun."
+msgstr "Ji kerema xwe kontrol bikin ku hilbijartinek nehatiye kirin."
 
 #. Translators: Message to prompt the user to verify that it is not in recording mode.
 #: addon\appModules\mp3directcut.py:84
 msgid "Please chek that you are not in a recording mode."
-msgstr "Kayıt modunda olmadığınızdan emin olun."
+msgstr "Ji kerema xwe, kontrol bikin ku hûn ne di moda tomarkirinê de ne."
 
 #: addon\appModules\mp3directcut.py:87
 msgid "The recording is ready ! It remains only to press spacebar for begin the recording.\tThis same spacebar  will stop the recording !"
-msgstr "Kayıt hazır, başlatmak için aralık tuşuna basmanız yeterli.\tAynı şekilde, durdurmak için de aralığa basın !"
+msgstr "Tomarkirin amade ye! Tenê dimîne ku ji bo destpêkirina tomarkirinê bişkoja spaceyê bikirtînin. Ev heman space dê tomarkirinê rawestîne!"
 
 #. Translators: Message to inform the user that a recording is in progress.
 #: addon\appModules\mp3directcut.py:91
 msgid "A recording is in progress, please press spacebar for stop it and start a new one."
-msgstr "Halıhazırda bir kayıt yapılıyor. Önce durdurmak için aralık tuşuna basın ve yenisini başlatın."
+msgstr "Tomarkirin berdewam dike, ji kerema xwe ji bo rawestandina wê û destpêkirina yeka nû bişkoja space bikirtînin."
 
 #. Translators: Message to inform the user that the recording is not ready.
 #: addon\appModules\mp3directcut.py:93
 msgid "The recording is not ready !"
-msgstr "Kayıt hazır değil !"
+msgstr "Tomarkirin ne amade ye!"
 
 #: addon\appModules\mp3directcut.py:96
 #, python-brace-format
 msgid "The vu-meter is not available. Please verify if a recording is in progress,\tand that the checkbox enable the margin button is checked in the options of {0}."
-msgstr "Vu-metre mevcut değil. kayıt yapılmakta olduğunu doğrulayın ve {0} seçeneklerinde, marjı etkinleştir onay kutusunun işaretli olduğundan emin olun."
+msgstr "Vu-metre peyda nabe. Ji kerema xwe piştrast bikin ka tomarkirin di pêşveçûnê de ye, û qutiya kontrolê ya bişkoka marjînalê çalak bike di vebijarkên {0} de hatiye kontrol kirin."
 
 #. Translators: Message to confirm that the level of the vu-meter has been reset.
 #: addon\appModules\mp3directcut.py:100
 msgid "The level of the vu-meter has been reset !"
-msgstr "Vu-metre düzeyi sıfırlandı !"
+msgstr "Asta vu-meterê ji nû ve hat sazkirin!"
 
 #. Translators: Message to confirm the placement of the selection start marker.
 #: addon\appModules\mp3directcut.py:102
 msgid "Start selection marker set."
-msgstr "Seçim başlangıç işareti konuldu."
+msgstr "Dest bi danîna nîşankerên hilbijartinê bike."
 
 #. Translators: Message to confirm the placement of the selection end marker.
 #: addon\appModules\mp3directcut.py:104
 msgid "End selection marker set."
-msgstr "Seçim sonu işareti konuldu."
+msgstr "Nîşaneya hilbijartinê bi dawî bike hate danîn."
 
 #. Translators: Message to confirm that the selection has been canceled.
 #: addon\appModules\mp3directcut.py:106
 msgid "Selection canceled."
-msgstr "Seçim iptal edildi."
+msgstr "Hilbijartin hat betalkirin."
 
 #: addon\appModules\mp3directcut.py:255
 msgid "of"
-msgstr "bölü"
+msgstr "ji"
 
 #: addon\appModules\mp3directcut.py:256
 msgid "Part"
-msgstr "Kısım"
+msgstr "Par"
 
 #. Translators: Message to inform the user that there is no remaining time.
 #: addon\appModules\mp3directcut.py:338
 msgid "No time remaining !"
-msgstr "Kalan süre yok !"
+msgstr "Dem nemaye!"
 
 #. Translators: Message to indicate the elapsed time.
 #: addon\appModules\mp3directcut.py:526 addon\appModules\mp3directcut.py:566
 #: addon\appModules\mp3directcut.py:594 addon\appModules\mp3directcut.py:601
 msgid "Elapsed time: "
-msgstr "Geçen süre: "
+msgstr "Dema derbasbûyî: "
 
 #: addon\appModules\mp3directcut.py:577
 msgid "Gives the duration from the beginning of the file to the current position of the playback cursor.\t\t\tIf pressed twice, gives the total duration."
-msgstr "Dosyanın başlangıcından oynatma imlecinin geçerli konumuna kadar geçen süreyi verir.\\t\\t\\tİki kez basıldığında toplam süreyi verir."
+msgstr "Demjimêra ji destpêka pelê heta pozîsyona niha ya nîşana lêdanê dide. Ger du caran were pêlkirin, demjimêra giştî dide."
 
 #: addon\appModules\mp3directcut.py:612
 msgid "Gives the time remaining from the current position of the playback cursor to the end of the file."
-msgstr "Çalma imleciyle dosya sonu arasındaki süreyi verir."
+msgstr "Dema mayî ji pozîsyona niha ya nîşankera lêdanê heta dawiya pelê dide."
 
 #. Translators: Message to indicate the remaining time.
 #: addon\appModules\mp3directcut.py:626
 msgid "Remaining time: "
-msgstr "Kalan süre: "
+msgstr "Dema mayî: "
 
 #: addon\appModules\mp3directcut.py:632
 msgid "Used to determine the current level of the vu-meter, during recording, double pressure reset it."
-msgstr "Kayıt esnasında vu-metrenin mevcut düzeyinin belirlenmesi için kullanılır, iki kez basmak sıfırlar."
+msgstr "Ji bo destnîşankirina asta niha ya vu-meterê, di dema tomarkirinê de, zexta du caran ji nû ve tê sazkirin."
 
 #: addon\appModules\mp3directcut.py:684
 msgid "Used to indicate the position of the marker of the beginning of selection B.\t\t\tDouble pressure lets give you the duration of the selection."
-msgstr "B seçiminin başlangıç işaretinin konumunu Belirtmek için kullanılır. İki kez basmak seçimin süresini verir."
+msgstr "Ji bo nîşandana cihê nîşankera destpêka hilbijartinê B tê bikar anîn. Zexta ducar dihêle hûn dema hilbijartinê bidin we."
 
 #: addon\appModules\mp3directcut.py:707
 msgid "Used to indicate the position of the marker of the end of selection N.\t\t\tDouble pressure gives recapitulatif positions B and N, and the duration of the selection."
-msgstr "N seçiminin sonlanma işaretinin konumunu Belirtmek için kullanılır.\t\t\tİki kez basmak B ve N'nin recapitulatif pozisyonlarını ve seçim süresini verir."
+msgstr "Ji bo nîşandana cihê nîşankera dawiya hilbijartina N tê bikaranîn. Zeexta ducarî pozîsyonên B û N, û dema hilbijartinê dubare dike."
 
 #: addon\appModules\mp3directcut.py:733
 msgid "Give the reference of the actual part and the total number of parts in the current file."
-msgstr "Mevcut dosyada geçerli bölüme referans  ve toplam bölüm sayısını verir."
+msgstr "Referansa parçeya rastîn û jimara giştî ya parçeyan di pelê heyî de bide."
 
 #: addon\appModules\mp3directcut.py:790
 msgid "Lets open the help of the current add-on."
-msgstr "Eklentiyle yardım alın."
+msgstr "Werin em alîkariya pêveka heyî vekin."
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
 #: buildVars.py:23
 msgid "some commands to use mp3directcut with NVDA"
-msgstr "mp3directcut uygulamasını NVDA ile kullanmak için bazı komutlar"
+msgstr "çend ferman ji bo bikaranîna mp3directcut bi NVDA re"
 
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:28
 msgid "Ensure compatibility with columnsReview and CustomLabels"
-msgstr "Sütun İncelemesi ve Özel Etiketler ile uyumluluğu sağlayın"
+msgstr "Lihevhatina bi columnsReview û CustomLabels re misoger bike"
 

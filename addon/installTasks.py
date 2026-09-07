@@ -6,9 +6,10 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
+from collections.abc import Callable
+
 import addonHandler
 import gui
-from typing import Callable
 import wx
 
 addonHandler.initTranslation()

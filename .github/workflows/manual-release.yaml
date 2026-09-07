@@ -44,7 +44,7 @@ jobs:
         $curDate = Get-Date -Format "yyyyMMdd"
         $curYear = Get-Date -Format "yyyy"
         $tagName = "v" + (Get-Date -Format "yy.MM.dd")
-        
+
         echo "CUR_DATE=$curDate" >> $env:GITHUB_ENV
         echo "CUR_YEAR=$curYear" >> $env:GITHUB_ENV
         echo "TAG_NAME=$tagName" >> $env:GITHUB_ENV

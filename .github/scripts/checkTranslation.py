@@ -2,8 +2,9 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
-import sys
 import os
+import sys
+
 from crowdin_api import CrowdinClient
 
 

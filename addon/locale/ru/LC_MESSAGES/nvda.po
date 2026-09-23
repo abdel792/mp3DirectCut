@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-08-05 15:51+0000\n"
-"PO-Revision-Date: 2026-09-16 17:46\n"
+"PO-Revision-Date: 2026-09-23 18:04\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -247,5 +247,5 @@ msgstr "некоторые команды использования mp3directcu
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:28
 msgid "Ensure compatibility with columnsReview and CustomLabels"
-msgstr ""
+msgstr "Обеспечена совместимость с columnsReview и CustomLabels"
 

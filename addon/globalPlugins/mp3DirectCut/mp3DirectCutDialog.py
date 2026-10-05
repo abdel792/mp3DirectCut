@@ -6,11 +6,12 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
+from collections.abc import Callable
+
 import addonHandler
 import config
 import wx
 from gui import guiHelper
-from typing import Callable
 
 # This block ensures compatibility with NVDA versions prior to 2018.2 which includes the settings panel.
 try:
@@ -83,4 +84,4 @@ class Mp3DirectCutDialog(SettingsDialog):
 		config.conf["mp3DCReport"]["space"] = self.reportSpaceCheckBox.GetValue()
 		config.conf["mp3DCReport"]["marker"] = self.reportMarkerCheckBox.GetValue()
 		config.conf["mp3DCReport"]["other"] = self.reportOtherCheckBox.GetValue()
-		super(Mp3DirectCutDialog, self).onOk(evt)
+		super().onOk(evt)

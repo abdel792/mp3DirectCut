@@ -5,7 +5,7 @@ from pathlib import Path
 
 def matchesNoPatterns(path: Path, patterns: Iterable[str]) -> bool:
 	"""Checks if the path, the first argument, does not match any of the patterns passed as the second argument."""
-	return not any((path.match(pattern) for pattern in patterns))
+	return not any(path.match(pattern) for pattern in patterns)
 
 
 def createAddonBundleFromPath(path: str | Path, dest: str, excludePatterns: Iterable[str]):

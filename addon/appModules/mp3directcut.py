@@ -751,6 +751,7 @@ class SoundManager(IAccessible):
 class AppModule(appModuleHandler.AppModule):
 	scriptCategory = ADDON_SUMMARY
 	runValueChange = True
+	loop = 0
 
 	def event_valueChange(self, obj, nextHandler):
 		if not self.runValueChange:
@@ -770,6 +771,9 @@ class AppModule(appModuleHandler.AppModule):
 		nextHandler()
 
 	def event_NVDAObject_init(self, obj):
+		self.loop += 1
+		if self.loop > 1:
+			return
 		isCustomLabel = next((x for x in addonHandler.getRunningAddons() if x.name == "CustomLabels"), None)
 		isColumnsReview = next((x for x in addonHandler.getRunningAddons() if x.name == "columnsReview"), None)
 		if not isCustomLabel and not isColumnsReview:

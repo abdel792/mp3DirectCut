@@ -6,16 +6,18 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
-import globalPluginHandler
-import globalVars
-from scriptHandler import script
+from collections.abc import Callable
+
 import addonHandler
 import buildVersion
-from .mp3DirectCutDialog import Mp3DirectCutDialog, Mp3DirectCutPanel
-from typing import Callable
+import config
+import globalPluginHandler
+import globalVars
 import gui
 import wx
-import config
+from scriptHandler import script
+
+from .mp3DirectCutDialog import Mp3DirectCutDialog, Mp3DirectCutPanel
 
 addonHandler.initTranslation()
 _: Callable[[str], str]
@@ -37,7 +39,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = ADDON_SUMMARY
 
 	def __init__(self, *args, **kwargs):
-		super(GlobalPlugin, self).__init__(*args, **kwargs)
+		super().__init__(*args, **kwargs)
 		if globalVars.appArgs.secure or (hasattr(config, "isAppX") and config.isAppX):
 			return
 		# This block ensures compatibility with NVDA versions prior to 2018.2 which includes the settings panel.
@@ -59,7 +61,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onMp3DirectCutDialog, self.mp3DirectCut)
 
 	def terminate(self):
-		super(GlobalPlugin, self).terminate()
+		super().terminate()
 		if hasattr(gui, "NVDASettingsDialog"):
 			gui.NVDASettingsDialog.categoryClasses.remove(Mp3DirectCutPanel)
 		if hasattr(self, "preferencesMenu"):

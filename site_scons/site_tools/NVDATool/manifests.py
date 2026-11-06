@@ -2,7 +2,7 @@ import codecs
 import gettext
 from functools import partial
 
-from .typings import AddonInfo, BrailleTables, SymbolDictionaries, SpeechDictionaries
+from .typings import AddonInfo, BrailleTables, SpeechDictionaries, SymbolDictionaries
 from .utils import format_nested_section
 
 
